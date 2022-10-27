@@ -1,0 +1,10 @@
+<mat-progress-bar
+  *ngIf="type === 'bar'; else spinner"
+  [mode]="mode"
+  [value]="value"
+>
+</mat-progress-bar>
+
+<ng-template #spinner>
+  <mat-spinner [mode]="mode" [value]="value"> </mat-spinner>
+</ng-template>

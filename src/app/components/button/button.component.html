@@ -1,0 +1,10 @@
+<button
+  mat-button
+  [class.mat-flat-button]="type === 'flat'"
+  [class.mat-raised-button]="type === 'raised'"
+  [class.mat-stroked-button]="type === 'stroked'"
+  [color]="color"
+  [disabled]="disabled"
+>
+  {{ label }}
+</button>
