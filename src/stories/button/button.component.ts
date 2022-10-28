@@ -1,23 +1,11 @@
 import { Component, Input } from '@angular/core';
-import { SBButtonComponent } from '@sb/components/button';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'storybook-button',
-  template: `
-    <sb-button
-      [label]="label"
-      [type]="type"
-      [color]="color"
-      [disabled]="disabled"
-      [size]="size"
-    ></sb-button>
-    <!--  <p>
-      <code>
-        {{ type === 'default' ? 'mat-button' : 'mat-' + type + '-button' }}
-      </code>
-    </p> -->
-  `,
-  imports: [SBButtonComponent],
+  templateUrl: './button.component.html',
+  imports: [MatButtonModule, MatIconModule],
   standalone: true,
 })
 export default class ButtonComponent {
@@ -26,15 +14,4 @@ export default class ButtonComponent {
   @Input() color: 'primary' | 'accent' | 'warn' = 'primary';
   @Input() disabled: boolean = false;
   @Input() label = 'Button';
-
-  /* @Output()
-  onClick = new EventEmitter<Event>();
-
-  public get classes(): string[] {
-    const mode = this.primary
-      ? 'storybook-button--primary'
-      : 'storybook-button--secondary';
-
-    return ['storybook-button', `storybook-button--${this.size}`, mode];
-  } */
 }

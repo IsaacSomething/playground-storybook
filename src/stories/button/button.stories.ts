@@ -4,7 +4,9 @@ import Button from './button.component';
 export default {
   title: 'Button',
   component: Button,
-  parameters: { controls: { sort: 'requiredFirst' } },
+  parameters: {
+    controls: { sort: 'requiredFirst' },
+  },
   argTypes: {
     label: {},
     color: {

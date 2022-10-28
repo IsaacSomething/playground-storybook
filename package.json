@@ -33,7 +33,6 @@
     "@angular/compiler-cli": "^14.2.0",
     "@babel/core": "^7.19.6",
     "@compodoc/compodoc": "^1.1.19",
-    "@etchteam/storybook-addon-status": "^4.2.2",
     "@storybook/addon-actions": "^6.5.13",
     "@storybook/addon-essentials": "^6.5.13",
     "@storybook/addon-interactions": "^6.5.13",
