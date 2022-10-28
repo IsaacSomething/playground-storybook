@@ -4,7 +4,6 @@ module.exports = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
-    '@etchteam/storybook-addon-status'
   ],
   framework: "@storybook/angular",
   core: {
