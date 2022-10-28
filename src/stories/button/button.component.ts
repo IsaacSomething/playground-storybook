@@ -3,12 +3,20 @@ import { SBButtonComponent } from '@sb/components/button';
 
 @Component({
   selector: 'storybook-button',
-  template: `<sb-button
-    [label]="label"
-    [type]="type"
-    [color]="color"
-    [disabled]="disabled"
-  ></sb-button>`,
+  template: `
+    <sb-button
+      [label]="label"
+      [type]="type"
+      [color]="color"
+      [disabled]="disabled"
+      [size]="size"
+    ></sb-button>
+    <!--  <p>
+      <code>
+        {{ type === 'default' ? 'mat-button' : 'mat-' + type + '-button' }}
+      </code>
+    </p> -->
+  `,
   imports: [SBButtonComponent],
   standalone: true,
 })

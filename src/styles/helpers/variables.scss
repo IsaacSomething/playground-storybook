@@ -1,0 +1,26 @@
+@use '@angular/material' as mat;
+@import "@angular/material/theming";
+@include mat.core();
+
+:root {
+  --playground-radius: 4px;
+
+  --playground-primary-font: "Quicksand", sans-serif !important;
+  --playground-secondary-font: "Roboto", sans-serif !important;
+  --playground-font-size: 14px;
+
+  --playground-text: #505050;
+  --playground-text-disabled: #cbcbcb;
+  --playground-text-secondary: #{mat.get-color-from-palette(
+      mat.$grey-palette,
+      600
+    )};
+  --playground-text-primary: var(--playground-primary);
+  --playground-text-accent: var(--playground-accent);
+  --playground-text-warn: var(--playground-warn);
+
+  --playground-bg: #ffffff;
+  --playground-bar: #ffffff;
+  --playground-card: #ffffff;
+  --playground-divider: #f3f3f3;
+}

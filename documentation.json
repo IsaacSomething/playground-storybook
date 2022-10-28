@@ -60,8 +60,8 @@
         },
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-4eb3d90d6c706dfa76aed9731c49bcffcc3bb3e737fd6a4dafce8f8f3ec712f9c522453d126df6bb9790975c28b7d946f2d333bd53e34b9868e51943633ea4b8",
-            "file": "src/stories/button.component.ts",
+            "id": "component-ButtonComponent-9cd5fbd55a2823898903727c82e2a9ca8bc22c2fee4aca8f6e84451a2ccd27b2b3fc4c1f7ea47730bbc0bcc877280a99dd708cfc2d5df6fb11a4be75ceafcd67",
+            "file": "src/stories/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
@@ -70,7 +70,7 @@
             "selector": "storybook-button",
             "styleUrls": [],
             "styles": [],
-            "template": "<sb-button    [primary]=\"true\"\n    [label]=\"label\"\n    [type]=\"type\"\n    [color]=\"color\"\n    [disabled]=\"disabled\"\n  ></sb-button>",
+            "template": "<sb-button\n  [label]=\"label\"\n  [type]=\"type\"\n  [color]=\"color\"\n  [disabled]=\"disabled\"\n  [size]=\"size\"\n></sb-button>\n<!--  <p>\n  <code>\n    {{ type === 'default' ? 'mat-button' : 'mat-' + type + '-button' }}\n  </code>\n</p> -->\n",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
@@ -79,7 +79,7 @@
                     "defaultValue": "'primary'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 19,
+                    "line": 26,
                     "type": "\"primary\" | \"accent\" | \"warn\"",
                     "decorators": []
                 },
@@ -88,7 +88,7 @@
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 20,
+                    "line": 27,
                     "type": "boolean",
                     "decorators": []
                 },
@@ -97,17 +97,17 @@
                     "defaultValue": "'Button'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 21,
+                    "line": 28,
                     "type": "string",
                     "decorators": []
                 },
                 {
                     "name": "size",
-                    "defaultValue": "'medium'",
+                    "defaultValue": "'default'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 17,
-                    "type": "\"small\" | \"medium\" | \"large\"",
+                    "line": 24,
+                    "type": "\"small\" | \"default\" | \"large\"",
                     "decorators": []
                 },
                 {
@@ -115,7 +115,7 @@
                     "defaultValue": "'flat'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 18,
+                    "line": 25,
                     "type": "\"flat\" | \"stroked\" | \"raised\" | \"default\"",
                     "decorators": []
                 }
@@ -130,14 +130,82 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { SBButtonComponent } from '@sb/components/button';\n\n@Component({\n  selector: 'storybook-button',\n  template: `<sb-button\n    [primary]=\"true\"\n    [label]=\"label\"\n    [type]=\"type\"\n    [color]=\"color\"\n    [disabled]=\"disabled\"\n  ></sb-button>`,\n  imports: [SBButtonComponent],\n  standalone: true,\n})\nexport default class ButtonComponent {\n  @Input() size: 'small' | 'medium' | 'large' = 'medium';\n  @Input() type: 'flat' | 'stroked' | 'raised' | 'default' = 'flat';\n  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';\n  @Input() disabled: boolean = false;\n  @Input() label = 'Button';\n\n  /* @Output()\n  onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.primary\n      ? 'storybook-button--primary'\n      : 'storybook-button--secondary';\n\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\n  } */\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { SBButtonComponent } from '@sb/components/button';\n\n@Component({\n  selector: 'storybook-button',\n  template: `\n    <sb-button\n      [label]=\"label\"\n      [type]=\"type\"\n      [color]=\"color\"\n      [disabled]=\"disabled\"\n      [size]=\"size\"\n    ></sb-button>\n    <!--  <p>\n      <code>\n        {{ type === 'default' ? 'mat-button' : 'mat-' + type + '-button' }}\n      </code>\n    </p> -->\n  `,\n  imports: [SBButtonComponent],\n  standalone: true,\n})\nexport default class ButtonComponent {\n  @Input() size: 'small' | 'default' | 'large' = 'default';\n  @Input() type: 'flat' | 'stroked' | 'raised' | 'default' = 'flat';\n  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';\n  @Input() disabled: boolean = false;\n  @Input() label = 'Button';\n\n  /* @Output()\n  onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.primary\n      ? 'storybook-button--primary'\n      : 'storybook-button--secondary';\n\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\n  } */\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": ""
+        },
+        {
+            "name": "ProgressComponent",
+            "id": "component-ProgressComponent-e1259c4d64e4e8ca8834bb0df69374d294233dcae09463e282384def33d42d5765f59499af4d840462f027b056c90288d46bd2f12f38eb10ff929917cca28e2d",
+            "file": "src/stories/progress-spinner/progress-spinner.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-button",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<sb-progress    [color]=\"color\"\n    [value]=\"value\"\n    [mode]=\"mode\"\n    [disabled]=\"disabled\"\n  ></sb-progress>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "color",
+                    "defaultValue": "'primary'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 18,
+                    "type": "\"primary\" | \"accent\" | \"warn\"",
+                    "decorators": []
+                },
+                {
+                    "name": "disabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 17,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "mode",
+                    "defaultValue": "'determinate'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 19,
+                    "type": "\"determinate\" | \"indeterminate\"",
+                    "decorators": []
+                },
+                {
+                    "name": "value",
+                    "defaultValue": "20",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "number",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { SBProgressComponent } from '@sb/components/progress';\n\n@Component({\n  selector: 'storybook-button',\n  template: `<sb-progress\n    [color]=\"color\"\n    [value]=\"value\"\n    [mode]=\"mode\"\n    [disabled]=\"disabled\"\n  ></sb-progress>`,\n  imports: [SBProgressComponent],\n  standalone: true,\n})\nexport default class ProgressComponent {\n  @Input() value = 20;\n  @Input() disabled: boolean = false;\n  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';\n  @Input() mode: 'determinate' | 'indeterminate' = 'determinate';\n\n  /* @Output()\n  onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.primary\n      ? 'storybook-button--primary'\n      : 'storybook-button--secondary';\n\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\n  } */\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": ""
         },
         {
             "name": "SBButtonComponent",
-            "id": "component-SBButtonComponent-688e334250aa16389b0e09fd7509f4e0ad25e774a4639cda0d5f4d5724d4c871ecbee07076fbcf3fe92aa4e9a96309e31b9b5e29edabd34e15e557672d21c101",
+            "id": "component-SBButtonComponent-b75a369223d6adcc7ebf82099dffc69e21ca7b4d61d13322780b92f73e1aca6f231cbb445c2e9d649f66b9c7a120f00159022efd9d9939ac71236b0d2c3ebc65",
             "file": "src/app/components/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -159,7 +227,7 @@
                     "defaultValue": "'primary'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 14,
+                    "line": 13,
                     "type": "string",
                     "decorators": []
                 },
@@ -177,16 +245,17 @@
                     "defaultValue": "'button'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 13,
+                    "line": 12,
                     "type": "string",
                     "decorators": []
                 },
                 {
-                    "name": "primary",
+                    "name": "size",
+                    "defaultValue": "'default'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 12,
-                    "type": "boolean",
+                    "line": 14,
+                    "type": "\"small\" | \"large\" | \"default\"",
                     "decorators": []
                 },
                 {
@@ -209,11 +278,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { MatButtonModule } from '@angular/material/button';\n\n@Component({\n  selector: 'sb-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss'],\n  imports: [MatButtonModule],\n  standalone: true,\n})\nexport class SBButtonComponent {\n  @Input() primary!: boolean;\n  @Input() label = 'button';\n  @Input() color = 'primary';\n  @Input() type: 'flat' | 'raised' | 'flat' | 'stroked' | 'default' = 'default';\n  @Input() disabled = false;\n  constructor() {}\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { MatButtonModule } from '@angular/material/button';\n\n@Component({\n  selector: 'sb-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss'],\n  imports: [MatButtonModule],\n  standalone: true,\n})\nexport class SBButtonComponent {\n  @Input() label = 'button';\n  @Input() color = 'primary';\n  @Input() size: 'small' | 'large' | 'default' = 'default';\n  @Input() type: 'flat' | 'raised' | 'flat' | 'stroked' | 'default' = 'default';\n  @Input() disabled = false;\n  constructor() {}\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "",
+                    "data": " ",
                     "styleUrl": "./button.component.scss"
                 }
             ],
@@ -226,7 +295,151 @@
                 "args": [],
                 "line": 16
             },
-            "templateData": "<button\n  mat-button\n  [class.mat-flat-button]=\"type === 'flat'\"\n  [class.mat-raised-button]=\"type === 'raised'\"\n  [class.mat-stroked-button]=\"type === 'stroked'\"\n  [color]=\"color\"\n  [disabled]=\"disabled\"\n>\n  {{ label }}\n</button>\n"
+            "templateData": "<button\n  mat-button\n  [class.mat-flat-button]=\"type === 'flat'\"\n  [class.mat-raised-button]=\"type === 'raised'\"\n  [class.mat-stroked-button]=\"type === 'stroked'\"\n  [class.large]=\"size === 'large'\"\n  [class.small]=\"size === 'small'\"\n  [color]=\"color\"\n  [disabled]=\"disabled\"\n>\n  {{ label }}\n</button>\n"
+        },
+        {
+            "name": "SBProgressComponent",
+            "id": "component-SBProgressComponent-498225920b9091e4e14f4cc402d3a2f79c83d65a6bfe601f010f3d1202744abbebff3fb31e93c6712f4668008e4f1721adb594a755a43bdd768867922e1cf81c",
+            "file": "src/app/components/progress/progress.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "sb-progress",
+            "styleUrls": [
+                "./progress.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./progress.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "color",
+                    "defaultValue": "'primary'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 17,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "disabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 18,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "mode",
+                    "defaultValue": "'determinate'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 19,
+                    "type": "ProgressSpinnerMode",
+                    "decorators": []
+                },
+                {
+                    "name": "value",
+                    "defaultValue": "20",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "number",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { MatProgressBarModule } from '@angular/material/progress-bar';\nimport {\n  MatProgressSpinnerModule,\n  ProgressSpinnerMode,\n} from '@angular/material/progress-spinner';\n\n@Component({\n  selector: 'sb-progress',\n  templateUrl: './progress.component.html',\n  styleUrls: ['./progress.component.scss'],\n  imports: [MatProgressBarModule, MatProgressSpinnerModule],\n  standalone: true,\n})\nexport class SBProgressComponent {\n  @Input() value = 20;\n  @Input() color = 'primary';\n  @Input() disabled = false;\n  @Input() mode: ProgressSpinnerMode = 'determinate';\n  constructor() {}\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": " ",
+                    "styleUrl": "./progress.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 19
+            },
+            "templateData": "<mat-progress-bar\n  *ngIf=\"type === 'bar'; else spinner\"\n  [mode]=\"mode\"\n  [value]=\"value\"\n>\n</mat-progress-bar>\n\n<ng-template #spinner>\n  <mat-spinner [mode]=\"mode\" [value]=\"value\"> </mat-spinner>\n</ng-template>\n"
+        },
+        {
+            "name": "Theme",
+            "id": "component-Theme-ae2e6ad45072b4fcb03602ca8fac7d4a22b269fd46f941c6ff92c8d5f6856d1cc2c3264a8d13a9f11a5b9ae9fc6d3242a17c24a0a3afc66d2445bf27210fc04b",
+            "file": "src/stories/theme/theme.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-button",
+            "styleUrls": [
+                "./theme.component.scss"
+            ],
+            "styles": [],
+            "template": "<div    class=\"block\"\n    *ngFor=\"let hue of palette\"\n    style=\"background-color:var(--playground-{{ color }}-{{ hue }}\"\n  >\n    <small style=\"color:var(--playground-{{ color }}-contrast-{{ hue }}\">\n      {{ color }} {{ hue }}\n    </small>\n  </div>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "color",
+                    "defaultValue": "'primary'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 20,
+                    "type": "\"primary\" | \"accent\" | \"warn\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "palette",
+                    "defaultValue": "[\n    '50',\n    '100',\n    '200',\n    '300',\n    '400',\n    '500',\n    '600',\n    '700',\n    '800',\n    '900',\n    'A100',\n    'A200',\n    'A400',\n    'A700',\n  ]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 21
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'storybook-button',\n  template: `<div\n    class=\"block\"\n    *ngFor=\"let hue of palette\"\n    style=\"background-color:var(--playground-{{ color }}-{{ hue }}\"\n  >\n    <small style=\"color:var(--playground-{{ color }}-contrast-{{ hue }}\">\n      {{ color }} {{ hue }}\n    </small>\n  </div>`,\n  styleUrls: ['./theme.component.scss'],\n  imports: [CommonModule],\n  standalone: true,\n})\nexport default class Theme {\n  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';\n  palette = [\n    '50',\n    '100',\n    '200',\n    '300',\n    '400',\n    '500',\n    '600',\n    '700',\n    '800',\n    '900',\n    'A100',\n    'A200',\n    'A400',\n    'A700',\n  ];\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".block {\n  height: 80px;\n  width: 80px;\n  border-radius: 4px;\n  display: inline-block;\n  margin-right: 16px;\n  margin-bottom: 16px;\n\n  $hues: 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, A100, A200, A400, A700;\n  @each $hue in $hues {\n    .primary.palette-#{$hue} {\n      background-color: var(--playground-primary-#{$hue});\n    }\n  }\n\n\n  &.primary {\n   /*  &.palette- {\n      &50 {\n        background-color: var(--playground-primary-50);\n      }\n      &100 {\n        background-color: var(--playground-primary-100);\n      }\n      &200 {\n        background-color: var(--playground-primary-200);\n      }\n      &300 {\n        background-color: var(--playground-primary-300);\n      }\n      &400 {\n        background-color: var(--playground-primary-400);\n      }\n      &500 {\n        background-color: var(--playground-primary-500);\n      }\n      &600 {\n        background-color: var(--playground-primary-600);\n      }\n      &700 {\n        background-color: var(--playground-primary-700);\n      }\n      &800 {\n        background-color: var(--playground-primary-800);\n      }\n      &900 {\n        background-color: var(--playground-primary-900);\n      }\n      &A100 {\n        background-color: var(--playground-primary-A100);\n      }\n      &A200 {\n        background-color: var(--playground-primary-A200);\n      }\n      &A400 {\n        background-color: var(--playground-primary-A400);\n      }\n      &A700 {\n        background-color: var(--playground-primary-A700);\n      }\n    } */\n    .contrast- {\n      &50 {\n        color: var(--playground-primary-contrast-50);\n      }\n      &100 {\n        color: var(--playground-primary-contrast-100);\n      }\n      &200 {\n        color: var(--playground-primary-contrast-200);\n      }\n      &300 {\n        color: var(--playground-primary-contrast-300);\n      }\n      &400 {\n        color: var(--playground-primary-contrast-400);\n      }\n      &500 {\n        color: var(--playground-primary-contrast-500);\n      }\n      &600 {\n        color: var(--playground-primary-contrast-600);\n      }\n      &700 {\n        color: var(--playground-primary-contrast-700);\n      }\n      &800 {\n        color: var(--playground-primary-contrast-800);\n      }\n      &900 {\n        color: var(--playground-primary-contrast-900);\n      }\n      &A100 {\n        color: var(--playground-primary-contrast-A100);\n      }\n      &A200 {\n        color: var(--playground-primary-contrast-A200);\n      }\n      &A400 {\n        color: var(--playground-primary-contrast-A400);\n      }\n      &A700 {\n        color: var(--playground-primary-contrast-A700);\n      }\n    }\n  }\n\n  &.accent.palette- {\n    &50 {\n      background-color: var(--playground-accent-50);\n    }\n    &100 {\n      background-color: var(--playground-accent-100);\n    }\n    &200 {\n      background-color: var(--playground-accent-200);\n    }\n    &300 {\n      background-color: var(--playground-accent-300);\n    }\n    &400 {\n      background-color: var(--playground-accent-400);\n    }\n    &500 {\n      background-color: var(--playground-accent-500);\n    }\n    &600 {\n      background-color: var(--playground-accent-600);\n    }\n    &700 {\n      background-color: var(--playground-accent-700);\n    }\n    &800 {\n      background-color: var(--playground-accent-800);\n    }\n    &900 {\n      background-color: var(--playground-accent-900);\n    }\n    &A100 {\n      background-color: var(--playground-accent-A100);\n    }\n    &A200 {\n      background-color: var(--playground-accent-A200);\n    }\n    &A400 {\n      background-color: var(--playground-accent-A400);\n    }\n    &A700 {\n      background-color: var(--playground-accent-A700);\n    }\n\n    &contrast {\n      &50 {\n        background-color: var(--playground-accent-contrast-50);\n      }\n      &100 {\n        background-color: var(--playground-accent-contrast-100);\n      }\n      &200 {\n        background-color: var(--playground-accent-contrast-200);\n      }\n      &300 {\n        background-color: var(--playground-accent-contrast-300);\n      }\n      &400 {\n        background-color: var(--playground-accent-contrast-400);\n      }\n      &500 {\n        background-color: var(--playground-accent-contrast-500);\n      }\n      &600 {\n        background-color: var(--playground-accent-contrast-600);\n      }\n      &700 {\n        background-color: var(--playground-accent-contrast-700);\n      }\n      &800 {\n        background-color: var(--playground-accent-contrast-800);\n      }\n      &900 {\n        background-color: var(--playground-accent-contrast-900);\n      }\n      &A100 {\n        background-color: var(--playground-accent-contrast-A100);\n      }\n      &A200 {\n        background-color: var(--playground-accent-contrast-A200);\n      }\n      &A400 {\n        background-color: var(--playground-accent-contrast-A400);\n      }\n      &A700 {\n        background-color: var(--playground-accent-contrast-A700);\n      }\n    }\n  }\n  &.warn.palette- {\n    &50 {\n      background-color: var(--playground-warn-50);\n    }\n    &100 {\n      background-color: var(--playground-warn-100);\n    }\n    &200 {\n      background-color: var(--playground-warn-200);\n    }\n    &300 {\n      background-color: var(--playground-warn-300);\n    }\n    &400 {\n      background-color: var(--playground-warn-400);\n    }\n    &500 {\n      background-color: var(--playground-warn-500);\n    }\n    &600 {\n      background-color: var(--playground-warn-600);\n    }\n    &700 {\n      background-color: var(--playground-warn-700);\n    }\n    &800 {\n      background-color: var(--playground-warn-800);\n    }\n    &900 {\n      background-color: var(--playground-warn-900);\n    }\n    &A100 {\n      background-color: var(--playground-warn-A100);\n    }\n    &A200 {\n      background-color: var(--playground-warn-A200);\n    }\n    &A400 {\n      background-color: var(--playground-warn-A400);\n    }\n    &A700 {\n      background-color: var(--playground-warn-A700);\n    }\n\n    &contrast {\n      &50 {\n        background-color: var(--playground-warn-contrast-50);\n      }\n      &100 {\n        background-color: var(--playground-warn-contrast-100);\n      }\n      &200 {\n        background-color: var(--playground-warn-contrast-200);\n      }\n      &300 {\n        background-color: var(--playground-warn-contrast-300);\n      }\n      &400 {\n        background-color: var(--playground-warn-contrast-400);\n      }\n      &500 {\n        background-color: var(--playground-warn-contrast-500);\n      }\n      &600 {\n        background-color: var(--playground-warn-contrast-600);\n      }\n      &700 {\n        background-color: var(--playground-warn-contrast-700);\n      }\n      &800 {\n        background-color: var(--playground-warn-contrast-800);\n      }\n      &900 {\n        background-color: var(--playground-warn-contrast-900);\n      }\n      &A100 {\n        background-color: var(--playground-warn-contrast-A100);\n      }\n      &A200 {\n        background-color: var(--playground-warn-contrast-A200);\n      }\n      &A400 {\n        background-color: var(--playground-warn-contrast-A400);\n      }\n      &A700 {\n        background-color: var(--playground-warn-contrast-A700);\n      }\n    }\n  }\n}\n",
+                    "styleUrl": "./theme.component.scss"
+                }
+            ],
+            "stylesData": ""
         }
     ],
     "modules": [
@@ -318,6 +531,16 @@
     "miscellaneous": {
         "variables": [
             {
+                "name": "Accent",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/theme/theme.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "context",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -331,21 +554,21 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
+                "file": "src/stories/button/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
             {
-                "name": "environment",
+                "name": "Determinate",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/environments/environment.ts",
+                "file": "src/stories/progress-spinner/progress-spinner.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "object",
-                "defaultValue": "{\n  production: false\n}"
+                "type": "",
+                "defaultValue": "Template.bind({})"
             },
             {
                 "name": "environment",
@@ -358,10 +581,40 @@
                 "defaultValue": "{\n  production: true\n}"
             },
             {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  production: false\n}"
+            },
+            {
                 "name": "Flat",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
+                "file": "src/stories/button/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Indeterminate",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/progress-spinner/progress-spinner.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/theme/theme.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -371,7 +624,7 @@
                 "name": "Raised",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
+                "file": "src/stories/button/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -390,7 +643,7 @@
                 "name": "Stroked",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
+                "file": "src/stories/button/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -400,17 +653,89 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
+                "file": "src/stories/button/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<Button>",
                 "defaultValue": "(args: Button) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/progress-spinner/progress-spinner.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<ProgressComponent>",
+                "defaultValue": "(args: ProgressComponent) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/theme/theme.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Theme>",
+                "defaultValue": "(args: Theme) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Warn",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/theme/theme.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
             }
         ],
         "functions": [],
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
+            "src/stories/theme/theme.stories.ts": [
+                {
+                    "name": "Accent",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/theme/theme.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/theme/theme.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/theme/theme.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Theme>",
+                    "defaultValue": "(args: Theme) => ({\n  props: args,\n})"
+                },
+                {
+                    "name": "Warn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/theme/theme.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                }
+            ],
             "src/test.ts": [
                 {
                     "name": "context",
@@ -432,12 +757,12 @@
                     "type": "literal type"
                 }
             ],
-            "src/stories/Button.stories.ts": [
+            "src/stories/button/button.stories.ts": [
                 {
                     "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
+                    "file": "src/stories/button/button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -447,7 +772,7 @@
                     "name": "Flat",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
+                    "file": "src/stories/button/button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -457,7 +782,7 @@
                     "name": "Raised",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
+                    "file": "src/stories/button/button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -467,7 +792,7 @@
                     "name": "Stroked",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
+                    "file": "src/stories/button/button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -477,23 +802,43 @@
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
+                    "file": "src/stories/button/button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<Button>",
                     "defaultValue": "(args: Button) => ({\n  props: args,\n})"
                 }
             ],
-            "src/environments/environment.ts": [
+            "src/stories/progress-spinner/progress-spinner.stories.ts": [
                 {
-                    "name": "environment",
+                    "name": "Determinate",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/environments/environment.ts",
+                    "file": "src/stories/progress-spinner/progress-spinner.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\n  production: false\n}"
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Indeterminate",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/progress-spinner/progress-spinner.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/progress-spinner/progress-spinner.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<ProgressComponent>",
+                    "defaultValue": "(args: ProgressComponent) => ({\n  props: args,\n})"
                 }
             ],
             "src/environments/environment.prod.ts": [
@@ -506,6 +851,18 @@
                     "deprecationMessage": "",
                     "type": "object",
                     "defaultValue": "{\n  production: true\n}"
+                }
+            ],
+            "src/environments/environment.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  production: false\n}"
                 }
             ]
         },
@@ -550,6 +907,15 @@
                 "status": "low"
             },
             {
+                "filePath": "src/app/components/progress/progress.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "SBProgressComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
                 "filePath": "src/environments/environment.prod.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -570,7 +936,16 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/Button.stories.ts",
+                "filePath": "src/stories/button/button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/button/button.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -580,7 +955,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/Button.stories.ts",
+                "filePath": "src/stories/button/button.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -590,7 +965,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/Button.stories.ts",
+                "filePath": "src/stories/button/button.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -600,7 +975,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/Button.stories.ts",
+                "filePath": "src/stories/button/button.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -610,7 +985,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/Button.stories.ts",
+                "filePath": "src/stories/button/button.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -620,12 +995,91 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/button.component.ts",
+                "filePath": "src/stories/progress-spinner/progress-spinner.component.ts",
                 "type": "component",
                 "linktype": "component",
-                "name": "ButtonComponent",
+                "name": "ProgressComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/6",
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/progress-spinner/progress-spinner.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Determinate",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/progress-spinner/progress-spinner.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Indeterminate",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/progress-spinner/progress-spinner.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/theme/theme.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "Theme",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/theme/theme.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Accent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/theme/theme.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/theme/theme.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/theme/theme.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Warn",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {

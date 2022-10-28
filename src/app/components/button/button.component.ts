@@ -11,6 +11,7 @@ import { MatButtonModule } from '@angular/material/button';
 export class SBButtonComponent {
   @Input() label = 'button';
   @Input() color = 'primary';
+  @Input() size: 'small' | 'large' | 'default' = 'default';
   @Input() type: 'flat' | 'raised' | 'flat' | 'stroked' | 'default' = 'default';
   @Input() disabled = false;
   constructor() {}
