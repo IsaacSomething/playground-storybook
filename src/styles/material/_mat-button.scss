@@ -1,12 +1,44 @@
+@use './utilities' as play;
+
 .mat-button-base {
   &.large {
     height: 50px;
     line-height: 50px;
     font-size: 16px;
   }
+
   &.small {
     height: 24px;
     line-height: 22px;
     font-size: 12px;
+  }
+
+  @mixin spinnerSize {
+    height: 18px !important;
+    width: 18px !important;
+  }
+
+  .mat-progress-spinner {
+    display: inline-block;
+    transform: translate(-1px, -2px);
+    margin-right: 6px;
+    @include spinnerSize;
+
+    svg {
+      @include spinnerSize;
+    }
+  }
+
+  @each $color in play.$colors {
+    &.mat-#{$color} .mat-spinner circle {
+      stroke: var(--playground-#{$color});
+    }
+
+    &.mat-#{$color}.mat-raised-button,
+    &.mat-#{$color}.mat-flat-button {
+      .mat-spinner circle {
+        stroke: var(--playground-#{$color}-50);
+      }
+    }
   }
 }

@@ -1,6 +1,7 @@
 import { Story, Meta } from '@storybook/angular';
-import ButtonIcon from './button-icon.component';
 import Button from './button.component';
+import ButtonIcon from './button-icon.component';
+import ButtonLoading from './button-loading.component';
 
 export default {
   title: 'Button',
@@ -15,6 +16,7 @@ const Template: Story<Button> = (args: Button) => ({
       control: { type: 'radio' },
     },
     disabled: { control: { type: 'boolean' } },
+    loading: { control: { type: 'boolean' } },
     type: { table: { disable: true } },
   },
 });
@@ -41,5 +43,10 @@ Stroked.args = {
 
 export const Icon: Story<ButtonIcon> = (args: ButtonIcon) => ({
   component: ButtonIcon,
+  props: args,
+});
+
+export const Loading: Story<ButtonLoading> = (args: ButtonLoading) => ({
+  component: ButtonLoading,
   props: args,
 });

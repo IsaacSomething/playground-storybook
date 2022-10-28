@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @Component({
-  selector: 'storybook-button',
+  selector: 'storybook-slide-toggle',
   template: `
     <mat-slide-toggle
       [color]="color"

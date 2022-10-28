@@ -1,18 +1,26 @@
+@use './utilities' as play;
+
 .mat-slide-toggle {
   &:not(.mat-checked) .mat-slide-toggle-bar {
     background-color: var(--playground-divider);
   }
 
   &.contained {
-    .mat-slide-toggle-thumb {
-      height: 15px;
-      width: 15px;
-      background-color: var(--playground-primary);
-      box-shadow: none;
+    @each $color in play.$colors {
+      &.mat-#{$color} .mat-slide-toggle-thumb {
+        background-color: var(--playground-#{$color});
+      }
     }
+
     .mat-slide-toggle-thumb-container {
       top: 1.5px;
       left: 1.5px;
+      
+      .mat-slide-toggle-thumb {
+        height: 15px;
+        width: 15px;
+        box-shadow: none;
+      }
     }
     .mat-slide-toggle-bar {
       background-color: transparent;
@@ -23,10 +31,16 @@
     }
 
     &.mat-checked {
+      @each $color in play.$colors {
+        &.mat-#{$color} .mat-slide-toggle-bar {
+          border-color: var(--playground-#{$color});
+        }
+      }
+
       .mat-slide-toggle-bar {
-        border-color: var(--playground-primary);
         background-color: transparent;
       }
+
       .mat-slide-toggle-thumb-container {
         left: 3px;
       }

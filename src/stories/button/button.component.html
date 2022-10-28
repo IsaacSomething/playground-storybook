@@ -8,5 +8,5 @@
   [color]="color"
   [disabled]="disabled"
 >
-  {{ label }}
+  <mat-spinner *ngIf="loading"></mat-spinner> {{ label }}
 </button>
