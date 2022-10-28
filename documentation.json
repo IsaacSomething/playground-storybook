@@ -110,7 +110,7 @@
         },
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-7d95c7cff4b8dfa5bfbe2c18bd4752b4103b0f85185db6d8abf41345dec19aa2e1484748fd69f61a10895d5561a57682104a3dc83b2f3637719c1d8bedb810dd",
+            "id": "component-ButtonComponent-222b785a6dea5a7073b3a2951e6aaa193e7da30e0f8ac07c5c1878a025541dcf965f8ec1e56be7e73b10772e242d29248f8edebf9f9b8169a4c3fcc6f6e9234b",
             "file": "src/stories/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -130,7 +130,7 @@
                     "defaultValue": "'primary'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 15,
+                    "line": 21,
                     "type": "\"primary\" | \"accent\" | \"warn\"",
                     "decorators": []
                 },
@@ -139,7 +139,7 @@
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 16,
+                    "line": 22,
                     "type": "boolean",
                     "decorators": []
                 },
@@ -148,7 +148,7 @@
                     "defaultValue": "'Button'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 18,
+                    "line": 24,
                     "type": "string",
                     "decorators": []
                 },
@@ -157,7 +157,7 @@
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 17,
+                    "line": 23,
                     "type": "boolean",
                     "decorators": []
                 },
@@ -166,7 +166,7 @@
                     "defaultValue": "'default'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 13,
+                    "line": 19,
                     "type": "\"small\" | \"default\" | \"large\"",
                     "decorators": []
                 },
@@ -175,7 +175,7 @@
                     "defaultValue": "'flat'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 14,
+                    "line": 20,
                     "type": "\"flat\" | \"stroked\" | \"raised\" | \"default\"",
                     "decorators": []
                 }
@@ -190,7 +190,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input } from '@angular/core';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatIconModule } from '@angular/material/icon';\n\n@Component({\n  selector: 'storybook-button',\n  templateUrl: './button.component.html',\n  imports: [MatButtonModule, MatIconModule, CommonModule],\n  standalone: true,\n})\nexport default class ButtonComponent {\n  @Input() size: 'small' | 'default' | 'large' = 'default';\n  @Input() type: 'flat' | 'stroked' | 'raised' | 'default' = 'flat';\n  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';\n  @Input() disabled: boolean = false;\n  @Input() loading: boolean = false;\n  @Input() label = 'Button';\n}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input } from '@angular/core';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatIconModule } from '@angular/material/icon';\nimport { MatProgressSpinnerModule } from '@angular/material/progress-spinner';\n\n@Component({\n  selector: 'storybook-button',\n  templateUrl: './button.component.html',\n  imports: [\n    MatButtonModule,\n    MatIconModule,\n    CommonModule,\n    MatProgressSpinnerModule,\n  ],\n  standalone: true,\n})\nexport default class ButtonComponent {\n  @Input() size: 'small' | 'default' | 'large' = 'default';\n  @Input() type: 'flat' | 'stroked' | 'raised' | 'default' = 'flat';\n  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';\n  @Input() disabled: boolean = false;\n  @Input() loading: boolean = false;\n  @Input() label = 'Button';\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",

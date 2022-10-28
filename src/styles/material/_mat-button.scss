@@ -1,31 +1,25 @@
 @use './utilities' as play;
 
+@mixin spinnerSize($size) {
+  height: $size !important;
+  width: $size !important;
+}
+
+@mixin buttonSize($height, $font-size) {
+  height: $height;
+  line-height: $height;
+  font-size: $font-size;
+}
+
 .mat-button-base {
-  &.large {
-    height: 50px;
-    line-height: 50px;
-    font-size: 16px;
-  }
-
-  &.small {
-    height: 24px;
-    line-height: 22px;
-    font-size: 12px;
-  }
-
-  @mixin spinnerSize {
-    height: 18px !important;
-    width: 18px !important;
-  }
-
   .mat-progress-spinner {
     display: inline-block;
-    transform: translate(-1px, -2px);
     margin-right: 6px;
-    @include spinnerSize;
+    transform: translate(-1px, -2px);
+    @include spinnerSize(18px);
 
     svg {
-      @include spinnerSize;
+      @include spinnerSize(18px);
     }
   }
 
@@ -38,6 +32,26 @@
     &.mat-#{$color}.mat-flat-button {
       .mat-spinner circle {
         stroke: var(--playground-#{$color}-50);
+      }
+    }
+  }
+
+  &.large {
+    @include buttonSize(50px, 16px);
+    .mat-progress-spinner {
+      @include spinnerSize(22px);
+      svg {
+        @include spinnerSize(22px);
+      }
+    }
+  }
+
+  &.small {
+    @include buttonSize(24px, 12px);
+    .mat-progress-spinner {
+      @include spinnerSize(12px);
+      svg {
+        @include spinnerSize(12px);
       }
     }
   }

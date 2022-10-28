@@ -1,7 +1,6 @@
 import { Story, Meta } from '@storybook/angular';
 import Button from './button.component';
 import ButtonIcon from './button-icon.component';
-import ButtonLoading from './button-loading.component';
 
 export default {
   title: 'Button',
@@ -43,10 +42,5 @@ Stroked.args = {
 
 export const Icon: Story<ButtonIcon> = (args: ButtonIcon) => ({
   component: ButtonIcon,
-  props: args,
-});
-
-export const Loading: Story<ButtonLoading> = (args: ButtonLoading) => ({
-  component: ButtonLoading,
   props: args,
 });
