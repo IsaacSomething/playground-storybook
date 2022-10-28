@@ -11,14 +11,8 @@ export default {
       options: ['primary', 'accent', 'warn'],
       control: { type: 'radio' },
     },
-    disabled: {
-      control: { type: 'boolean' },
-    },
-    type: {
-      table: {
-        disable: true,
-      },
-    },
+    disabled: { control: { type: 'boolean' } },
+    type: { table: { disable: true } },
   },
 } as Meta;
 

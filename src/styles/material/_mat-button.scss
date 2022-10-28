@@ -1,5 +1,3 @@
-@use '@angular/material' as mat;
-
 .mat-button-base {
   &.large {
     height: 50px;
@@ -10,9 +8,5 @@
     height: 24px;
     line-height: 22px;
     font-size: 12px;
-  }
-  & .mat-stroked-button:not(.mat-button-disabled) {
-    &.mat-primary {
-    }
   }
 }
