@@ -1,5 +1,7 @@
 import { addons } from "@storybook/addons";
 
+import theme from "./playground-theme";
+
 addons.setConfig({
   isFullscreen: false,
   showNav: true,
@@ -21,4 +23,5 @@ addons.setConfig({
     copy: { hidden: false },
     fullscreen: { hidden: false },
   },
+  theme: theme,
 });
