@@ -5,6 +5,7 @@ export default {
   title: 'Theme',
   component: Theme,
   parameters: { controls: { sort: 'requiredFirst' } },
+  color: { table: { disable: true } },
 } as Meta;
 
 const Template: Story<Theme> = (args: Theme) => ({

@@ -1,0 +1,35 @@
+.mat-slide-toggle {
+  &:not(.mat-checked) .mat-slide-toggle-bar {
+    background-color: var(--playground-divider);
+  }
+
+  &.contained {
+    .mat-slide-toggle-thumb {
+      height: 15px;
+      width: 15px;
+      background-color: var(--playground-primary);
+      box-shadow: none;
+    }
+    .mat-slide-toggle-thumb-container {
+      top: 1.5px;
+      left: 1.5px;
+    }
+    .mat-slide-toggle-bar {
+      background-color: transparent;
+      border: 1px solid var(--playground-divider);
+      box-shadow: none;
+      height: 18px;
+      border-radius: 14px;
+    }
+
+    &.mat-checked {
+      .mat-slide-toggle-bar {
+        border-color: var(--playground-primary);
+        background-color: transparent;
+      }
+      .mat-slide-toggle-thumb-container {
+        left: 3px;
+      }
+    }
+  }
+}
