@@ -1,0 +1,12 @@
+@use './mat-utilities' as play;
+
+.mat-tooltip {
+  background: var(--playground-accent);
+  border-radius: 3px;
+
+  @each $color in play.$colors {
+    &.#{$color} {
+      background: var(--playground-#{$color});
+    }
+  }
+}

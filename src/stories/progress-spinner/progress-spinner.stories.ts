@@ -21,12 +21,12 @@ const Template: Story<ProgressComponent> = (args: ProgressComponent) => ({
   props: args,
 });
 
-export const Determinate = Template.bind({});
-Determinate.args = {
+export const Bar = Template.bind({});
+Bar.args = {
   mode: 'determinate',
 };
 
-export const Indeterminate = Template.bind({});
-Indeterminate.args = {
+export const Spinner = Template.bind({});
+Spinner.args = {
   mode: 'indeterminate',
 };

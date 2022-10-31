@@ -1,5 +1,4 @@
 @use '@angular/material' as mat;
-
 @import "@angular/material/theming";
 @include mat.core();
 @import "./palette";
@@ -14,13 +13,13 @@ $playground-theme: mat.define-light-theme(
 );
 
 $playground-theme-background: (
-  status-bar: var(--playground-bg),
-  app-bar: #fff,
-  background: var(--playground-bg),
-  hover: rgba(black, 0.04),
-  card: var(--playground-bg),
-  dialog: var(--playground-bg),
-  disabled-button: rgba(black, 0.12),
+  // status-bar: var(--playground-bg),
+  // app-bar: #fff,
+  // background: var(--playground-bg),
+  // hover: rgba(black, 0.04),
+  // card: var(--playground-bg),
+  // dialog: var(--playground-bg),
+  // disabled-button: rgba(black, 0.12),
   // raised-button: white,
   // focused-button: $dark-focused,
   // selected-button: map_get(mat.$grey-palette, 300),
@@ -31,18 +30,18 @@ $playground-theme-background: (
 );
 
 $playground-theme-foreground: (
-  base: var(--playground-bg),
-  divider: var(--playground-divider),
-  dividers: var(--playground-divider),
+  // base: var(--playground-bg),
+  // divider: var(--playground-divider),
+  // dividers: var(--playground-divider),
   // disabled: $dark-disabled-text,
   // disabled-button: rgba(black, 0.26),
   // disabled-text: $dark-disabled-text,
   // elevation: black,
   // hint-text: $dark-disabled-text,
   // secondary-text: var(--playground-app-text-secondary),
-  icon: var(--playground-text),
-  icons: var(--playground-text),
-  text: var(--playground-text),
+  // icon: var(--playground-text),
+  // icons: var(--playground-text),
+  // text: var(--playground-text),
   // slider-min: rgba(black, 0.87),
   // slider-off: rgba(black, 0.26),
   // slider-off-active: rgba(black, 0.38),

@@ -1,4 +1,4 @@
-@use './utilities' as play;
+@use './mat-utilities' as play;
 
 @mixin spinnerSize($size) {
   height: $size !important;
@@ -61,7 +61,7 @@
 
   /* Stroked */
   @each $color in play.$colors {
-    &.mat-#{$color}:not(.mat-button-disabled) {
+    &.mat-stroked-button.mat-#{$color}:not(.mat-button-disabled) {
       box-shadow: none;
       border: 1px solid var(--playground-#{$color});
     }
