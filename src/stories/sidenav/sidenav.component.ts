@@ -6,6 +6,8 @@ import { Observable } from 'rxjs';
 
 @Component({
   selector: 'storybook-sidenav',
+  standalone: true,
+  imports: [MatSidenavModule, BrowserAnimationsModule, MatButtonModule],
   template: `
     <mat-sidenav-container class="example-container">
       <mat-sidenav
@@ -13,10 +15,10 @@ import { Observable } from 'rxjs';
         class="mat-elevation-z8"
         [mode]="mode"
         [position]="position"
-        (closedStart)="closedStart.emit($event)"
-        (openedStart)="openedStart.emit($event)"
+        (closedStart)="closedStart.emit()"
+        (openedStart)="openedStart.emit()"
         (openedChange)="openedChange.emit($event)"
-        (onPositionChanged)="onPositionChanged.emit($event)"
+        (onPositionChanged)="onPositionChanged.emit()"
       >
         <button type="button" mat-button (click)="sidenav.close()">
           Close sidenav
@@ -29,8 +31,6 @@ import { Observable } from 'rxjs';
       </mat-sidenav-content>
     </mat-sidenav-container>
   `,
-  imports: [MatSidenavModule, BrowserAnimationsModule, MatButtonModule],
-  standalone: true,
 })
 export default class Sidenav {
   @Input() mode: 'over' | 'push' | 'side' = 'side';

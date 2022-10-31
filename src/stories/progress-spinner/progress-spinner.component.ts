@@ -1,16 +1,10 @@
 import { Component, Input } from '@angular/core';
-import { SBProgressComponent } from '@sb/components/progress';
 
 @Component({
   selector: 'storybook-button',
-  template: `<sb-progress
-    [color]="color"
-    [value]="value"
-    [mode]="mode"
-    [disabled]="disabled"
-  ></sb-progress>`,
-  imports: [SBProgressComponent],
   standalone: true,
+  imports: [],
+  template: ``,
 })
 export default class ProgressComponent {
   @Input() value = 20;

@@ -6,14 +6,14 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @Component({
   selector: 'storybook-button',
-  templateUrl: './button.component.html',
+  standalone: true,
   imports: [
     MatButtonModule,
     MatIconModule,
     CommonModule,
     MatProgressSpinnerModule,
   ],
-  standalone: true,
+  templateUrl: './button.component.html',
 })
 export default class ButtonComponent {
   @Input() size: 'small' | 'default' | 'large' = 'default';

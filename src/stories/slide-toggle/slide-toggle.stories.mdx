@@ -4,13 +4,16 @@ import { Meta } from "@storybook/addon-docs";
 
 # Material Slide Toggle
 
-[Angular Material buttons](https://material.angular.io/components/button/api) are native `<button>` or `<a>` elements enhanced with Material Design styling and ink ripples. <br />
-
-`import { MatButtonModule } from '@angular/material/button';`
+[mat-slide-toggle](https://material.angular.io/components/slide-toggle/overview) is an on/off control that can be toggled via clicking.
 
 ```
-<button mat-button> </button>
-<button mat-flat-button> </button>
-<button mat-raised-button> </button>
-<button mat-stroked-button> </button>
+ <mat-slide-toggle> Slide </mat-slide-toggle>
+```
+
+### Helper classes
+
+`.contained` changes the style and sets the toggle thumb inside the slide bar
+
+```
+ <mat-slide-toggle class="contained"> Slide </mat-slide-toggle>
 ```

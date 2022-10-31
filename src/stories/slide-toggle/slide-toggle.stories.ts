@@ -19,3 +19,11 @@ const Template: Story<SlideToggle> = (args: SlideToggle) => ({
 });
 
 export const Default = Template.bind({});
+Default.args = {
+  isContained: false,
+};
+
+export const Contained = Template.bind({});
+Contained.args = {
+  isContained: true,
+};

@@ -1,5 +1,64 @@
+@use './utilities' as play;
+
 .mat-card {
-  &[color="primary"] {
-    background-color: var(--playground-primary);
+  /* Title with no margin */
+  .mat-card-header.no-margin .mat-card-header-text {
+    margin: 0;
+  }
+
+  /* Colors */
+  @each $color in play.$colors {
+    &[color="#{$color}"] {
+      background-color: var(--playground-#{$color});
+      color: var(--playground-#{$color}-contrast-500);
+    }
+  }
+
+  /* Card with expansion */
+  &.expansion {
+    .mat-card-header.expansion {
+      margin: 0 -16px;
+
+      .mat-card-header-text {
+        display: none;
+      }
+
+      .mat-expansion-panel {
+        width: 100%;
+        border-radius: 0;
+        background: transparent;
+        margin-top: -16px;
+
+        &:not([class*="mat-elevation-z"]) {
+          box-shadow: none;
+        }
+
+        .mat-expansion-panel-header {
+          padding-top: 8px;
+
+          &.cdk-keyboard-focused:not([aria-disabled="true"]),
+          &.cdk-program-focused:not([aria-disabled="true"]),
+          &:hover:not([aria-disabled="true"]) {
+            background-color: transparent;
+          }
+
+          .mat-card-title,
+          .mat-card-subtitle {
+            margin: 0;
+          }
+
+          .mat-content {
+            flex-direction: column;
+          }
+        }
+      }
+    }
+
+    .mat-card-content.expansion {
+      margin: 0 -16px -16px;
+      .mat-expansion-panel {
+        border-bottom: 1px solid var(--playground-divider);
+      }
+    }
   }
 }
