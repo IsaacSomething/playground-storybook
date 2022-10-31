@@ -298,7 +298,7 @@
         },
         {
             "name": "CardExpansion",
-            "id": "component-CardExpansion-14bdce99ae473290b9a7607ec10465901ab52397db2a7d3c3c7537221c52b7bb9295a227ae1fae12f75e2a365db641a046b71a0eaf70a37a7cad53616201d4e5",
+            "id": "component-CardExpansion-184520a9ecc97a22375771669d6c62b087710ef131520b46a62126cbc0dc3121156a0f6420cc5619a0ba7afa40672af37c66ca8f142e420f0186e3b3b0511a84",
             "file": "src/stories/card/card-expansion.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -308,7 +308,7 @@
             "selector": "storybook-card",
             "styleUrls": [],
             "styles": [],
-            "template": "<mat-card [attr.color]=\"color\" class=\"expansion\">\n  <mat-card-header class=\"no-margin\" class=\"expansion\">\n    <mat-expansion-panel class=\"mat-elevation-z0\">\n      <mat-expansion-panel-header>\n        <mat-card-title>title</mat-card-title>\n        <mat-card-subtitle>subtitle</mat-card-subtitle>\n      </mat-expansion-panel-header>\n      <p>I'm visible because I am open</p>\n    </mat-expansion-panel>\n  </mat-card-header>\n\n  <mat-card-content class=\"expansion\">\n    <mat-accordion>\n      <mat-expansion-panel class=\"mat-elevation-z0\">\n        <mat-expansion-panel-header>\n          <mat-panel-title> This is the expansion title </mat-panel-title>\n          <mat-panel-description>\n            This is a summary of the content\n          </mat-panel-description>\n        </mat-expansion-panel-header>\n        <p>This is the primary content of the panel.</p>\n      </mat-expansion-panel>\n\n      <mat-expansion-panel class=\"mat-elevation-z0\">\n        <mat-expansion-panel-header>\n          <mat-panel-title> Self aware panel </mat-panel-title>\n          <mat-panel-description> Currently I am </mat-panel-description>\n        </mat-expansion-panel-header>\n        <p>I'm visible because I am open</p>\n      </mat-expansion-panel>\n    </mat-accordion>\n  </mat-card-content>\n</mat-card>\n<br />\n<p>Expansion card not working with change in color yet</p>\n",
+            "template": "<mat-card [attr.color]=\"color\" class=\"expansion\">\n  <mat-card-header class=\"no-margin\" class=\"expansion\">\n    <mat-expansion-panel matRipple matRippleColor=\"black\">\n      <mat-expansion-panel-header>\n        <mat-card-title>title</mat-card-title>\n        <mat-card-subtitle>subtitle</mat-card-subtitle>\n      </mat-expansion-panel-header>\n      <p>matRipple was added</p>\n    </mat-expansion-panel>\n  </mat-card-header>\n\n  <mat-card-content class=\"expansion\">\n    <mat-accordion>\n      <mat-expansion-panel class=\"mat-elevation-z0\">\n        <mat-expansion-panel-header>\n          <mat-panel-title> This is the expansion title </mat-panel-title>\n          <mat-panel-description>\n            This is a summary of the content\n          </mat-panel-description>\n        </mat-expansion-panel-header>\n        <p>This is the primary content of the panel.</p>\n      </mat-expansion-panel>\n\n      <mat-expansion-panel class=\"mat-elevation-z0\">\n        <mat-expansion-panel-header>\n          <mat-panel-title> Self aware panel </mat-panel-title>\n          <mat-panel-description> Currently I am </mat-panel-description>\n        </mat-expansion-panel-header>\n        <p>therefore i think ... i think</p>\n      </mat-expansion-panel>\n    </mat-accordion>\n  </mat-card-content>\n</mat-card>\n<br />\n<p>Expansion card not working with change in color yet</p>\n",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
@@ -317,7 +317,7 @@
                     "defaultValue": "'default'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 49,
+                    "line": 55,
                     "type": "\"primary\" | \"accent\" | \"warn\" | \"default\"",
                     "decorators": []
                 }
@@ -332,14 +332,14 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { MatCardModule } from '@angular/material/card';\nimport { MatExpansionModule } from '@angular/material/expansion';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\n\n@Component({\n  selector: 'storybook-card',\n  standalone: true,\n  imports: [MatCardModule, MatExpansionModule, BrowserAnimationsModule],\n  template: `\n    <mat-card [attr.color]=\"color\" class=\"expansion\">\n      <mat-card-header class=\"no-margin\" class=\"expansion\">\n        <mat-expansion-panel class=\"mat-elevation-z0\">\n          <mat-expansion-panel-header>\n            <mat-card-title>title</mat-card-title>\n            <mat-card-subtitle>subtitle</mat-card-subtitle>\n          </mat-expansion-panel-header>\n          <p>I'm visible because I am open</p>\n        </mat-expansion-panel>\n      </mat-card-header>\n\n      <mat-card-content class=\"expansion\">\n        <mat-accordion>\n          <mat-expansion-panel class=\"mat-elevation-z0\">\n            <mat-expansion-panel-header>\n              <mat-panel-title> This is the expansion title </mat-panel-title>\n              <mat-panel-description>\n                This is a summary of the content\n              </mat-panel-description>\n            </mat-expansion-panel-header>\n            <p>This is the primary content of the panel.</p>\n          </mat-expansion-panel>\n\n          <mat-expansion-panel class=\"mat-elevation-z0\">\n            <mat-expansion-panel-header>\n              <mat-panel-title> Self aware panel </mat-panel-title>\n              <mat-panel-description> Currently I am </mat-panel-description>\n            </mat-expansion-panel-header>\n            <p>I'm visible because I am open</p>\n          </mat-expansion-panel>\n        </mat-accordion>\n      </mat-card-content>\n    </mat-card>\n    <br />\n    <p>Expansion card not working with change in color yet</p>\n  `,\n})\nexport default class CardExpansion {\n  @Input() color: 'primary' | 'accent' | 'warn' | 'default' = 'default';\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { MatCardModule } from '@angular/material/card';\nimport { MatRippleModule } from '@angular/material/core';\nimport { MatExpansionModule } from '@angular/material/expansion';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\n\n@Component({\n  selector: 'storybook-card',\n  standalone: true,\n  imports: [\n    MatCardModule,\n    MatExpansionModule,\n    BrowserAnimationsModule,\n    MatRippleModule,\n  ],\n  template: `\n    <mat-card [attr.color]=\"color\" class=\"expansion\">\n      <mat-card-header class=\"no-margin\" class=\"expansion\">\n        <mat-expansion-panel matRipple matRippleColor=\"black\">\n          <mat-expansion-panel-header>\n            <mat-card-title>title</mat-card-title>\n            <mat-card-subtitle>subtitle</mat-card-subtitle>\n          </mat-expansion-panel-header>\n          <p>matRipple was added</p>\n        </mat-expansion-panel>\n      </mat-card-header>\n\n      <mat-card-content class=\"expansion\">\n        <mat-accordion>\n          <mat-expansion-panel class=\"mat-elevation-z0\">\n            <mat-expansion-panel-header>\n              <mat-panel-title> This is the expansion title </mat-panel-title>\n              <mat-panel-description>\n                This is a summary of the content\n              </mat-panel-description>\n            </mat-expansion-panel-header>\n            <p>This is the primary content of the panel.</p>\n          </mat-expansion-panel>\n\n          <mat-expansion-panel class=\"mat-elevation-z0\">\n            <mat-expansion-panel-header>\n              <mat-panel-title> Self aware panel </mat-panel-title>\n              <mat-panel-description> Currently I am </mat-panel-description>\n            </mat-expansion-panel-header>\n            <p>therefore i think ... i think</p>\n          </mat-expansion-panel>\n        </mat-accordion>\n      </mat-card-content>\n    </mat-card>\n    <br />\n    <p>Expansion card not working with change in color yet</p>\n  `,\n})\nexport default class CardExpansion {\n  @Input() color: 'primary' | 'accent' | 'warn' | 'default' = 'default';\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": ""
         },
         {
             "name": "Elevation",
-            "id": "component-Elevation-994fc669ae6286e9869fbbbf697af6381d88463fce2dcc446ecb61e0896005d226eaf09afaf1f4ea5375c6ffcd5fad30440e52ca22527d77dcd2a81460b36fa8",
+            "id": "component-Elevation-6cd248fda2a65ebb4af6cd1a106a520c1f955dcc94548c1a03fea2ff678efd39478c5be45f17f803fc31af51b24f4d501525aa823e39e74434890f384f62fbff",
             "file": "src/stories/elevation/elevation.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -347,7 +347,7 @@
             "outputs": [],
             "providers": [
                 {
-                    "name": "{\n    provide: HIGHLIGHT_OPTIONS, useValue: {\n        coreLibraryLoader: () => import(), languages: {\n            typescript: () => import(), css: () => import(), xml: () => import(),\n        },\n    },\n}"
+                    "name": "{\n    provide: HIGHLIGHT_OPTIONS, useValue: {\n        coreLibraryLoader: () => import(),\n    },\n}"
                 }
             ],
             "selector": "storybook-elevation",
@@ -355,7 +355,7 @@
             "styles": [
                 "\n      mat-card {\n        height: 300px;\n        width: 300px;\n      }\n    "
             ],
-            "template": "<mat-card [class]=\"'mat-elevation-z' + elevation\">\n  <p>Elevation</p>\n  <code>.mat-elevation-z{{ elevation }}</code>\n</mat-card>\n<br />\n<code [highlight]=\"code\"> </code>\n",
+            "template": "<mat-card [class]=\"'mat-elevation-z' + elevation\">\n  <code [highlight]=\"code\"> </code>\n</mat-card>\n",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
@@ -364,7 +364,7 @@
                     "defaultValue": "0",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 41,
+                    "line": 32,
                     "type": "number",
                     "decorators": []
                 }
@@ -378,7 +378,7 @@
                     "type": "any",
                     "optional": false,
                     "description": "",
-                    "line": 42
+                    "line": 33
                 }
             ],
             "methodsClass": [
@@ -388,7 +388,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 44,
+                    "line": 35,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -400,10 +400,67 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { MatCardModule } from '@angular/material/card';\nimport { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';\n\n@Component({\n  selector: 'storybook-elevation',\n  standalone: true,\n  imports: [MatCardModule, HighlightModule],\n  providers: [\n    {\n      provide: HIGHLIGHT_OPTIONS,\n      useValue: {\n        coreLibraryLoader: () => import('highlight.js/lib/core'),\n        languages: {\n          typescript: () => import('highlight.js/lib/languages/typescript'),\n          css: () => import('highlight.js/lib/languages/css'),\n          xml: () => import('highlight.js/lib/languages/xml'),\n        },\n        // themePath: 'path-to-theme.css', // Optional, and useful if you want to change the theme dynamically\n      },\n    },\n  ],\n  styles: [\n    `\n      mat-card {\n        height: 300px;\n        width: 300px;\n      }\n    `,\n  ],\n  template: `\n    <mat-card [class]=\"'mat-elevation-z' + elevation\">\n      <p>Elevation</p>\n      <code>.mat-elevation-z{{ elevation }}</code>\n    </mat-card>\n    <br />\n    <code [highlight]=\"code\"> </code>\n  `,\n})\nexport default class Elevation {\n  @Input() elevation = 0;\n  code: any;\n\n  ngOnChanges() {\n    this.code = `<mat-card class=\"mat-elevation-z${this.elevation}\"> `;\n  }\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { MatCardModule } from '@angular/material/card';\nimport { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';\n\n@Component({\n  selector: 'storybook-elevation',\n  standalone: true,\n  imports: [MatCardModule, HighlightModule],\n  providers: [\n    {\n      provide: HIGHLIGHT_OPTIONS,\n      useValue: {\n        coreLibraryLoader: () => import('highlight.js/lib/core'),\n      },\n    },\n  ],\n  styles: [\n    `\n      mat-card {\n        height: 300px;\n        width: 300px;\n      }\n    `,\n  ],\n  template: `\n    <mat-card [class]=\"'mat-elevation-z' + elevation\">\n      <code [highlight]=\"code\"> </code>\n    </mat-card>\n  `,\n})\nexport default class Elevation {\n  @Input() elevation = 0;\n  code: any;\n\n  ngOnChanges() {\n    this.code = `<mat-card class=\"mat-elevation-z${this.elevation}\"> `;\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "\n      mat-card {\n        height: 300px;\n        width: 300px;\n      }\n    \n"
+        },
+        {
+            "name": "Helpers",
+            "id": "component-Helpers-cfcf04b23bdd4d4797f1f4aa498973bcb5666e1ee42a39af8c0abc4f5e36ea6d9de9e2e0ba97dde3a23799f8afbe1c914b231985b43db294fae6b6305211a60e",
+            "file": "src/stories/helpers/helpers.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-helpers",
+            "styleUrls": [
+                "./helpers.scss"
+            ],
+            "styles": [],
+            "template": "<div class=\"box-outer\">\n  <div [class]=\"'padding-10'\"></div>\n</div>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "margin",
+                    "defaultValue": "0",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "number",
+                    "decorators": []
+                },
+                {
+                    "name": "padding",
+                    "defaultValue": "0",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15,
+                    "type": "number",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'storybook-helpers',\n  standalone: true,\n  imports: [],\n  styleUrls: ['./helpers.scss'],\n  template: `\n    <div class=\"box-outer\">\n      <div [class]=\"'padding-10'\"></div>\n    </div>\n  `,\n})\nexport default class Helpers {\n  @Input() padding: number = 0;\n  @Input() margin: number = 0;\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".box-outer {\n  border: 2px dashed #f3f3f3;\n  height: 230px;\n  width: 230px;\n  display: block;\n  > div {\n    background: #f3f3f3;\n    height: 50px;\n    width: 50px;\n    display: block;\n  }\n}\n",
+                    "styleUrl": "./helpers.scss"
+                }
+            ],
+            "stylesData": ""
         },
         {
             "name": "ProgressComponent",
@@ -817,16 +874,6 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/card/card.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({\n  color: 'default',\n})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/button/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -837,11 +884,31 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/card/card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({\n  color: 'default',\n})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/elevation/elevation.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "Template.bind({\n  elevation: 1,\n})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/helpers/helpers.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({\n  padding: 0,\n  margin: 0,\n})"
             },
             {
                 "name": "Default",
@@ -877,21 +944,21 @@
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/environments/environment.prod.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "object",
-                "defaultValue": "{\n  production: true\n}"
-            },
-            {
-                "name": "environment",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/environments/environment.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
                 "defaultValue": "{\n  production: false\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.prod.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  production: true\n}"
             },
             {
                 "name": "Expansion",
@@ -1006,21 +1073,21 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/card/card.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<Card>",
-                "defaultValue": "(args: Card) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/button/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<Button>",
                 "defaultValue": "(args: Button) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n    loading: { control: { type: 'boolean' } },\n    type: { table: { disable: true } },\n  },\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/card/card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Card>",
+                "defaultValue": "(args: Card) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -1036,6 +1103,16 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/helpers/helpers.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Helpers>",
+                "defaultValue": "(args: Helpers) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/progress-spinner/progress-spinner.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1046,21 +1123,21 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/slide-toggle/slide-toggle.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<SlideToggle>",
-                "defaultValue": "(args: SlideToggle) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/theme/theme.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<Theme>",
                 "defaultValue": "(args: Theme) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/slide-toggle/slide-toggle.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<SlideToggle>",
+                "defaultValue": "(args: SlideToggle) => ({\n  props: args,\n})"
             },
             {
                 "name": "Warn",
@@ -1226,68 +1303,6 @@
                     "defaultValue": "(args: Blank) => ({\n  props: args,\n})"
                 }
             ],
-            "src/stories/card/card.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/card/card.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({\n  color: 'default',\n})"
-                },
-                {
-                    "name": "Drawer",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/card/card.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({\n  color: 'default',\n})"
-                },
-                {
-                    "name": "Expansion",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/card/card.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<CardExpansion>",
-                    "defaultValue": "(args: CardExpansion) => ({\n  component: CardExpansion,\n  props: args,\n  color: 'default',\n})"
-                },
-                {
-                    "name": "Horizontal",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/card/card.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({\n  color: 'default',\n})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/card/card.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<Card>",
-                    "defaultValue": "(args: Card) => ({\n  props: args,\n})"
-                },
-                {
-                    "name": "WithImage",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/card/card.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({\n  color: 'default',\n})"
-                }
-            ],
             "src/stories/button/button.stories.ts": [
                 {
                     "name": "Default",
@@ -1350,6 +1365,68 @@
                     "defaultValue": "(args: Button) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n    loading: { control: { type: 'boolean' } },\n    type: { table: { disable: true } },\n  },\n})"
                 }
             ],
+            "src/stories/card/card.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/card/card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({\n  color: 'default',\n})"
+                },
+                {
+                    "name": "Drawer",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/card/card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({\n  color: 'default',\n})"
+                },
+                {
+                    "name": "Expansion",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/card/card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<CardExpansion>",
+                    "defaultValue": "(args: CardExpansion) => ({\n  component: CardExpansion,\n  props: args,\n  color: 'default',\n})"
+                },
+                {
+                    "name": "Horizontal",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/card/card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({\n  color: 'default',\n})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/card/card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Card>",
+                    "defaultValue": "(args: Card) => ({\n  props: args,\n})"
+                },
+                {
+                    "name": "WithImage",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/card/card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({\n  color: 'default',\n})"
+                }
+            ],
             "src/stories/elevation/elevation.stories.ts": [
                 {
                     "name": "Default",
@@ -1370,6 +1447,28 @@
                     "deprecationMessage": "",
                     "type": "Story<Elevation>",
                     "defaultValue": "(args: Elevation) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/stories/helpers/helpers.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/helpers/helpers.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({\n  padding: 0,\n  margin: 0,\n})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/helpers/helpers.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Helpers>",
+                    "defaultValue": "(args: Helpers) => ({\n  props: args,\n})"
                 }
             ],
             "src/stories/progress-spinner/progress-spinner.stories.ts": [
@@ -1404,18 +1503,6 @@
                     "defaultValue": "(args: ProgressComponent) => ({\n  props: args,\n})"
                 }
             ],
-            "src/environments/environment.prod.ts": [
-                {
-                    "name": "environment",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/environments/environment.prod.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\n  production: true\n}"
-                }
-            ],
             "src/environments/environment.ts": [
                 {
                     "name": "environment",
@@ -1426,6 +1513,18 @@
                     "deprecationMessage": "",
                     "type": "object",
                     "defaultValue": "{\n  production: false\n}"
+                }
+            ],
+            "src/environments/environment.prod.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.prod.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  production: true\n}"
                 }
             ]
         },
@@ -1686,6 +1785,35 @@
             },
             {
                 "filePath": "src/stories/elevation/elevation.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/helpers/helpers.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "Helpers",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/helpers/helpers.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/helpers/helpers.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",

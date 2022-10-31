@@ -11,13 +11,6 @@ import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
       provide: HIGHLIGHT_OPTIONS,
       useValue: {
         coreLibraryLoader: () => import('highlight.js/lib/core'),
-        languages: {
-          typescript: () => import('highlight.js/lib/languages/typescript'),
-          css: () => import('highlight.js/lib/languages/css'),
-          scss: () => import('highlight.js/lib/languages/scss'),
-          html: () => import('highlight.js/lib/languages/html'),
-        },
-        // themePath: 'path-to-theme.css', // Optional, and useful if you want to change the theme dynamically
       },
     },
   ],

@@ -42,7 +42,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
               <mat-panel-title> Self aware panel </mat-panel-title>
               <mat-panel-description> Currently I am </mat-panel-description>
             </mat-expansion-panel-header>
-            <p>I'm visible because I am open</p>
+            <p>therefore i think ... i think</p>
           </mat-expansion-panel>
         </mat-accordion>
       </mat-card-content>
