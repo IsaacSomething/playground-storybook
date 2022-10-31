@@ -1,8 +1,10 @@
+$props: "padding", "padding-left", "padding-right", "margin", "margin-left",
+  "margin-right";
+
 @for $i from 1 through 60 {
-  .padding-#{$i} {
-    padding: #{$i}px;
-  }
-  .margin-#{$i} {
-    margin: #{$i}px;
+  @each $prop in $props {
+    .#{$prop}-#{$i} {
+      #{$prop}: #{$i}px;
+    }
   }
 }

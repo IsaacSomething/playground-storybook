@@ -10,7 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
   styles: [
     `
       div {
-        padding: 50px;
+        padding: 50px 100px;
       }
     `,
   ],
@@ -18,7 +18,7 @@ import { MatIconModule } from '@angular/material/icon';
     <div>
       <button
         mat-stroked-button
-        matTooltip="Lorem Ipsum"
+        [matTooltip]="tooltipLabel"
         [matTooltipPosition]="position"
         [matTooltipClass]="color"
         [matTooltipDisabled]="disabled"
@@ -33,4 +33,5 @@ export default class Tooltip {
   @Input() position: 'after' | 'before' | 'above' | 'below' | 'left' | 'right' =
     'below';
   @Input() disabled: boolean = false;
+  @Input() tooltipLabel = 'Lorem Ipsum';
 }

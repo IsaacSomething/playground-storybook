@@ -8,7 +8,19 @@ export default {
     padding: {
       control: { type: 'range', min: 0, max: 60, step: 1 },
     },
+    paddingLeft: {
+      control: { type: 'range', min: 0, max: 60, step: 1 },
+    },
+    paddingRight: {
+      control: { type: 'range', min: 0, max: 60, step: 1 },
+    },
     margin: {
+      control: { type: 'range', min: 0, max: 60, step: 1 },
+    },
+    marginLeft: {
+      control: { type: 'range', min: 0, max: 60, step: 1 },
+    },
+    marginRight: {
       control: { type: 'range', min: 0, max: 60, step: 1 },
     },
   },

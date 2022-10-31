@@ -1,20 +1,26 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { ClipboardModule } from '@angular/cdk/clipboard';
+import { MatRippleModule } from '@angular/material/core';
+import SBHeader from '../sb-header/sb-header.component';
 
 @Component({
   selector: 'storybook-button',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ClipboardModule, MatRippleModule, SBHeader],
   styleUrls: ['./theme.component.scss'],
   template: `
-    <h2>{{ color }}</h2>
-    <h4 *ngIf="color === 'primary'">HEX: #3F51B5</h4>
-    <h4 *ngIf="color === 'accent'">HEX: #D72828</h4>
-    <h4 *ngIf="color === 'warn'">HEX: #5C5C5C</h4>
-    <hr />
-    <br />
+    <sb-header [title]="color" hasCopy>
+      <h4 *ngIf="color === 'primary'">HEX: #3F51B5</h4>
+      <h4 *ngIf="color === 'accent'">HEX: #D72828</h4>
+      <h4 *ngIf="color === 'warn'">HEX: #5C5C5C</h4>
+    </sb-header>
+
     <div
       class="block"
+      matRipple
+      matRippleColor="var(--playground-{{ color }}-contrast-{{ hue }})"
+      cdkCopyToClipboard="var(--playground-{{ color }}-{{ hue }})"
       *ngFor="
         let hue of [
           '50',
@@ -38,9 +44,9 @@ import { Component, Input } from '@angular/core';
       <h1 style="color:var(--playground-{{ color }}-contrast-{{ hue }})">
         {{ hue }}
       </h1>
-      <span style="color:var(--playground-{{ color }}-contrast-{{ hue }})"
-        >var(--playground-{{ color }})</span
-      >
+      <span style="color:var(--playground-{{ color }}-contrast-{{ hue }})">
+        var(--playground-{{ color }}-{{ hue }})
+      </span>
     </div>
   `,
 })

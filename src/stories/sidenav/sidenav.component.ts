@@ -8,8 +8,24 @@ import { Observable } from 'rxjs';
   selector: 'storybook-sidenav',
   standalone: true,
   imports: [MatSidenavModule, BrowserAnimationsModule, MatButtonModule],
+  styles: [
+    `
+      mat-sidenav-container {
+        height: 500px;
+        border: 1px solid var(--playground-divider);
+        border-radius: var(--playground-radius);
+      }
+      mat-sidenav-content,
+      mat-sidenav {
+        padding: 16px;
+      }
+      mat-sidenav {
+        background-color: var(--playground-divider);
+      }
+    `,
+  ],
   template: `
-    <mat-sidenav-container class="example-container">
+    <mat-sidenav-container autosize>
       <mat-sidenav
         #sidenav
         class="mat-elevation-z8"
@@ -21,12 +37,12 @@ import { Observable } from 'rxjs';
         (onPositionChanged)="onPositionChanged.emit()"
       >
         <button type="button" mat-button (click)="sidenav.close()">
-          Close sidenav
+          [Close sidenav]
         </button>
       </mat-sidenav>
       <mat-sidenav-content>
         <button type="button" mat-button (click)="sidenav.toggle()">
-          Toggle sidenav
+          [Toggle sidenav]
         </button>
       </mat-sidenav-content>
     </mat-sidenav-container>

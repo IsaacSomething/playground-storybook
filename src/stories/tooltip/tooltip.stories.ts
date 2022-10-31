@@ -14,6 +14,9 @@ export default {
       control: { type: 'radio' },
     },
     disabled: { control: { type: 'boolean' } },
+    tooltipLabel: {
+      control: { type: 'text', label: 'Label' },
+    },
   },
 } as Meta;
 
