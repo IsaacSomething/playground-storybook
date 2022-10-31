@@ -256,18 +256,18 @@
             "stylesData": ""
         },
         {
-            "name": "ButtonLoading",
-            "id": "component-ButtonLoading-1687bc125bf601f374abe8912055865f991fe7b181de5019ab43f6516689f7c65573631fbe150fad9fdf1e7db39a4b0b907c71bd67682b809c1aa94975c4fb02",
-            "file": "src/stories/button/button-loading.component.ts",
+            "name": "Card",
+            "id": "component-Card-31771fd8f94f26bcf48d4844e52250f533e0a7e024f8718654dccf6b99d6bafc04095e3615ceb34b9740f6ef12e999e51b845475c7bb3d562472f1f5ce6147f7",
+            "file": "src/stories/card/card.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "storybook-button-loading",
+            "selector": "storybook-card",
             "styleUrls": [],
             "styles": [],
-            "template": "<button mat-flat-button [color]=\"color\" [disabled]=\"disabled\">\n  <mat-spinner></mat-spinner> {{ label }}\n</button>\n",
+            "template": "<mat-card>\n  <mat-card-header>\n    <mat-card-title>title</mat-card-title>\n    <mat-card-subtitle>subtitle</mat-card-subtitle>\n  </mat-card-header>\n  <mat-card-content> </mat-card-content>\n  <mat-card-actions>\n    <button mat-button>Ok</button>\n  </mat-card-actions>\n</mat-card>\n",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
@@ -276,7 +276,7 @@
                     "defaultValue": "'primary'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 17,
+                    "line": 22,
                     "type": "\"primary\" | \"accent\" | \"warn\"",
                     "decorators": []
                 },
@@ -285,17 +285,8 @@
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 18,
+                    "line": 23,
                     "type": "boolean",
-                    "decorators": []
-                },
-                {
-                    "name": "label",
-                    "defaultValue": "'loading'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 19,
-                    "type": "string",
                     "decorators": []
                 }
             ],
@@ -309,7 +300,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatIconModule } from '@angular/material/icon';\nimport { MatProgressSpinnerModule } from '@angular/material/progress-spinner';\n\n@Component({\n  selector: 'storybook-button-loading',\n  template: `\n    <button mat-flat-button [color]=\"color\" [disabled]=\"disabled\">\n      <mat-spinner></mat-spinner> {{ label }}\n    </button>\n  `,\n  imports: [MatButtonModule, MatIconModule, MatProgressSpinnerModule],\n  standalone: true,\n})\nexport default class ButtonLoading {\n  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';\n  @Input() disabled: boolean = false;\n  @Input() label = 'loading';\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { MatCardModule } from '@angular/material/card';\n\n@Component({\n  selector: 'storybook-card',\n  template: `\n    <mat-card>\n      <mat-card-header>\n        <mat-card-title>title</mat-card-title>\n        <mat-card-subtitle>subtitle</mat-card-subtitle>\n      </mat-card-header>\n      <mat-card-content> </mat-card-content>\n      <mat-card-actions>\n        <button mat-button>Ok</button>\n      </mat-card-actions>\n    </mat-card>\n  `,\n  imports: [MatCardModule],\n  standalone: true,\n})\nexport default class Card {\n  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';\n  @Input() disabled: boolean = false;\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": ""
@@ -905,6 +896,16 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/card/card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/slide-toggle/slide-toggle.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -970,16 +971,6 @@
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Loading",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/button/button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<ButtonLoading>",
-                "defaultValue": "(args: ButtonLoading) => ({\n  component: ButtonLoading,\n  props: args,\n})"
             },
             {
                 "name": "Primary",
@@ -1049,6 +1040,16 @@
                 "deprecationMessage": "",
                 "type": "Story<Button>",
                 "defaultValue": "(args: Button) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n    loading: { control: { type: 'boolean' } },\n    type: { table: { disable: true } },\n  },\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/card/card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Card>",
+                "defaultValue": "(args: Card) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -1234,16 +1235,6 @@
                     "defaultValue": "(args: ButtonIcon) => ({\n  component: ButtonIcon,\n  props: args,\n})"
                 },
                 {
-                    "name": "Loading",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/button/button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<ButtonLoading>",
-                    "defaultValue": "(args: ButtonLoading) => ({\n  component: ButtonLoading,\n  props: args,\n})"
-                },
-                {
                     "name": "Raised",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
@@ -1272,6 +1263,28 @@
                     "deprecationMessage": "",
                     "type": "Story<Button>",
                     "defaultValue": "(args: Button) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n    loading: { control: { type: 'boolean' } },\n    type: { table: { disable: true } },\n  },\n})"
+                }
+            ],
+            "src/stories/card/card.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/card/card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/card/card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Card>",
+                    "defaultValue": "(args: Card) => ({\n  props: args,\n})"
                 }
             ],
             "src/stories/slide-toggle/slide-toggle.stories.ts": [
@@ -1461,15 +1474,6 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/button/button-loading.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "ButtonLoading",
-                "coveragePercent": 0,
-                "coverageCount": "0/4",
-                "status": "low"
-            },
-            {
                 "filePath": "src/stories/button/button.component.ts",
                 "type": "component",
                 "linktype": "component",
@@ -1513,16 +1517,6 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "Loading",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/button/button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
                 "name": "Raised",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
@@ -1540,6 +1534,35 @@
             },
             {
                 "filePath": "src/stories/button/button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/card/card.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "Card",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/card/card.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/card/card.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",

@@ -1,0 +1,5 @@
+.mat-card {
+  &[color="primary"] {
+    background-color: var(--playground-primary);
+  }
+}
