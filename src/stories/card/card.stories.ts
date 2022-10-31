@@ -10,6 +10,7 @@ export default {
       options: ['default', 'primary', 'accent', 'warn'],
       control: { type: 'radio' },
     },
+    image: { control: { type: 'boolean' } },
   },
 } as Meta;
 
@@ -20,9 +21,11 @@ const Template: Story<Card> = (args: Card) => ({
 export const Default = Template.bind({
   color: 'default',
 });
-export const WithImage = Template.bind({
-  color: 'default',
+
+export const Image = Template.bind({
+  image: true,
 });
+
 export const Horizontal = Template.bind({
   color: 'default',
 });

@@ -5,12 +5,13 @@
   width: $size !important;
 }
 
-@mixin buttonSize($height, $font-size) {
+@mixin buttonSize($height, $lineHeight, $font-size) {
   height: $height;
-  line-height: $height;
+  line-height: $lineHeight;
   font-size: $font-size;
 }
 
+/* Loading */
 .mat-button-base {
   .mat-progress-spinner {
     display: inline-block;
@@ -23,6 +24,7 @@
     }
   }
 
+  /* Colors */
   @each $color in play.$colors {
     &.mat-#{$color} .mat-spinner circle {
       stroke: var(--playground-#{$color});
@@ -36,8 +38,9 @@
     }
   }
 
+  /* Sizes */
   &.large {
-    @include buttonSize(50px, 16px);
+    @include buttonSize(50px, 50px, 16px);
     .mat-progress-spinner {
       @include spinnerSize(22px);
       svg {
@@ -47,12 +50,20 @@
   }
 
   &.small {
-    @include buttonSize(24px, 12px);
+    @include buttonSize(24px, 21px, 12px);
     .mat-progress-spinner {
       @include spinnerSize(12px);
       svg {
         @include spinnerSize(12px);
       }
+    }
+  }
+
+  /* Stroked */
+  @each $color in play.$colors {
+    &.mat-#{$color}:not(.mat-button-disabled) {
+      box-shadow: none;
+      border: 1px solid var(--playground-#{$color});
     }
   }
 }

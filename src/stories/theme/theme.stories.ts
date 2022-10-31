@@ -4,8 +4,9 @@ import Theme from './theme.component';
 export default {
   title: 'Theme',
   component: Theme,
-  parameters: { controls: { sort: 'requiredFirst' } },
-  color: { table: { disable: true } },
+  argTypes: {
+    color: { control: false },
+  },
 } as Meta;
 
 const Template: Story<Theme> = (args: Theme) => ({
