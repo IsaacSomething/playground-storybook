@@ -1,18 +1,10 @@
 import { Component, Input } from '@angular/core';
-import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 
 @Component({
   selector: 'storybook-helpers',
   standalone: true,
-  imports: [HighlightModule],
-  providers: [
-    {
-      provide: HIGHLIGHT_OPTIONS,
-      useValue: {
-        coreLibraryLoader: () => import('highlight.js/lib/core'),
-      },
-    },
-  ],
+  imports: [],
+  providers: [],
   styleUrls: ['./helpers.scss'],
   template: `
     <div class="box-outer">
@@ -25,7 +17,6 @@ import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
       ></div>
     </div>
     <br />
-    <code [highlight]="code"> </code>
   `,
 })
 export default class Helpers {

@@ -348,7 +348,7 @@
         },
         {
             "name": "Elevation",
-            "id": "component-Elevation-a26820d6a8566eec69462ede27bfd35cf54cebe9916735673de4ced6109b7c149115a7902b093bd56d39eb77214091ef77467ffa9b2635d461dc3cc723b35cdb",
+            "id": "component-Elevation-444d9882559f0eca1a672b2e77e6269b96684c2b27c84a85277e6f2434c71b45280dcaa4fe7454e3579efe5dab71bd813b9e8dc4816e983358775785147acc91",
             "file": "src/stories/elevation/elevation.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -364,7 +364,7 @@
             "styles": [
                 "\n      div {\n        height: 300px;\n        width: 300px;\n        padding: 16px;\n        border-radius: 4px;\n        cursor: copy;\n      }\n    "
             ],
-            "template": "<sb-header title=\"Elevation\" hasCopy></sb-header>\n<div\n  [class]=\"'mat-elevation-z' + elevation\"\n  matRipple\n  matRippleColor=\"var(--playground-accent)\"\n  [cdkCopyToClipboard]=\"'mat-elevation-z' + elevation\"\n>\n  <code [highlight]=\"code\"></code>\n</div>\n",
+            "template": "<sb-header title=\"Elevation\" clipboard></sb-header>\n<div\n  [class]=\"'mat-elevation-z' + elevation\"\n  matRipple\n  matRippleColor=\"var(--mat-accent)\"\n  [cdkCopyToClipboard]=\"'mat-elevation-z' + elevation\"\n>\n  <code [highlight]=\"code\"></code>\n</div>\n",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
@@ -409,7 +409,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, OnChanges, OnInit } from '@angular/core';\nimport { MatCardModule } from '@angular/material/card';\nimport { MatRippleModule } from '@angular/material/core';\nimport { ClipboardModule } from '@angular/cdk/clipboard';\nimport { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';\nimport SBHeader from '../sb-header/sb-header.component';\n\n@Component({\n  selector: 'storybook-elevation',\n  standalone: true,\n  imports: [\n    MatCardModule,\n    HighlightModule,\n    SBHeader,\n    MatRippleModule,\n    ClipboardModule,\n  ],\n  providers: [\n    {\n      provide: HIGHLIGHT_OPTIONS,\n      useValue: {\n        coreLibraryLoader: () => import('highlight.js/lib/core'),\n      },\n    },\n  ],\n  styles: [\n    `\n      div {\n        height: 300px;\n        width: 300px;\n        padding: 16px;\n        border-radius: 4px;\n        cursor: copy;\n      }\n    `,\n  ],\n  template: `\n    <sb-header title=\"Elevation\" hasCopy></sb-header>\n    <div\n      [class]=\"'mat-elevation-z' + elevation\"\n      matRipple\n      matRippleColor=\"var(--playground-accent)\"\n      [cdkCopyToClipboard]=\"'mat-elevation-z' + elevation\"\n    >\n      <code [highlight]=\"code\"></code>\n    </div>\n  `,\n})\nexport default class Elevation implements OnChanges {\n  @Input() elevation = 1;\n  code: any;\n\n  ngOnChanges() {\n    this.code = `<div class=\"mat-elevation-z${this.elevation}\"></div>`;\n  }\n}\n",
+            "sourceCode": "import { Component, Input, OnChanges, OnInit } from '@angular/core';\nimport { MatCardModule } from '@angular/material/card';\nimport { MatRippleModule } from '@angular/material/core';\nimport { ClipboardModule } from '@angular/cdk/clipboard';\nimport { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';\nimport SBHeader from '../sb-header/sb-header.component';\n\n@Component({\n  selector: 'storybook-elevation',\n  standalone: true,\n  imports: [\n    MatCardModule,\n    HighlightModule,\n    SBHeader,\n    MatRippleModule,\n    ClipboardModule,\n  ],\n  providers: [\n    {\n      provide: HIGHLIGHT_OPTIONS,\n      useValue: {\n        coreLibraryLoader: () => import('highlight.js/lib/core'),\n      },\n    },\n  ],\n  styles: [\n    `\n      div {\n        height: 300px;\n        width: 300px;\n        padding: 16px;\n        border-radius: 4px;\n        cursor: copy;\n      }\n    `,\n  ],\n  template: `\n    <sb-header title=\"Elevation\" clipboard></sb-header>\n    <div\n      [class]=\"'mat-elevation-z' + elevation\"\n      matRipple\n      matRippleColor=\"var(--mat-accent)\"\n      [cdkCopyToClipboard]=\"'mat-elevation-z' + elevation\"\n    >\n      <code [highlight]=\"code\"></code>\n    </div>\n  `,\n})\nexport default class Elevation implements OnChanges {\n  @Input() elevation = 1;\n  code: any;\n\n  ngOnChanges() {\n    this.code = `<div class=\"mat-elevation-z${this.elevation}\"></div>`;\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "\n      div {\n        height: 300px;\n        width: 300px;\n        padding: 16px;\n        border-radius: 4px;\n        cursor: copy;\n      }\n    \n",
@@ -605,11 +605,10 @@
         },
         {
             "name": "SBHeader",
-            "id": "component-SBHeader-70c9e3de71f851bd6f7708a17deb29b972afc4440c795ec92b70b1fa8014ea4350757b0d3559270c8f22691fadbd339356f2af6e7e840227e3e0aa80d528b34d",
+            "id": "component-SBHeader-14dbbd9640e3ff88678786b2865c206b7e586e3d12f57e2735c20c20024a74b61a3d1fd0394dd7fa4e9c456d63b46347109032c177c4e616a30f3cab34454504",
             "file": "src/stories/sb-header/sb-header.component.ts",
             "encapsulation": [],
             "entryComponents": [],
-            "host": {},
             "inputs": [],
             "outputs": [],
             "providers": [],
@@ -618,23 +617,23 @@
             "styles": [
                 "\n      h2 {\n        font-size: 50px !important;\n        font-weight: bold !important;\n        margin-bottom: 6px !important;\n        text-transform: capitalize;\n      }\n    "
             ],
-            "template": "<h2>{{ title }}</h2>\n<ng-content></ng-content>\n<small *ngIf=\"hasCopy\">CLICK TO COPY VALUE</small>\n<mat-divider></mat-divider>\n<br />\n",
+            "template": "<h2>{{ title }}</h2>\n<ng-content></ng-content>\n<small *ngIf=\"clipboard\">CLICK TO COPY VALUE</small>\n<mat-divider></mat-divider>\n<br />\n",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
                 {
-                    "name": "hasCopy",
+                    "name": "clipboard",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 31,
-                    "type": "boolean",
+                    "line": 30,
+                    "type": "BooleanInput",
                     "decorators": []
                 },
                 {
                     "name": "title",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 30,
+                    "line": 29,
                     "type": "string",
                     "decorators": []
                 }
@@ -642,14 +641,14 @@
             "outputsClass": [],
             "propertiesClass": [
                 {
-                    "name": "_hasCopy",
+                    "name": "_clipboard",
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
                     "optional": false,
                     "description": "",
-                    "line": 37
+                    "line": 36
                 }
             ],
             "methodsClass": [],
@@ -660,32 +659,32 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input } from '@angular/core';\nimport { MatDividerModule } from '@angular/material/divider';\nimport { coerceBooleanProperty } from '@angular/cdk/coercion';\n\n@Component({\n  selector: 'sb-header',\n  standalone: true,\n  host: { '[copy]': 'copy' },\n  imports: [CommonModule, MatDividerModule],\n  styles: [\n    `\n      h2 {\n        font-size: 50px !important;\n        font-weight: bold !important;\n        margin-bottom: 6px !important;\n        text-transform: capitalize;\n      }\n    `,\n  ],\n  template: `\n    <h2>{{ title }}</h2>\n    <ng-content></ng-content>\n    <small *ngIf=\"hasCopy\">CLICK TO COPY VALUE</small>\n    <mat-divider></mat-divider>\n    <br />\n  `,\n})\nexport default class SBHeader {\n  @Input() title!: string;\n  @Input() set hasCopy(value: boolean) {\n    this._hasCopy = coerceBooleanProperty(value);\n  }\n  get hasCopy() {\n    return this._hasCopy;\n  }\n  _hasCopy = false;\n}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input } from '@angular/core';\nimport { MatDividerModule } from '@angular/material/divider';\nimport { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';\n\n@Component({\n  selector: 'sb-header',\n  standalone: true,\n  imports: [CommonModule, MatDividerModule],\n  styles: [\n    `\n      h2 {\n        font-size: 50px !important;\n        font-weight: bold !important;\n        margin-bottom: 6px !important;\n        text-transform: capitalize;\n      }\n    `,\n  ],\n  template: `\n    <h2>{{ title }}</h2>\n    <ng-content></ng-content>\n    <small *ngIf=\"clipboard\">CLICK TO COPY VALUE</small>\n    <mat-divider></mat-divider>\n    <br />\n  `,\n})\nexport default class SBHeader {\n  @Input() title!: string;\n  @Input() set clipboard(value: BooleanInput) {\n    this._clipboard = coerceBooleanProperty(value);\n  }\n  get clipboard() {\n    return this._clipboard;\n  }\n  _clipboard = false;\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "\n      h2 {\n        font-size: 50px !important;\n        font-weight: bold !important;\n        margin-bottom: 6px !important;\n        text-transform: capitalize;\n      }\n    \n",
             "accessors": {
-                "hasCopy": {
-                    "name": "hasCopy",
+                "clipboard": {
+                    "name": "clipboard",
                     "setSignature": {
-                        "name": "hasCopy",
+                        "name": "clipboard",
                         "type": "void",
                         "deprecated": false,
                         "deprecationMessage": "",
                         "args": [
                             {
                                 "name": "value",
-                                "type": "boolean",
+                                "type": "BooleanInput",
                                 "deprecated": false,
                                 "deprecationMessage": ""
                             }
                         ],
                         "returnType": "void",
-                        "line": 31,
+                        "line": 30,
                         "jsdoctags": [
                             {
                                 "name": "value",
-                                "type": "boolean",
+                                "type": "BooleanInput",
                                 "deprecated": false,
                                 "deprecationMessage": "",
                                 "tagName": {
@@ -695,17 +694,17 @@
                         ]
                     },
                     "getSignature": {
-                        "name": "hasCopy",
+                        "name": "clipboard",
                         "type": "",
                         "returnType": "",
-                        "line": 34
+                        "line": 33
                     }
                 }
             }
         },
         {
             "name": "Sidenav",
-            "id": "component-Sidenav-3dbfac297e342819d01fbb41c60c51c69c04a6a084487ac19dc6682241c017ef4e0ec2db6311b8df7a83e1b9e90fc7fcad07651243c04ed401c4d2325ef9de7f",
+            "id": "component-Sidenav-e216268112aa62e4730ffd2104bb15727022c06bb908aef47be033c3a462e887e2c8fa26ba92db8d2e7f572a7c8dc06bb58b7ff5e6c5d8c16bf51195119a4e75",
             "file": "src/stories/sidenav/sidenav.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -715,7 +714,7 @@
             "selector": "storybook-sidenav",
             "styleUrls": [],
             "styles": [
-                "\n      mat-sidenav-container {\n        height: 500px;\n        border: 1px solid var(--playground-divider);\n        border-radius: var(--playground-radius);\n      }\n      mat-sidenav-content,\n      mat-sidenav {\n        padding: 16px;\n      }\n      mat-sidenav {\n        background-color: var(--playground-divider);\n      }\n    "
+                "\n      mat-sidenav-container {\n        height: 500px;\n        border: 1px solid var(--mat-divider);\n        border-radius: var(--mat-radius);\n      }\n      mat-sidenav-content,\n      mat-sidenav {\n        padding: 16px;\n      }\n      mat-sidenav {\n        background-color: var(--mat-divider);\n      }\n    "
             ],
             "template": "<mat-sidenav-container autosize>\n  <mat-sidenav\n    #sidenav\n    class=\"mat-elevation-z8\"\n    [mode]=\"mode\"\n    [position]=\"position\"\n    (closedStart)=\"closedStart.emit()\"\n    (openedStart)=\"openedStart.emit()\"\n    (openedChange)=\"openedChange.emit($event)\"\n    (onPositionChanged)=\"onPositionChanged.emit()\"\n  >\n    <button type=\"button\" mat-button (click)=\"sidenav.close()\">\n      [Close sidenav]\n    </button>\n  </mat-sidenav>\n  <mat-sidenav-content>\n    <button type=\"button\" mat-button (click)=\"sidenav.toggle()\">\n      [Toggle sidenav]\n    </button>\n  </mat-sidenav-content>\n</mat-sidenav-container>\n",
             "templateUrl": [],
@@ -783,10 +782,10 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\nimport { MatSidenavModule } from '@angular/material/sidenav';\nimport { MatButtonModule } from '@angular/material/button';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\nimport { Observable } from 'rxjs';\n\n@Component({\n  selector: 'storybook-sidenav',\n  standalone: true,\n  imports: [MatSidenavModule, BrowserAnimationsModule, MatButtonModule],\n  styles: [\n    `\n      mat-sidenav-container {\n        height: 500px;\n        border: 1px solid var(--playground-divider);\n        border-radius: var(--playground-radius);\n      }\n      mat-sidenav-content,\n      mat-sidenav {\n        padding: 16px;\n      }\n      mat-sidenav {\n        background-color: var(--playground-divider);\n      }\n    `,\n  ],\n  template: `\n    <mat-sidenav-container autosize>\n      <mat-sidenav\n        #sidenav\n        class=\"mat-elevation-z8\"\n        [mode]=\"mode\"\n        [position]=\"position\"\n        (closedStart)=\"closedStart.emit()\"\n        (openedStart)=\"openedStart.emit()\"\n        (openedChange)=\"openedChange.emit($event)\"\n        (onPositionChanged)=\"onPositionChanged.emit()\"\n      >\n        <button type=\"button\" mat-button (click)=\"sidenav.close()\">\n          [Close sidenav]\n        </button>\n      </mat-sidenav>\n      <mat-sidenav-content>\n        <button type=\"button\" mat-button (click)=\"sidenav.toggle()\">\n          [Toggle sidenav]\n        </button>\n      </mat-sidenav-content>\n    </mat-sidenav-container>\n  `,\n})\nexport default class Sidenav {\n  @Input() mode: 'over' | 'push' | 'side' = 'side';\n  @Input() position: 'start' | 'end' = 'start';\n\n  @Output() closedStart = new EventEmitter<Observable<void>>();\n  @Output() openedStart = new EventEmitter<Observable<void>>();\n  @Output() openedChange = new EventEmitter<boolean>();\n  @Output() onPositionChanged = new EventEmitter<EventEmitter<void>>();\n}\n",
+            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\nimport { MatSidenavModule } from '@angular/material/sidenav';\nimport { MatButtonModule } from '@angular/material/button';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\nimport { Observable } from 'rxjs';\n\n@Component({\n  selector: 'storybook-sidenav',\n  standalone: true,\n  imports: [MatSidenavModule, BrowserAnimationsModule, MatButtonModule],\n  styles: [\n    `\n      mat-sidenav-container {\n        height: 500px;\n        border: 1px solid var(--mat-divider);\n        border-radius: var(--mat-radius);\n      }\n      mat-sidenav-content,\n      mat-sidenav {\n        padding: 16px;\n      }\n      mat-sidenav {\n        background-color: var(--mat-divider);\n      }\n    `,\n  ],\n  template: `\n    <mat-sidenav-container autosize>\n      <mat-sidenav\n        #sidenav\n        class=\"mat-elevation-z8\"\n        [mode]=\"mode\"\n        [position]=\"position\"\n        (closedStart)=\"closedStart.emit()\"\n        (openedStart)=\"openedStart.emit()\"\n        (openedChange)=\"openedChange.emit($event)\"\n        (onPositionChanged)=\"onPositionChanged.emit()\"\n      >\n        <button type=\"button\" mat-button (click)=\"sidenav.close()\">\n          [Close sidenav]\n        </button>\n      </mat-sidenav>\n      <mat-sidenav-content>\n        <button type=\"button\" mat-button (click)=\"sidenav.toggle()\">\n          [Toggle sidenav]\n        </button>\n      </mat-sidenav-content>\n    </mat-sidenav-container>\n  `,\n})\nexport default class Sidenav {\n  @Input() mode: 'over' | 'push' | 'side' = 'side';\n  @Input() position: 'start' | 'end' = 'start';\n\n  @Output() closedStart = new EventEmitter<Observable<void>>();\n  @Output() openedStart = new EventEmitter<Observable<void>>();\n  @Output() openedChange = new EventEmitter<boolean>();\n  @Output() onPositionChanged = new EventEmitter<EventEmitter<void>>();\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
-            "stylesData": "\n      mat-sidenav-container {\n        height: 500px;\n        border: 1px solid var(--playground-divider);\n        border-radius: var(--playground-radius);\n      }\n      mat-sidenav-content,\n      mat-sidenav {\n        padding: 16px;\n      }\n      mat-sidenav {\n        background-color: var(--playground-divider);\n      }\n    \n"
+            "stylesData": "\n      mat-sidenav-container {\n        height: 500px;\n        border: 1px solid var(--mat-divider);\n        border-radius: var(--mat-radius);\n      }\n      mat-sidenav-content,\n      mat-sidenav {\n        padding: 16px;\n      }\n      mat-sidenav {\n        background-color: var(--mat-divider);\n      }\n    \n"
         },
         {
             "name": "SlideToggle",
@@ -849,7 +848,7 @@
         },
         {
             "name": "Theme",
-            "id": "component-Theme-364feb26c87a10ba7c613cf74a6678f0e79eb46e7b2d536b6f6118de8830b136568112059a2ba1b5cd7a200e8b5f38673d3efb90e3217481418a4ff0a62dfa26",
+            "id": "component-Theme-395d0cb4eee7f2f0caf82ed454b243817bd94057ac7008de2d1f3c2bede69363b890397b9777fd880b117802de74a237cd9099ca6b1a696197e75c6c2536aa1f",
             "file": "src/stories/theme/theme.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -861,7 +860,7 @@
                 "./theme.component.scss"
             ],
             "styles": [],
-            "template": "<sb-header [title]=\"color\" hasCopy>\n  <h4 *ngIf=\"color === 'primary'\">HEX: #3F51B5</h4>\n  <h4 *ngIf=\"color === 'accent'\">HEX: #D72828</h4>\n  <h4 *ngIf=\"color === 'warn'\">HEX: #5C5C5C</h4>\n</sb-header>\n\n<div\n  class=\"block\"\n  matRipple\n  matRippleColor=\"var(--playground-{{ color }}-contrast-{{ hue }})\"\n  cdkCopyToClipboard=\"var(--playground-{{ color }}-{{ hue }})\"\n  *ngFor=\"\n    let hue of [\n      '50',\n      '100',\n      '200',\n      '300',\n      '400',\n      '500',\n      '600',\n      '700',\n      '800',\n      '900',\n      'A100',\n      'A200',\n      'A400',\n      'A700'\n    ]\n  \"\n  style=\"background-color:var(--playground-{{ color }}-{{ hue }})\"\n>\n  <h1 style=\"color:var(--playground-{{ color }}-contrast-{{ hue }})\">\n    {{ hue }}\n  </h1>\n  <span style=\"color:var(--playground-{{ color }}-contrast-{{ hue }})\">\n    var(--playground-{{ color }}-{{ hue }})\n  </span>\n</div>\n",
+            "template": "<sb-header [title]=\"color\" hasCopy>\n  <h4 *ngIf=\"color === 'primary'\">HEX: #3F51B5</h4>\n  <h4 *ngIf=\"color === 'accent'\">HEX: #D72828</h4>\n  <h4 *ngIf=\"color === 'warn'\">HEX: #5C5C5C</h4>\n</sb-header>\n\n<div\n  class=\"block\"\n  matRipple\n  matRippleColor=\"var(--mat-{{ color }}-contrast-{{ hue }})\"\n  cdkCopyToClipboard=\"var(--mat-{{ color }}-{{ hue }})\"\n  *ngFor=\"\n    let hue of [\n      '50',\n      '100',\n      '200',\n      '300',\n      '400',\n      '500',\n      '600',\n      '700',\n      '800',\n      '900',\n      'A100',\n      'A200',\n      'A400',\n      'A700'\n    ]\n  \"\n  style=\"background-color:var(--mat-{{ color }}-{{ hue }})\"\n>\n  <h1 style=\"color:var(--mat-{{ color }}-contrast-{{ hue }})\">\n    {{ hue }}\n  </h1>\n  <span style=\"color:var(--mat-{{ color }}-contrast-{{ hue }})\">\n    var(--mat-{{ color }}-{{ hue }})\n  </span>\n</div>\n",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
@@ -885,7 +884,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input } from '@angular/core';\nimport { ClipboardModule } from '@angular/cdk/clipboard';\nimport { MatRippleModule } from '@angular/material/core';\nimport SBHeader from '../sb-header/sb-header.component';\n\n@Component({\n  selector: 'storybook-button',\n  standalone: true,\n  imports: [CommonModule, ClipboardModule, MatRippleModule, SBHeader],\n  styleUrls: ['./theme.component.scss'],\n  template: `\n    <sb-header [title]=\"color\" hasCopy>\n      <h4 *ngIf=\"color === 'primary'\">HEX: #3F51B5</h4>\n      <h4 *ngIf=\"color === 'accent'\">HEX: #D72828</h4>\n      <h4 *ngIf=\"color === 'warn'\">HEX: #5C5C5C</h4>\n    </sb-header>\n\n    <div\n      class=\"block\"\n      matRipple\n      matRippleColor=\"var(--playground-{{ color }}-contrast-{{ hue }})\"\n      cdkCopyToClipboard=\"var(--playground-{{ color }}-{{ hue }})\"\n      *ngFor=\"\n        let hue of [\n          '50',\n          '100',\n          '200',\n          '300',\n          '400',\n          '500',\n          '600',\n          '700',\n          '800',\n          '900',\n          'A100',\n          'A200',\n          'A400',\n          'A700'\n        ]\n      \"\n      style=\"background-color:var(--playground-{{ color }}-{{ hue }})\"\n    >\n      <h1 style=\"color:var(--playground-{{ color }}-contrast-{{ hue }})\">\n        {{ hue }}\n      </h1>\n      <span style=\"color:var(--playground-{{ color }}-contrast-{{ hue }})\">\n        var(--playground-{{ color }}-{{ hue }})\n      </span>\n    </div>\n  `,\n})\nexport default class Theme {\n  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';\n}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input } from '@angular/core';\nimport { ClipboardModule } from '@angular/cdk/clipboard';\nimport { MatRippleModule } from '@angular/material/core';\nimport SBHeader from '../sb-header/sb-header.component';\n\n@Component({\n  selector: 'storybook-button',\n  standalone: true,\n  imports: [CommonModule, ClipboardModule, MatRippleModule, SBHeader],\n  styleUrls: ['./theme.component.scss'],\n  template: `\n    <sb-header [title]=\"color\" hasCopy>\n      <h4 *ngIf=\"color === 'primary'\">HEX: #3F51B5</h4>\n      <h4 *ngIf=\"color === 'accent'\">HEX: #D72828</h4>\n      <h4 *ngIf=\"color === 'warn'\">HEX: #5C5C5C</h4>\n    </sb-header>\n\n    <div\n      class=\"block\"\n      matRipple\n      matRippleColor=\"var(--mat-{{ color }}-contrast-{{ hue }})\"\n      cdkCopyToClipboard=\"var(--mat-{{ color }}-{{ hue }})\"\n      *ngFor=\"\n        let hue of [\n          '50',\n          '100',\n          '200',\n          '300',\n          '400',\n          '500',\n          '600',\n          '700',\n          '800',\n          '900',\n          'A100',\n          'A200',\n          'A400',\n          'A700'\n        ]\n      \"\n      style=\"background-color:var(--mat-{{ color }}-{{ hue }})\"\n    >\n      <h1 style=\"color:var(--mat-{{ color }}-contrast-{{ hue }})\">\n        {{ hue }}\n      </h1>\n      <span style=\"color:var(--mat-{{ color }}-contrast-{{ hue }})\">\n        var(--mat-{{ color }}-{{ hue }})\n      </span>\n    </div>\n  `,\n})\nexport default class Theme {\n  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -969,13 +968,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-98922d4c22625a621f0e20e11daf409faf5122ee3e0df746ffbb9812076bc1d05b3256bfe8528012ee802a810946fe6b7f4c174e4b611bdb7a0f08aff5ade4ef",
+            "id": "module-AppModule-3e3f47980613318cdcfa797f516b6bac6f5371d4c90424a3ede3e81146d9325b265c675290e1742e6898200d02666ccd8cc3e72a3a4922bdca36c6daa93e2497",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\nimport { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';\n\n@NgModule({\n  declarations: [AppComponent],\n  imports: [\n    BrowserModule,\n    AppRoutingModule,\n    BrowserAnimationsModule,\n    HighlightModule,\n  ],\n  providers: [\n    {\n      provide: HIGHLIGHT_OPTIONS,\n      useValue: {\n        coreLibraryLoader: () => import('highlight.js/lib/core'),\n        languages: {\n          typescript: () => import('highlight.js/lib/languages/typescript'),\n          css: () => import('highlight.js/lib/languages/css'),\n          xml: () => import('highlight.js/lib/languages/xml'),\n        },\n        // themePath: 'path-to-theme.css', // Optional, and useful if you want to change the theme dynamically\n      },\n    },\n  ],\n  bootstrap: [AppComponent],\n})\nexport class AppModule {}\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\n\n@NgModule({\n  declarations: [AppComponent],\n  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],\n  providers: [],\n  bootstrap: [AppComponent],\n})\nexport class AppModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -1118,6 +1117,16 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/button/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/card/card.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1158,16 +1167,6 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/button/button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/tooltip/tooltip.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1188,21 +1187,21 @@
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/environments/environment.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "object",
-                "defaultValue": "{\n  production: false\n}"
-            },
-            {
-                "name": "environment",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/environments/environment.prod.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
                 "defaultValue": "{\n  production: true\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  production: false\n}"
             },
             {
                 "name": "Expansion",
@@ -1327,6 +1326,16 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/button/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Button>",
+                "defaultValue": "(args: Button) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n    loading: { control: { type: 'boolean' } },\n    type: { table: { disable: true } },\n  },\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/card/card.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1382,16 +1391,6 @@
                 "deprecationMessage": "",
                 "type": "Story<Theme>",
                 "defaultValue": "(args: Theme) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/button/button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<Button>",
-                "defaultValue": "(args: Button) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n    loading: { control: { type: 'boolean' } },\n    type: { table: { disable: true } },\n  },\n})"
             },
             {
                 "name": "Template",
@@ -1589,6 +1588,68 @@
                     "defaultValue": "(args: Blank) => ({\n  props: args,\n})"
                 }
             ],
+            "src/stories/button/button.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/button/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Flat",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/button/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Icon",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/button/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<ButtonIcon>",
+                    "defaultValue": "(args: ButtonIcon) => ({\n  component: ButtonIcon,\n  props: args,\n})"
+                },
+                {
+                    "name": "Raised",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/button/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Stroked",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/button/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/button/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Button>",
+                    "defaultValue": "(args: Button) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n    loading: { control: { type: 'boolean' } },\n    type: { table: { disable: true } },\n  },\n})"
+                }
+            ],
             "src/stories/card/card.stories.ts": [
                 {
                     "name": "Default",
@@ -1695,68 +1756,6 @@
                     "defaultValue": "(args: Helpers) => ({\n  props: args,\n})"
                 }
             ],
-            "src/stories/button/button.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/button/button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Flat",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/button/button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Icon",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/button/button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<ButtonIcon>",
-                    "defaultValue": "(args: ButtonIcon) => ({\n  component: ButtonIcon,\n  props: args,\n})"
-                },
-                {
-                    "name": "Raised",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/button/button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Stroked",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/button/button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/button/button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<Button>",
-                    "defaultValue": "(args: Button) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n    loading: { control: { type: 'boolean' } },\n    type: { table: { disable: true } },\n  },\n})"
-                }
-            ],
             "src/stories/tooltip/tooltip.stories.ts": [
                 {
                     "name": "Default",
@@ -1779,18 +1778,6 @@
                     "defaultValue": "(args: Tooltip) => ({\n  props: args,\n})"
                 }
             ],
-            "src/environments/environment.ts": [
-                {
-                    "name": "environment",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/environments/environment.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\n  production: false\n}"
-                }
-            ],
             "src/environments/environment.prod.ts": [
                 {
                     "name": "environment",
@@ -1801,6 +1788,18 @@
                     "deprecationMessage": "",
                     "type": "object",
                     "defaultValue": "{\n  production: true\n}"
+                }
+            ],
+            "src/environments/environment.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  production: false\n}"
                 }
             ]
         },

@@ -19,8 +19,8 @@ import SBHeader from '../sb-header/sb-header.component';
     <div
       class="block"
       matRipple
-      matRippleColor="var(--playground-{{ color }}-contrast-{{ hue }})"
-      cdkCopyToClipboard="var(--playground-{{ color }}-{{ hue }})"
+      matRippleColor="var(--mat-{{ color }}-contrast-{{ hue }})"
+      cdkCopyToClipboard="var(--mat-{{ color }}-{{ hue }})"
       *ngFor="
         let hue of [
           '50',
@@ -39,13 +39,13 @@ import SBHeader from '../sb-header/sb-header.component';
           'A700'
         ]
       "
-      style="background-color:var(--playground-{{ color }}-{{ hue }})"
+      style="background-color:var(--mat-{{ color }}-{{ hue }})"
     >
-      <h1 style="color:var(--playground-{{ color }}-contrast-{{ hue }})">
+      <h1 style="color:var(--mat-{{ color }}-contrast-{{ hue }})">
         {{ hue }}
       </h1>
-      <span style="color:var(--playground-{{ color }}-contrast-{{ hue }})">
-        var(--playground-{{ color }}-{{ hue }})
+      <span style="color:var(--mat-{{ color }}-contrast-{{ hue }})">
+        var(--mat-{{ color }}-{{ hue }})
       </span>
     </div>
   `,

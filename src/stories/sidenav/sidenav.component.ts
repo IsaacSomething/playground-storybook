@@ -12,15 +12,15 @@ import { Observable } from 'rxjs';
     `
       mat-sidenav-container {
         height: 500px;
-        border: 1px solid var(--playground-divider);
-        border-radius: var(--playground-radius);
+        border: 1px solid var(--mat-divider);
+        border-radius: var(--mat-radius);
       }
       mat-sidenav-content,
       mat-sidenav {
         padding: 16px;
       }
       mat-sidenav {
-        background-color: var(--playground-divider);
+        background-color: var(--mat-divider);
       }
     `,
   ],

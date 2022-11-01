@@ -2,13 +2,13 @@
 
 .mat-slide-toggle {
   &:not(.mat-checked) .mat-slide-toggle-bar {
-    background-color: var(--playground-divider);
+    background-color: var(--mat-divider);
   }
 
   &.contained {
     @each $color in play.$colors {
       &.mat-#{$color} .mat-slide-toggle-thumb {
-        background-color: var(--playground-#{$color});
+        background-color: var(--mat-#{$color});
       }
     }
 
@@ -24,7 +24,7 @@
     }
     .mat-slide-toggle-bar {
       background-color: transparent;
-      border: 1px solid var(--playground-divider);
+      border: 1px solid var(--mat-divider);
       box-shadow: none;
       height: 18px;
       border-radius: 14px;
@@ -33,7 +33,7 @@
     &.mat-checked {
       @each $color in play.$colors {
         &.mat-#{$color} .mat-slide-toggle-bar {
-          border-color: var(--playground-#{$color});
+          border-color: var(--mat-#{$color});
         }
       }
 

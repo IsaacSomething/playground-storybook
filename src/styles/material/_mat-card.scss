@@ -9,8 +9,8 @@
   /* Colors */
   @each $color in play.$colors {
     &[color="#{$color}"] {
-      background-color: var(--playground-#{$color});
-      color: var(--playground-#{$color}-contrast-500);
+      background-color: var(--mat-#{$color});
+      color: var(--mat-#{$color}-contrast-500);
     }
   }
 
@@ -57,7 +57,7 @@
     .mat-card-content.expansion {
       margin: 0 -16px -16px;
       .mat-expansion-panel {
-        border-bottom: 1px solid var(--playground-divider);
+        border-bottom: 1px solid var(--mat-divider);
       }
     }
   }

@@ -1,28 +1,14 @@
-import { Component, Input, OnChanges, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatRippleModule } from '@angular/material/core';
 import { ClipboardModule } from '@angular/cdk/clipboard';
-import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 import SBHeader from '../sb-header/sb-header.component';
 
 @Component({
   selector: 'storybook-elevation',
   standalone: true,
-  imports: [
-    MatCardModule,
-    HighlightModule,
-    SBHeader,
-    MatRippleModule,
-    ClipboardModule,
-  ],
-  providers: [
-    {
-      provide: HIGHLIGHT_OPTIONS,
-      useValue: {
-        coreLibraryLoader: () => import('highlight.js/lib/core'),
-      },
-    },
-  ],
+  imports: [MatCardModule, SBHeader, MatRippleModule, ClipboardModule],
+  providers: [],
   styles: [
     `
       div {
@@ -35,22 +21,15 @@ import SBHeader from '../sb-header/sb-header.component';
     `,
   ],
   template: `
-    <sb-header title="Elevation" hasCopy></sb-header>
+    <sb-header title="Elevation" clipboard></sb-header>
     <div
       [class]="'mat-elevation-z' + elevation"
       matRipple
-      matRippleColor="var(--playground-accent)"
+      matRippleColor="var(--mat-accent)"
       [cdkCopyToClipboard]="'mat-elevation-z' + elevation"
-    >
-      <code [highlight]="code"></code>
-    </div>
+    ></div>
   `,
 })
-export default class Elevation implements OnChanges {
+export default class Elevation {
   @Input() elevation = 1;
-  code: any;
-
-  ngOnChanges() {
-    this.code = `<div class="mat-elevation-z${this.elevation}"></div>`;
-  }
 }

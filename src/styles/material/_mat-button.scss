@@ -27,13 +27,13 @@
   /* Colors */
   @each $color in play.$colors {
     &.mat-#{$color} .mat-spinner circle {
-      stroke: var(--playground-#{$color});
+      stroke: var(--mat-#{$color});
     }
 
     &.mat-#{$color}.mat-raised-button,
     &.mat-#{$color}.mat-flat-button {
       .mat-spinner circle {
-        stroke: var(--playground-#{$color}-50);
+        stroke: var(--mat-#{$color}-50);
       }
     }
   }
@@ -63,7 +63,7 @@
   @each $color in play.$colors {
     &.mat-stroked-button.mat-#{$color}:not(.mat-button-disabled) {
       box-shadow: none;
-      border: 1px solid var(--playground-#{$color});
+      border: 1px solid var(--mat-#{$color});
     }
   }
 }

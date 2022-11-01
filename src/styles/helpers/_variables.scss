@@ -3,24 +3,24 @@
 @include mat.core();
 
 :root {
-  --playground-radius: 4px;
+  --mat-radius: 4px;
 
-  --playground-primary-font: "Quicksand", sans-serif !important;
-  --playground-secondary-font: "Roboto", sans-serif !important;
-  --playground-font-size: 14px;
+  --mat-primary-font: "Quicksand", sans-serif !important;
+  --mat-secondary-font: "Roboto", sans-serif !important;
+  --mat-font-size: 14px;
 
-  --playground-text: #505050;
-  --playground-text-disabled: #cbcbcb;
-  --playground-text-secondary: #{mat.get-color-from-palette(
+  --mat-text: #505050;
+  --mat-text-disabled: #cbcbcb;
+  --mat-text-secondary: #{mat.get-color-from-palette(
       mat.$grey-palette,
       600
     )};
-  --playground-text-primary: var(--playground-primary);
-  --playground-text-accent: var(--playground-accent);
-  --playground-text-warn: var(--playground-warn);
+  --mat-text-primary: var(--mat-primary);
+  --mat-text-accent: var(--mat-accent);
+  --mat-text-warn: var(--mat-warn);
 
-  --playground-bg: #ffffff;
-  --playground-bar: #ffffff;
-  --playground-card: #ffffff;
-  --playground-divider: #f3f3f3;
+  --mat-bg: #ffffff;
+  --mat-bar: #ffffff;
+  --mat-card: #ffffff;
+  --mat-divider: #f3f3f3;
 }
