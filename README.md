@@ -1,7 +1,10 @@
-# PlaygroundStorybook
+# Angular Material Storybook
 
-Project used to explore angular material with the use of storybook
+![Angular Material](src/assets/material.svg)
+![Storybook](src/assets/storybook.svg)
+
+Project used to explore angular material with the use of storybook.
 
 ```
-npm run storybook
+npm start
 ```

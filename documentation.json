@@ -348,23 +348,19 @@
         },
         {
             "name": "Elevation",
-            "id": "component-Elevation-444d9882559f0eca1a672b2e77e6269b96684c2b27c84a85277e6f2434c71b45280dcaa4fe7454e3579efe5dab71bd813b9e8dc4816e983358775785147acc91",
+            "id": "component-Elevation-508fcee30b7451e1aeb9d823a69eac78cbd44b69699d33a2a9a4a44edf77afc7f2134edcf83cc1d9432178f2aba59cd5b6d93116a0297b43850a7e0f5335d4f3",
             "file": "src/stories/elevation/elevation.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
-            "providers": [
-                {
-                    "name": "{\n    provide: HIGHLIGHT_OPTIONS, useValue: {\n        coreLibraryLoader: () => import(),\n    },\n}"
-                }
-            ],
+            "providers": [],
             "selector": "storybook-elevation",
             "styleUrls": [],
             "styles": [
                 "\n      div {\n        height: 300px;\n        width: 300px;\n        padding: 16px;\n        border-radius: 4px;\n        cursor: copy;\n      }\n    "
             ],
-            "template": "<sb-header title=\"Elevation\" clipboard></sb-header>\n<div\n  [class]=\"'mat-elevation-z' + elevation\"\n  matRipple\n  matRippleColor=\"var(--mat-accent)\"\n  [cdkCopyToClipboard]=\"'mat-elevation-z' + elevation\"\n>\n  <code [highlight]=\"code\"></code>\n</div>\n",
+            "template": "<sb-header title=\"Elevation\" clipboard></sb-header>\n<div\n  [class]=\"'mat-elevation-z' + elevation\"\n  matRipple\n  matRippleColor=\"var(--mat-accent)\"\n  [cdkCopyToClipboard]=\"'mat-elevation-z' + elevation\"\n></div>\n",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
@@ -373,35 +369,14 @@
                     "defaultValue": "1",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 50,
+                    "line": 34,
                     "type": "number",
                     "decorators": []
                 }
             ],
             "outputsClass": [],
-            "propertiesClass": [
-                {
-                    "name": "code",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "any",
-                    "optional": false,
-                    "description": "",
-                    "line": 51
-                }
-            ],
-            "methodsClass": [
-                {
-                    "name": "ngOnChanges",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 53,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                }
-            ],
+            "propertiesClass": [],
+            "methodsClass": [],
             "deprecated": false,
             "deprecationMessage": "",
             "hostBindings": [],
@@ -409,33 +384,26 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, OnChanges, OnInit } from '@angular/core';\nimport { MatCardModule } from '@angular/material/card';\nimport { MatRippleModule } from '@angular/material/core';\nimport { ClipboardModule } from '@angular/cdk/clipboard';\nimport { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';\nimport SBHeader from '../sb-header/sb-header.component';\n\n@Component({\n  selector: 'storybook-elevation',\n  standalone: true,\n  imports: [\n    MatCardModule,\n    HighlightModule,\n    SBHeader,\n    MatRippleModule,\n    ClipboardModule,\n  ],\n  providers: [\n    {\n      provide: HIGHLIGHT_OPTIONS,\n      useValue: {\n        coreLibraryLoader: () => import('highlight.js/lib/core'),\n      },\n    },\n  ],\n  styles: [\n    `\n      div {\n        height: 300px;\n        width: 300px;\n        padding: 16px;\n        border-radius: 4px;\n        cursor: copy;\n      }\n    `,\n  ],\n  template: `\n    <sb-header title=\"Elevation\" clipboard></sb-header>\n    <div\n      [class]=\"'mat-elevation-z' + elevation\"\n      matRipple\n      matRippleColor=\"var(--mat-accent)\"\n      [cdkCopyToClipboard]=\"'mat-elevation-z' + elevation\"\n    >\n      <code [highlight]=\"code\"></code>\n    </div>\n  `,\n})\nexport default class Elevation implements OnChanges {\n  @Input() elevation = 1;\n  code: any;\n\n  ngOnChanges() {\n    this.code = `<div class=\"mat-elevation-z${this.elevation}\"></div>`;\n  }\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { MatCardModule } from '@angular/material/card';\nimport { MatRippleModule } from '@angular/material/core';\nimport { ClipboardModule } from '@angular/cdk/clipboard';\nimport SBHeader from '../sb-header/sb-header.component';\n\n@Component({\n  selector: 'storybook-elevation',\n  standalone: true,\n  imports: [MatCardModule, SBHeader, MatRippleModule, ClipboardModule],\n  providers: [],\n  styles: [\n    `\n      div {\n        height: 300px;\n        width: 300px;\n        padding: 16px;\n        border-radius: 4px;\n        cursor: copy;\n      }\n    `,\n  ],\n  template: `\n    <sb-header title=\"Elevation\" clipboard></sb-header>\n    <div\n      [class]=\"'mat-elevation-z' + elevation\"\n      matRipple\n      matRippleColor=\"var(--mat-accent)\"\n      [cdkCopyToClipboard]=\"'mat-elevation-z' + elevation\"\n    ></div>\n  `,\n})\nexport default class Elevation {\n  @Input() elevation = 1;\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
-            "stylesData": "\n      div {\n        height: 300px;\n        width: 300px;\n        padding: 16px;\n        border-radius: 4px;\n        cursor: copy;\n      }\n    \n",
-            "implements": [
-                "OnChanges"
-            ]
+            "stylesData": "\n      div {\n        height: 300px;\n        width: 300px;\n        padding: 16px;\n        border-radius: 4px;\n        cursor: copy;\n      }\n    \n"
         },
         {
             "name": "Helpers",
-            "id": "component-Helpers-8918eb4bf5b5dce5150437b938f61334edd97bf4eed881df174b7a6335249a8e75f0fbc9471aa62e3d98b76dff2121b73b240887adf841d9921709f0a5ed7987",
+            "id": "component-Helpers-4027432788127f8d20b41d4a3f1d570cde95821c5d5dcda3f01a992dc0240518db387bf2d462bc30a9071c63f9ca8e56866b938bfb96447be5096bce857791ba",
             "file": "src/stories/helpers/helpers.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
-            "providers": [
-                {
-                    "name": "{\n    provide: HIGHLIGHT_OPTIONS, useValue: {\n        coreLibraryLoader: () => import(),\n    },\n}"
-                }
-            ],
+            "providers": [],
             "selector": "storybook-helpers",
             "styleUrls": [
                 "./helpers.scss"
             ],
             "styles": [],
-            "template": "<div class=\"box-outer\">\n  <div\n    class=\"padding-{{ padding }} padding-left-{{\n      paddingLeft\n    }} padding-right-{{ paddingRight }} margin-{{ margin }} margin-left-{{\n      marginLeft\n    }} margin-right-{{ marginRight }}\"\n  ></div>\n</div>\n<br />\n<code [highlight]=\"code\"> </code>\n",
+            "template": "<div class=\"box-outer\">\n  <div\n    class=\"padding-{{ padding }} padding-left-{{\n      paddingLeft\n    }} padding-right-{{ paddingRight }} margin-{{ margin }} margin-left-{{\n      marginLeft\n    }} margin-right-{{ marginRight }}\"\n  ></div>\n</div>\n<br />\n",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
@@ -444,7 +412,7 @@
                     "defaultValue": "0",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 33,
+                    "line": 24,
                     "type": "number",
                     "decorators": []
                 },
@@ -453,7 +421,7 @@
                     "defaultValue": "0",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 37,
+                    "line": 28,
                     "type": "number",
                     "decorators": []
                 },
@@ -462,7 +430,7 @@
                     "defaultValue": "0",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 36,
+                    "line": 27,
                     "type": "number",
                     "decorators": []
                 },
@@ -471,7 +439,7 @@
                     "defaultValue": "0",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 32,
+                    "line": 23,
                     "type": "number",
                     "decorators": []
                 },
@@ -480,7 +448,7 @@
                     "defaultValue": "0",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 35,
+                    "line": 26,
                     "type": "number",
                     "decorators": []
                 },
@@ -489,7 +457,7 @@
                     "defaultValue": "0",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 34,
+                    "line": 25,
                     "type": "number",
                     "decorators": []
                 }
@@ -503,7 +471,7 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 38
+                    "line": 29
                 }
             ],
             "methodsClass": [
@@ -513,7 +481,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 40,
+                    "line": 31,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -525,7 +493,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';\n\n@Component({\n  selector: 'storybook-helpers',\n  standalone: true,\n  imports: [HighlightModule],\n  providers: [\n    {\n      provide: HIGHLIGHT_OPTIONS,\n      useValue: {\n        coreLibraryLoader: () => import('highlight.js/lib/core'),\n      },\n    },\n  ],\n  styleUrls: ['./helpers.scss'],\n  template: `\n    <div class=\"box-outer\">\n      <div\n        class=\"padding-{{ padding }} padding-left-{{\n          paddingLeft\n        }} padding-right-{{ paddingRight }} margin-{{ margin }} margin-left-{{\n          marginLeft\n        }} margin-right-{{ marginRight }}\"\n      ></div>\n    </div>\n    <br />\n    <code [highlight]=\"code\"> </code>\n  `,\n})\nexport default class Helpers {\n  @Input() padding: number = 0;\n  @Input() margin: number = 0;\n  @Input() paddingRight: number = 0;\n  @Input() paddingLeft: number = 0;\n  @Input() marginRight: number = 0;\n  @Input() marginLeft: number = 0;\n  code!: string;\n\n  ngOnChanges() {\n    this.code = `<div class=\"padding-${this.padding} padding-left-${this.paddingLeft} padding-right-${this.paddingRight} margin-${this.margin} margin-left-${this.marginLeft} margin-right-${this.marginRight}\"> </div>`;\n  }\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'storybook-helpers',\n  standalone: true,\n  imports: [],\n  providers: [],\n  styleUrls: ['./helpers.scss'],\n  template: `\n    <div class=\"box-outer\">\n      <div\n        class=\"padding-{{ padding }} padding-left-{{\n          paddingLeft\n        }} padding-right-{{ paddingRight }} margin-{{ margin }} margin-left-{{\n          marginLeft\n        }} margin-right-{{ marginRight }}\"\n      ></div>\n    </div>\n    <br />\n  `,\n})\nexport default class Helpers {\n  @Input() padding: number = 0;\n  @Input() margin: number = 0;\n  @Input() paddingRight: number = 0;\n  @Input() paddingLeft: number = 0;\n  @Input() marginRight: number = 0;\n  @Input() marginLeft: number = 0;\n  code!: string;\n\n  ngOnChanges() {\n    this.code = `<div class=\"padding-${this.padding} padding-left-${this.paddingLeft} padding-right-${this.paddingRight} margin-${this.margin} margin-left-${this.marginLeft} margin-right-${this.marginRight}\"> </div>`;\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -1157,21 +1125,21 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/slide-toggle/slide-toggle.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/tooltip/tooltip.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "Template.bind({\n  position: 'after',\n})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/slide-toggle/slide-toggle.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
             },
             {
                 "name": "Drawer",
@@ -1356,16 +1324,6 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/helpers/helpers.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<Helpers>",
-                "defaultValue": "(args: Helpers) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/progress-spinner/progress-spinner.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1376,11 +1334,21 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/slide-toggle/slide-toggle.stories.ts",
+                "file": "src/stories/helpers/helpers.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<SlideToggle>",
-                "defaultValue": "(args: SlideToggle) => ({\n  props: args,\n})"
+                "type": "Story<Helpers>",
+                "defaultValue": "(args: Helpers) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/tooltip/tooltip.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Tooltip>",
+                "defaultValue": "(args: Tooltip) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -1396,11 +1364,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/tooltip/tooltip.stories.ts",
+                "file": "src/stories/slide-toggle/slide-toggle.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<Tooltip>",
-                "defaultValue": "(args: Tooltip) => ({\n  props: args,\n})"
+                "type": "Story<SlideToggle>",
+                "defaultValue": "(args: SlideToggle) => ({\n  props: args,\n})"
             },
             {
                 "name": "Warn",
@@ -2045,7 +2013,7 @@
                 "linktype": "component",
                 "name": "Elevation",
                 "coveragePercent": 0,
-                "coverageCount": "0/4",
+                "coverageCount": "0/2",
                 "status": "low"
             },
             {
