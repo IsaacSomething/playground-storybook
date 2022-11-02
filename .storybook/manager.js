@@ -6,15 +6,15 @@ addons.setConfig({
   isFullscreen: false,
   showNav: true,
   showPanel: true,
+  showToolbar: true,
+  theme: theme,
   panelPosition: "right",
   enableShortcuts: true,
-  showToolbar: true,
-  theme: undefined,
+   
   selectedPanel: undefined,
   initialActive: "sidebar",
-  sidebar: {
-    showRoots: false,
-    collapsedRoots: ["other"],
+  sidebar: { 
+    collapsedRoots: ["themeç"],
   },
   toolbar: {
     title: { hidden: false },
@@ -23,5 +23,4 @@ addons.setConfig({
     copy: { hidden: false },
     fullscreen: { hidden: false },
   },
-  theme: theme,
 });
