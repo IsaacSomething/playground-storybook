@@ -11,8 +11,13 @@
   font-size: $font-size;
 }
 
-/* Loading */
 .mat-button-base {
+  /* Rounded */
+  &.round {
+    border-radius: 36px;
+  }
+
+  /* Loading */
   .mat-progress-spinner {
     display: inline-block;
     margin-right: 6px;

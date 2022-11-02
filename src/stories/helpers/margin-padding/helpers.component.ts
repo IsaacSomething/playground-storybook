@@ -5,7 +5,22 @@ import { Component, Input } from '@angular/core';
   standalone: true,
   imports: [],
   providers: [],
-  styleUrls: ['./helpers.scss'],
+  styles: [
+    `
+      .box-outer {
+        border: 2px dashed #f3f3f3;
+        height: 230px;
+        width: 230px;
+        display: block;
+        > div {
+          background: #f3f3f3;
+          height: 50px;
+          width: 50px;
+          display: block;
+        }
+      }
+    `,
+  ],
   template: `
     <div class="box-outer">
       <div

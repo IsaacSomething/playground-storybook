@@ -21,6 +21,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
       [class.mat-stroked-button]="type === 'stroked'"
       [class.large]="size === 'large'"
       [class.small]="size === 'small'"
+      [class.round]="round"
       [color]="color"
       [disabled]="disabled"
     >
@@ -29,10 +30,11 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
   `,
 })
 export default class ButtonComponent {
+  @Input() label = 'Button';
   @Input() size: 'small' | 'default' | 'large' = 'default';
   @Input() type: 'flat' | 'stroked' | 'raised' | 'default' = 'flat';
   @Input() color: 'primary' | 'accent' | 'warn' = 'primary';
   @Input() disabled: boolean = false;
   @Input() loading: boolean = false;
-  @Input() label = 'Button';
+  @Input() round: boolean = false;
 }

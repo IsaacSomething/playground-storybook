@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatRippleModule } from '@angular/material/core';
 import { ClipboardModule } from '@angular/cdk/clipboard';
-import SBHeader from '../sb-header/sb-header.component';
+import SBHeader from '../../assets/sb-header/sb-header.component';
 
 @Component({
   selector: 'storybook-elevation',

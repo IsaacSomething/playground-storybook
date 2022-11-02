@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { ClipboardModule } from '@angular/cdk/clipboard';
 import { MatRippleModule } from '@angular/material/core';
-import SBHeader from '../sb-header/sb-header.component';
+import SBHeader from '../assets/sb-header/sb-header.component';
 
 @Component({
   selector: 'storybook-button',

@@ -10,11 +10,10 @@ addons.setConfig({
   theme: theme,
   panelPosition: "right",
   enableShortcuts: true,
-   
   selectedPanel: undefined,
   initialActive: "sidebar",
-  sidebar: { 
-    collapsedRoots: ["themeç"],
+  sidebar: {
+    /* collapsedRoots: ["theme"], */
   },
   toolbar: {
     title: { hidden: false },

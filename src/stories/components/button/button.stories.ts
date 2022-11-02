@@ -16,6 +16,7 @@ const Template: Story<Button> = (args: Button) => ({
     },
     disabled: { control: { type: 'boolean' } },
     loading: { control: { type: 'boolean' } },
+    round: { control: { type: 'boolean' } },
     type: { disable: true },
   },
 });
