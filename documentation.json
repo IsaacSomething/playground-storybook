@@ -10,7 +10,7 @@
         {
             "name": "_Blank",
             "id": "component-_Blank-beedfadec32e3a0d01d62518a8c23f2b5e68108d82b535131bc4b4656d55c542b8bc1b63f9ef9688e5d8911ea61a9349c12194e9f50a110f56035afef1d04328",
-            "file": "src/stories/blank/blank.component.ts",
+            "file": "src/stories/assets/blank/blank.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
@@ -111,7 +111,7 @@
         {
             "name": "ButtonComponent",
             "id": "component-ButtonComponent-b7bad167cb4a0f34af366ebc8ef0a8879a64f5254e86ff90bcf36ebbf312a2afa21f64985900769d38cb4c6c13b2fc6b870d6c8abd79a2f7a26ef03d1ec5966b",
-            "file": "src/stories/button/button.component.ts",
+            "file": "src/stories/components/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
@@ -206,7 +206,7 @@
         {
             "name": "ButtonIcon",
             "id": "component-ButtonIcon-aabd2683dc4620a2cf8dcab18c24cd9564fb5298cce282508fcd358f313c6b58c29c8a108f9bc0fe4822d81108e60876ae7791d4095268f145003647e81b4814",
-            "file": "src/stories/button/button-icon.component.ts",
+            "file": "src/stories/components/button/button-icon.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
@@ -265,7 +265,7 @@
         {
             "name": "Card",
             "id": "component-Card-7158b436105a916ac540b4ada85e2ea4604dbdfa3a7890d847f0a884c7c8de238f55cd30031a466e765bc212ef05545296786655e6a9c37d24995779987a9270",
-            "file": "src/stories/card/card.component.ts",
+            "file": "src/stories/components/card/card.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
@@ -315,7 +315,7 @@
         {
             "name": "CardExpansion",
             "id": "component-CardExpansion-184520a9ecc97a22375771669d6c62b087710ef131520b46a62126cbc0dc3121156a0f6420cc5619a0ba7afa40672af37c66ca8f142e420f0186e3b3b0511a84",
-            "file": "src/stories/card/card-expansion.component.ts",
+            "file": "src/stories/components/card/card-expansion.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
@@ -354,49 +354,8 @@
             "stylesData": ""
         },
         {
-            "name": "Checkbox",
-            "id": "component-Checkbox-fa4f431a7eb15b965031b775c5db876df243f7d4c816ed7d1e839449db9103e9727e55d313c779d14453931869c175937cb29931360b0ff8eab593496bc78148",
-            "file": "src/stories/forms/checkbox/checkbox.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "storybook-checkbox",
-            "styleUrls": [],
-            "styles": [],
-            "template": "Copy and paste these files for a blank project <br />\nWill be better to add a schematic for this\n",
-            "templateUrl": [],
-            "viewProviders": [],
-            "inputsClass": [
-                {
-                    "name": "disabled",
-                    "defaultValue": "false",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 13,
-                    "type": "boolean",
-                    "decorators": []
-                }
-            ],
-            "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'storybook-checkbox',\n  standalone: true,\n  imports: [],\n  template: `\n    Copy and paste these files for a blank project <br />\n    Will be better to add a schematic for this\n  `,\n})\nexport default class Checkbox {\n  @Input() disabled: boolean = false;\n}\n",
-            "assetsDirs": [],
-            "styleUrlsData": "",
-            "stylesData": ""
-        },
-        {
             "name": "Elevation",
-            "id": "component-Elevation-98a5d307c5ed3842876586b175448498a0a77f0d867bbf040aff4a0f997037abc140f4e86d5ad8cbbc59aa50241f8ffcaca059ceee759e7985c1e2be59a412dd",
+            "id": "component-Elevation-f3ff17a0a8454556cf1e0015ef0c3d5e8beb092a0fdbbc7d120152c1381aebd95a4e3c9363476781634c282da617de9f2809ed77dbe2eceff44a05bd2baf6b61",
             "file": "src/stories/helpers/elevation/elevation.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -432,51 +391,10 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { MatCardModule } from '@angular/material/card';\nimport { MatRippleModule } from '@angular/material/core';\nimport { ClipboardModule } from '@angular/cdk/clipboard';\nimport SBHeader from '../../sb-header/sb-header.component';\n\n@Component({\n  selector: 'storybook-elevation',\n  standalone: true,\n  imports: [MatCardModule, SBHeader, MatRippleModule, ClipboardModule],\n  providers: [],\n  styles: [\n    `\n      div {\n        height: 300px;\n        width: 300px;\n        padding: 16px;\n        border-radius: 4px;\n        cursor: copy;\n      }\n    `,\n  ],\n  template: `\n    <sb-header title=\"Elevation\" clipboard></sb-header>\n    <div\n      [class]=\"'mat-elevation-z' + elevation\"\n      matRipple\n      matRippleColor=\"var(--mat-accent)\"\n      [cdkCopyToClipboard]=\"'mat-elevation-z' + elevation\"\n    ></div>\n  `,\n})\nexport default class Elevation {\n  @Input() elevation = 1;\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { MatCardModule } from '@angular/material/card';\nimport { MatRippleModule } from '@angular/material/core';\nimport { ClipboardModule } from '@angular/cdk/clipboard';\nimport SBHeader from '../../assets/sb-header/sb-header.component';\n\n@Component({\n  selector: 'storybook-elevation',\n  standalone: true,\n  imports: [MatCardModule, SBHeader, MatRippleModule, ClipboardModule],\n  providers: [],\n  styles: [\n    `\n      div {\n        height: 300px;\n        width: 300px;\n        padding: 16px;\n        border-radius: 4px;\n        cursor: copy;\n      }\n    `,\n  ],\n  template: `\n    <sb-header title=\"Elevation\" clipboard></sb-header>\n    <div\n      [class]=\"'mat-elevation-z' + elevation\"\n      matRipple\n      matRippleColor=\"var(--mat-accent)\"\n      [cdkCopyToClipboard]=\"'mat-elevation-z' + elevation\"\n    ></div>\n  `,\n})\nexport default class Elevation {\n  @Input() elevation = 1;\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "\n      div {\n        height: 300px;\n        width: 300px;\n        padding: 16px;\n        border-radius: 4px;\n        cursor: copy;\n      }\n    \n"
-        },
-        {
-            "name": "FormFieldInput",
-            "id": "component-FormFieldInput-aba6a65e8916b5ad3b2aa9fa930df038656b667fd87133404ecca491490df5e46132f1d638d41f15745940883ce482f3a85fc8ab55bfbeecafcafd3fa75d6570",
-            "file": "src/stories/forms/input/input.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "storybook-input",
-            "styleUrls": [],
-            "styles": [],
-            "template": "Copy and paste these files for a blank project <br />\nWill be better to add a schematic for this\n",
-            "templateUrl": [],
-            "viewProviders": [],
-            "inputsClass": [
-                {
-                    "name": "disabled",
-                    "defaultValue": "false",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 13,
-                    "type": "boolean",
-                    "decorators": []
-                }
-            ],
-            "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'storybook-input',\n  standalone: true,\n  imports: [],\n  template: `\n    Copy and paste these files for a blank project <br />\n    Will be better to add a schematic for this\n  `,\n})\nexport default class FormFieldInput {\n  @Input() disabled: boolean = false;\n}\n",
-            "assetsDirs": [],
-            "styleUrlsData": "",
-            "stylesData": ""
         },
         {
             "name": "Helpers",
@@ -590,7 +508,7 @@
         {
             "name": "ProgressComponent",
             "id": "component-ProgressComponent-d9ff8dfe4cc5f0bed4d0bf64391aa0c557aaea86e157b8a5f5d0e0cf3a6bd4c75ba43327c910472ce544e8780c8930189e9de106d76486576d6e4e9504b03df2",
-            "file": "src/stories/progress-spinner/progress-spinner.component.ts",
+            "file": "src/stories/components/progress-spinner/progress-spinner.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
@@ -658,7 +576,7 @@
         {
             "name": "SBHeader",
             "id": "component-SBHeader-14dbbd9640e3ff88678786b2865c206b7e586e3d12f57e2735c20c20024a74b61a3d1fd0394dd7fa4e9c456d63b46347109032c177c4e616a30f3cab34454504",
-            "file": "src/stories/sb-header/sb-header.component.ts",
+            "file": "src/stories/assets/sb-header/sb-header.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
@@ -757,7 +675,7 @@
         {
             "name": "Sidenav",
             "id": "component-Sidenav-e216268112aa62e4730ffd2104bb15727022c06bb908aef47be033c3a462e887e2c8fa26ba92db8d2e7f572a7c8dc06bb58b7ff5e6c5d8c16bf51195119a4e75",
-            "file": "src/stories/sidenav/sidenav.component.ts",
+            "file": "src/stories/components/sidenav/sidenav.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
@@ -842,7 +760,7 @@
         {
             "name": "SlideToggle",
             "id": "component-SlideToggle-189c3cab874b633c358b6e3e400e45278956152542b1e04b52b2be8a98616e47721f64794f8ee66037831d2bfe382065327c179af0af6062ddc68f157e4272c3",
-            "file": "src/stories/slide-toggle/slide-toggle.component.ts",
+            "file": "src/stories/components/slide-toggle/slide-toggle.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
@@ -900,7 +818,7 @@
         },
         {
             "name": "Theme",
-            "id": "component-Theme-395d0cb4eee7f2f0caf82ed454b243817bd94057ac7008de2d1f3c2bede69363b890397b9777fd880b117802de74a237cd9099ca6b1a696197e75c6c2536aa1f",
+            "id": "component-Theme-f486fee0f1753bdc0c38851f5d5f5c1ad28d82d9a0b63f6b2520bf5048fcf28a8add7f28d09d38f6e136e425fb5b5e94b5b470a98b8b7ba3b9fb20fec7793d5e",
             "file": "src/stories/theme/theme.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -936,7 +854,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input } from '@angular/core';\nimport { ClipboardModule } from '@angular/cdk/clipboard';\nimport { MatRippleModule } from '@angular/material/core';\nimport SBHeader from '../sb-header/sb-header.component';\n\n@Component({\n  selector: 'storybook-button',\n  standalone: true,\n  imports: [CommonModule, ClipboardModule, MatRippleModule, SBHeader],\n  styleUrls: ['./theme.component.scss'],\n  template: `\n    <sb-header [title]=\"color\" hasCopy>\n      <h4 *ngIf=\"color === 'primary'\">HEX: #3F51B5</h4>\n      <h4 *ngIf=\"color === 'accent'\">HEX: #D72828</h4>\n      <h4 *ngIf=\"color === 'warn'\">HEX: #5C5C5C</h4>\n    </sb-header>\n\n    <div\n      class=\"block\"\n      matRipple\n      matRippleColor=\"var(--mat-{{ color }}-contrast-{{ hue }})\"\n      cdkCopyToClipboard=\"var(--mat-{{ color }}-{{ hue }})\"\n      *ngFor=\"\n        let hue of [\n          '50',\n          '100',\n          '200',\n          '300',\n          '400',\n          '500',\n          '600',\n          '700',\n          '800',\n          '900',\n          'A100',\n          'A200',\n          'A400',\n          'A700'\n        ]\n      \"\n      style=\"background-color:var(--mat-{{ color }}-{{ hue }})\"\n    >\n      <h1 style=\"color:var(--mat-{{ color }}-contrast-{{ hue }})\">\n        {{ hue }}\n      </h1>\n      <span style=\"color:var(--mat-{{ color }}-contrast-{{ hue }})\">\n        var(--mat-{{ color }}-{{ hue }})\n      </span>\n    </div>\n  `,\n})\nexport default class Theme {\n  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';\n}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input } from '@angular/core';\nimport { ClipboardModule } from '@angular/cdk/clipboard';\nimport { MatRippleModule } from '@angular/material/core';\nimport SBHeader from '../assets/sb-header/sb-header.component';\n\n@Component({\n  selector: 'storybook-button',\n  standalone: true,\n  imports: [CommonModule, ClipboardModule, MatRippleModule, SBHeader],\n  styleUrls: ['./theme.component.scss'],\n  template: `\n    <sb-header [title]=\"color\" hasCopy>\n      <h4 *ngIf=\"color === 'primary'\">HEX: #3F51B5</h4>\n      <h4 *ngIf=\"color === 'accent'\">HEX: #D72828</h4>\n      <h4 *ngIf=\"color === 'warn'\">HEX: #5C5C5C</h4>\n    </sb-header>\n\n    <div\n      class=\"block\"\n      matRipple\n      matRippleColor=\"var(--mat-{{ color }}-contrast-{{ hue }})\"\n      cdkCopyToClipboard=\"var(--mat-{{ color }}-{{ hue }})\"\n      *ngFor=\"\n        let hue of [\n          '50',\n          '100',\n          '200',\n          '300',\n          '400',\n          '500',\n          '600',\n          '700',\n          '800',\n          '900',\n          'A100',\n          'A200',\n          'A400',\n          'A700'\n        ]\n      \"\n      style=\"background-color:var(--mat-{{ color }}-{{ hue }})\"\n    >\n      <h1 style=\"color:var(--mat-{{ color }}-contrast-{{ hue }})\">\n        {{ hue }}\n      </h1>\n      <span style=\"color:var(--mat-{{ color }}-contrast-{{ hue }})\">\n        var(--mat-{{ color }}-{{ hue }})\n      </span>\n    </div>\n  `,\n})\nexport default class Theme {\n  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -949,7 +867,7 @@
         {
             "name": "Tooltip",
             "id": "component-Tooltip-0ea923c49c0ee79853760b296a382d455c43140eb265b7caa7f427487e571e19d9f16cb9765efb67589d00b600bb597e0ed2195d0a52e790262fe31146b41f2b",
-            "file": "src/stories/tooltip/tooltip.component.ts",
+            "file": "src/stories/components/tooltip/tooltip.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
@@ -1119,7 +1037,7 @@
                 "name": "Bar",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/progress-spinner/progress-spinner.stories.ts",
+                "file": "src/stories/components/progress-spinner/progress-spinner.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -1129,7 +1047,7 @@
                 "name": "Contained",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/slide-toggle/slide-toggle.stories.ts",
+                "file": "src/stories/components/slide-toggle/slide-toggle.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -1139,7 +1057,7 @@
                 "name": "Container",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/sidenav/sidenav.stories.ts",
+                "file": "src/stories/components/sidenav/sidenav.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -1159,7 +1077,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/button/button.stories.ts",
+                "file": "src/stories/assets/blank/blank.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -1169,7 +1087,17 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/card/card.stories.ts",
+                "file": "src/stories/components/button/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/card/card.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -1179,17 +1107,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/blank/blank.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/slide-toggle/slide-toggle.stories.ts",
+                "file": "src/stories/components/slide-toggle/slide-toggle.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -1199,31 +1117,11 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/tooltip/tooltip.stories.ts",
+                "file": "src/stories/components/tooltip/tooltip.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "Template.bind({\n  position: 'after',\n})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/forms/checkbox/checkbox.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/forms/input/input.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
             },
             {
                 "name": "Default",
@@ -1249,7 +1147,7 @@
                 "name": "Drawer",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/card/card.stories.ts",
+                "file": "src/stories/components/card/card.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -1279,7 +1177,7 @@
                 "name": "Expansion",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/card/card.stories.ts",
+                "file": "src/stories/components/card/card.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<CardExpansion>",
@@ -1289,27 +1187,7 @@
                 "name": "Flat",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/button/button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Flat",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/forms/checkbox/checkbox.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Flat",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/forms/input/input.stories.ts",
+                "file": "src/stories/components/button/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -1319,7 +1197,7 @@
                 "name": "Horizontal",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/card/card.stories.ts",
+                "file": "src/stories/components/card/card.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -1329,7 +1207,7 @@
                 "name": "Icon",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/button/button.stories.ts",
+                "file": "src/stories/components/button/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<ButtonIcon>",
@@ -1339,7 +1217,7 @@
                 "name": "Image",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/card/card.stories.ts",
+                "file": "src/stories/components/card/card.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -1359,27 +1237,7 @@
                 "name": "Raised",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/button/button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Raised",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/forms/checkbox/checkbox.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Raised",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/forms/input/input.stories.ts",
+                "file": "src/stories/components/button/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -1398,7 +1256,7 @@
                 "name": "SidenavContainer",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/sidenav/sidenav.stories.ts",
+                "file": "src/stories/components/sidenav/sidenav.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<Sidenav>",
@@ -1408,7 +1266,7 @@
                 "name": "Spinner",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/progress-spinner/progress-spinner.stories.ts",
+                "file": "src/stories/components/progress-spinner/progress-spinner.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -1418,81 +1276,11 @@
                 "name": "Stroked",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/button/button.stories.ts",
+                "file": "src/stories/components/button/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Stroked",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/forms/checkbox/checkbox.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Stroked",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/forms/input/input.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/button/button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<Button>",
-                "defaultValue": "(args: Button) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n    loading: { control: { type: 'boolean' } },\n    round: { control: { type: 'boolean' } },\n    type: { disable: true },\n  },\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/card/card.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<Card>",
-                "defaultValue": "(args: Card) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/progress-spinner/progress-spinner.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<ProgressComponent>",
-                "defaultValue": "(args: ProgressComponent) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/blank/blank.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<Blank>",
-                "defaultValue": "(args: Blank) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/slide-toggle/slide-toggle.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<SlideToggle>",
-                "defaultValue": "(args: SlideToggle) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -1508,31 +1296,61 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/tooltip/tooltip.stories.ts",
+                "file": "src/stories/assets/blank/blank.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Blank>",
+                "defaultValue": "(args: Blank) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/button/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Button>",
+                "defaultValue": "(args: Button) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n    loading: { control: { type: 'boolean' } },\n    round: { control: { type: 'boolean' } },\n    type: { disable: true },\n    parameters: {\n      design: {\n        type: 'figma',\n        url: 'https://www.figma.com/file/OsZF53QyMuWCyDTxqtlr7w/Angular-Material-(Material-3-Design-Component-Figma-Library-For-Angular)-(Community)?node-id=14%3A735',\n      },\n    },\n  },\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/card/card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Card>",
+                "defaultValue": "(args: Card) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/progress-spinner/progress-spinner.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<ProgressComponent>",
+                "defaultValue": "(args: ProgressComponent) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/slide-toggle/slide-toggle.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<SlideToggle>",
+                "defaultValue": "(args: SlideToggle) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/tooltip/tooltip.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<Tooltip>",
                 "defaultValue": "(args: Tooltip) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/forms/checkbox/checkbox.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<Checkbox>",
-                "defaultValue": "(args: Checkbox) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/forms/input/input.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<FormFieldInput>",
-                "defaultValue": "(args: FormFieldInput) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -1611,12 +1429,12 @@
                     "defaultValue": "Template.bind({})"
                 }
             ],
-            "src/stories/progress-spinner/progress-spinner.stories.ts": [
+            "src/stories/components/progress-spinner/progress-spinner.stories.ts": [
                 {
                     "name": "Bar",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/progress-spinner/progress-spinner.stories.ts",
+                    "file": "src/stories/components/progress-spinner/progress-spinner.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -1626,7 +1444,7 @@
                     "name": "Spinner",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/progress-spinner/progress-spinner.stories.ts",
+                    "file": "src/stories/components/progress-spinner/progress-spinner.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -1636,19 +1454,19 @@
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/progress-spinner/progress-spinner.stories.ts",
+                    "file": "src/stories/components/progress-spinner/progress-spinner.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<ProgressComponent>",
                     "defaultValue": "(args: ProgressComponent) => ({\n  props: args,\n})"
                 }
             ],
-            "src/stories/slide-toggle/slide-toggle.stories.ts": [
+            "src/stories/components/slide-toggle/slide-toggle.stories.ts": [
                 {
                     "name": "Contained",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/slide-toggle/slide-toggle.stories.ts",
+                    "file": "src/stories/components/slide-toggle/slide-toggle.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -1658,7 +1476,7 @@
                     "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/slide-toggle/slide-toggle.stories.ts",
+                    "file": "src/stories/components/slide-toggle/slide-toggle.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -1668,19 +1486,19 @@
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/slide-toggle/slide-toggle.stories.ts",
+                    "file": "src/stories/components/slide-toggle/slide-toggle.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<SlideToggle>",
                     "defaultValue": "(args: SlideToggle) => ({\n  props: args,\n})"
                 }
             ],
-            "src/stories/sidenav/sidenav.stories.ts": [
+            "src/stories/components/sidenav/sidenav.stories.ts": [
                 {
                     "name": "Container",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/sidenav/sidenav.stories.ts",
+                    "file": "src/stories/components/sidenav/sidenav.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -1690,7 +1508,7 @@
                     "name": "SidenavContainer",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/sidenav/sidenav.stories.ts",
+                    "file": "src/stories/components/sidenav/sidenav.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<Sidenav>",
@@ -1718,12 +1536,34 @@
                     "type": "literal type"
                 }
             ],
-            "src/stories/button/button.stories.ts": [
+            "src/stories/assets/blank/blank.stories.ts": [
                 {
                     "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/button/button.stories.ts",
+                    "file": "src/stories/assets/blank/blank.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/assets/blank/blank.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Blank>",
+                    "defaultValue": "(args: Blank) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/stories/components/button/button.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/button/button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -1733,7 +1573,7 @@
                     "name": "Flat",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/button/button.stories.ts",
+                    "file": "src/stories/components/button/button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -1743,7 +1583,7 @@
                     "name": "Icon",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/button/button.stories.ts",
+                    "file": "src/stories/components/button/button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<ButtonIcon>",
@@ -1753,7 +1593,7 @@
                     "name": "Raised",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/button/button.stories.ts",
+                    "file": "src/stories/components/button/button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -1763,7 +1603,7 @@
                     "name": "Stroked",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/button/button.stories.ts",
+                    "file": "src/stories/components/button/button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -1773,19 +1613,19 @@
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/button/button.stories.ts",
+                    "file": "src/stories/components/button/button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<Button>",
-                    "defaultValue": "(args: Button) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n    loading: { control: { type: 'boolean' } },\n    round: { control: { type: 'boolean' } },\n    type: { disable: true },\n  },\n})"
+                    "defaultValue": "(args: Button) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n    loading: { control: { type: 'boolean' } },\n    round: { control: { type: 'boolean' } },\n    type: { disable: true },\n    parameters: {\n      design: {\n        type: 'figma',\n        url: 'https://www.figma.com/file/OsZF53QyMuWCyDTxqtlr7w/Angular-Material-(Material-3-Design-Component-Figma-Library-For-Angular)-(Community)?node-id=14%3A735',\n      },\n    },\n  },\n})"
                 }
             ],
-            "src/stories/card/card.stories.ts": [
+            "src/stories/components/card/card.stories.ts": [
                 {
                     "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/card/card.stories.ts",
+                    "file": "src/stories/components/card/card.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -1795,7 +1635,7 @@
                     "name": "Drawer",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/card/card.stories.ts",
+                    "file": "src/stories/components/card/card.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -1805,7 +1645,7 @@
                     "name": "Expansion",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/card/card.stories.ts",
+                    "file": "src/stories/components/card/card.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<CardExpansion>",
@@ -1815,7 +1655,7 @@
                     "name": "Horizontal",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/card/card.stories.ts",
+                    "file": "src/stories/components/card/card.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -1825,7 +1665,7 @@
                     "name": "Image",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/card/card.stories.ts",
+                    "file": "src/stories/components/card/card.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -1835,41 +1675,19 @@
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/card/card.stories.ts",
+                    "file": "src/stories/components/card/card.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<Card>",
                     "defaultValue": "(args: Card) => ({\n  props: args,\n})"
                 }
             ],
-            "src/stories/blank/blank.stories.ts": [
+            "src/stories/components/tooltip/tooltip.stories.ts": [
                 {
                     "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/blank/blank.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/blank/blank.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<Blank>",
-                    "defaultValue": "(args: Blank) => ({\n  props: args,\n})"
-                }
-            ],
-            "src/stories/tooltip/tooltip.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/tooltip/tooltip.stories.ts",
+                    "file": "src/stories/components/tooltip/tooltip.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -1879,115 +1697,11 @@
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/tooltip/tooltip.stories.ts",
+                    "file": "src/stories/components/tooltip/tooltip.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<Tooltip>",
                     "defaultValue": "(args: Tooltip) => ({\n  props: args,\n})"
-                }
-            ],
-            "src/stories/forms/checkbox/checkbox.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/forms/checkbox/checkbox.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Flat",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/forms/checkbox/checkbox.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Raised",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/forms/checkbox/checkbox.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Stroked",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/forms/checkbox/checkbox.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/forms/checkbox/checkbox.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<Checkbox>",
-                    "defaultValue": "(args: Checkbox) => ({\n  props: args,\n})"
-                }
-            ],
-            "src/stories/forms/input/input.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/forms/input/input.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Flat",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/forms/input/input.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Raised",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/forms/input/input.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Stroked",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/forms/input/input.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/forms/input/input.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<FormFieldInput>",
-                    "defaultValue": "(args: FormFieldInput) => ({\n  props: args,\n})"
                 }
             ],
             "src/stories/helpers/elevation/elevation.stories.ts": [
@@ -2111,7 +1825,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/blank/blank.component.ts",
+                "filePath": "src/stories/assets/blank/blank.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "_Blank",
@@ -2120,7 +1834,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/blank/blank.stories.ts",
+                "filePath": "src/stories/assets/blank/blank.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -2130,7 +1844,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/blank/blank.stories.ts",
+                "filePath": "src/stories/assets/blank/blank.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -2140,7 +1854,16 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/button/button-icon.component.ts",
+                "filePath": "src/stories/assets/sb-header/sb-header.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "SBHeader",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/button/button-icon.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "ButtonIcon",
@@ -2149,7 +1872,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/button/button.component.ts",
+                "filePath": "src/stories/components/button/button.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "ButtonComponent",
@@ -2158,7 +1881,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/button/button.stories.ts",
+                "filePath": "src/stories/components/button/button.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -2168,7 +1891,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/button/button.stories.ts",
+                "filePath": "src/stories/components/button/button.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -2178,7 +1901,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/button/button.stories.ts",
+                "filePath": "src/stories/components/button/button.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -2188,7 +1911,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/button/button.stories.ts",
+                "filePath": "src/stories/components/button/button.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -2198,7 +1921,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/button/button.stories.ts",
+                "filePath": "src/stories/components/button/button.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -2208,7 +1931,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/button/button.stories.ts",
+                "filePath": "src/stories/components/button/button.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -2218,7 +1941,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/card/card-expansion.component.ts",
+                "filePath": "src/stories/components/card/card-expansion.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "CardExpansion",
@@ -2227,7 +1950,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/card/card.component.ts",
+                "filePath": "src/stories/components/card/card.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "Card",
@@ -2236,7 +1959,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/card/card.stories.ts",
+                "filePath": "src/stories/components/card/card.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -2246,7 +1969,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/card/card.stories.ts",
+                "filePath": "src/stories/components/card/card.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -2256,7 +1979,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/card/card.stories.ts",
+                "filePath": "src/stories/components/card/card.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -2266,7 +1989,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/card/card.stories.ts",
+                "filePath": "src/stories/components/card/card.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -2276,7 +1999,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/card/card.stories.ts",
+                "filePath": "src/stories/components/card/card.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -2286,7 +2009,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/card/card.stories.ts",
+                "filePath": "src/stories/components/card/card.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -2296,56 +2019,36 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/forms/checkbox/checkbox.component.ts",
+                "filePath": "src/stories/components/progress-spinner/progress-spinner.component.ts",
                 "type": "component",
                 "linktype": "component",
-                "name": "Checkbox",
+                "name": "ProgressComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/2",
+                "coverageCount": "0/5",
                 "status": "low"
             },
             {
-                "filePath": "src/stories/forms/checkbox/checkbox.stories.ts",
+                "filePath": "src/stories/components/progress-spinner/progress-spinner.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "Default",
+                "name": "Bar",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
             },
             {
-                "filePath": "src/stories/forms/checkbox/checkbox.stories.ts",
+                "filePath": "src/stories/components/progress-spinner/progress-spinner.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "Flat",
+                "name": "Spinner",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
             },
             {
-                "filePath": "src/stories/forms/checkbox/checkbox.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Raised",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/forms/checkbox/checkbox.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Stroked",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/forms/checkbox/checkbox.stories.ts",
+                "filePath": "src/stories/components/progress-spinner/progress-spinner.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -2355,16 +2058,55 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/forms/input/input.component.ts",
+                "filePath": "src/stories/components/sidenav/sidenav.component.ts",
                 "type": "component",
                 "linktype": "component",
-                "name": "FormFieldInput",
+                "name": "Sidenav",
                 "coveragePercent": 0,
-                "coverageCount": "0/2",
+                "coverageCount": "0/7",
                 "status": "low"
             },
             {
-                "filePath": "src/stories/forms/input/input.stories.ts",
+                "filePath": "src/stories/components/sidenav/sidenav.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Container",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/sidenav/sidenav.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "SidenavContainer",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/slide-toggle/slide-toggle.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "SlideToggle",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/slide-toggle/slide-toggle.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Contained",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/slide-toggle/slide-toggle.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -2374,37 +2116,36 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/forms/input/input.stories.ts",
+                "filePath": "src/stories/components/slide-toggle/slide-toggle.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "Flat",
+                "name": "Template",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
             },
             {
-                "filePath": "src/stories/forms/input/input.stories.ts",
+                "filePath": "src/stories/components/tooltip/tooltip.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "Tooltip",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/tooltip/tooltip.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "Raised",
+                "name": "Default",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
             },
             {
-                "filePath": "src/stories/forms/input/input.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Stroked",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/forms/input/input.stories.ts",
+                "filePath": "src/stories/components/tooltip/tooltip.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -2472,122 +2213,6 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/progress-spinner/progress-spinner.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "ProgressComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/5",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/progress-spinner/progress-spinner.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Bar",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/progress-spinner/progress-spinner.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Spinner",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/progress-spinner/progress-spinner.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Template",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/sb-header/sb-header.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "SBHeader",
-                "coveragePercent": 0,
-                "coverageCount": "0/4",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/sidenav/sidenav.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "Sidenav",
-                "coveragePercent": 0,
-                "coverageCount": "0/7",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/sidenav/sidenav.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Container",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/sidenav/sidenav.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "SidenavContainer",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/slide-toggle/slide-toggle.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "SlideToggle",
-                "coveragePercent": 0,
-                "coverageCount": "0/4",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/slide-toggle/slide-toggle.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Contained",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/slide-toggle/slide-toggle.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Default",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/slide-toggle/slide-toggle.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Template",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
                 "filePath": "src/stories/theme/theme.component.ts",
                 "type": "component",
                 "linktype": "component",
@@ -2632,35 +2257,6 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Warn",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/tooltip/tooltip.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "Tooltip",
-                "coveragePercent": 0,
-                "coverageCount": "0/5",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/tooltip/tooltip.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Default",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/tooltip/tooltip.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Template",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
