@@ -13,7 +13,20 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     CommonModule,
     MatProgressSpinnerModule,
   ],
-  templateUrl: './button.component.html',
+  template: `
+    <button
+      mat-button
+      [class.mat-flat-button]="type === 'flat'"
+      [class.mat-raised-button]="type === 'raised'"
+      [class.mat-stroked-button]="type === 'stroked'"
+      [class.large]="size === 'large'"
+      [class.small]="size === 'small'"
+      [color]="color"
+      [disabled]="disabled"
+    >
+      <mat-spinner *ngIf="loading"></mat-spinner> {{ label }}
+    </button>
+  `,
 })
 export default class ButtonComponent {
   @Input() size: 'small' | 'default' | 'large' = 'default';

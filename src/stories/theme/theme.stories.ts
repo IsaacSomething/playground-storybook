@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/angular/types-6-0';
 import Theme from './theme.component';
 
 export default {
-  title: 'Theme',
+  title: 'Theme/Colors',
   component: Theme,
   argTypes: {
     color: { control: false },
@@ -22,6 +22,7 @@ export const Accent = Template.bind({});
 Accent.args = {
   color: 'accent',
 };
+
 export const Warn = Template.bind({});
 Warn.args = {
   color: 'warn',

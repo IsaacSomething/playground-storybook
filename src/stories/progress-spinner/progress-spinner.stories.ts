@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/angular/types-6-0';
 import ProgressComponent from './progress-spinner.component';
 
 export default {
-  title: 'Progress',
+  title: 'Components/Progress',
   component: ProgressComponent,
   parameters: { controls: { sort: 'requiredFirst' } },
   argTypes: {

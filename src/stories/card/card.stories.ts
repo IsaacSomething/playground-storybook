@@ -3,7 +3,7 @@ import CardExpansion from './card-expansion.component';
 import Card from './card.component';
 
 export default {
-  title: 'Card',
+  title: 'Components/Card',
   component: Card,
   argTypes: {
     color: {

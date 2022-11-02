@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/angular';
 import Sidenav from './sidenav.component';
 
 export default {
-  title: 'Sidenav',
+  title: 'Components/Sidenav',
   component: Sidenav,
   argTypes: {
     mode: {

@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/angular';
 import Elevation from './elevation.component';
 
 export default {
-  title: 'Elevation',
+  title: 'Helpers/Elevation',
   component: Elevation,
   argTypes: {
     elevation: {

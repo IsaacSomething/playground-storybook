@@ -3,7 +3,7 @@ import Button from './button.component';
 import ButtonIcon from './button-icon.component';
 
 export default {
-  title: 'Button',
+  title: 'Components/Button',
   component: Button,
 } as Meta;
 
@@ -16,7 +16,7 @@ const Template: Story<Button> = (args: Button) => ({
     },
     disabled: { control: { type: 'boolean' } },
     loading: { control: { type: 'boolean' } },
-    type: { table: { disable: true } },
+    type: { disable: true },
   },
 });
 

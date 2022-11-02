@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/angular';
 import Helpers from './helpers.component';
 
 export default {
-  title: 'Helpers',
+  title: 'Helpers/Padding & Margin',
   component: Helpers,
   argTypes: {
     padding: {

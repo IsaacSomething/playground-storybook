@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/angular';
 import Tooltip from './tooltip.component';
 
 export default {
-  title: 'Tooltip',
+  title: 'Components/Tooltip',
   component: Tooltip,
   argTypes: {
     position: {

@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/angular';
 import SlideToggle from './slide-toggle.component';
 
 export default {
-  title: 'Slide Toggle',
+  title: 'Components/Slide Toggle',
   component: SlideToggle,
   argTypes: {
     color: {
@@ -18,12 +18,12 @@ const Template: Story<SlideToggle> = (args: SlideToggle) => ({
   props: args,
 });
 
-export const Default = Template.bind({});
+export const Default = Template.bind({label:'Button'});
 Default.args = {
-  isContained: false,
+  contained: false,
 };
 
 export const Contained = Template.bind({});
 Contained.args = {
-  isContained: true,
+  contained: true,
 };
