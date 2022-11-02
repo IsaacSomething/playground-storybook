@@ -18,7 +18,7 @@ const Template: Story<SlideToggle> = (args: SlideToggle) => ({
   props: args,
 });
 
-export const Default = Template.bind({label:'Button'});
+export const Default = Template.bind({});
 Default.args = {
   contained: false,
 };

@@ -1,4 +1,5 @@
 import { Story, Meta } from '@storybook/angular';
+import CardDrawer from './card-drawer.component';
 import CardExpansion from './card-expansion.component';
 import Card from './card.component';
 
@@ -8,6 +9,10 @@ export default {
   argTypes: {
     color: {
       options: ['default', 'primary', 'accent', 'warn'],
+      control: { type: 'radio' },
+    },
+    imgSize: {
+      options: ['sm', 'md', 'lg', 'xl'],
       control: { type: 'radio' },
     },
     image: { control: { type: 'boolean' } },
@@ -26,16 +31,14 @@ export const Image = Template.bind({
   image: true,
 });
 
-export const Horizontal = Template.bind({
-  color: 'default',
-});
-
 export const Expansion: Story<CardExpansion> = (args: CardExpansion) => ({
   component: CardExpansion,
   props: args,
   color: 'default',
 });
 
-export const Drawer = Template.bind({
+export const Drawer: Story<CardDrawer> = (args: CardDrawer) => ({
+  component: CardDrawer,
+  props: args,
   color: 'default',
 });

@@ -5,6 +5,6 @@ export default create({
   brandTitle: "Playground storybook",
   brandUrl: "https://material.angular.io",
   brandImage: "assets/material.svg",
-  brandTarget: "_self",
+  brandTarget: "_blank",
   fontBase: '"Roboto", sans-serif',
 });

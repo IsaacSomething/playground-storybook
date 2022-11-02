@@ -1,18 +1,23 @@
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import ProgressComponent from './progress-spinner.component';
+import ProgressComponent from './progress.component';
 
 export default {
   title: 'Components/Progress',
   component: ProgressComponent,
   parameters: { controls: { sort: 'requiredFirst' } },
   argTypes: {
-    label: {},
     color: {
       options: ['primary', 'accent', 'warn'],
       control: { type: 'radio' },
     },
-    disabled: {
-      control: { type: 'boolean' },
+    type: {
+      control: { disable: true },
+    },
+    strokeWidth: {
+      control: { type: 'range', min: 1, max: 30, step: 1 },
+    },
+    diameter: {
+      control: { type: 'range', min: 15, max: 200, step: 5 },
     },
   },
 } as Meta;
@@ -23,10 +28,18 @@ const Template: Story<ProgressComponent> = (args: ProgressComponent) => ({
 
 export const Bar = Template.bind({});
 Bar.args = {
-  mode: 'determinate',
+  type: 'bar',
+};
+Bar.argTypes = {
+  strokeWidth: {
+    control: { disable: true },
+  },
+  diameter: {
+    control: { disable: true },
+  },
 };
 
 export const Spinner = Template.bind({});
 Spinner.args = {
-  mode: 'indeterminate',
+  type: 'spinner',
 };

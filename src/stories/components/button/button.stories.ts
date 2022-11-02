@@ -30,30 +30,22 @@ const designParams = {
 };
 
 export const Default = Template.bind({});
-Default.args = {
-  type: 'default',
-};
+Default.args = { type: 'default' };
 Default.parameters = {
   design: { ...designParams, url: `${urlPrefix}0%3A1` },
 };
 
 export const Flat = Template.bind({});
-Flat.args = {
-  type: 'flat',
-};
+Flat.args = { type: 'flat' };
 Flat.parameters = {
   design: { ...designParams, url: `${urlPrefix}1%3A391` },
 };
 
 export const Raised = Template.bind({});
-Raised.args = {
-  type: 'raised',
-};
+Raised.args = { type: 'raised' };
 
 export const Stroked = Template.bind({});
-Stroked.args = {
-  type: 'stroked',
-};
+Stroked.args = { type: 'stroked' };
 
 export const Icon: Story<ButtonIcon> = (args: ButtonIcon) => ({
   component: ButtonIcon,

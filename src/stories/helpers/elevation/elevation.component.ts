@@ -27,7 +27,9 @@ import SBHeader from '../../assets/sb-header/sb-header.component';
       matRipple
       matRippleColor="var(--mat-accent)"
       [cdkCopyToClipboard]="'mat-elevation-z' + elevation"
-    ></div>
+    >
+  <code>.mat-elevation-z{{elevation}}</code>
+  </div>
   `,
 })
 export default class Elevation {

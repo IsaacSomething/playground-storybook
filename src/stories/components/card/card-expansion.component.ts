@@ -5,7 +5,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @Component({
-  selector: 'storybook-card',
+  selector: 'storybook-card-expansion',
   standalone: true,
   imports: [
     MatCardModule,
@@ -15,21 +15,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   template: `
     <mat-card [attr.color]="color" class="expansion">
-      <mat-card-header class="no-margin" class="expansion">
+      <mat-card-header class="no-margin">
         <mat-expansion-panel matRipple matRippleColor="black">
           <mat-expansion-panel-header>
-            <mat-card-title>title</mat-card-title>
-            <mat-card-subtitle>subtitle</mat-card-subtitle>
+            <mat-card-title>Title</mat-card-title>
+            <mat-card-subtitle>Subtitle</mat-card-subtitle>
           </mat-expansion-panel-header>
           <p>matRipple was added</p>
         </mat-expansion-panel>
       </mat-card-header>
 
-      <mat-card-content class="expansion">
+      <mat-card-content>
         <mat-accordion>
           <mat-expansion-panel class="mat-elevation-z0">
             <mat-expansion-panel-header>
-              <mat-panel-title> This is the expansion title </mat-panel-title>
+              <mat-panel-title> Expansion title </mat-panel-title>
               <mat-panel-description>
                 This is a summary of the content
               </mat-panel-description>
@@ -39,7 +39,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
           <mat-expansion-panel class="mat-elevation-z0">
             <mat-expansion-panel-header>
-              <mat-panel-title> Self aware panel </mat-panel-title>
+              <mat-panel-title> Aware panel </mat-panel-title>
               <mat-panel-description> Currently I am </mat-panel-description>
             </mat-expansion-panel-header>
             <p>therefore i think ... i think</p>

@@ -16,7 +16,7 @@
 
   /* Card with expansion */
   &.expansion {
-    .mat-card-header.expansion {
+    .mat-card-header {
       margin: 0 -16px;
 
       .mat-card-header-text {
@@ -54,11 +54,27 @@
       }
     }
 
-    .mat-card-content.expansion {
+    .mat-card-content {
       margin: 0 -16px -16px;
       .mat-expansion-panel {
         border-bottom: 1px solid var(--mat-divider);
       }
+    }
+  }
+
+  /* Drawer */
+  &.drawer {
+    padding: 0;
+    .mat-drawer {
+      width: 100%;
+    }
+    @for $i from 0 to 100 {
+      .width-#{$i} {
+        width: #{$i + "%"};
+      }
+    }
+    .mat-drawer-content {
+      padding: var(--mat-spacing);
     }
   }
 }

@@ -45,7 +45,7 @@
 
   /* Sizes */
   &.large {
-    @include buttonSize(50px, 50px, 16px);
+    @include buttonSize(50px, 48px, 16px);
     .mat-progress-spinner {
       @include spinnerSize(22px);
       svg {

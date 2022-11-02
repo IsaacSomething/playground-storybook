@@ -8,3 +8,39 @@ $props: "padding", "padding-left", "padding-right", "margin", "margin-left",
     }
   }
 }
+
+$spaces: "margin", "padding";
+
+@each $space in $spaces {
+  .#{$space}-horizontal {
+    #{$space}: 0 var(--mat-spacing);
+  }
+  .#{$space}-vertical {
+    #{$space}: 0 var(--mat-spacing);
+  }
+  .no-#{$space} {
+    #{$space}: 0;
+  }
+}
+
+$spacing: "padding", "padding-right", "padding-left", "padding-bottom",
+  "padding-top", "margin", "margin-top", "margin-bottom", "margin-left",
+  "margin-right";
+
+@each $space in $spacing {
+  .#{$space} {
+    #{$space}: var(--mat-spacing);
+  }
+}
+
+$backgrounds: "bg", "divider", "primary", "accent" "warn";
+
+@each $bg in $backgrounds {
+  .bg-#{$bg} {
+    background-color: var(--mat-#{$bg});
+  }
+}
+
+.pointer {
+  cursor: pointer;
+}

@@ -12,7 +12,7 @@ import { Observable } from 'rxjs';
     `
       mat-sidenav-container {
         height: 500px;
-        border: 1px solid var(--mat-divider);
+        border: 2px solid var(--mat-divider);
         border-radius: var(--mat-radius);
       }
       mat-sidenav-content,

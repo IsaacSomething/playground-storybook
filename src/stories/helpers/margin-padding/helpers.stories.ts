@@ -6,22 +6,22 @@ export default {
   component: Helpers,
   argTypes: {
     padding: {
-      control: { type: 'range', min: 0, max: 60, step: 1 },
+      control: { type: 'range', min: 0, max: 60, step: 5 },
     },
     paddingLeft: {
-      control: { type: 'range', min: 0, max: 60, step: 1 },
+      control: { type: 'range', min: 0, max: 60, step: 5 },
     },
     paddingRight: {
-      control: { type: 'range', min: 0, max: 60, step: 1 },
+      control: { type: 'range', min: 0, max: 60, step: 5 },
     },
     margin: {
-      control: { type: 'range', min: 0, max: 60, step: 1 },
+      control: { type: 'range', min: 0, max: 60, step: 5},
     },
     marginLeft: {
-      control: { type: 'range', min: 0, max: 60, step: 1 },
+      control: { type: 'range', min: 0, max: 60, step: 5 },
     },
     marginRight: {
-      control: { type: 'range', min: 0, max: 60, step: 1 },
+      control: { type: 'range', min: 0, max: 60, step: 5 },
     },
   },
 } as Meta;
