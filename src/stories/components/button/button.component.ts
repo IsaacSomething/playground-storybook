@@ -39,7 +39,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
         [color]="color"
         [disabled]="disabled"
       >
-        <mat-spinner *ngIf="loading"></mat-spinner> {{ label }}
+        <mat-spinner *ngIf="loading"></mat-spinner> [{{ label }}]
       </button>
 
       <button

@@ -1,9 +1,9 @@
 import { Story, Meta } from '@storybook/angular';
-import Blank from './blank.component';
+import Snackbar from './snackbar.component';
 
 export default {
-  title: 'Blank',
-  component: Blank,
+  title: 'Components/Snackbar',
+  component: Snackbar,
   argTypes: {
     color: {
       options: ['primary', 'accent', 'warn'],
@@ -13,7 +13,7 @@ export default {
   },
 } as Meta;
 
-const Template: Story<Blank> = (args: Blank) => ({
+const Template: Story<Snackbar> = (args: Snackbar) => ({
   props: args,
 });
 

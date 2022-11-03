@@ -8,39 +8,39 @@ $mat-accent: mat.define-palette($mat-accent-palette);
 $mat-warn: mat.define-palette($mat-warn-palette);
 $mat-theme: mat.define-light-theme($mat-primary, $mat-accent, $mat-warn);
 
-$mat-theme-background: (
-  // status-bar: var(--mat-bg),
-  // app-bar: #fff,
-  // background: var(--mat-bg),`
-  // hover: rgba(black, 0.04),
-  // card: var(--mat-bg),
-  // dialog: var(--mat-bg),
-  // disabled-button: rgba(black, 0.12),
-  // raised-button: white,
-  // focused-button: $dark-focused,
-  // selected-button: map_get(mat.$grey-palette, 300),
-  // selected-disabled-button: map_get(mat.$grey-palette, 400),
-  // disabled-button-toggle: map_get(mat.$grey-palette, 200),
-  // unselected-chip: map_get(mat.$grey-palette, 300),
-  // disabled-list-option: map_get(mat.$grey-palette, 200),
+/* $mat-theme-background: (
+  status-bar: var(--mat-bg),
+  app-bar: #fff,
+  background: var(--mat-bg),
+  hover: rgba(black, 0.04),
+  card: var(--mat-bg),
+  dialog: var(--mat-bg),
+  disabled-button: rgba(black, 0.12),
+  raised-button: white,
+  focused-button: $dark-focused,
+  selected-button: map_get(mat.$grey-palette, 300),
+  selected-disabled-button: map_get(mat.$grey-palette, 400),
+  disabled-button-toggle: map_get(mat.$grey-palette, 200),
+  unselected-chip: map_get(mat.$grey-palette, 300),
+  disabled-list-option: map_get(mat.$grey-palette, 200),
 );
 
 $mat-theme-foreground: (
-  // base: var(--mat-bg),
+  base: var(--mat-bg),
   divider: var(--mat-divider),
-  // dividers: var(--mat-divider),
-  // disabled: $dark-disabled-text,
-  // disabled-button: rgba(black, 0.26),
-  // disabled-text: $dark-disabled-text,
-  // elevation: black,
-  // hint-text: $dark-disabled-text,
-  // secondary-text: var(--mat-app-text-secondary),
-  // icon: var(--mat-text),
-  // icons: var(--mat-text),
-  // text: var(--mat-text),
-  // slider-min: rgba(black, 0.87),
-  // slider-off: rgba(black, 0.26),
-  // slider-off-active: rgba(black, 0.38),
+  dividers: var(--mat-divider),
+  disabled: $dark-disabled-text,
+  disabled-button: rgba(black, 0.26),
+  disabled-text: $dark-disabled-text,
+  elevation: black,
+  hint-text: $dark-disabled-text,
+  secondary-text: var(--mat-app-text-secondary),
+  icon: var(--mat-text),
+  icons: var(--mat-text),
+  text: var(--mat-text),
+  slider-min: rgba(black, 0.87),
+  slider-off: rgba(black, 0.26),
+  slider-off-active: rgba(black, 0.38),
 );
 
 $mat-theme: map-merge(
@@ -49,6 +49,6 @@ $mat-theme: map-merge(
     background: $mat-theme-background,
     foreground: $mat-theme-foreground,
   )
-);
+); */
 
 @include mat.all-component-themes($mat-theme);

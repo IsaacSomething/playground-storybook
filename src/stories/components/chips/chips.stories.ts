@@ -1,19 +1,19 @@
 import { Story, Meta } from '@storybook/angular';
-import Blank from './blank.component';
+import Chips from './chips.component';
 
 export default {
-  title: 'Blank',
-  component: Blank,
+  title: 'Components/Chips',
+  component: Chips,
   argTypes: {
     color: {
-      options: ['primary', 'accent', 'warn'],
+      options: ['primary', 'accent', 'warn',],
       control: { type: 'radio' },
     },
     disabled: { control: { type: 'boolean' } },
   },
 } as Meta;
 
-const Template: Story<Blank> = (args: Blank) => ({
+const Template: Story<Chips> = (args: Chips) => ({
   props: args,
 });
 

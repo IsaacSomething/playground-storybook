@@ -591,8 +591,58 @@
             ]
         },
         {
+            "name": "Menu",
+            "id": "component-Menu-feebcca8656bf4f92187ff82d8ef8c107aa2b525aaaf9f270f53d4e4abeaf028549d074c949b8917e261a6ca8d84ee159e45d7a9fcce53054ec81a78d793f8fc",
+            "file": "src/stories/components/menu/menu.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-menu",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<button mat-flat-button [matMenuTriggerFor]=\"menu\">Menu</button>\n<mat-menu #menu=\"matMenu\">\n  <button mat-menu-item>Item 1</button>\n  <button mat-menu-item>Item 2</button>\n</mat-menu>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "color",
+                    "defaultValue": "'primary'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 18,
+                    "type": "\"primary\" | \"accent\" | \"warn\"",
+                    "decorators": []
+                },
+                {
+                    "name": "disabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 19,
+                    "type": "boolean",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { MatMenuModule } from '@angular/material/menu';\nimport { MatButtonModule } from '@angular/material/button';\n\n@Component({\n  selector: 'storybook-menu',\n  standalone: true,\n  imports: [MatMenuModule, MatButtonModule],\n  template: `\n    <button mat-flat-button [matMenuTriggerFor]=\"menu\">Menu</button>\n    <mat-menu #menu=\"matMenu\">\n      <button mat-menu-item>Item 1</button>\n      <button mat-menu-item>Item 2</button>\n    </mat-menu>\n  `,\n})\nexport default class Menu {\n  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';\n  @Input() disabled: boolean = false;\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": ""
+        },
+        {
             "name": "ProgressComponent",
-            "id": "component-ProgressComponent-332cf12133cefe7e83ccf8cd853d4643cda3a3eb3023e206b6b50f8677c1a6ae9627b1efd7955bc4d9e8db0776e022646b5fbd409e09a4a0c5b2db8176a596c3",
+            "id": "component-ProgressComponent-809d94beb1494aeaa4ec64937dbbbe8f1abebde763fbbcbedb904385fdb2ec4206cdd46dbd9a81af8c8ebc63dbce3d6a844a2117d65b09f1e2901698d33fb4ae",
             "file": "src/stories/components/progress/progress.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -617,7 +667,7 @@
                 },
                 {
                     "name": "diameter",
-                    "defaultValue": "15",
+                    "defaultValue": "100",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "line": 35,
@@ -679,7 +729,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { MatProgressSpinnerModule } from '@angular/material/progress-spinner';\nimport { MatProgressBarModule } from '@angular/material/progress-bar';\nimport { CommonModule } from '@angular/common';\n\n@Component({\n  selector: 'storybook-progress',\n  standalone: true,\n  imports: [MatProgressSpinnerModule, MatProgressBarModule, CommonModule],\n  template: `\n    <mat-progress-bar\n      *ngIf=\"type === 'bar'\"\n      [mode]=\"mode\"\n      [value]=\"value\"\n      [color]=\"color\"\n    ></mat-progress-bar>\n    <br />\n    <mat-spinner\n      *ngIf=\"type === 'spinner'\"\n      [mode]=\"mode\"\n      [value]=\"value\"\n      [color]=\"color\"\n      [strokeWidth]=\"strokeWidth\"\n      [diameter]=\"diameter\"\n    ></mat-spinner>\n  `,\n})\nexport default class ProgressComponent {\n  @Input() value = 50;\n  @Input() disabled: boolean = false;\n  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';\n  @Input() mode: 'determinate' | 'indeterminate' = 'indeterminate';\n  @Input() type!: 'bar' | 'spinner';\n  @Input() strokeWidth = 10;\n  @Input() diameter = 15;\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { MatProgressSpinnerModule } from '@angular/material/progress-spinner';\nimport { MatProgressBarModule } from '@angular/material/progress-bar';\nimport { CommonModule } from '@angular/common';\n\n@Component({\n  selector: 'storybook-progress',\n  standalone: true,\n  imports: [MatProgressSpinnerModule, MatProgressBarModule, CommonModule],\n  template: `\n    <mat-progress-bar\n      *ngIf=\"type === 'bar'\"\n      [mode]=\"mode\"\n      [value]=\"value\"\n      [color]=\"color\"\n    ></mat-progress-bar>\n    <br />\n    <mat-spinner\n      *ngIf=\"type === 'spinner'\"\n      [mode]=\"mode\"\n      [value]=\"value\"\n      [color]=\"color\"\n      [strokeWidth]=\"strokeWidth\"\n      [diameter]=\"diameter\"\n    ></mat-spinner>\n  `,\n})\nexport default class ProgressComponent {\n  @Input() value = 50;\n  @Input() disabled: boolean = false;\n  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';\n  @Input() mode: 'determinate' | 'indeterminate' = 'indeterminate';\n  @Input() type!: 'bar' | 'spinner';\n  @Input() strokeWidth = 10;\n  @Input() diameter = 100;\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": ""
@@ -1188,6 +1238,16 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/assets/blank/blank.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/components/button/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1208,11 +1268,11 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/components/tooltip/tooltip.stories.ts",
+                "file": "src/stories/components/menu/menu.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "Template.bind({\n  position: 'after',\n})"
+                "defaultValue": "Template.bind({})"
             },
             {
                 "name": "Default",
@@ -1228,11 +1288,11 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/assets/blank/blank.stories.ts",
+                "file": "src/stories/components/tooltip/tooltip.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "Template.bind({})"
+                "defaultValue": "Template.bind({\n  position: 'after',\n})"
             },
             {
                 "name": "Default",
@@ -1407,6 +1467,16 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/assets/blank/blank.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Blank>",
+                "defaultValue": "(args: Blank) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/components/button/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1427,21 +1497,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/components/progress/progress.stories.ts",
+                "file": "src/stories/components/menu/menu.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<ProgressComponent>",
-                "defaultValue": "(args: ProgressComponent) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/components/tooltip/tooltip.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<Tooltip>",
-                "defaultValue": "(args: Tooltip) => ({\n  props: args,\n})"
+                "type": "Story<Menu>",
+                "defaultValue": "(args: Menu) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -1457,11 +1517,21 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/assets/blank/blank.stories.ts",
+                "file": "src/stories/components/progress/progress.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<Blank>",
-                "defaultValue": "(args: Blank) => ({\n  props: args,\n})"
+                "type": "Story<ProgressComponent>",
+                "defaultValue": "(args: ProgressComponent) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/tooltip/tooltip.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Tooltip>",
+                "defaultValue": "(args: Tooltip) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -1657,6 +1727,28 @@
                     "type": "literal type"
                 }
             ],
+            "src/stories/assets/blank/blank.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/assets/blank/blank.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/assets/blank/blank.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Blank>",
+                    "defaultValue": "(args: Blank) => ({\n  props: args,\n})"
+                }
+            ],
             "src/stories/components/button/button.stories.ts": [
                 {
                     "name": "Default",
@@ -1791,6 +1883,28 @@
                     "defaultValue": "(args: Card) => ({\n  props: args,\n})"
                 }
             ],
+            "src/stories/components/menu/menu.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/menu/menu.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/menu/menu.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Menu>",
+                    "defaultValue": "(args: Menu) => ({\n  props: args,\n})"
+                }
+            ],
             "src/stories/components/tooltip/tooltip.stories.ts": [
                 {
                     "name": "Default",
@@ -1811,28 +1925,6 @@
                     "deprecationMessage": "",
                     "type": "Story<Tooltip>",
                     "defaultValue": "(args: Tooltip) => ({\n  props: args,\n})"
-                }
-            ],
-            "src/stories/assets/blank/blank.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/assets/blank/blank.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/assets/blank/blank.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<Blank>",
-                    "defaultValue": "(args: Blank) => ({\n  props: args,\n})"
                 }
             ],
             "src/stories/helpers/elevation/elevation.stories.ts": [
@@ -2160,6 +2252,35 @@
             },
             {
                 "filePath": "src/stories/components/card/card.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/menu/menu.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "Menu",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/menu/menu.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/menu/menu.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",

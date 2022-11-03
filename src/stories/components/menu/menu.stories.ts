@@ -1,9 +1,9 @@
 import { Story, Meta } from '@storybook/angular';
-import Blank from './blank.component';
+import Menu from './menu.component';
 
 export default {
-  title: 'Blank',
-  component: Blank,
+  title: 'Components/Menu',
+  component: Menu,
   argTypes: {
     color: {
       options: ['primary', 'accent', 'warn'],
@@ -13,7 +13,7 @@ export default {
   },
 } as Meta;
 
-const Template: Story<Blank> = (args: Blank) => ({
+const Template: Story<Menu> = (args: Menu) => ({
   props: args,
 });
 

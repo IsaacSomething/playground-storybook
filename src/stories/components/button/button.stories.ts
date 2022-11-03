@@ -1,6 +1,6 @@
 import { Story, Meta } from '@storybook/angular';
+import ButtonToggle from './button-toggle.component';
 import Button from './button.component';
-import ButtonIcon from './button-icon.component';
 
 export default {
   title: 'Components/Button',
@@ -57,3 +57,9 @@ Raised.argTypes = { ...disableTypes };
 export const Stroked = Template.bind({});
 Stroked.args = { type: 'stroked' };
 Stroked.argTypes = { ...disableTypes };
+
+/* Button Toggle */
+export const Toggle: Story<ButtonToggle> = (args: ButtonToggle) => ({
+  component: ButtonToggle,
+  props: args,
+});
