@@ -11,9 +11,8 @@ export default {
       options: ['default', 'primary', 'accent', 'warn'],
       control: { type: 'radio' },
     },
-    imgSize: {
-      options: ['sm', 'md', 'lg', 'xl'],
-      control: { type: 'radio' },
+    drawerSize: {
+      control: { type: 'range', min: 40, max: 100, step: 5 },
     },
     image: { control: { type: 'boolean' } },
   },
@@ -23,13 +22,11 @@ const Template: Story<Card> = (args: Card) => ({
   props: args,
 });
 
-export const Default = Template.bind({
-  color: 'default',
-});
+export const Default = Template.bind({});
+Default.args = { color: 'default' };
 
-export const Image = Template.bind({
-  image: true,
-});
+export const Image = Template.bind({});
+Image.args = { image: true };
 
 export const Expansion: Story<CardExpansion> = (args: CardExpansion) => ({
   component: CardExpansion,
@@ -40,5 +37,10 @@ export const Expansion: Story<CardExpansion> = (args: CardExpansion) => ({
 export const Drawer: Story<CardDrawer> = (args: CardDrawer) => ({
   component: CardDrawer,
   props: args,
-  color: 'default',
+  argTypes: {
+    color: 'default',
+    drawerSize: {
+      control: { type: 'range', min: 0, max: 100, step: 5 },
+    },
+  },
 });

@@ -110,7 +110,7 @@
         },
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-1b89a2bce3ad21f74440f5d58201c15af0108f7787d9316b4253c67659072efbc9230a31ea9728f3ee80637112c91ec0f0cb4aad72db7935ff7d5f465448840d",
+            "id": "component-ButtonComponent-4df6a143ee9993a8ca8c5d5166776d98786e995bac448e4f81bd75974f029d829b38cbe4a6597a62d43beea945a8b749a23ffcf550e37b48e7d03a0e11f76c22",
             "file": "src/stories/components/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -120,7 +120,7 @@
             "selector": "storybook-button",
             "styleUrls": [],
             "styles": [],
-            "template": "<ng-container\n  *ngTemplateOutlet=\"btnTemplate; context: { $implicit: 'small' }\"\n>\n</ng-container>\n<br />\n<br />\n<ng-container *ngTemplateOutlet=\"btnTemplate\"> </ng-container>\n<br />\n<br />\n<ng-container\n  *ngTemplateOutlet=\"btnTemplate; context: { $implicit: 'large' }\"\n>\n</ng-container>\n\n<ng-template #btnTemplate let-size>\n  <button\n    mat-button\n    [class.mat-flat-button]=\"type === 'flat'\"\n    [class.mat-raised-button]=\"type === 'raised'\"\n    [class.mat-stroked-button]=\"type === 'stroked'\"\n    class=\"{{ size }}\"\n    [class.round]=\"round\"\n    [color]=\"color\"\n    [disabled]=\"disabled\"\n  >\n    <mat-spinner *ngIf=\"loading\"></mat-spinner> {{ label }}\n  </button>\n</ng-template>\n\n<!-- <button\n  mat-button\n  [class.mat-flat-button]=\"type === 'flat'\"\n  [class.mat-raised-button]=\"type === 'raised'\"\n  [class.mat-stroked-button]=\"type === 'stroked'\"\n  class=\"small\"\n  [class.round]=\"round\"\n  [color]=\"color\"\n  [disabled]=\"disabled\"\n>\n  <mat-spinner *ngIf=\"loading\"></mat-spinner> {{ label }}\n</button>\n<br />\n<br />\n<button\n  mat-button\n  [class.mat-flat-button]=\"type === 'flat'\"\n  [class.mat-raised-button]=\"type === 'raised'\"\n  [class.mat-stroked-button]=\"type === 'stroked'\"\n  [class.round]=\"round\"\n  [color]=\"color\"\n  [disabled]=\"disabled\"\n>\n  <mat-spinner *ngIf=\"loading\"></mat-spinner> {{ label }}\n</button>\n<br />\n<br />\n<button\n  mat-button\n  [class.mat-flat-button]=\"type === 'flat'\"\n  [class.mat-raised-button]=\"type === 'raised'\"\n  [class.mat-stroked-button]=\"type === 'stroked'\"\n  class=\"large\"\n  [class.round]=\"round\"\n  [color]=\"color\"\n  [disabled]=\"disabled\"\n>\n  <mat-spinner *ngIf=\"loading\"></mat-spinner> {{ label }}\n</button> -->\n",
+            "template": "<ng-container\n  *ngTemplateOutlet=\"btnTemplate; context: { $implicit: 'small' }\"\n>\n</ng-container>\n<br />\n<br />\n<ng-container *ngTemplateOutlet=\"btnTemplate\"> </ng-container>\n<br />\n<br />\n<ng-container\n  *ngTemplateOutlet=\"btnTemplate; context: { $implicit: 'large' }\"\n>\n</ng-container>\n\n<ng-template #btnTemplate let-size>\n  <button\n    mat-button\n    [class.mat-flat-button]=\"type === 'flat'\"\n    [class.mat-raised-button]=\"type === 'raised'\"\n    [class.mat-stroked-button]=\"type === 'stroked'\"\n    class=\"{{ size }} margin-right\"\n    [class.round]=\"round\"\n    [color]=\"color\"\n    [disabled]=\"disabled\"\n  >\n    <mat-spinner *ngIf=\"loading\"></mat-spinner> {{ label }}\n  </button>\n\n  <button\n    mat-icon-button\n    [class.mat-flat-button]=\"type === 'flat'\"\n    [class.mat-raised-button]=\"type === 'raised'\"\n    [class.mat-stroked-button]=\"type === 'stroked'\"\n    class=\"{{ size }}\"\n    [color]=\"color\"\n  >\n    <mat-icon>home</mat-icon>\n  </button>\n</ng-template>\n",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
@@ -129,7 +129,7 @@
                     "defaultValue": "'primary'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 91,
+                    "line": 62,
                     "type": "\"primary\" | \"accent\" | \"warn\"",
                     "decorators": []
                 },
@@ -138,7 +138,7 @@
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 92,
+                    "line": 63,
                     "type": "boolean",
                     "decorators": []
                 },
@@ -147,7 +147,7 @@
                     "defaultValue": "'Button'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 88,
+                    "line": 59,
                     "type": "string",
                     "decorators": []
                 },
@@ -156,7 +156,7 @@
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 93,
+                    "line": 64,
                     "type": "boolean",
                     "decorators": []
                 },
@@ -165,7 +165,7 @@
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 94,
+                    "line": 65,
                     "type": "boolean",
                     "decorators": []
                 },
@@ -174,7 +174,7 @@
                     "defaultValue": "'default'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 89,
+                    "line": 60,
                     "type": "\"small\" | \"default\" | \"large\"",
                     "decorators": []
                 },
@@ -183,7 +183,7 @@
                     "defaultValue": "'flat'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 90,
+                    "line": 61,
                     "type": "\"flat\" | \"stroked\" | \"raised\" | \"default\"",
                     "decorators": []
                 }
@@ -198,7 +198,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input } from '@angular/core';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatIconModule } from '@angular/material/icon';\nimport { MatProgressSpinnerModule } from '@angular/material/progress-spinner';\n\n@Component({\n  selector: 'storybook-button',\n  standalone: true,\n  imports: [\n    MatButtonModule,\n    MatIconModule,\n    CommonModule,\n    MatProgressSpinnerModule,\n  ],\n  template: `\n    <ng-container\n      *ngTemplateOutlet=\"btnTemplate; context: { $implicit: 'small' }\"\n    >\n    </ng-container>\n    <br />\n    <br />\n    <ng-container *ngTemplateOutlet=\"btnTemplate\"> </ng-container>\n    <br />\n    <br />\n    <ng-container\n      *ngTemplateOutlet=\"btnTemplate; context: { $implicit: 'large' }\"\n    >\n    </ng-container>\n\n    <ng-template #btnTemplate let-size>\n      <button\n        mat-button\n        [class.mat-flat-button]=\"type === 'flat'\"\n        [class.mat-raised-button]=\"type === 'raised'\"\n        [class.mat-stroked-button]=\"type === 'stroked'\"\n        class=\"{{ size }}\"\n        [class.round]=\"round\"\n        [color]=\"color\"\n        [disabled]=\"disabled\"\n      >\n        <mat-spinner *ngIf=\"loading\"></mat-spinner> {{ label }}\n      </button>\n    </ng-template>\n\n    <!-- <button\n      mat-button\n      [class.mat-flat-button]=\"type === 'flat'\"\n      [class.mat-raised-button]=\"type === 'raised'\"\n      [class.mat-stroked-button]=\"type === 'stroked'\"\n      class=\"small\"\n      [class.round]=\"round\"\n      [color]=\"color\"\n      [disabled]=\"disabled\"\n    >\n      <mat-spinner *ngIf=\"loading\"></mat-spinner> {{ label }}\n    </button>\n    <br />\n    <br />\n    <button\n      mat-button\n      [class.mat-flat-button]=\"type === 'flat'\"\n      [class.mat-raised-button]=\"type === 'raised'\"\n      [class.mat-stroked-button]=\"type === 'stroked'\"\n      [class.round]=\"round\"\n      [color]=\"color\"\n      [disabled]=\"disabled\"\n    >\n      <mat-spinner *ngIf=\"loading\"></mat-spinner> {{ label }}\n    </button>\n    <br />\n    <br />\n    <button\n      mat-button\n      [class.mat-flat-button]=\"type === 'flat'\"\n      [class.mat-raised-button]=\"type === 'raised'\"\n      [class.mat-stroked-button]=\"type === 'stroked'\"\n      class=\"large\"\n      [class.round]=\"round\"\n      [color]=\"color\"\n      [disabled]=\"disabled\"\n    >\n      <mat-spinner *ngIf=\"loading\"></mat-spinner> {{ label }}\n    </button> -->\n  `,\n})\nexport default class ButtonComponent {\n  @Input() label = 'Button';\n  @Input() size: 'small' | 'default' | 'large' = 'default';\n  @Input() type: 'flat' | 'stroked' | 'raised' | 'default' = 'flat';\n  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';\n  @Input() disabled: boolean = false;\n  @Input() loading: boolean = false;\n  @Input() round: boolean = false;\n}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input } from '@angular/core';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatIconModule } from '@angular/material/icon';\nimport { MatProgressSpinnerModule } from '@angular/material/progress-spinner';\n\n@Component({\n  selector: 'storybook-button',\n  standalone: true,\n  imports: [\n    MatButtonModule,\n    MatIconModule,\n    CommonModule,\n    MatProgressSpinnerModule,\n  ],\n  template: `\n    <ng-container\n      *ngTemplateOutlet=\"btnTemplate; context: { $implicit: 'small' }\"\n    >\n    </ng-container>\n    <br />\n    <br />\n    <ng-container *ngTemplateOutlet=\"btnTemplate\"> </ng-container>\n    <br />\n    <br />\n    <ng-container\n      *ngTemplateOutlet=\"btnTemplate; context: { $implicit: 'large' }\"\n    >\n    </ng-container>\n\n    <ng-template #btnTemplate let-size>\n      <button\n        mat-button\n        [class.mat-flat-button]=\"type === 'flat'\"\n        [class.mat-raised-button]=\"type === 'raised'\"\n        [class.mat-stroked-button]=\"type === 'stroked'\"\n        class=\"{{ size }} margin-right\"\n        [class.round]=\"round\"\n        [color]=\"color\"\n        [disabled]=\"disabled\"\n      >\n        <mat-spinner *ngIf=\"loading\"></mat-spinner> {{ label }}\n      </button>\n\n      <button\n        mat-icon-button\n        [class.mat-flat-button]=\"type === 'flat'\"\n        [class.mat-raised-button]=\"type === 'raised'\"\n        [class.mat-stroked-button]=\"type === 'stroked'\"\n        class=\"{{ size }}\"\n        [color]=\"color\"\n      >\n        <mat-icon>home</mat-icon>\n      </button>\n    </ng-template>\n  `,\n})\nexport default class ButtonComponent {\n  @Input() label = 'Button';\n  @Input() size: 'small' | 'default' | 'large' = 'default';\n  @Input() type: 'flat' | 'stroked' | 'raised' | 'default' = 'flat';\n  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';\n  @Input() disabled: boolean = false;\n  @Input() loading: boolean = false;\n  @Input() round: boolean = false;\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": ""
@@ -264,7 +264,7 @@
         },
         {
             "name": "Card",
-            "id": "component-Card-7158b436105a916ac540b4ada85e2ea4604dbdfa3a7890d847f0a884c7c8de238f55cd30031a466e765bc212ef05545296786655e6a9c37d24995779987a9270",
+            "id": "component-Card-c64fda78be635ee3786ecbcd645f59da820d3305388c23df59dd0b763920016ad873db6d93c7ba75c45aa1d68703f06e90d0a461005ff7e15320b6023769725f",
             "file": "src/stories/components/card/card.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -274,7 +274,7 @@
             "selector": "storybook-card",
             "styleUrls": [],
             "styles": [],
-            "template": "<mat-card [attr.color]=\"color\">\n  <img\n    mat-card-image\n    *ngIf=\"image\"\n    src=\"https://cdn.pixabay.com/photo/2018/07/09/16/59/clouds-3526558_960_720.jpg\"\n  />\n  <mat-card-header class=\"no-margin\">\n    <mat-card-title>title</mat-card-title>\n    <mat-card-subtitle>subtitle</mat-card-subtitle>\n  </mat-card-header>\n\n  <mat-card-content>\n    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,\n    provident dolores mollitia inventore facilis harum dolore nam in ut!\n    Eveniet reiciendis, laudantium excepturi velit cum totam quo expedita\n    aspernatur tenetur?\n  </mat-card-content>\n\n  <mat-card-actions>\n    <button mat-button>Default</button>\n    <button mat-flat-button>Flat</button>\n    <button mat-raised-button>Raised</button>\n    <button mat-stroked-button>Stroked</button>\n  </mat-card-actions>\n</mat-card>\n",
+            "template": "<mat-card [attr.color]=\"color\">\n  <img\n    mat-card-image\n    *ngIf=\"image\"\n    src=\"https://cdn.pixabay.com/photo/2018/07/09/16/59/clouds-3526558_960_720.jpg\"\n  />\n\n  <mat-card-header>\n    <img\n      mat-card-avatar\n      src=\"https://material.angular.io/assets/img/examples/shiba2.jpg\"\n    />\n    <mat-card-title>Lorem ipsum</mat-card-title>\n    <mat-card-subtitle>Dolor sit amet consectetur</mat-card-subtitle>\n  </mat-card-header>\n\n  <mat-card-content class=\"margin-top\">\n    Eligendi, provident dolores mollitia inventore facilis harum dolore nam\n    in ut! Eveniet reiciendis, laudantium excepturi velit cum totam quo\n    expedita aspernatur tenetur?\n  </mat-card-content>\n\n  <mat-card-actions>\n    <button mat-button>Actions</button>\n  </mat-card-actions>\n\n  <mat-card-footer class=\"padding-horizontal padding-bottom\">\n    <small> Footer | Eligendi, provident dolores mollitia </small>\n  </mat-card-footer>\n</mat-card>\n",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
@@ -283,7 +283,7 @@
                     "defaultValue": "'default'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 39,
+                    "line": 44,
                     "type": "\"primary\" | \"accent\" | \"warn\" | \"default\"",
                     "decorators": []
                 },
@@ -292,7 +292,7 @@
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 40,
+                    "line": 45,
                     "type": "boolean",
                     "decorators": []
                 }
@@ -307,24 +307,106 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { MatCardModule } from '@angular/material/card';\nimport { MatButtonModule } from '@angular/material/button';\nimport { CommonModule } from '@angular/common';\n\n@Component({\n  selector: 'storybook-card',\n  imports: [MatCardModule, MatButtonModule, CommonModule],\n  standalone: true,\n  template: `\n    <mat-card [attr.color]=\"color\">\n      <img\n        mat-card-image\n        *ngIf=\"image\"\n        src=\"https://cdn.pixabay.com/photo/2018/07/09/16/59/clouds-3526558_960_720.jpg\"\n      />\n      <mat-card-header class=\"no-margin\">\n        <mat-card-title>title</mat-card-title>\n        <mat-card-subtitle>subtitle</mat-card-subtitle>\n      </mat-card-header>\n\n      <mat-card-content>\n        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,\n        provident dolores mollitia inventore facilis harum dolore nam in ut!\n        Eveniet reiciendis, laudantium excepturi velit cum totam quo expedita\n        aspernatur tenetur?\n      </mat-card-content>\n\n      <mat-card-actions>\n        <button mat-button>Default</button>\n        <button mat-flat-button>Flat</button>\n        <button mat-raised-button>Raised</button>\n        <button mat-stroked-button>Stroked</button>\n      </mat-card-actions>\n    </mat-card>\n  `,\n})\nexport default class Card {\n  @Input() color: 'primary' | 'accent' | 'warn' | 'default' = 'default';\n  @Input() image = false;\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { MatCardModule } from '@angular/material/card';\nimport { MatButtonModule } from '@angular/material/button';\nimport { CommonModule } from '@angular/common';\n\n@Component({\n  selector: 'storybook-card',\n  imports: [MatCardModule, MatButtonModule, CommonModule],\n  standalone: true,\n  template: `\n    <mat-card [attr.color]=\"color\">\n      <img\n        mat-card-image\n        *ngIf=\"image\"\n        src=\"https://cdn.pixabay.com/photo/2018/07/09/16/59/clouds-3526558_960_720.jpg\"\n      />\n\n      <mat-card-header>\n        <img\n          mat-card-avatar\n          src=\"https://material.angular.io/assets/img/examples/shiba2.jpg\"\n        />\n        <mat-card-title>Lorem ipsum</mat-card-title>\n        <mat-card-subtitle>Dolor sit amet consectetur</mat-card-subtitle>\n      </mat-card-header>\n\n      <mat-card-content class=\"margin-top\">\n        Eligendi, provident dolores mollitia inventore facilis harum dolore nam\n        in ut! Eveniet reiciendis, laudantium excepturi velit cum totam quo\n        expedita aspernatur tenetur?\n      </mat-card-content>\n\n      <mat-card-actions>\n        <button mat-button>Actions</button>\n      </mat-card-actions>\n\n      <mat-card-footer class=\"padding-horizontal padding-bottom\">\n        <small> Footer | Eligendi, provident dolores mollitia </small>\n      </mat-card-footer>\n    </mat-card>\n  `,\n})\nexport default class Card {\n  @Input() color: 'primary' | 'accent' | 'warn' | 'default' = 'default';\n  @Input() image = false;\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": ""
         },
         {
+            "name": "CardDrawer",
+            "id": "component-CardDrawer-32fa82612688fc615f50ba82ca7b737619727b4f516764ee7fa48a28a0d259a91889d3345000863c9a3f09985d0b5a80620f0c851e975d4030d38a68a26126f0",
+            "file": "src/stories/components/card/card-drawer.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-card-drawer",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<mat-card [attr.color]=\"color\" class=\"drawer\">\n  <mat-drawer-container #drawer>\n    <mat-drawer\n      mode=\"over\"\n      class=\"bg-divider padding width-{{drawerSize}} mat-elevation-z0\"\n    >\n      <button mat-button (click)=\"drawer.close()\">[Close drawer]</button>\n    </mat-drawer>\n\n    <mat-drawer-content>\n      <mat-card-header>\n        <img\n          mat-card-avatar\n          src=\"https://material.angular.io/assets/img/examples/shiba2.jpg\"\n        />\n        <mat-card-title (click)=\"drawer.open()\" class=\"pointer\">\n          [Open]\n        </mat-card-title>\n        <mat-card-subtitle>Click [Open] to open drawer</mat-card-subtitle>\n      </mat-card-header>\n\n      <mat-card-content class=\"margin-top\">\n        Eligendi, provident dolores mollitia inventore facilis harum dolore\n        nam in ut! Eveniet reiciendis, laudantium excepturi velit cum totam\n        quo expedita aspernatur tenetur?\n      </mat-card-content>\n\n      <mat-card-actions>\n        <button mat-button>Actions</button>\n      </mat-card-actions>\n\n      <mat-card-footer class=\"padding-horizontal padding-bottom\">\n        <small> Footer | Eligendi, provident dolores mollitia </small>\n      </mat-card-footer>\n    </mat-drawer-content>\n  </mat-drawer-container>\n</mat-card>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "color",
+                    "defaultValue": "'default'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 57,
+                    "type": "\"primary\" | \"accent\" | \"warn\" | \"default\"",
+                    "decorators": []
+                },
+                {
+                    "name": "drawerSize",
+                    "defaultValue": "50",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 58,
+                    "type": "number",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnChanges",
+                    "args": [
+                        {
+                            "name": "changes",
+                            "type": "SimpleChanges",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 60,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "changes",
+                            "type": "SimpleChanges",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatCardModule } from '@angular/material/card';\nimport { MatSidenavModule } from '@angular/material/sidenav';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\n\n@Component({\n  selector: 'storybook-card-drawer',\n  standalone: true,\n  imports: [\n    MatCardModule,\n    BrowserAnimationsModule,\n    MatSidenavModule,\n    MatButtonModule,\n  ],\n  template: `\n    <mat-card [attr.color]=\"color\" class=\"drawer\">\n      <mat-drawer-container #drawer>\n        <mat-drawer\n          mode=\"over\"\n          class=\"bg-divider padding width-{{drawerSize}} mat-elevation-z0\"\n        >\n          <button mat-button (click)=\"drawer.close()\">[Close drawer]</button>\n        </mat-drawer>\n\n        <mat-drawer-content>\n          <mat-card-header>\n            <img\n              mat-card-avatar\n              src=\"https://material.angular.io/assets/img/examples/shiba2.jpg\"\n            />\n            <mat-card-title (click)=\"drawer.open()\" class=\"pointer\">\n              [Open]\n            </mat-card-title>\n            <mat-card-subtitle>Click [Open] to open drawer</mat-card-subtitle>\n          </mat-card-header>\n\n          <mat-card-content class=\"margin-top\">\n            Eligendi, provident dolores mollitia inventore facilis harum dolore\n            nam in ut! Eveniet reiciendis, laudantium excepturi velit cum totam\n            quo expedita aspernatur tenetur?\n          </mat-card-content>\n\n          <mat-card-actions>\n            <button mat-button>Actions</button>\n          </mat-card-actions>\n\n          <mat-card-footer class=\"padding-horizontal padding-bottom\">\n            <small> Footer | Eligendi, provident dolores mollitia </small>\n          </mat-card-footer>\n        </mat-drawer-content>\n      </mat-drawer-container>\n    </mat-card>\n  `,\n})\nexport default class CardDrawer implements OnChanges {\n  @Input() color: 'primary' | 'accent' | 'warn' | 'default' = 'default';\n  @Input() drawerSize = 50;\n\n  ngOnChanges(changes: SimpleChanges): void {}\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "implements": [
+                "OnChanges"
+            ]
+        },
+        {
             "name": "CardExpansion",
-            "id": "component-CardExpansion-184520a9ecc97a22375771669d6c62b087710ef131520b46a62126cbc0dc3121156a0f6420cc5619a0ba7afa40672af37c66ca8f142e420f0186e3b3b0511a84",
+            "id": "component-CardExpansion-0e61a293c324ecd151dfe3136cd980f3112a280a6b040317b17a766d46425d4ac9ac9786482c3fb7e0e28f3320f38e26719287c2c29f5fef994c7c8b1c93630c",
             "file": "src/stories/components/card/card-expansion.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "storybook-card",
+            "selector": "storybook-card-expansion",
             "styleUrls": [],
             "styles": [],
-            "template": "<mat-card [attr.color]=\"color\" class=\"expansion\">\n  <mat-card-header class=\"no-margin\" class=\"expansion\">\n    <mat-expansion-panel matRipple matRippleColor=\"black\">\n      <mat-expansion-panel-header>\n        <mat-card-title>title</mat-card-title>\n        <mat-card-subtitle>subtitle</mat-card-subtitle>\n      </mat-expansion-panel-header>\n      <p>matRipple was added</p>\n    </mat-expansion-panel>\n  </mat-card-header>\n\n  <mat-card-content class=\"expansion\">\n    <mat-accordion>\n      <mat-expansion-panel class=\"mat-elevation-z0\">\n        <mat-expansion-panel-header>\n          <mat-panel-title> This is the expansion title </mat-panel-title>\n          <mat-panel-description>\n            This is a summary of the content\n          </mat-panel-description>\n        </mat-expansion-panel-header>\n        <p>This is the primary content of the panel.</p>\n      </mat-expansion-panel>\n\n      <mat-expansion-panel class=\"mat-elevation-z0\">\n        <mat-expansion-panel-header>\n          <mat-panel-title> Self aware panel </mat-panel-title>\n          <mat-panel-description> Currently I am </mat-panel-description>\n        </mat-expansion-panel-header>\n        <p>therefore i think ... i think</p>\n      </mat-expansion-panel>\n    </mat-accordion>\n  </mat-card-content>\n</mat-card>\n<br />\n<p>Expansion card not working with change in color yet</p>\n",
+            "template": "<mat-card [attr.color]=\"color\" class=\"expansion\">\n  <mat-card-header class=\"no-margin\">\n    <mat-expansion-panel matRipple matRippleColor=\"black\">\n      <mat-expansion-panel-header>\n        <mat-card-title>Title</mat-card-title>\n        <mat-card-subtitle>Subtitle</mat-card-subtitle>\n      </mat-expansion-panel-header>\n      <p>matRipple was added</p>\n    </mat-expansion-panel>\n  </mat-card-header>\n\n  <mat-card-content>\n    <mat-accordion>\n      <mat-expansion-panel class=\"mat-elevation-z0\">\n        <mat-expansion-panel-header>\n          <mat-panel-title> Expansion title </mat-panel-title>\n          <mat-panel-description>\n            This is a summary of the content\n          </mat-panel-description>\n        </mat-expansion-panel-header>\n        <p>This is the primary content of the panel.</p>\n      </mat-expansion-panel>\n\n      <mat-expansion-panel class=\"mat-elevation-z0\">\n        <mat-expansion-panel-header>\n          <mat-panel-title> Aware panel </mat-panel-title>\n          <mat-panel-description> Currently I am </mat-panel-description>\n        </mat-expansion-panel-header>\n        <p>therefore i think ... i think</p>\n      </mat-expansion-panel>\n    </mat-accordion>\n  </mat-card-content>\n</mat-card>\n<br />\n<p>Expansion card not working with change in color yet</p>\n",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
@@ -348,14 +430,14 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { MatCardModule } from '@angular/material/card';\nimport { MatRippleModule } from '@angular/material/core';\nimport { MatExpansionModule } from '@angular/material/expansion';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\n\n@Component({\n  selector: 'storybook-card',\n  standalone: true,\n  imports: [\n    MatCardModule,\n    MatExpansionModule,\n    BrowserAnimationsModule,\n    MatRippleModule,\n  ],\n  template: `\n    <mat-card [attr.color]=\"color\" class=\"expansion\">\n      <mat-card-header class=\"no-margin\" class=\"expansion\">\n        <mat-expansion-panel matRipple matRippleColor=\"black\">\n          <mat-expansion-panel-header>\n            <mat-card-title>title</mat-card-title>\n            <mat-card-subtitle>subtitle</mat-card-subtitle>\n          </mat-expansion-panel-header>\n          <p>matRipple was added</p>\n        </mat-expansion-panel>\n      </mat-card-header>\n\n      <mat-card-content class=\"expansion\">\n        <mat-accordion>\n          <mat-expansion-panel class=\"mat-elevation-z0\">\n            <mat-expansion-panel-header>\n              <mat-panel-title> This is the expansion title </mat-panel-title>\n              <mat-panel-description>\n                This is a summary of the content\n              </mat-panel-description>\n            </mat-expansion-panel-header>\n            <p>This is the primary content of the panel.</p>\n          </mat-expansion-panel>\n\n          <mat-expansion-panel class=\"mat-elevation-z0\">\n            <mat-expansion-panel-header>\n              <mat-panel-title> Self aware panel </mat-panel-title>\n              <mat-panel-description> Currently I am </mat-panel-description>\n            </mat-expansion-panel-header>\n            <p>therefore i think ... i think</p>\n          </mat-expansion-panel>\n        </mat-accordion>\n      </mat-card-content>\n    </mat-card>\n    <br />\n    <p>Expansion card not working with change in color yet</p>\n  `,\n})\nexport default class CardExpansion {\n  @Input() color: 'primary' | 'accent' | 'warn' | 'default' = 'default';\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { MatCardModule } from '@angular/material/card';\nimport { MatRippleModule } from '@angular/material/core';\nimport { MatExpansionModule } from '@angular/material/expansion';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\n\n@Component({\n  selector: 'storybook-card-expansion',\n  standalone: true,\n  imports: [\n    MatCardModule,\n    MatExpansionModule,\n    BrowserAnimationsModule,\n    MatRippleModule,\n  ],\n  template: `\n    <mat-card [attr.color]=\"color\" class=\"expansion\">\n      <mat-card-header class=\"no-margin\">\n        <mat-expansion-panel matRipple matRippleColor=\"black\">\n          <mat-expansion-panel-header>\n            <mat-card-title>Title</mat-card-title>\n            <mat-card-subtitle>Subtitle</mat-card-subtitle>\n          </mat-expansion-panel-header>\n          <p>matRipple was added</p>\n        </mat-expansion-panel>\n      </mat-card-header>\n\n      <mat-card-content>\n        <mat-accordion>\n          <mat-expansion-panel class=\"mat-elevation-z0\">\n            <mat-expansion-panel-header>\n              <mat-panel-title> Expansion title </mat-panel-title>\n              <mat-panel-description>\n                This is a summary of the content\n              </mat-panel-description>\n            </mat-expansion-panel-header>\n            <p>This is the primary content of the panel.</p>\n          </mat-expansion-panel>\n\n          <mat-expansion-panel class=\"mat-elevation-z0\">\n            <mat-expansion-panel-header>\n              <mat-panel-title> Aware panel </mat-panel-title>\n              <mat-panel-description> Currently I am </mat-panel-description>\n            </mat-expansion-panel-header>\n            <p>therefore i think ... i think</p>\n          </mat-expansion-panel>\n        </mat-accordion>\n      </mat-card-content>\n    </mat-card>\n    <br />\n    <p>Expansion card not working with change in color yet</p>\n  `,\n})\nexport default class CardExpansion {\n  @Input() color: 'primary' | 'accent' | 'warn' | 'default' = 'default';\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": ""
         },
         {
             "name": "Elevation",
-            "id": "component-Elevation-f3ff17a0a8454556cf1e0015ef0c3d5e8beb092a0fdbbc7d120152c1381aebd95a4e3c9363476781634c282da617de9f2809ed77dbe2eceff44a05bd2baf6b61",
+            "id": "component-Elevation-7cc250420da8b8865200919b02cf5c98766d4acfe99481f921eaad9cb804709b94dd525c18281627da58d042b88fe6e49527363e9f803967fc102e8a678afa74",
             "file": "src/stories/helpers/elevation/elevation.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -367,7 +449,7 @@
             "styles": [
                 "\n      div {\n        height: 300px;\n        width: 300px;\n        padding: 16px;\n        border-radius: 4px;\n        cursor: copy;\n      }\n    "
             ],
-            "template": "<sb-header title=\"Elevation\" clipboard></sb-header>\n<div\n  [class]=\"'mat-elevation-z' + elevation\"\n  matRipple\n  matRippleColor=\"var(--mat-accent)\"\n  [cdkCopyToClipboard]=\"'mat-elevation-z' + elevation\"\n></div>\n",
+            "template": "  <sb-header title=\"Elevation\" clipboard></sb-header>\n  <div\n    [class]=\"'mat-elevation-z' + elevation\"\n    matRipple\n    matRippleColor=\"var(--mat-accent)\"\n    [cdkCopyToClipboard]=\"'mat-elevation-z' + elevation\"\n  >\n<code>.mat-elevation-z{{elevation}}</code>\n</div>\n",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
@@ -376,7 +458,7 @@
                     "defaultValue": "1",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 34,
+                    "line": 36,
                     "type": "number",
                     "decorators": []
                 }
@@ -391,14 +473,14 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { MatCardModule } from '@angular/material/card';\nimport { MatRippleModule } from '@angular/material/core';\nimport { ClipboardModule } from '@angular/cdk/clipboard';\nimport SBHeader from '../../assets/sb-header/sb-header.component';\n\n@Component({\n  selector: 'storybook-elevation',\n  standalone: true,\n  imports: [MatCardModule, SBHeader, MatRippleModule, ClipboardModule],\n  providers: [],\n  styles: [\n    `\n      div {\n        height: 300px;\n        width: 300px;\n        padding: 16px;\n        border-radius: 4px;\n        cursor: copy;\n      }\n    `,\n  ],\n  template: `\n    <sb-header title=\"Elevation\" clipboard></sb-header>\n    <div\n      [class]=\"'mat-elevation-z' + elevation\"\n      matRipple\n      matRippleColor=\"var(--mat-accent)\"\n      [cdkCopyToClipboard]=\"'mat-elevation-z' + elevation\"\n    ></div>\n  `,\n})\nexport default class Elevation {\n  @Input() elevation = 1;\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { MatCardModule } from '@angular/material/card';\nimport { MatRippleModule } from '@angular/material/core';\nimport { ClipboardModule } from '@angular/cdk/clipboard';\nimport SBHeader from '../../assets/sb-header/sb-header.component';\n\n@Component({\n  selector: 'storybook-elevation',\n  standalone: true,\n  imports: [MatCardModule, SBHeader, MatRippleModule, ClipboardModule],\n  providers: [],\n  styles: [\n    `\n      div {\n        height: 300px;\n        width: 300px;\n        padding: 16px;\n        border-radius: 4px;\n        cursor: copy;\n      }\n    `,\n  ],\n  template: `\n    <sb-header title=\"Elevation\" clipboard></sb-header>\n    <div\n      [class]=\"'mat-elevation-z' + elevation\"\n      matRipple\n      matRippleColor=\"var(--mat-accent)\"\n      [cdkCopyToClipboard]=\"'mat-elevation-z' + elevation\"\n    >\n  <code>.mat-elevation-z{{elevation}}</code>\n  </div>\n  `,\n})\nexport default class Elevation {\n  @Input() elevation = 1;\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "\n      div {\n        height: 300px;\n        width: 300px;\n        padding: 16px;\n        border-radius: 4px;\n        cursor: copy;\n      }\n    \n"
         },
         {
             "name": "Helpers",
-            "id": "component-Helpers-75a4d645fc1914885c79a1af536ddbc5c0287d25688e5769d6e73ca1662321feeeb51428f568a6f6fbc1f4d49f209c4180d2192d5a4f2b9fb1ab5b343f0aa4dc",
+            "id": "component-Helpers-6eb67701f30e988055ecab2feab118e85edf748116cb07471f5f52adb703a31168b425bdb128efe033929a76071c93b793f02f1a54e21ca6ac2a0fe1867a7886",
             "file": "src/stories/helpers/margin-padding/helpers.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -408,9 +490,9 @@
             "selector": "storybook-helpers",
             "styleUrls": [],
             "styles": [
-                "\n      .box-outer {\n        border: 2px dashed #f3f3f3;\n        height: 230px;\n        width: 230px;\n        display: block;\n        > div {\n          background: #f3f3f3;\n          height: 50px;\n          width: 50px;\n          display: block;\n        }\n      }\n    "
+                "\n      .container {\n        display: inline;\n      }\n      .box-outer,\n      .box-outer-2 {\n        border: 2px dashed #f3f3f3;\n        height: 230px;\n        width: 230px;\n        display: block;\n        > div {\n          background: #f3f3f3;\n          height: 50px;\n          width: 50px;\n          display: block;\n        }\n      }\n\n      .box-outer-2 {\n        margin-top: 16px;\n        > div {\n          float: right;\n        }\n      }\n    "
             ],
-            "template": "<div class=\"box-outer\">\n  <div\n    class=\"padding-{{ padding }} padding-left-{{\n      paddingLeft\n    }} padding-right-{{ paddingRight }} margin-{{ margin }} margin-left-{{\n      marginLeft\n    }} margin-right-{{ marginRight }}\"\n  ></div>\n</div>\n<br />\n",
+            "template": "<div class=\"container\">\n  <div class=\"box-outer\">\n    <div\n      class=\"padding-{{ padding }} padding-left-{{\n        paddingLeft\n      }} padding-right-{{ paddingRight }} margin-{{ margin }} margin-left-{{\n        marginLeft\n      }} margin-right-{{ marginRight }}\"\n    ></div>\n  </div>\n\n  <div class=\"box-outer-2\">\n    <div\n      class=\"padding-{{ padding }} padding-left-{{\n        paddingLeft\n      }} padding-right-{{ paddingRight }} margin-{{ margin }} margin-left-{{\n        marginLeft\n      }} margin-right-{{ marginRight }}\"\n    ></div>\n  </div>\n</div>\n<br />\n\n<code>.padding-{{ padding }}</code\n><br />\n<code>.padding-left-{{ paddingLeft }}</code\n><br />\n<code>.padding-right-{{ paddingRight }}</code\n><br />\n<code>.margin-{{ margin }}</code\n><br />\n<code>.margin-left-{{ marginLeft }}</code\n><br />\n<code>.margin-right-{{ marginRight }}</code\n><br />\n",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
@@ -419,7 +501,7 @@
                     "defaultValue": "0",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 39,
+                    "line": 75,
                     "type": "number",
                     "decorators": []
                 },
@@ -428,7 +510,7 @@
                     "defaultValue": "0",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 43,
+                    "line": 79,
                     "type": "number",
                     "decorators": []
                 },
@@ -437,7 +519,7 @@
                     "defaultValue": "0",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 42,
+                    "line": 78,
                     "type": "number",
                     "decorators": []
                 },
@@ -446,7 +528,7 @@
                     "defaultValue": "0",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 38,
+                    "line": 74,
                     "type": "number",
                     "decorators": []
                 },
@@ -455,7 +537,7 @@
                     "defaultValue": "0",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 41,
+                    "line": 77,
                     "type": "number",
                     "decorators": []
                 },
@@ -464,7 +546,7 @@
                     "defaultValue": "0",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 40,
+                    "line": 76,
                     "type": "number",
                     "decorators": []
                 }
@@ -478,7 +560,7 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 44
+                    "line": 80
                 }
             ],
             "methodsClass": [
@@ -488,7 +570,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 46,
+                    "line": 82,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -500,24 +582,27 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'storybook-helpers',\n  standalone: true,\n  imports: [],\n  providers: [],\n  styles: [\n    `\n      .box-outer {\n        border: 2px dashed #f3f3f3;\n        height: 230px;\n        width: 230px;\n        display: block;\n        > div {\n          background: #f3f3f3;\n          height: 50px;\n          width: 50px;\n          display: block;\n        }\n      }\n    `,\n  ],\n  template: `\n    <div class=\"box-outer\">\n      <div\n        class=\"padding-{{ padding }} padding-left-{{\n          paddingLeft\n        }} padding-right-{{ paddingRight }} margin-{{ margin }} margin-left-{{\n          marginLeft\n        }} margin-right-{{ marginRight }}\"\n      ></div>\n    </div>\n    <br />\n  `,\n})\nexport default class Helpers {\n  @Input() padding: number = 0;\n  @Input() margin: number = 0;\n  @Input() paddingRight: number = 0;\n  @Input() paddingLeft: number = 0;\n  @Input() marginRight: number = 0;\n  @Input() marginLeft: number = 0;\n  code!: string;\n\n  ngOnChanges() {\n    this.code = `<div class=\"padding-${this.padding} padding-left-${this.paddingLeft} padding-right-${this.paddingRight} margin-${this.margin} margin-left-${this.marginLeft} margin-right-${this.marginRight}\"> </div>`;\n  }\n}\n",
+            "sourceCode": "import { Component, Input, OnChanges } from '@angular/core';\n\n@Component({\n  selector: 'storybook-helpers',\n  standalone: true,\n  imports: [],\n  providers: [],\n  styles: [\n    `\n      .container {\n        display: inline;\n      }\n      .box-outer,\n      .box-outer-2 {\n        border: 2px dashed #f3f3f3;\n        height: 230px;\n        width: 230px;\n        display: block;\n        > div {\n          background: #f3f3f3;\n          height: 50px;\n          width: 50px;\n          display: block;\n        }\n      }\n\n      .box-outer-2 {\n        margin-top: 16px;\n        > div {\n          float: right;\n        }\n      }\n    `,\n  ],\n  template: `\n    <div class=\"container\">\n      <div class=\"box-outer\">\n        <div\n          class=\"padding-{{ padding }} padding-left-{{\n            paddingLeft\n          }} padding-right-{{ paddingRight }} margin-{{ margin }} margin-left-{{\n            marginLeft\n          }} margin-right-{{ marginRight }}\"\n        ></div>\n      </div>\n\n      <div class=\"box-outer-2\">\n        <div\n          class=\"padding-{{ padding }} padding-left-{{\n            paddingLeft\n          }} padding-right-{{ paddingRight }} margin-{{ margin }} margin-left-{{\n            marginLeft\n          }} margin-right-{{ marginRight }}\"\n        ></div>\n      </div>\n    </div>\n    <br />\n\n    <code>.padding-{{ padding }}</code\n    ><br />\n    <code>.padding-left-{{ paddingLeft }}</code\n    ><br />\n    <code>.padding-right-{{ paddingRight }}</code\n    ><br />\n    <code>.margin-{{ margin }}</code\n    ><br />\n    <code>.margin-left-{{ marginLeft }}</code\n    ><br />\n    <code>.margin-right-{{ marginRight }}</code\n    ><br />\n  `,\n})\nexport default class Helpers implements OnChanges {\n  @Input() padding: number = 0;\n  @Input() margin: number = 0;\n  @Input() paddingRight: number = 0;\n  @Input() paddingLeft: number = 0;\n  @Input() marginRight: number = 0;\n  @Input() marginLeft: number = 0;\n  code!: string;\n\n  ngOnChanges() {\n    this.code = `<div class=\"padding-${this.padding} padding-left-${this.paddingLeft} padding-right-${this.paddingRight} margin-${this.margin} margin-left-${this.marginLeft} margin-right-${this.marginRight}\"> </div>`;\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
-            "stylesData": "\n      .box-outer {\n        border: 2px dashed #f3f3f3;\n        height: 230px;\n        width: 230px;\n        display: block;\n        > div {\n          background: #f3f3f3;\n          height: 50px;\n          width: 50px;\n          display: block;\n        }\n      }\n    \n"
+            "stylesData": "\n      .container {\n        display: inline;\n      }\n      .box-outer,\n      .box-outer-2 {\n        border: 2px dashed #f3f3f3;\n        height: 230px;\n        width: 230px;\n        display: block;\n        > div {\n          background: #f3f3f3;\n          height: 50px;\n          width: 50px;\n          display: block;\n        }\n      }\n\n      .box-outer-2 {\n        margin-top: 16px;\n        > div {\n          float: right;\n        }\n      }\n    \n",
+            "implements": [
+                "OnChanges"
+            ]
         },
         {
             "name": "ProgressComponent",
-            "id": "component-ProgressComponent-d9ff8dfe4cc5f0bed4d0bf64391aa0c557aaea86e157b8a5f5d0e0cf3a6bd4c75ba43327c910472ce544e8780c8930189e9de106d76486576d6e4e9504b03df2",
-            "file": "src/stories/components/progress-spinner/progress-spinner.component.ts",
+            "id": "component-ProgressComponent-332cf12133cefe7e83ccf8cd853d4643cda3a3eb3023e206b6b50f8677c1a6ae9627b1efd7955bc4d9e8db0776e022646b5fbd409e09a4a0c5b2db8176a596c3",
+            "file": "src/stories/components/progress/progress.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "storybook-button",
+            "selector": "storybook-progress",
             "styleUrls": [],
             "styles": [],
-            "template": "",
+            "template": "<mat-progress-bar\n  *ngIf=\"type === 'bar'\"\n  [mode]=\"mode\"\n  [value]=\"value\"\n  [color]=\"color\"\n></mat-progress-bar>\n<br />\n<mat-spinner\n  *ngIf=\"type === 'spinner'\"\n  [mode]=\"mode\"\n  [value]=\"value\"\n  [color]=\"color\"\n  [strokeWidth]=\"strokeWidth\"\n  [diameter]=\"diameter\"\n></mat-spinner>\n",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
@@ -526,8 +611,17 @@
                     "defaultValue": "'primary'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 12,
+                    "line": 31,
                     "type": "\"primary\" | \"accent\" | \"warn\"",
+                    "decorators": []
+                },
+                {
+                    "name": "diameter",
+                    "defaultValue": "15",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 35,
+                    "type": "number",
                     "decorators": []
                 },
                 {
@@ -535,25 +629,42 @@
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 11,
+                    "line": 30,
                     "type": "boolean",
                     "decorators": []
                 },
                 {
                     "name": "mode",
-                    "defaultValue": "'determinate'",
+                    "defaultValue": "'indeterminate'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 13,
+                    "line": 32,
                     "type": "\"determinate\" | \"indeterminate\"",
                     "decorators": []
                 },
                 {
-                    "name": "value",
-                    "defaultValue": "20",
+                    "name": "strokeWidth",
+                    "defaultValue": "10",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 10,
+                    "line": 34,
+                    "type": "number",
+                    "decorators": []
+                },
+                {
+                    "name": "type",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 33,
+                    "type": "\"bar\" | \"spinner\"",
+                    "decorators": []
+                },
+                {
+                    "name": "value",
+                    "defaultValue": "50",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 29,
                     "type": "number",
                     "decorators": []
                 }
@@ -568,7 +679,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'storybook-button',\n  standalone: true,\n  imports: [],\n  template: ``,\n})\nexport default class ProgressComponent {\n  @Input() value = 20;\n  @Input() disabled: boolean = false;\n  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';\n  @Input() mode: 'determinate' | 'indeterminate' = 'determinate';\n\n  /* @Output()\n  onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.primary\n      ? 'storybook-button--primary'\n      : 'storybook-button--secondary';\n\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\n  } */\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { MatProgressSpinnerModule } from '@angular/material/progress-spinner';\nimport { MatProgressBarModule } from '@angular/material/progress-bar';\nimport { CommonModule } from '@angular/common';\n\n@Component({\n  selector: 'storybook-progress',\n  standalone: true,\n  imports: [MatProgressSpinnerModule, MatProgressBarModule, CommonModule],\n  template: `\n    <mat-progress-bar\n      *ngIf=\"type === 'bar'\"\n      [mode]=\"mode\"\n      [value]=\"value\"\n      [color]=\"color\"\n    ></mat-progress-bar>\n    <br />\n    <mat-spinner\n      *ngIf=\"type === 'spinner'\"\n      [mode]=\"mode\"\n      [value]=\"value\"\n      [color]=\"color\"\n      [strokeWidth]=\"strokeWidth\"\n      [diameter]=\"diameter\"\n    ></mat-spinner>\n  `,\n})\nexport default class ProgressComponent {\n  @Input() value = 50;\n  @Input() disabled: boolean = false;\n  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';\n  @Input() mode: 'determinate' | 'indeterminate' = 'indeterminate';\n  @Input() type!: 'bar' | 'spinner';\n  @Input() strokeWidth = 10;\n  @Input() diameter = 15;\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": ""
@@ -674,7 +785,7 @@
         },
         {
             "name": "Sidenav",
-            "id": "component-Sidenav-e216268112aa62e4730ffd2104bb15727022c06bb908aef47be033c3a462e887e2c8fa26ba92db8d2e7f572a7c8dc06bb58b7ff5e6c5d8c16bf51195119a4e75",
+            "id": "component-Sidenav-9abca60e96f4f0e709bb25d18752f24da610748adc5cd36d2a0b874ea5759cd5144bac3e4f5e443df3092588142999ca39f630cd82276f5bd42179ab4d027a66",
             "file": "src/stories/components/sidenav/sidenav.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -684,7 +795,7 @@
             "selector": "storybook-sidenav",
             "styleUrls": [],
             "styles": [
-                "\n      mat-sidenav-container {\n        height: 500px;\n        border: 1px solid var(--mat-divider);\n        border-radius: var(--mat-radius);\n      }\n      mat-sidenav-content,\n      mat-sidenav {\n        padding: 16px;\n      }\n      mat-sidenav {\n        background-color: var(--mat-divider);\n      }\n    "
+                "\n      mat-sidenav-container {\n        height: 500px;\n        border: 2px solid var(--mat-divider);\n        border-radius: var(--mat-radius);\n      }\n      mat-sidenav-content,\n      mat-sidenav {\n        padding: 16px;\n      }\n      mat-sidenav {\n        background-color: var(--mat-divider);\n      }\n    "
             ],
             "template": "<mat-sidenav-container autosize>\n  <mat-sidenav\n    #sidenav\n    class=\"mat-elevation-z8\"\n    [mode]=\"mode\"\n    [position]=\"position\"\n    (closedStart)=\"closedStart.emit()\"\n    (openedStart)=\"openedStart.emit()\"\n    (openedChange)=\"openedChange.emit($event)\"\n    (onPositionChanged)=\"onPositionChanged.emit()\"\n  >\n    <button type=\"button\" mat-button (click)=\"sidenav.close()\">\n      [Close sidenav]\n    </button>\n  </mat-sidenav>\n  <mat-sidenav-content>\n    <button type=\"button\" mat-button (click)=\"sidenav.toggle()\">\n      [Toggle sidenav]\n    </button>\n  </mat-sidenav-content>\n</mat-sidenav-container>\n",
             "templateUrl": [],
@@ -752,10 +863,10 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\nimport { MatSidenavModule } from '@angular/material/sidenav';\nimport { MatButtonModule } from '@angular/material/button';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\nimport { Observable } from 'rxjs';\n\n@Component({\n  selector: 'storybook-sidenav',\n  standalone: true,\n  imports: [MatSidenavModule, BrowserAnimationsModule, MatButtonModule],\n  styles: [\n    `\n      mat-sidenav-container {\n        height: 500px;\n        border: 1px solid var(--mat-divider);\n        border-radius: var(--mat-radius);\n      }\n      mat-sidenav-content,\n      mat-sidenav {\n        padding: 16px;\n      }\n      mat-sidenav {\n        background-color: var(--mat-divider);\n      }\n    `,\n  ],\n  template: `\n    <mat-sidenav-container autosize>\n      <mat-sidenav\n        #sidenav\n        class=\"mat-elevation-z8\"\n        [mode]=\"mode\"\n        [position]=\"position\"\n        (closedStart)=\"closedStart.emit()\"\n        (openedStart)=\"openedStart.emit()\"\n        (openedChange)=\"openedChange.emit($event)\"\n        (onPositionChanged)=\"onPositionChanged.emit()\"\n      >\n        <button type=\"button\" mat-button (click)=\"sidenav.close()\">\n          [Close sidenav]\n        </button>\n      </mat-sidenav>\n      <mat-sidenav-content>\n        <button type=\"button\" mat-button (click)=\"sidenav.toggle()\">\n          [Toggle sidenav]\n        </button>\n      </mat-sidenav-content>\n    </mat-sidenav-container>\n  `,\n})\nexport default class Sidenav {\n  @Input() mode: 'over' | 'push' | 'side' = 'side';\n  @Input() position: 'start' | 'end' = 'start';\n\n  @Output() closedStart = new EventEmitter<Observable<void>>();\n  @Output() openedStart = new EventEmitter<Observable<void>>();\n  @Output() openedChange = new EventEmitter<boolean>();\n  @Output() onPositionChanged = new EventEmitter<EventEmitter<void>>();\n}\n",
+            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\nimport { MatSidenavModule } from '@angular/material/sidenav';\nimport { MatButtonModule } from '@angular/material/button';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\nimport { Observable } from 'rxjs';\n\n@Component({\n  selector: 'storybook-sidenav',\n  standalone: true,\n  imports: [MatSidenavModule, BrowserAnimationsModule, MatButtonModule],\n  styles: [\n    `\n      mat-sidenav-container {\n        height: 500px;\n        border: 2px solid var(--mat-divider);\n        border-radius: var(--mat-radius);\n      }\n      mat-sidenav-content,\n      mat-sidenav {\n        padding: 16px;\n      }\n      mat-sidenav {\n        background-color: var(--mat-divider);\n      }\n    `,\n  ],\n  template: `\n    <mat-sidenav-container autosize>\n      <mat-sidenav\n        #sidenav\n        class=\"mat-elevation-z8\"\n        [mode]=\"mode\"\n        [position]=\"position\"\n        (closedStart)=\"closedStart.emit()\"\n        (openedStart)=\"openedStart.emit()\"\n        (openedChange)=\"openedChange.emit($event)\"\n        (onPositionChanged)=\"onPositionChanged.emit()\"\n      >\n        <button type=\"button\" mat-button (click)=\"sidenav.close()\">\n          [Close sidenav]\n        </button>\n      </mat-sidenav>\n      <mat-sidenav-content>\n        <button type=\"button\" mat-button (click)=\"sidenav.toggle()\">\n          [Toggle sidenav]\n        </button>\n      </mat-sidenav-content>\n    </mat-sidenav-container>\n  `,\n})\nexport default class Sidenav {\n  @Input() mode: 'over' | 'push' | 'side' = 'side';\n  @Input() position: 'start' | 'end' = 'start';\n\n  @Output() closedStart = new EventEmitter<Observable<void>>();\n  @Output() openedStart = new EventEmitter<Observable<void>>();\n  @Output() openedChange = new EventEmitter<boolean>();\n  @Output() onPositionChanged = new EventEmitter<EventEmitter<void>>();\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
-            "stylesData": "\n      mat-sidenav-container {\n        height: 500px;\n        border: 1px solid var(--mat-divider);\n        border-radius: var(--mat-radius);\n      }\n      mat-sidenav-content,\n      mat-sidenav {\n        padding: 16px;\n      }\n      mat-sidenav {\n        background-color: var(--mat-divider);\n      }\n    \n"
+            "stylesData": "\n      mat-sidenav-container {\n        height: 500px;\n        border: 2px solid var(--mat-divider);\n        border-radius: var(--mat-radius);\n      }\n      mat-sidenav-content,\n      mat-sidenav {\n        padding: 16px;\n      }\n      mat-sidenav {\n        background-color: var(--mat-divider);\n      }\n    \n"
         },
         {
             "name": "SlideToggle",
@@ -1037,7 +1148,7 @@
                 "name": "Bar",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/components/progress-spinner/progress-spinner.stories.ts",
+                "file": "src/stories/components/progress/progress.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -1091,17 +1202,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "Template.bind({\n  color: 'default',\n})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/components/slide-toggle/slide-toggle.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({label:'Button'})"
+                "defaultValue": "Template.bind({})"
             },
             {
                 "name": "Default",
@@ -1112,6 +1213,16 @@
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "Template.bind({\n  position: 'after',\n})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/slide-toggle/slide-toggle.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
             },
             {
                 "name": "Default",
@@ -1154,14 +1265,24 @@
                 "defaultValue": "{\n  type: 'figma',\n  url: `${urlPrefix}?node-id=0%3A1`,\n}"
             },
             {
+                "name": "disableTypes",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/button/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  size: { control: { disable: true } },\n  type: { control: { disable: true } },\n}"
+            },
+            {
                 "name": "Drawer",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/components/card/card.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({\n  color: 'default',\n})"
+                "type": "Story<CardDrawer>",
+                "defaultValue": "(args: CardDrawer) => ({\n  component: CardDrawer,\n  props: args,\n  argTypes: {\n    color: 'default',\n    drawerSize: {\n      control: { type: 'range', min: 0, max: 100, step: 5 },\n    },\n  },\n})"
             },
             {
                 "name": "environment",
@@ -1204,26 +1325,6 @@
                 "defaultValue": "Template.bind({})"
             },
             {
-                "name": "Horizontal",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/components/card/card.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({\n  color: 'default',\n})"
-            },
-            {
-                "name": "Icon",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/components/button/button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<ButtonIcon>",
-                "defaultValue": "(args: ButtonIcon) => ({\n  component: ButtonIcon,\n  props: args,\n})"
-            },
-            {
                 "name": "Image",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -1231,7 +1332,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "Template.bind({\n  image: true,\n})"
+                "defaultValue": "Template.bind({})"
             },
             {
                 "name": "Primary",
@@ -1276,7 +1377,7 @@
                 "name": "Spinner",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/components/progress-spinner/progress-spinner.stories.ts",
+                "file": "src/stories/components/progress/progress.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -1310,7 +1411,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<Button>",
-                "defaultValue": "(args: Button) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n    loading: { control: { type: 'boolean' } },\n    round: { control: { type: 'boolean' } },\n    type: { disable: true },\n  },\n\n  options: {\n    storySort: {\n      method: 'configure',\n      includeNames: true,\n      order: ['Default', 'Stroked', 'Flat', 'Raised', 'Icon'],\n    },\n  },\n})"
+                "defaultValue": "(args: Button) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n    loading: { control: { type: 'boolean' } },\n    round: { control: { type: 'boolean' } },\n  },\n})"
             },
             {
                 "name": "Template",
@@ -1326,21 +1427,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/components/progress-spinner/progress-spinner.stories.ts",
+                "file": "src/stories/components/progress/progress.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<ProgressComponent>",
                 "defaultValue": "(args: ProgressComponent) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/components/slide-toggle/slide-toggle.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<SlideToggle>",
-                "defaultValue": "(args: SlideToggle) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -1351,6 +1442,16 @@
                 "deprecationMessage": "",
                 "type": "Story<Tooltip>",
                 "defaultValue": "(args: Tooltip) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/slide-toggle/slide-toggle.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<SlideToggle>",
+                "defaultValue": "(args: SlideToggle) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -1449,12 +1550,12 @@
                     "defaultValue": "Template.bind({})"
                 }
             ],
-            "src/stories/components/progress-spinner/progress-spinner.stories.ts": [
+            "src/stories/components/progress/progress.stories.ts": [
                 {
                     "name": "Bar",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/components/progress-spinner/progress-spinner.stories.ts",
+                    "file": "src/stories/components/progress/progress.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -1464,7 +1565,7 @@
                     "name": "Spinner",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/components/progress-spinner/progress-spinner.stories.ts",
+                    "file": "src/stories/components/progress/progress.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -1474,7 +1575,7 @@
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/components/progress-spinner/progress-spinner.stories.ts",
+                    "file": "src/stories/components/progress/progress.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<ProgressComponent>",
@@ -1500,7 +1601,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
-                    "defaultValue": "Template.bind({label:'Button'})"
+                    "defaultValue": "Template.bind({})"
                 },
                 {
                     "name": "Template",
@@ -1578,6 +1679,16 @@
                     "defaultValue": "{\n  type: 'figma',\n  url: `${urlPrefix}?node-id=0%3A1`,\n}"
                 },
                 {
+                    "name": "disableTypes",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/button/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  size: { control: { disable: true } },\n  type: { control: { disable: true } },\n}"
+                },
+                {
                     "name": "Flat",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
@@ -1586,16 +1697,6 @@
                     "deprecationMessage": "",
                     "type": "",
                     "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Icon",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/components/button/button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<ButtonIcon>",
-                    "defaultValue": "(args: ButtonIcon) => ({\n  component: ButtonIcon,\n  props: args,\n})"
                 },
                 {
                     "name": "Raised",
@@ -1625,7 +1726,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<Button>",
-                    "defaultValue": "(args: Button) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n    loading: { control: { type: 'boolean' } },\n    round: { control: { type: 'boolean' } },\n    type: { disable: true },\n  },\n\n  options: {\n    storySort: {\n      method: 'configure',\n      includeNames: true,\n      order: ['Default', 'Stroked', 'Flat', 'Raised', 'Icon'],\n    },\n  },\n})"
+                    "defaultValue": "(args: Button) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n    loading: { control: { type: 'boolean' } },\n    round: { control: { type: 'boolean' } },\n  },\n})"
                 },
                 {
                     "name": "urlPrefix",
@@ -1647,7 +1748,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
-                    "defaultValue": "Template.bind({\n  color: 'default',\n})"
+                    "defaultValue": "Template.bind({})"
                 },
                 {
                     "name": "Drawer",
@@ -1656,8 +1757,8 @@
                     "file": "src/stories/components/card/card.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({\n  color: 'default',\n})"
+                    "type": "Story<CardDrawer>",
+                    "defaultValue": "(args: CardDrawer) => ({\n  component: CardDrawer,\n  props: args,\n  argTypes: {\n    color: 'default',\n    drawerSize: {\n      control: { type: 'range', min: 0, max: 100, step: 5 },\n    },\n  },\n})"
                 },
                 {
                     "name": "Expansion",
@@ -1670,16 +1771,6 @@
                     "defaultValue": "(args: CardExpansion) => ({\n  component: CardExpansion,\n  props: args,\n  color: 'default',\n})"
                 },
                 {
-                    "name": "Horizontal",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/components/card/card.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({\n  color: 'default',\n})"
-                },
-                {
                     "name": "Image",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
@@ -1687,7 +1778,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
-                    "defaultValue": "Template.bind({\n  image: true,\n})"
+                    "defaultValue": "Template.bind({})"
                 },
                 {
                     "name": "Template",
@@ -1945,7 +2036,7 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "Flat",
+                "name": "disableTypes",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -1955,7 +2046,7 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "Icon",
+                "name": "Flat",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -1998,6 +2089,15 @@
                 "name": "urlPrefix",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/card/card-drawer.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "CardDrawer",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
                 "status": "low"
             },
             {
@@ -2053,16 +2153,6 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "Horizontal",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/components/card/card.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
                 "name": "Image",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
@@ -2079,16 +2169,16 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/components/progress-spinner/progress-spinner.component.ts",
+                "filePath": "src/stories/components/progress/progress.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "ProgressComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/5",
+                "coverageCount": "0/8",
                 "status": "low"
             },
             {
-                "filePath": "src/stories/components/progress-spinner/progress-spinner.stories.ts",
+                "filePath": "src/stories/components/progress/progress.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -2098,7 +2188,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/components/progress-spinner/progress-spinner.stories.ts",
+                "filePath": "src/stories/components/progress/progress.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -2108,7 +2198,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/components/progress-spinner/progress-spinner.stories.ts",
+                "filePath": "src/stories/components/progress/progress.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",

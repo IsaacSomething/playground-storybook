@@ -43,6 +43,11 @@
     }
   }
 
+  /* mat icon button  */
+  &.mat-icon-button .mat-icon {
+    line-height: 20px;
+  }
+
   /* Sizes */
   &.large {
     @include buttonSize(50px, 48px, 16px);
@@ -50,6 +55,21 @@
       @include spinnerSize(22px);
       svg {
         @include spinnerSize(22px);
+      }
+    }
+    &.mat-icon-button {
+      width: 24px;
+      .mat-icon {
+        font-size: 12px;
+      }
+    }
+    &.mat-icon-button {
+      width: 50px;
+      .mat-icon {
+        font-size: 30px;
+        height: 30px;
+        width: 29px;
+        line-height: 26px;
       }
     }
   }
@@ -60,6 +80,15 @@
       @include spinnerSize(12px);
       svg {
         @include spinnerSize(12px);
+      }
+    }
+    &.mat-icon-button {
+      width: 24px;
+      .mat-icon {
+        font-size: 14px;
+        height: 14px;
+        width: 13px;
+        line-height: 11px;
       }
     }
   }

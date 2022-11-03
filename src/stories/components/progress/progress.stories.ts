@@ -19,6 +19,9 @@ export default {
     diameter: {
       control: { type: 'range', min: 15, max: 200, step: 5 },
     },
+    value: {
+      control: { type: 'range', min: 0, max: 100, step: 1 },
+    },
   },
 } as Meta;
 
@@ -27,9 +30,7 @@ const Template: Story<ProgressComponent> = (args: ProgressComponent) => ({
 });
 
 export const Bar = Template.bind({});
-Bar.args = {
-  type: 'bar',
-};
+Bar.args = { type: 'bar' };
 Bar.argTypes = {
   strokeWidth: {
     control: { disable: true },
@@ -40,6 +41,4 @@ Bar.argTypes = {
 };
 
 export const Spinner = Template.bind({});
-Spinner.args = {
-  type: 'spinner',
-};
+Spinner.args = { type: 'spinner' };

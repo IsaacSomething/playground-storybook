@@ -26,11 +26,11 @@ import { CommonModule } from '@angular/common';
   `,
 })
 export default class ProgressComponent {
-  @Input() value = 20;
+  @Input() value = 50;
   @Input() disabled: boolean = false;
   @Input() color: 'primary' | 'accent' | 'warn' = 'primary';
-  @Input() mode: 'determinate' | 'indeterminate' = 'determinate';
+  @Input() mode: 'determinate' | 'indeterminate' = 'indeterminate';
   @Input() type!: 'bar' | 'spinner';
-  @Input() strokeWidth = 20;
-  @Input() diameter = 20;
+  @Input() strokeWidth = 10;
+  @Input() diameter = 100;
 }

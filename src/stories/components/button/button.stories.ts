@@ -17,7 +17,6 @@ const Template: Story<Button> = (args: Button) => ({
     disabled: { control: { type: 'boolean' } },
     loading: { control: { type: 'boolean' } },
     round: { control: { type: 'boolean' } },
-    type: { disable: true },
   },
 });
 
@@ -28,26 +27,33 @@ const designParams = {
   type: 'figma',
   url: `${urlPrefix}?node-id=0%3A1`,
 };
+const disableTypes = {
+  size: { control: { disable: true } },
+  type: { control: { disable: true } },
+};
 
+/* Default */
 export const Default = Template.bind({});
 Default.args = { type: 'default' };
 Default.parameters = {
   design: { ...designParams, url: `${urlPrefix}0%3A1` },
 };
+Default.argTypes = { ...disableTypes };
 
+/* Flat */
 export const Flat = Template.bind({});
 Flat.args = { type: 'flat' };
 Flat.parameters = {
   design: { ...designParams, url: `${urlPrefix}1%3A391` },
 };
+Flat.argTypes = { ...disableTypes };
 
+/* Raised */
 export const Raised = Template.bind({});
 Raised.args = { type: 'raised' };
+Raised.argTypes = { ...disableTypes };
 
+/* Stroked */
 export const Stroked = Template.bind({});
 Stroked.args = { type: 'stroked' };
-
-export const Icon: Story<ButtonIcon> = (args: ButtonIcon) => ({
-  component: ButtonIcon,
-  props: args,
-});
+Stroked.argTypes = { ...disableTypes };

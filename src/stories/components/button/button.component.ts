@@ -34,54 +34,25 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
         [class.mat-flat-button]="type === 'flat'"
         [class.mat-raised-button]="type === 'raised'"
         [class.mat-stroked-button]="type === 'stroked'"
-        class="{{ size }}"
+        class="{{ size }} margin-right"
         [class.round]="round"
         [color]="color"
         [disabled]="disabled"
       >
         <mat-spinner *ngIf="loading"></mat-spinner> {{ label }}
       </button>
-    </ng-template>
 
-    <!-- <button
-      mat-button
-      [class.mat-flat-button]="type === 'flat'"
-      [class.mat-raised-button]="type === 'raised'"
-      [class.mat-stroked-button]="type === 'stroked'"
-      class="small"
-      [class.round]="round"
-      [color]="color"
-      [disabled]="disabled"
-    >
-      <mat-spinner *ngIf="loading"></mat-spinner> {{ label }}
-    </button>
-    <br />
-    <br />
-    <button
-      mat-button
-      [class.mat-flat-button]="type === 'flat'"
-      [class.mat-raised-button]="type === 'raised'"
-      [class.mat-stroked-button]="type === 'stroked'"
-      [class.round]="round"
-      [color]="color"
-      [disabled]="disabled"
-    >
-      <mat-spinner *ngIf="loading"></mat-spinner> {{ label }}
-    </button>
-    <br />
-    <br />
-    <button
-      mat-button
-      [class.mat-flat-button]="type === 'flat'"
-      [class.mat-raised-button]="type === 'raised'"
-      [class.mat-stroked-button]="type === 'stroked'"
-      class="large"
-      [class.round]="round"
-      [color]="color"
-      [disabled]="disabled"
-    >
-      <mat-spinner *ngIf="loading"></mat-spinner> {{ label }}
-    </button> -->
+      <button
+        mat-icon-button
+        [class.mat-flat-button]="type === 'flat'"
+        [class.mat-raised-button]="type === 'raised'"
+        [class.mat-stroked-button]="type === 'stroked'"
+        class="{{ size }}"
+        [color]="color"
+      >
+        <mat-icon>home</mat-icon>
+      </button>
+    </ng-template>
   `,
 })
 export default class ButtonComponent {
