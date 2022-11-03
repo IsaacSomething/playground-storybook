@@ -33,7 +33,7 @@ $spacing: "padding", "padding-right", "padding-left", "padding-bottom",
   }
 }
 
-$backgrounds: "bg", "divider", "primary", "accent" "warn";
+$backgrounds: "bg", "card", "bar", "divider", "primary", "accent", "warn";
 
 @each $bg in $backgrounds {
   .bg-#{$bg} {
