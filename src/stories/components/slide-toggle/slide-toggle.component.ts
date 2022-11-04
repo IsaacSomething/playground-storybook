@@ -16,7 +16,7 @@ import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
   `,
 })
 export default class SlideToggle {
-  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';
+  @Input() color!: 'primary' | 'accent' | 'warn';
   @Input() disabled: boolean = false;
   @Input() contained: boolean = false;
 }

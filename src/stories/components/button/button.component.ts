@@ -39,7 +39,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
         [color]="color"
         [disabled]="disabled"
       >
-        <mat-spinner *ngIf="loading"></mat-spinner> [{{ label }}]
+        <mat-spinner *ngIf="loading"></mat-spinner> {{ label }}
       </button>
 
       <button
@@ -56,10 +56,10 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
   `,
 })
 export default class ButtonComponent {
-  @Input() label = 'Button';
-  @Input() size: 'small' | 'default' | 'large' = 'default';
-  @Input() type: 'flat' | 'stroked' | 'raised' | 'default' = 'flat';
-  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';
+  @Input() label!: string;
+  @Input() size!: 'small' | 'default' | 'large';
+  @Input() type!: 'flat' | 'stroked' | 'raised' | 'default';
+  @Input() color!: 'primary' | 'accent' | 'warn' | 'default';
   @Input() disabled: boolean = false;
   @Input() loading: boolean = false;
   @Input() round: boolean = false;

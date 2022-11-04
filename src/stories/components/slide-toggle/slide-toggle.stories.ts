@@ -14,16 +14,21 @@ export default {
   },
 } as Meta;
 
+const defaultArgs: Partial<SlideToggle> | undefined = {
+  color: 'primary',
+  disabled: false,
+  contained: false,
+};
+
 const Template: Story<SlideToggle> = (args: SlideToggle) => ({
   props: args,
 });
 
 export const Default = Template.bind({});
-Default.args = {
-  contained: false,
-};
+Default.args = { ...defaultArgs };
 
 export const Contained = Template.bind({});
 Contained.args = {
+  ...defaultArgs,
   contained: true,
 };
