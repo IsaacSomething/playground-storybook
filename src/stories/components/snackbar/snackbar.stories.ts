@@ -13,6 +13,7 @@ export default {
       control: { type: 'range', min: 0, max: 10000, step: 1000 },
     },
   },
+  parameters: { options: { showPanel: true } },
 } as Meta;
 
 const Template: Story<Snackbar> = (args: Snackbar) => ({

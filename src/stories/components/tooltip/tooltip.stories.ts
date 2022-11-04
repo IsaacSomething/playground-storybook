@@ -29,6 +29,7 @@ export default {
       name: 'Hide delay',
     },
   },
+  parameters: { options: { showPanel: true } },
 } as Meta;
 
 const defaultArgs: Partial<Tooltip> | undefined = {

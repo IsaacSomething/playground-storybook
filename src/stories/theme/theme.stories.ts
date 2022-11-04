@@ -7,6 +7,7 @@ export default {
   argTypes: {
     color: { control: false },
   },
+  parameters: { options: { showPanel: false } },
 } as Meta;
 
 const Template: Story<Theme> = (args: Theme) => ({

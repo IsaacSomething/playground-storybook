@@ -6,11 +6,12 @@ export default {
   component: Chips,
   argTypes: {
     color: {
-      options: ['primary', 'accent', 'warn',],
+      options: ['primary', 'accent', 'warn'],
       control: { type: 'radio' },
     },
     disabled: { control: { type: 'boolean' } },
   },
+  parameters: { options: { showPanel: true } },
 } as Meta;
 
 const Template: Story<Chips> = (args: Chips) => ({

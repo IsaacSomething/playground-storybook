@@ -19,6 +19,7 @@ export default {
       control: { type: 'range', min: 0, max: 24, step: 1 },
     },
   },
+  parameters: { options: { showPanel: true } },
 } as Meta;
 
 const Template: Story<Expansion> = (args: Expansion) => ({

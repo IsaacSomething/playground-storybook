@@ -5,6 +5,7 @@ import Button from './button.component';
 export default {
   title: 'Components/Button',
   component: Button,
+  parameters: { options: { showPanel: true } },
 } as Meta;
 
 const Template: Story<Button> = (args: Button) => ({
@@ -16,7 +17,7 @@ const Template: Story<Button> = (args: Button) => ({
     },
     disabled: { control: { type: 'boolean' } },
     loading: { control: { type: 'boolean' } },
-    round: { control: { type: 'boolean' } }
+    round: { control: { type: 'boolean' } },
   },
 });
 

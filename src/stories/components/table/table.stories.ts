@@ -11,6 +11,7 @@ export default {
     },
     disabled: { control: { type: 'boolean' } },
   },
+  parameters: { options: { showPanel: true } },
 } as Meta;
 
 const Template: Story<Table> = (args: Table) => ({

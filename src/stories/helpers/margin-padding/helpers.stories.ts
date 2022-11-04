@@ -23,6 +23,7 @@ export default {
     marginRight: {
       control: { type: 'range', min: 0, max: 60, step: 5 },
     },
+    parameters: { options: { showPanel: true } },
   },
 } as Meta;
 

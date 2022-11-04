@@ -4,6 +4,7 @@ import Figma from './figma.component';
 export default {
   title: 'Storybook/Figma',
   component: Figma,
+  parameters: { options: { showPanel: true } },
 } as Meta;
 
 // This is from my account

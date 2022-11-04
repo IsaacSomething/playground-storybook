@@ -4,6 +4,7 @@ import VirtualScroll from './virtual-scroll.component';
 export default {
   title: 'Layout/Virtual Scroll',
   component: VirtualScroll,
+  parameters: { options: { showPanel: true } },
 } as Meta;
 
 const Template: Story<VirtualScroll> = (args: VirtualScroll) => ({

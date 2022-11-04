@@ -16,6 +16,7 @@ export default {
     },
     image: { control: { type: 'boolean' } },
   },
+  parameters: { options: { showPanel: true } },
 } as Meta;
 
 const Template: Story<Card> = (args: Card) => ({

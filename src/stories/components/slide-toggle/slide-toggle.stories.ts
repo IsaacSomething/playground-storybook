@@ -12,6 +12,7 @@ export default {
     disabled: { control: { type: 'boolean' } },
     isContained: { control: { type: 'boolean' } },
   },
+  parameters: { options: { showPanel: true } },
 } as Meta;
 
 const defaultArgs: Partial<SlideToggle> | undefined = {

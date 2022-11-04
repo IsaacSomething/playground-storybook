@@ -18,6 +18,7 @@ export default {
     openedChange: { action: 'Sidenav opened changed' },
     onPositionChanged: { action: 'Sidenav position changed' },
   },
+  parameters: { options: { showPanel: true } },
 } as Meta;
 
 const SidenavContainer: Story<Sidenav> = (args: Sidenav) => ({

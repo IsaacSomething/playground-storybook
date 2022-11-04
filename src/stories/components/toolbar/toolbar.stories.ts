@@ -16,6 +16,7 @@ export default {
       name: 'Right label',
     },
   },
+  parameters: { options: { showPanel: true } },
 } as Meta;
 
 const defaultArgs: Partial<Toolbar> | undefined = {

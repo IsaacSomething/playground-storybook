@@ -4,6 +4,7 @@ import Tree from './tree.component';
 export default {
   title: 'Components/Tree',
   component: Tree,
+  parameters: { options: { showPanel: true } },
 } as Meta;
 
 const Template: Story<Tree> = (args: Tree) => ({

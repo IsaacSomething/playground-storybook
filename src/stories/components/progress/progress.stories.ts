@@ -4,7 +4,10 @@ import ProgressComponent from './progress.component';
 export default {
   title: 'Components/Progress',
   component: ProgressComponent,
-  parameters: { controls: { sort: 'requiredFirst' } },
+  parameters: {
+    controls: { sort: 'requiredFirst' },
+    options: { showPanel: true },
+  },
   argTypes: {
     color: {
       options: ['primary', 'accent', 'warn'],

@@ -4,6 +4,7 @@ import Responsive from './responsive.component';
 export default {
   title: 'Layout/Responsive',
   component: Responsive,
+  parameters: { options: { showPanel: true } },
 } as Meta;
 
 const Template: Story<Responsive> = (args: Responsive) => ({

@@ -4,6 +4,7 @@ import Grid from './grid.component';
 export default {
   title: 'Layout/Grid',
   component: Grid,
+  parameters: { options: { showPanel: true } },
 } as Meta;
 
 const Template: Story<Grid> = (args: Grid) => ({

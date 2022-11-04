@@ -10,6 +10,7 @@ export default {
       control: { type: 'radio' },
     },
   },
+  parameters: { options: { showPanel: true } },
 } as Meta;
 
 const Template: Story<Dialog> = (args: Dialog) => ({
