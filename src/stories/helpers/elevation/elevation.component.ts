@@ -11,7 +11,7 @@ import SBHeader from '../../assets/sb-header/sb-header.component';
   providers: [],
   styles: [
     `
-      div {
+      .box {
         height: 300px;
         width: 300px;
         padding: 16px;
@@ -21,15 +21,16 @@ import SBHeader from '../../assets/sb-header/sb-header.component';
     `,
   ],
   template: `
-    <sb-header title="Elevation" clipboard></sb-header>
-    <div
-      [class]="'mat-elevation-z' + elevation"
-      matRipple
-      matRippleColor="var(--mat-accent)"
-      [cdkCopyToClipboard]="'mat-elevation-z' + elevation"
-    >
-  <code>.mat-elevation-z{{elevation}}</code>
-  </div>
+    <div class="padding">
+      <sb-header title="Elevation" clipboard></sb-header>
+      <div
+        [class]="'box mat-elevation-z' + elevation"
+        matRipple
+        [cdkCopyToClipboard]="'mat-elevation-z' + elevation"
+      >
+        <code>.mat-elevation-z{{ elevation }}</code>
+      </div>
+    </div>
   `,
 })
 export default class Elevation {

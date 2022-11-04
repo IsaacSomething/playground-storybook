@@ -18,6 +18,7 @@ export default {
     },
     tooltipLabel: {
       control: { type: 'text', label: 'Label' },
+      name: 'Tooltip label',
     },
     showDelay: {
       control: { type: 'range', min: 0, max: 10000, step: 1000 },

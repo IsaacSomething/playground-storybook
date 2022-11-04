@@ -9,6 +9,12 @@ export default {
       options: ['primary', 'accent', 'warn', 'default'],
       control: { type: 'radio' },
     },
+    leftLabel: {
+      name: 'Left label',
+    },
+    rightLabel: {
+      name: 'Right label',
+    },
   },
 } as Meta;
 

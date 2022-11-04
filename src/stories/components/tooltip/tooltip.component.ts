@@ -10,7 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
   styles: [
     `
       div {
-        padding: 50px 100px;
+        padding: 50px 150px;
       }
     `,
   ],

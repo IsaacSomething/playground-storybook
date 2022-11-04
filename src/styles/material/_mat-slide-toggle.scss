@@ -5,6 +5,7 @@
     background-color: var(--mat-divider);
   }
 
+  /* Contained */
   &.contained {
     @each $color in play.$colors {
       &.mat-#{$color} .mat-slide-toggle-thumb {
@@ -44,6 +45,11 @@
       .mat-slide-toggle-thumb-container {
         left: 3px;
       }
+    }
+
+    .mat-slide-toggle-ripple {
+      top: calc(50% - 22px);
+      left: calc(50% - 22px);
     }
   }
 }

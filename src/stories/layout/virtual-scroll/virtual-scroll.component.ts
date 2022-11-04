@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
       .viewport {
         height: 400px;
         width: 200px;
-        border: 2px solid var(--mat-divider);
+        border: 1px solid var(--mat-divider);
         border-radius: 4px;
       }
 
@@ -23,11 +23,13 @@ import { CommonModule } from '@angular/common';
     `,
   ],
   template: `
-    <cdk-virtual-scroll-viewport itemSize="50" class="viewport">
-      <div *cdkVirtualFor="let item of items" class="item">
-        {{ item }}
-      </div>
-    </cdk-virtual-scroll-viewport>
+    <div class="padding">
+      <cdk-virtual-scroll-viewport itemSize="50" class="viewport">
+        <div *cdkVirtualFor="let item of items" class="item">
+          {{ item }}
+        </div>
+      </cdk-virtual-scroll-viewport>
+    </div>
   `,
 })
 export default class VirtualScroll implements OnInit {

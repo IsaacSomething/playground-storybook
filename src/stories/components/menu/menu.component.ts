@@ -8,11 +8,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   standalone: true,
   imports: [MatMenuModule, MatButtonModule, BrowserAnimationsModule],
   template: `
-    <button mat-flat-button [matMenuTriggerFor]="menu">[Menu]</button>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item>Item 1</button>
-      <button mat-menu-item>Item 2</button>
-    </mat-menu>
+    <div class="padding">
+      <button mat-flat-button [matMenuTriggerFor]="menu">[Menu]</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+      </mat-menu>
+    </div>
   `,
 })
 export default class Menu {

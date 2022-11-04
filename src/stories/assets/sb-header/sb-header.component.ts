@@ -9,20 +9,35 @@ import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
   imports: [CommonModule, MatDividerModule],
   styles: [
     `
+      :host {
+        display: block;
+        width: 100%;
+      }
+      .container {
+        display: block;
+        width: 100%;
+      }
       h2 {
         font-size: 50px !important;
         font-weight: bold !important;
         margin-bottom: 6px !important;
         text-transform: capitalize;
       }
+      small {
+        padding-top: 12px;
+        display: block;
+      }
     `,
   ],
   template: `
-    <h2>{{ title }}</h2>
-    <ng-content></ng-content>
-    <small *ngIf="clipboard">CLICK TO COPY VALUE</small>
-    <mat-divider></mat-divider>
-    <br />
+    <div class="container">
+      <h2>{{ title }}</h2>
+      <ng-content></ng-content>
+      <small *ngIf="clipboard">CLICK TO COPY VALUE</small>
+      <mat-divider></mat-divider>
+      <br />
+      <div></div>
+    </div>
   `,
 })
 export default class SBHeader {

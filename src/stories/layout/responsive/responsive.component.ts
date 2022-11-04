@@ -1,5 +1,5 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 
 @Component({
@@ -13,7 +13,7 @@ import { Subject, takeUntil } from 'rxjs';
     </p>
   `,
 })
-export default class Responsive {
+export default class Responsive implements OnDestroy {
   destroyed = new Subject<void>();
   currentScreenSize!: string;
 

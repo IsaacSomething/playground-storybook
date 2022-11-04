@@ -1,5 +1,6 @@
 .mat-storybook {
-  margin: 30px !important;
+  margin-top: var(--mat-spacing) !important;
+  padding: 0px !important;
 }
 
 .sbdocs-title,
@@ -15,8 +16,8 @@ code:not(#error-stack) {
   margin-bottom: 6px;
   display: inline-block;
   font-weight: bold;
-  padding: 6px;
-  font-size: 13px;
+  padding: 3px 6px;
+  font-size: 12px;
 }
 
 .sb-errordisplay {

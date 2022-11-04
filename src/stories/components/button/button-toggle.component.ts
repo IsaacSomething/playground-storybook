@@ -6,11 +6,13 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
   imports: [MatButtonToggleModule],
   standalone: true,
   template: `
-    <mat-button-toggle-group color="primary">
-      <mat-button-toggle value="left">[Left]</mat-button-toggle>
-      <mat-button-toggle value="middle">[Middle]</mat-button-toggle>
-      <mat-button-toggle value="right">[Right]</mat-button-toggle>
-    </mat-button-toggle-group>
+    <div class="padding">
+      <mat-button-toggle-group color="primary">
+        <mat-button-toggle value="left">[Left]</mat-button-toggle>
+        <mat-button-toggle value="middle">[Middle]</mat-button-toggle>
+        <mat-button-toggle value="right">[Right]</mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
   `,
 })
 export default class ButtonToggle {

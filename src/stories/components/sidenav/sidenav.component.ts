@@ -11,9 +11,7 @@ import { Observable } from 'rxjs';
   styles: [
     `
       mat-sidenav-container {
-        height: 500px;
-        border: 2px solid var(--mat-divider);
-        border-radius: var(--mat-radius);
+        height: 100vh;
       }
       mat-sidenav-content,
       mat-sidenav {
@@ -25,7 +23,7 @@ import { Observable } from 'rxjs';
     `,
   ],
   template: `
-    <mat-sidenav-container autosize>
+    <mat-sidenav-container autosize class="bg-card">
       <mat-sidenav
         #sidenav
         class="mat-elevation-z8"

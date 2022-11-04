@@ -9,12 +9,10 @@ export default {
       options: ['primary', 'accent', 'warn'],
       control: { type: 'radio' },
     },
-    disabled: { control: { type: 'boolean' } },
   },
 } as Meta;
 
 const Template: Story<Dialog> = (args: Dialog) => ({
   props: args,
 });
-
 export const Default = Template.bind({});

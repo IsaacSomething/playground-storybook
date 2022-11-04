@@ -33,41 +33,43 @@ import { Component, Input, OnChanges } from '@angular/core';
     `,
   ],
   template: `
-    <div class="container">
-      <div class="box-outer">
-        <div
-          class="padding-{{ padding }} padding-left-{{
-            paddingLeft
-          }} padding-right-{{ paddingRight }} margin-{{ margin }} margin-left-{{
-            marginLeft
-          }} margin-right-{{ marginRight }}"
-        ></div>
-      </div>
+    <div class="padding">
+      <div class="container">
+        <div class="box-outer">
+          <div
+            class="padding-{{ padding }} padding-left-{{
+              paddingLeft
+            }} padding-right-{{ paddingRight }} margin-{{
+              margin
+            }} margin-left-{{ marginLeft }} margin-right-{{ marginRight }}"
+          ></div>
+        </div>
 
-      <div class="box-outer-2">
-        <div
-          class="padding-{{ padding }} padding-left-{{
-            paddingLeft
-          }} padding-right-{{ paddingRight }} margin-{{ margin }} margin-left-{{
-            marginLeft
-          }} margin-right-{{ marginRight }}"
-        ></div>
+        <div class="box-outer-2">
+          <div
+            class="padding-{{ padding }} padding-left-{{
+              paddingLeft
+            }} padding-right-{{ paddingRight }} margin-{{
+              margin
+            }} margin-left-{{ marginLeft }} margin-right-{{ marginRight }}"
+          ></div>
+        </div>
       </div>
+      <br />
+
+      <code>.padding-{{ padding }}</code>
+      <br />
+      <code>.padding-left-{{ paddingLeft }}</code>
+      <br />
+      <code>.padding-right-{{ paddingRight }}</code>
+      <br />
+      <code>.margin-{{ margin }}</code>
+      <br />
+      <code>.margin-left-{{ marginLeft }}</code>
+      <br />
+      <code>.margin-right-{{ marginRight }}</code>
+      <br />
     </div>
-    <br />
-
-    <code>.padding-{{ padding }}</code
-    ><br />
-    <code>.padding-left-{{ paddingLeft }}</code
-    ><br />
-    <code>.padding-right-{{ paddingRight }}</code
-    ><br />
-    <code>.margin-{{ margin }}</code
-    ><br />
-    <code>.margin-left-{{ marginLeft }}</code
-    ><br />
-    <code>.margin-right-{{ marginRight }}</code
-    ><br />
   `,
 })
 export default class Helpers implements OnChanges {

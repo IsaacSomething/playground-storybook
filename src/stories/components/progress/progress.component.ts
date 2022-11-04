@@ -16,6 +16,7 @@ import { CommonModule } from '@angular/common';
     ></mat-progress-bar>
     <br />
     <mat-spinner
+      class="margin"
       *ngIf="type === 'spinner'"
       [mode]="mode"
       [value]="value"

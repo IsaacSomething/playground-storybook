@@ -6,15 +6,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   selector: 'storybook-toolbar',
   standalone: true,
   imports: [MatToolbarModule, CommonModule],
-  styles: [
-    `
-      /* Fix for SB padding */
-      mat-toolbar {
-        margin: -30px -46px;
-        width: calc(100% + 92px);
-      }
-    `,
-  ],
+  styles: [],
   template: `
     <mat-toolbar [color]="color">
       <span> {{ leftLabel }} </span>

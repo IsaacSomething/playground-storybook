@@ -7,12 +7,14 @@ import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
   standalone: true,
   imports: [MatSlideToggleModule],
   template: `
-    <mat-slide-toggle
-      [color]="color"
-      [disabled]="disabled"
-      [class.contained]="contained"
-    >
-    </mat-slide-toggle>
+    <div class="padding">
+      <mat-slide-toggle
+        [color]="color"
+        [disabled]="disabled"
+        [class.contained]="contained"
+      >
+      </mat-slide-toggle>
+    </div>
   `,
 })
 export default class SlideToggle {

@@ -6,41 +6,43 @@ import { MatTableModule } from '@angular/material/table';
   standalone: true,
   imports: [MatTableModule],
   template: `
-    <table mat-table [dataSource]="dataSource" class="mat-elevation-z1">
-      <!--- Note that these columns can be defined in any order.
+    <div class="padding-left-32 padding-right-32">
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z1">
+        <!--- Note that these columns can be defined in any order.
         The actual rendered columns are set as a property on the row definition" -->
 
-      <!-- Position Column -->
-      <ng-container matColumnDef="position">
-        <th mat-header-cell *matHeaderCellDef>No.</th>
-        <td mat-cell *matCellDef="let element">{{ element.position }}</td>
-      </ng-container>
+        <!-- Position Column -->
+        <ng-container matColumnDef="position">
+          <th mat-header-cell *matHeaderCellDef>No.</th>
+          <td mat-cell *matCellDef="let element">{{ element.position }}</td>
+        </ng-container>
 
-      <!-- Name Column -->
-      <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef>Name</th>
-        <td mat-cell *matCellDef="let element">{{ element.name }}</td>
-      </ng-container>
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef>Name</th>
+          <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+        </ng-container>
 
-      <!-- Weight Column -->
-      <ng-container matColumnDef="weight">
-        <th mat-header-cell *matHeaderCellDef>Weight</th>
-        <td mat-cell *matCellDef="let element">{{ element.weight }}</td>
-      </ng-container>
+        <!-- Weight Column -->
+        <ng-container matColumnDef="weight">
+          <th mat-header-cell *matHeaderCellDef>Weight</th>
+          <td mat-cell *matCellDef="let element">{{ element.weight }}</td>
+        </ng-container>
 
-      <!-- Symbol Column -->
-      <ng-container matColumnDef="symbol">
-        <th mat-header-cell *matHeaderCellDef>Symbol</th>
-        <td mat-cell *matCellDef="let element">{{ element.symbol }}</td>
-      </ng-container>
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="symbol">
+          <th mat-header-cell *matHeaderCellDef>Symbol</th>
+          <td mat-cell *matCellDef="let element">{{ element.symbol }}</td>
+        </ng-container>
 
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-    </table>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+    </div>
   `,
 })
 export default class Table {
-  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';
+  @Input() color: 'primary' | 'accent' | 'warn' | 'card' = 'primary';
   @Input() disabled: boolean = false;
 
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];

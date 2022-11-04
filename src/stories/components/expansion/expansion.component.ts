@@ -7,34 +7,37 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   standalone: true,
   imports: [MatExpansionModule, BrowserAnimationsModule],
   template: `
-    <mat-accordion
-      [attr.dense]="dense"
-      [displayMode]="mode"
-      [hideToggle]="hideToggle"
-    >
-      <mat-expansion-panel class="mat-elevation-z{{ elevation }}">
-        <mat-expansion-panel-header>
-          <mat-panel-title>{{ title }}</mat-panel-title>
-          <mat-panel-description>{{ description }}</mat-panel-description>
-        </mat-expansion-panel-header>
-        <p>
-          Eligendi, provident dolores mollitia inventore facilis harum dolore
-          nam in ut! Eveniet reiciendis, laudantium excepturi velit cum totam
-          quo expedita aspernatur tenetur?
-        </p>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="mat-elevation-z{{ elevation }}">
-        <mat-expansion-panel-header>
-          <mat-panel-title>[Title]</mat-panel-title>
-          <mat-panel-description>[Description]</mat-panel-description>
-        </mat-expansion-panel-header>
-        <p>
-          Eligendi, provident dolores mollitia inventore facilis harum dolore
-          nam in ut! Eveniet reiciendis, laudantium excepturi velit cum totam
-          quo expedita aspernatur tenetur?
-        </p>
-      </mat-expansion-panel>
-    </mat-accordion>
+    <div class="margin">
+      <mat-accordion
+        class="margin"
+        [attr.dense]="dense"
+        [displayMode]="mode"
+        [hideToggle]="hideToggle"
+      >
+        <mat-expansion-panel class="mat-elevation-z{{ elevation }}">
+          <mat-expansion-panel-header>
+            <mat-panel-title>{{ title }}</mat-panel-title>
+            <mat-panel-description>{{ description }}</mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>
+            Eligendi, provident dolores mollitia inventore facilis harum dolore
+            nam in ut! Eveniet reiciendis, laudantium excepturi velit cum totam
+            quo expedita aspernatur tenetur?
+          </p>
+        </mat-expansion-panel>
+        <mat-expansion-panel class="mat-elevation-z{{ elevation }}">
+          <mat-expansion-panel-header>
+            <mat-panel-title>[Title]</mat-panel-title>
+            <mat-panel-description>[Description]</mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>
+            Eligendi, provident dolores mollitia inventore facilis harum dolore
+            nam in ut! Eveniet reiciendis, laudantium excepturi velit cum totam
+            quo expedita aspernatur tenetur?
+          </p>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
   `,
 })
 export default class Expansion {

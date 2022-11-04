@@ -16,7 +16,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 })
 export default class Chips {
   @Input() color: 'primary' | 'accent' | 'warn' = 'primary';
-  @Input() disabled: boolean = false;
 
   constructor(public dialog: MatDialog) {}
 
@@ -36,8 +35,8 @@ export interface DialogData {
 }
 
 @Component({
-  selector: 'dialog-overview-example-dialog',
-  template: ` <h1>Dialog</h1> `,
+  selector: 'dialog-storybook-example',
+  template: ` <h1>[Dialog component]</h1> `,
 })
 export class DialogOverviewExampleDialog {
   constructor(
