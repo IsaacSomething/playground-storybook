@@ -4,6 +4,11 @@ import Textarea from './textarea.component';
 export default {
   title: 'Forms/Textarea',
   component: Textarea,
+  parameters: { options: { showPanel: true } },
+} as Meta;
+
+const Template: Story<Textarea> = (args: Textarea) => ({
+  props: args,
   argTypes: {
     color: {
       options: ['primary', 'accent', 'warn'],
@@ -11,10 +16,12 @@ export default {
     },
     disabled: { control: { type: 'boolean' } },
   },
-} as Meta;
-
-const Template: Story<Textarea> = (args: Textarea) => ({
-  props: args,
 });
 
+const defaultArgs: Partial<Textarea> | undefined = {
+  color: 'primary',
+  disabled: false,
+};
+
 export const Default = Template.bind({});
+Default.args = { ...defaultArgs };

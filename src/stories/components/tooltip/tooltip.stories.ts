@@ -4,6 +4,11 @@ import Tooltip from './tooltip.component';
 export default {
   title: 'Components/Tooltip',
   component: Tooltip,
+  parameters: { options: { showPanel: true } },
+} as Meta;
+
+const Template: Story<Tooltip> = (args: Tooltip) => ({
+  props: args,
   argTypes: {
     position: {
       options: ['after', 'before', 'above', 'below', 'left', 'right'],
@@ -29,8 +34,7 @@ export default {
       name: 'Hide delay',
     },
   },
-  parameters: { options: { showPanel: true } },
-} as Meta;
+});
 
 const defaultArgs: Partial<Tooltip> | undefined = {
   tooltipLabel: '[Tooltip label]',
@@ -40,10 +44,6 @@ const defaultArgs: Partial<Tooltip> | undefined = {
   showDelay: 0,
   hideDelay: 0,
 };
-
-const Template: Story<Tooltip> = (args: Tooltip) => ({
-  props: args,
-});
 
 export const Default = Template.bind({});
 Default.args = { ...defaultArgs };

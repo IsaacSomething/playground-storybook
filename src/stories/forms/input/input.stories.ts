@@ -4,6 +4,11 @@ import InputFormField from './input.component';
 export default {
   title: 'Forms/Input',
   component: InputFormField,
+  parameters: { options: { showPanel: true } },
+} as Meta;
+
+const Template: Story<InputFormField> = (args: InputFormField) => ({
+  props: args,
   argTypes: {
     color: {
       options: ['primary', 'accent', 'warn'],
@@ -11,10 +16,12 @@ export default {
     },
     disabled: { control: { type: 'boolean' } },
   },
-} as Meta;
-
-const Template: Story<InputFormField> = (args: InputFormField) => ({
-  props: args,
 });
 
+const defaultArgs: Partial<InputFormField> | undefined = {
+  color: 'primary',
+  disabled: false,
+};
+
 export const Default = Template.bind({});
+Default.args = { ...defaultArgs };

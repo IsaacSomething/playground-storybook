@@ -4,6 +4,11 @@ import DatePicker from './date-picker.component';
 export default {
   title: 'Forms/Date Picker',
   component: DatePicker,
+  parameters: { options: { showPanel: true } },
+} as Meta;
+
+const Template: Story<DatePicker> = (args: DatePicker) => ({
+  props: args,
   argTypes: {
     color: {
       options: ['primary', 'accent', 'warn'],
@@ -11,10 +16,12 @@ export default {
     },
     disabled: { control: { type: 'boolean' } },
   },
-} as Meta;
-
-const Template: Story<DatePicker> = (args: DatePicker) => ({
-  props: args,
 });
 
+const defaultArgs: Partial<DatePicker> | undefined = {
+  color: 'primary',
+  disabled: false,
+};
+
 export const Default = Template.bind({});
+Default.args = { ...defaultArgs };
