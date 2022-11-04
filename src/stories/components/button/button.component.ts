@@ -57,7 +57,6 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 })
 export default class ButtonComponent {
   @Input() label!: string;
-  @Input() size!: 'small' | 'default' | 'large';
   @Input() type!: 'flat' | 'stroked' | 'raised' | 'default';
   @Input() color!: 'primary' | 'accent' | 'warn' | 'default';
   @Input() disabled: boolean = false;

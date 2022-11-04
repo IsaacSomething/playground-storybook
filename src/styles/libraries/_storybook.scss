@@ -7,12 +7,41 @@
   font-weight: bold !important;
 }
 
-code {
+code:not(#error-stack) {
   font-size: 11px;
   background: #f3f3f3;
-  padding: 0 4px;
   border: 1px solid #dfdfdf;
   border-radius: 3px;
   margin-bottom: 6px;
   display: inline-block;
+  font-weight: bold;
+  padding: 6px;
+  font-size: 13px;
+}
+
+.sb-errordisplay {
+  border: none;
+  background-color: transparent;
+}
+
+#error-message.sb-heading {
+  color: var(--mat-warn);
+}
+
+.sb-errordisplay_code {
+  background-color: var(--mat-warn);
+  border-radius: var(--mat-radius);
+  font-weight: bold;
+  color: var(--mat-card);
+}
+
+.css-bdtlhc {
+  box-shadow: none;
+}
+.os-content {
+  font-weight: bold;
+}
+.css-3ltsna:focus {
+  box-shadow: var(--mat-primary) 0 -3px 0 0 inset;
+  outline: 0 none;
 }

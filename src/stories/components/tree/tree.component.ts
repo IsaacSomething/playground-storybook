@@ -1,6 +1,6 @@
 import { ArrayDataSource } from '@angular/cdk/collections';
 import { FlatTreeControl } from '@angular/cdk/tree';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatIconModule } from '@angular/material/icon';
 import { CdkTreeModule } from '@angular/cdk/tree';
@@ -120,12 +120,12 @@ interface ExampleFlatNode {
   `,
 })
 export default class Tree {
-  treeControl = new FlatTreeControl<ExampleFlatNode>(
+  @Input() treeControl = new FlatTreeControl<ExampleFlatNode>(
     (node) => node.level,
     (node) => node.expandable
   );
 
-  dataSource = new ArrayDataSource(TREE_DATA);
+  @Input() dataSource = new ArrayDataSource(TREE_DATA);
 
   hasChild = (_: number, node: ExampleFlatNode) => node.expandable;
 

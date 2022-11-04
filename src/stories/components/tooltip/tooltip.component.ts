@@ -22,6 +22,8 @@ import { MatIconModule } from '@angular/material/icon';
         [matTooltipPosition]="position"
         [matTooltipClass]="color"
         [matTooltipDisabled]="disabled"
+        [matTooltipShowDelay]="showDelay"
+        [matTooltipHideDelay]="hideDelay"
       >
         [Hover here for tooltip]
       </button>
@@ -34,4 +36,6 @@ export default class Tooltip {
     'below';
   @Input() disabled: boolean = false;
   @Input() tooltipLabel = 'Lorem Ipsum';
+  @Input() showDelay!: number;
+  @Input() hideDelay!: number;
 }

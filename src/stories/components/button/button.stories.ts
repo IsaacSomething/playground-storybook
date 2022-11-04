@@ -16,7 +16,7 @@ const Template: Story<Button> = (args: Button) => ({
     },
     disabled: { control: { type: 'boolean' } },
     loading: { control: { type: 'boolean' } },
-    round: { control: { type: 'boolean' } },
+    round: { control: { type: 'boolean' } }
   },
 });
 
@@ -35,7 +35,7 @@ const disableTypes = {
 
 const defaultArgs: Partial<Button> | undefined = {
   label: '[Button]',
-  color: 'default',
+  color: 'primary',
   disabled: false,
   loading: false,
   round: false,

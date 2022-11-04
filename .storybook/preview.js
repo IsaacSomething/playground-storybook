@@ -17,6 +17,7 @@ export const parameters = {
         "Introduction",
         "Storybook",
         "Theme",
+        "Forms",
         "Components",
         "Layout",
         "Helpers",
