@@ -1,0 +1,13 @@
+@use './mat-utilities' as play;
+
+.mat-snack-bar-container {
+  /* Colors */
+  @each $color in play.$colors {
+    &.mat-#{$color} {
+      background: var(--mat-#{$color});
+    }
+    .mat-simple-snackbar-action .mat-button-wrapper{
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+}

@@ -6,10 +6,12 @@ export default {
   component: Snackbar,
   argTypes: {
     color: {
-      options: ['primary', 'accent', 'warn'],
+      options: ['primary', 'accent', 'warn', 'default'],
       control: { type: 'radio' },
     },
-    disabled: { control: { type: 'boolean' } },
+    duration: {
+      control: { type: 'range', min: 0, max: 10000, step: 1000 },
+    },
   },
 } as Meta;
 

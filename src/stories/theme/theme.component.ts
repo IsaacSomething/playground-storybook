@@ -10,7 +10,7 @@ import SBHeader from '../assets/sb-header/sb-header.component';
   imports: [CommonModule, ClipboardModule, MatRippleModule, SBHeader],
   styleUrls: ['./theme.component.scss'],
   template: `
-    <sb-header [title]="color" hasCopy>
+    <sb-header [title]="color" clipboard>
       <h4 *ngIf="color === 'primary'">HEX: #3F51B5</h4>
       <h4 *ngIf="color === 'accent'">HEX: #D72828</h4>
       <h4 *ngIf="color === 'warn'">HEX: #5C5C5C</h4>
@@ -19,7 +19,6 @@ import SBHeader from '../assets/sb-header/sb-header.component';
     <div
       class="block"
       matRipple
-      matRippleColor="var(--mat-{{ color }}-contrast-{{ hue }})"
       cdkCopyToClipboard="var(--mat-{{ color }}-{{ hue }})"
       *ngFor="
         let hue of [

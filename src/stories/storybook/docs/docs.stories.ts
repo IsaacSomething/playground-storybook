@@ -14,12 +14,26 @@ export const Default = Template.bind({});
 Default.parameters = {
   docs: {
     source: {
-      code: `  
+      code: `
+        /** 
+         * Typescript code example using
+         *  
+         *  Default.parameters = {
+         *   docs: {
+         *     source: {
+         *       code: '[Add code here]',
+         *       language: 'typescript',
+         *       format: false,
+         *     },
+         *   },
+         *  }; 
+         **/
+      
         open() {
           this.snackBar.open('Snackbar message', 'Okay', { duration: 1000 });
-        }
-      `,
+        }`,
       language: 'typescript',
+      format: false,
     },
   },
 };

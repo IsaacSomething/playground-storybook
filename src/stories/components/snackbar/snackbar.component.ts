@@ -12,12 +12,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   `,
 })
 export default class Snackbar {
-  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';
-  @Input() disabled: boolean = false;
+  @Input() color: 'primary' | 'accent' | 'warn' | 'default' = 'primary';
+  @Input() duration = 8000;
 
   constructor(private snackBar: MatSnackBar) {}
 
   open() {
-    this.snackBar.open('Snackbar message', 'Okay', { duration: 1000 });
+    const message = `Eligendi, provident dolores mollitia inventore facilis harum dolore nam
+    in ut!`;
+    this.snackBar.open(message, 'Okay', {
+      duration: this.duration,
+      panelClass: `mat-${this.color}`,
+    });
   }
 }

@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ScrollingModule } from '@angular/cdk/scrolling';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'storybook-virtual-scroll',
   standalone: true,
-  imports: [ScrollingModule],
+  imports: [ScrollingModule, CommonModule],
   styles: [
     `
       .viewport {
@@ -29,6 +30,10 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     </cdk-virtual-scroll-viewport>
   `,
 })
-export default class VirtualScroll {
-  items = Array.from({ length: 1000 }).map((_, i) => `Item #${i}`);
+export default class VirtualScroll implements OnInit {
+  @Input() items!: string[];
+
+  ngOnInit() {
+    this.items = Array.from({ length: 1000 }).map((_, i) => `Item #${i}`);
+  }
 }

@@ -6,10 +6,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   selector: 'storybook-stepper',
   standalone: true,
   imports: [MatStepperModule, BrowserAnimationsModule],
+  styles: [
+    `
+      h1 {
+        font-weight: bold!important;
+      }
+    `,
+  ],
   template: `
     <mat-stepper>
       <mat-step label="[Label]">
-        <h1>Step 1</h1>
+        <h1>[01]</h1>
         <p>
           Eligendi, provident dolores mollitia inventore facilis harum dolore
           nam in ut! Eveniet reiciendis, laudantium excepturi velit cum totam
@@ -17,7 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         </p>
       </mat-step>
       <mat-step label="[attribute label]">
-        <h1>Step 2</h1>
+        <h1>[02]</h1>
         <p>
           Eligendi, provident dolores mollitia inventore facilis harum dolore
           nam in ut! Eveniet reiciendis, laudantium excepturi velit cum totam
@@ -26,7 +33,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       </mat-step>
       <mat-step>
         <ng-template matStepLabel>[matStepLabel]</ng-template>
-        <h1>Step 3</h1>
+        <h1>[03]</h1>
         <p>
           Eligendi, provident dolores mollitia inventore facilis harum dolore
           nam in ut! Eveniet reiciendis, laudantium excepturi velit cum totam

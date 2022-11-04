@@ -11,3 +11,4 @@ const Template: Story<VirtualScroll> = (args: VirtualScroll) => ({
 });
 
 export const Default = Template.bind({});
+Default.argTypes = { items: { control: { disable: true } } };

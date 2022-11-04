@@ -1,13 +1,21 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'storybook-figma',
   standalone: true,
   imports: [],
+  styles: [
+    `
+      p {
+        font-size: 16px;
+        line-height: 22px;
+      }
+    `,
+  ],
   template: `
     <p>
-      This is a test story to try out the integration of Figma within
-      storybook.Click the design tab on the panel on the right
+      This is a test story to try out the integration of Figma within storybook.
+      Click the <strong>"Design"</strong> tab on the panel on the right.
     </p>
 
     <a

@@ -15,10 +15,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   template: `
     <mat-card [attr.color]="color" class="drawer">
-      <mat-drawer-container #drawer>
+      <mat-drawer-container #drawer class="bg-card">
         <mat-drawer
           mode="over"
-          class="bg-divider padding width-{{drawerSize}} mat-elevation-z0"
+          class="bg-divider padding width-{{ drawerSize }} mat-elevation-z0"
         >
           <button mat-button (click)="drawer.close()">[Close drawer]</button>
         </mat-drawer>

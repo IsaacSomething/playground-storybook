@@ -440,7 +440,7 @@
         },
         {
             "name": "CardDrawer",
-            "id": "component-CardDrawer-32fa82612688fc615f50ba82ca7b737619727b4f516764ee7fa48a28a0d259a91889d3345000863c9a3f09985d0b5a80620f0c851e975d4030d38a68a26126f0",
+            "id": "component-CardDrawer-ce375557d8408afb5281a5e667a343cc60eed9ed838370fc673e76aa9e29a5b9544d8654d61069e73433e8a6de8830f6d1a8f5777108ee8c833f09c46478a1ed",
             "file": "src/stories/components/card/card-drawer.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -450,7 +450,7 @@
             "selector": "storybook-card-drawer",
             "styleUrls": [],
             "styles": [],
-            "template": "<mat-card [attr.color]=\"color\" class=\"drawer\">\n  <mat-drawer-container #drawer>\n    <mat-drawer\n      mode=\"over\"\n      class=\"bg-divider padding width-{{drawerSize}} mat-elevation-z0\"\n    >\n      <button mat-button (click)=\"drawer.close()\">[Close drawer]</button>\n    </mat-drawer>\n\n    <mat-drawer-content>\n      <mat-card-header>\n        <img\n          mat-card-avatar\n          src=\"https://material.angular.io/assets/img/examples/shiba2.jpg\"\n        />\n        <mat-card-title (click)=\"drawer.open()\" class=\"pointer\">\n          [Open]\n        </mat-card-title>\n        <mat-card-subtitle>Click [Open] to open drawer</mat-card-subtitle>\n      </mat-card-header>\n\n      <mat-card-content class=\"margin-top\">\n        Eligendi, provident dolores mollitia inventore facilis harum dolore\n        nam in ut! Eveniet reiciendis, laudantium excepturi velit cum totam\n        quo expedita aspernatur tenetur?\n      </mat-card-content>\n\n      <mat-card-actions>\n        <button mat-button>Actions</button>\n      </mat-card-actions>\n\n      <mat-card-footer class=\"padding-horizontal padding-bottom\">\n        <small> Footer | Eligendi, provident dolores mollitia </small>\n      </mat-card-footer>\n    </mat-drawer-content>\n  </mat-drawer-container>\n</mat-card>\n",
+            "template": "<mat-card [attr.color]=\"color\" class=\"drawer\">\n  <mat-drawer-container #drawer class=\"bg-card\">\n    <mat-drawer\n      mode=\"over\"\n      class=\"bg-divider padding width-{{ drawerSize }} mat-elevation-z0\"\n    >\n      <button mat-button (click)=\"drawer.close()\">[Close drawer]</button>\n    </mat-drawer>\n\n    <mat-drawer-content>\n      <mat-card-header>\n        <img\n          mat-card-avatar\n          src=\"https://material.angular.io/assets/img/examples/shiba2.jpg\"\n        />\n        <mat-card-title (click)=\"drawer.open()\" class=\"pointer\">\n          [Open]\n        </mat-card-title>\n        <mat-card-subtitle>Click [Open] to open drawer</mat-card-subtitle>\n      </mat-card-header>\n\n      <mat-card-content class=\"margin-top\">\n        Eligendi, provident dolores mollitia inventore facilis harum dolore\n        nam in ut! Eveniet reiciendis, laudantium excepturi velit cum totam\n        quo expedita aspernatur tenetur?\n      </mat-card-content>\n\n      <mat-card-actions>\n        <button mat-button>Actions</button>\n      </mat-card-actions>\n\n      <mat-card-footer class=\"padding-horizontal padding-bottom\">\n        <small> Footer | Eligendi, provident dolores mollitia </small>\n      </mat-card-footer>\n    </mat-drawer-content>\n  </mat-drawer-container>\n</mat-card>\n",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
@@ -512,7 +512,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatCardModule } from '@angular/material/card';\nimport { MatSidenavModule } from '@angular/material/sidenav';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\n\n@Component({\n  selector: 'storybook-card-drawer',\n  standalone: true,\n  imports: [\n    MatCardModule,\n    BrowserAnimationsModule,\n    MatSidenavModule,\n    MatButtonModule,\n  ],\n  template: `\n    <mat-card [attr.color]=\"color\" class=\"drawer\">\n      <mat-drawer-container #drawer>\n        <mat-drawer\n          mode=\"over\"\n          class=\"bg-divider padding width-{{drawerSize}} mat-elevation-z0\"\n        >\n          <button mat-button (click)=\"drawer.close()\">[Close drawer]</button>\n        </mat-drawer>\n\n        <mat-drawer-content>\n          <mat-card-header>\n            <img\n              mat-card-avatar\n              src=\"https://material.angular.io/assets/img/examples/shiba2.jpg\"\n            />\n            <mat-card-title (click)=\"drawer.open()\" class=\"pointer\">\n              [Open]\n            </mat-card-title>\n            <mat-card-subtitle>Click [Open] to open drawer</mat-card-subtitle>\n          </mat-card-header>\n\n          <mat-card-content class=\"margin-top\">\n            Eligendi, provident dolores mollitia inventore facilis harum dolore\n            nam in ut! Eveniet reiciendis, laudantium excepturi velit cum totam\n            quo expedita aspernatur tenetur?\n          </mat-card-content>\n\n          <mat-card-actions>\n            <button mat-button>Actions</button>\n          </mat-card-actions>\n\n          <mat-card-footer class=\"padding-horizontal padding-bottom\">\n            <small> Footer | Eligendi, provident dolores mollitia </small>\n          </mat-card-footer>\n        </mat-drawer-content>\n      </mat-drawer-container>\n    </mat-card>\n  `,\n})\nexport default class CardDrawer implements OnChanges {\n  @Input() color: 'primary' | 'accent' | 'warn' | 'default' = 'default';\n  @Input() drawerSize = 50;\n\n  ngOnChanges(changes: SimpleChanges): void {}\n}\n",
+            "sourceCode": "import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatCardModule } from '@angular/material/card';\nimport { MatSidenavModule } from '@angular/material/sidenav';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\n\n@Component({\n  selector: 'storybook-card-drawer',\n  standalone: true,\n  imports: [\n    MatCardModule,\n    BrowserAnimationsModule,\n    MatSidenavModule,\n    MatButtonModule,\n  ],\n  template: `\n    <mat-card [attr.color]=\"color\" class=\"drawer\">\n      <mat-drawer-container #drawer class=\"bg-card\">\n        <mat-drawer\n          mode=\"over\"\n          class=\"bg-divider padding width-{{ drawerSize }} mat-elevation-z0\"\n        >\n          <button mat-button (click)=\"drawer.close()\">[Close drawer]</button>\n        </mat-drawer>\n\n        <mat-drawer-content>\n          <mat-card-header>\n            <img\n              mat-card-avatar\n              src=\"https://material.angular.io/assets/img/examples/shiba2.jpg\"\n            />\n            <mat-card-title (click)=\"drawer.open()\" class=\"pointer\">\n              [Open]\n            </mat-card-title>\n            <mat-card-subtitle>Click [Open] to open drawer</mat-card-subtitle>\n          </mat-card-header>\n\n          <mat-card-content class=\"margin-top\">\n            Eligendi, provident dolores mollitia inventore facilis harum dolore\n            nam in ut! Eveniet reiciendis, laudantium excepturi velit cum totam\n            quo expedita aspernatur tenetur?\n          </mat-card-content>\n\n          <mat-card-actions>\n            <button mat-button>Actions</button>\n          </mat-card-actions>\n\n          <mat-card-footer class=\"padding-horizontal padding-bottom\">\n            <small> Footer | Eligendi, provident dolores mollitia </small>\n          </mat-card-footer>\n        </mat-drawer-content>\n      </mat-drawer-container>\n    </mat-card>\n  `,\n})\nexport default class CardDrawer implements OnChanges {\n  @Input() color: 'primary' | 'accent' | 'warn' | 'default' = 'default';\n  @Input() drawerSize = 50;\n\n  ngOnChanges(changes: SimpleChanges): void {}\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
@@ -563,57 +563,7 @@
         },
         {
             "name": "Chips",
-            "id": "component-Chips-f21e6a6feac94b27c42a02212d400c2b808e9f6948771893fce0244f1ee8cbb82b79d71be5cf7531e003d5be8d2a4e824ca45444565f701be8205d04e92e0c10",
-            "file": "src/stories/components/chips/chips.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "storybook-chips",
-            "styleUrls": [],
-            "styles": [],
-            "template": "<mat-chip-list>\n  <mat-chip>[Chip default]</mat-chip>\n  <mat-chip selected>[Chip default selected]</mat-chip>\n  <mat-chip [color]=\"color\">[Chip with color no selected]</mat-chip>\n  <mat-chip [color]=\"color\" selected>[Chip with color selected]</mat-chip>\n</mat-chip-list>\n",
-            "templateUrl": [],
-            "viewProviders": [],
-            "inputsClass": [
-                {
-                    "name": "color",
-                    "defaultValue": "'primary'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 18,
-                    "type": "\"primary\" | \"accent\" | \"warn\"",
-                    "decorators": []
-                },
-                {
-                    "name": "disabled",
-                    "defaultValue": "false",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 19,
-                    "type": "boolean",
-                    "decorators": []
-                }
-            ],
-            "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { MatChipsModule } from '@angular/material/chips';\n\n@Component({\n  selector: 'storybook-chips',\n  standalone: true,\n  imports: [MatChipsModule],\n  template: `\n    <mat-chip-list>\n      <mat-chip>[Chip default]</mat-chip>\n      <mat-chip selected>[Chip default selected]</mat-chip>\n      <mat-chip [color]=\"color\">[Chip with color no selected]</mat-chip>\n      <mat-chip [color]=\"color\" selected>[Chip with color selected]</mat-chip>\n    </mat-chip-list>\n  `,\n})\nexport default class Chips {\n  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';\n  @Input() disabled: boolean = false;\n}\n",
-            "assetsDirs": [],
-            "styleUrlsData": "",
-            "stylesData": ""
-        },
-        {
-            "name": "Chips",
-            "id": "component-Chips-f13a8602bb7bba0cc3205735db10e43ae5ef7923436aa20c861d6cd6a69b467148234a06359ecfcc864f793fa58d991f6ed9a80cfb74848b2a080903269a9c91-1",
+            "id": "component-Chips-f13a8602bb7bba0cc3205735db10e43ae5ef7923436aa20c861d6cd6a69b467148234a06359ecfcc864f793fa58d991f6ed9a80cfb74848b2a080903269a9c91",
             "file": "src/stories/components/dialog/dialog.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -709,24 +659,21 @@
                         }
                     }
                 ]
-            },
-            "isDuplicate": true,
-            "duplicateId": 1,
-            "duplicateName": "Chips-1"
+            }
         },
         {
             "name": "Chips",
-            "id": "component-Chips-a34eb45551b7d7ee067a127033ffe3a6509e44d5b1b097d54ed12a7f7aee8342af0ed91afa6113008090f33649ef6a7294c5d181208d8a5ecdb904136c725a63-2",
-            "file": "src/stories/components/stepper/stepper.component.ts",
+            "id": "component-Chips-f21e6a6feac94b27c42a02212d400c2b808e9f6948771893fce0244f1ee8cbb82b79d71be5cf7531e003d5be8d2a4e824ca45444565f701be8205d04e92e0c10-1",
+            "file": "src/stories/components/chips/chips.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "storybook-stepper",
+            "selector": "storybook-chips",
             "styleUrls": [],
             "styles": [],
-            "template": "<mat-stepper>\n  <mat-step label=\"[Label]\">\n    <h1>Step 1</h1>\n    <p>\n      Eligendi, provident dolores mollitia inventore facilis harum dolore\n      nam in ut! Eveniet reiciendis, laudantium excepturi velit cum totam\n      quo expedita aspernatur tenetur?\n    </p>\n  </mat-step>\n  <mat-step label=\"[attribute label]\">\n    <h1>Step 2</h1>\n    <p>\n      Eligendi, provident dolores mollitia inventore facilis harum dolore\n      nam in ut! Eveniet reiciendis, laudantium excepturi velit cum totam\n      quo expedita aspernatur tenetur?\n    </p>\n  </mat-step>\n  <mat-step>\n    <ng-template matStepLabel>[matStepLabel]</ng-template>\n    <h1>Step 3</h1>\n    <p>\n      Eligendi, provident dolores mollitia inventore facilis harum dolore\n      nam in ut! Eveniet reiciendis, laudantium excepturi velit cum totam\n      quo expedita aspernatur tenetur?\n    </p>\n  </mat-step>\n</mat-stepper>\n",
+            "template": "<mat-chip-list>\n  <mat-chip>[Chip default]</mat-chip>\n  <mat-chip selected>[Chip default selected]</mat-chip>\n  <mat-chip [color]=\"color\">[Chip with color no selected]</mat-chip>\n  <mat-chip [color]=\"color\" selected>[Chip with color selected]</mat-chip>\n</mat-chip-list>\n",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
@@ -735,7 +682,7 @@
                     "defaultValue": "'primary'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 40,
+                    "line": 18,
                     "type": "\"primary\" | \"accent\" | \"warn\"",
                     "decorators": []
                 },
@@ -744,7 +691,7 @@
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 41,
+                    "line": 19,
                     "type": "boolean",
                     "decorators": []
                 }
@@ -759,10 +706,65 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { MatStepperModule } from '@angular/material/stepper';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\n\n@Component({\n  selector: 'storybook-stepper',\n  standalone: true,\n  imports: [MatStepperModule, BrowserAnimationsModule],\n  template: `\n    <mat-stepper>\n      <mat-step label=\"[Label]\">\n        <h1>Step 1</h1>\n        <p>\n          Eligendi, provident dolores mollitia inventore facilis harum dolore\n          nam in ut! Eveniet reiciendis, laudantium excepturi velit cum totam\n          quo expedita aspernatur tenetur?\n        </p>\n      </mat-step>\n      <mat-step label=\"[attribute label]\">\n        <h1>Step 2</h1>\n        <p>\n          Eligendi, provident dolores mollitia inventore facilis harum dolore\n          nam in ut! Eveniet reiciendis, laudantium excepturi velit cum totam\n          quo expedita aspernatur tenetur?\n        </p>\n      </mat-step>\n      <mat-step>\n        <ng-template matStepLabel>[matStepLabel]</ng-template>\n        <h1>Step 3</h1>\n        <p>\n          Eligendi, provident dolores mollitia inventore facilis harum dolore\n          nam in ut! Eveniet reiciendis, laudantium excepturi velit cum totam\n          quo expedita aspernatur tenetur?\n        </p>\n      </mat-step>\n    </mat-stepper>\n  `,\n})\nexport default class Chips {\n  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';\n  @Input() disabled: boolean = false;\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { MatChipsModule } from '@angular/material/chips';\n\n@Component({\n  selector: 'storybook-chips',\n  standalone: true,\n  imports: [MatChipsModule],\n  template: `\n    <mat-chip-list>\n      <mat-chip>[Chip default]</mat-chip>\n      <mat-chip selected>[Chip default selected]</mat-chip>\n      <mat-chip [color]=\"color\">[Chip with color no selected]</mat-chip>\n      <mat-chip [color]=\"color\" selected>[Chip with color selected]</mat-chip>\n    </mat-chip-list>\n  `,\n})\nexport default class Chips {\n  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';\n  @Input() disabled: boolean = false;\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
+            "isDuplicate": true,
+            "duplicateId": 1,
+            "duplicateName": "Chips-1"
+        },
+        {
+            "name": "Chips",
+            "id": "component-Chips-8d81e7c6df039b24e86149fc0dfb895aa7faca24a299c70c77cbd56e6811d8e540d2f7ecaa779c5d7cdebc35ced3e6c8ada7c36f94023547789b4b684585d598-2",
+            "file": "src/stories/components/stepper/stepper.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-stepper",
+            "styleUrls": [],
+            "styles": [
+                "\n      h1 {\n        font-weight: bold!important;\n      }\n    "
+            ],
+            "template": "<mat-stepper>\n  <mat-step label=\"[Label]\">\n    <h1>[01]</h1>\n    <p>\n      Eligendi, provident dolores mollitia inventore facilis harum dolore\n      nam in ut! Eveniet reiciendis, laudantium excepturi velit cum totam\n      quo expedita aspernatur tenetur?\n    </p>\n  </mat-step>\n  <mat-step label=\"[attribute label]\">\n    <h1>[02]</h1>\n    <p>\n      Eligendi, provident dolores mollitia inventore facilis harum dolore\n      nam in ut! Eveniet reiciendis, laudantium excepturi velit cum totam\n      quo expedita aspernatur tenetur?\n    </p>\n  </mat-step>\n  <mat-step>\n    <ng-template matStepLabel>[matStepLabel]</ng-template>\n    <h1>[03]</h1>\n    <p>\n      Eligendi, provident dolores mollitia inventore facilis harum dolore\n      nam in ut! Eveniet reiciendis, laudantium excepturi velit cum totam\n      quo expedita aspernatur tenetur?\n    </p>\n  </mat-step>\n</mat-stepper>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "color",
+                    "defaultValue": "'primary'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 47,
+                    "type": "\"primary\" | \"accent\" | \"warn\"",
+                    "decorators": []
+                },
+                {
+                    "name": "disabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 48,
+                    "type": "boolean",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { MatStepperModule } from '@angular/material/stepper';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\n\n@Component({\n  selector: 'storybook-stepper',\n  standalone: true,\n  imports: [MatStepperModule, BrowserAnimationsModule],\n  styles: [\n    `\n      h1 {\n        font-weight: bold!important;\n      }\n    `,\n  ],\n  template: `\n    <mat-stepper>\n      <mat-step label=\"[Label]\">\n        <h1>[01]</h1>\n        <p>\n          Eligendi, provident dolores mollitia inventore facilis harum dolore\n          nam in ut! Eveniet reiciendis, laudantium excepturi velit cum totam\n          quo expedita aspernatur tenetur?\n        </p>\n      </mat-step>\n      <mat-step label=\"[attribute label]\">\n        <h1>[02]</h1>\n        <p>\n          Eligendi, provident dolores mollitia inventore facilis harum dolore\n          nam in ut! Eveniet reiciendis, laudantium excepturi velit cum totam\n          quo expedita aspernatur tenetur?\n        </p>\n      </mat-step>\n      <mat-step>\n        <ng-template matStepLabel>[matStepLabel]</ng-template>\n        <h1>[03]</h1>\n        <p>\n          Eligendi, provident dolores mollitia inventore facilis harum dolore\n          nam in ut! Eveniet reiciendis, laudantium excepturi velit cum totam\n          quo expedita aspernatur tenetur?\n        </p>\n      </mat-step>\n    </mat-stepper>\n  `,\n})\nexport default class Chips {\n  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';\n  @Input() disabled: boolean = false;\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "\n      h1 {\n        font-weight: bold!important;\n      }\n    \n",
             "isDuplicate": true,
             "duplicateId": 2,
             "duplicateName": "Chips-2"
@@ -990,7 +992,7 @@
         },
         {
             "name": "Figma",
-            "id": "component-Figma-f5cd54fa295783abf838f38b41a207d744c26348ee36647d9fbcf1890103a6bae437bf77a2e60f64fd9e81825620cc7d10d2c616e1746428ef397406dddeb88d",
+            "id": "component-Figma-abf0f68dee54029a198bb02c1cc9ae84aaa809f2391c3a6d39b79fa6bd38214635e24d258f1f5c22a26d1285a0f2f8b26ad0237f087a5c669daab2f7253e4464",
             "file": "src/stories/storybook/figma/figma.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -999,8 +1001,10 @@
             "providers": [],
             "selector": "storybook-figma",
             "styleUrls": [],
-            "styles": [],
-            "template": "<p>\n  This is a test story to try out the integration of Figma within\n  storybook.Click the design tab on the panel on the right\n</p>\n\n<a\n  href=\"https://www.figma.com/file/3Pi5gtn4HauAVNK098GWUs/Mockup?node-id=0%3A1\"\n  target=\"_blank\"\n>\n  Figma mockup link\n</a>\n",
+            "styles": [
+                "\n      p {\n        font-size: 16px;\n        line-height: 22px;\n      }\n    "
+            ],
+            "template": "<p>\n  This is a test story to try out the integration of Figma within storybook.\n  Click the <strong>\"Design\"</strong> tab on the panel on the right.\n</p>\n\n<a\n  href=\"https://www.figma.com/file/3Pi5gtn4HauAVNK098GWUs/Mockup?node-id=0%3A1\"\n  target=\"_blank\"\n>\n  Figma mockup link\n</a>\n",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [],
@@ -1014,10 +1018,10 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'storybook-figma',\n  standalone: true,\n  imports: [],\n  template: `\n    <p>\n      This is a test story to try out the integration of Figma within\n      storybook.Click the design tab on the panel on the right\n    </p>\n\n    <a\n      href=\"https://www.figma.com/file/3Pi5gtn4HauAVNK098GWUs/Mockup?node-id=0%3A1\"\n      target=\"_blank\"\n    >\n      Figma mockup link\n    </a>\n  `,\n})\nexport default class Figma {}\n",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'storybook-figma',\n  standalone: true,\n  imports: [],\n  styles: [\n    `\n      p {\n        font-size: 16px;\n        line-height: 22px;\n      }\n    `,\n  ],\n  template: `\n    <p>\n      This is a test story to try out the integration of Figma within storybook.\n      Click the <strong>\"Design\"</strong> tab on the panel on the right.\n    </p>\n\n    <a\n      href=\"https://www.figma.com/file/3Pi5gtn4HauAVNK098GWUs/Mockup?node-id=0%3A1\"\n      target=\"_blank\"\n    >\n      Figma mockup link\n    </a>\n  `,\n})\nexport default class Figma {}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
-            "stylesData": ""
+            "stylesData": "\n      p {\n        font-size: 16px;\n        line-height: 22px;\n      }\n    \n"
         },
         {
             "name": "Grid",
@@ -1649,7 +1653,7 @@
         },
         {
             "name": "Snackbar",
-            "id": "component-Snackbar-0fb467d9425fe387391282210a4d7e0f4d901a387c31d0e8ea3a539417f8ec30c53dc1582cc624bfb7c1457ca0bfc13b3ce6a895290dfdf2ad2162ddea3040b2",
+            "id": "component-Snackbar-bf74d91f7d04c20ac8413a66506662d0de5c9d982019c0167a92fa74a03794bb01191f104f52008f41f94b2ada20014af453d3f129d0213c24667240213f7294",
             "file": "src/stories/components/snackbar/snackbar.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1669,16 +1673,16 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "line": 15,
-                    "type": "\"primary\" | \"accent\" | \"warn\"",
+                    "type": "\"primary\" | \"accent\" | \"warn\" | \"default\"",
                     "decorators": []
                 },
                 {
-                    "name": "disabled",
-                    "defaultValue": "false",
+                    "name": "duration",
+                    "defaultValue": "8000",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "line": 16,
-                    "type": "boolean",
+                    "type": "number",
                     "decorators": []
                 }
             ],
@@ -1703,7 +1707,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\n\n@Component({\n  selector: 'storybook-snackbar',\n  standalone: true,\n  imports: [MatButtonModule, MatSnackBarModule, BrowserAnimationsModule],\n  template: `\n    <button mat-flat-button (click)=\"open()\">[Open snackbar]</button>\n  `,\n})\nexport default class Snackbar {\n  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';\n  @Input() disabled: boolean = false;\n\n  constructor(private snackBar: MatSnackBar) {}\n\n  open() {\n    this.snackBar.open('Snackbar message', 'Okay', { duration: 1000 });\n  }\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\n\n@Component({\n  selector: 'storybook-snackbar',\n  standalone: true,\n  imports: [MatButtonModule, MatSnackBarModule, BrowserAnimationsModule],\n  template: `\n    <button mat-flat-button (click)=\"open()\">[Open snackbar]</button>\n  `,\n})\nexport default class Snackbar {\n  @Input() color: 'primary' | 'accent' | 'warn' | 'default' = 'primary';\n  @Input() duration = 8000;\n\n  constructor(private snackBar: MatSnackBar) {}\n\n  open() {\n    const message = `Eligendi, provident dolores mollitia inventore facilis harum dolore nam\n    in ut!`;\n    this.snackBar.open(message, 'Okay', {\n      duration: this.duration,\n      panelClass: `mat-${this.color}`,\n    });\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
@@ -1859,7 +1863,7 @@
         },
         {
             "name": "Theme",
-            "id": "component-Theme-f486fee0f1753bdc0c38851f5d5f5c1ad28d82d9a0b63f6b2520bf5048fcf28a8add7f28d09d38f6e136e425fb5b5e94b5b470a98b8b7ba3b9fb20fec7793d5e",
+            "id": "component-Theme-f08fae50d4d6f4df3dd64157df6469cb02a526ad605e40cd21e8b37f19b55218e10b8b07ff2671dc72424efa7a29170bf0f2b6a4b1d6e2d1a19bc932140ec7fc",
             "file": "src/stories/theme/theme.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1871,7 +1875,7 @@
                 "./theme.component.scss"
             ],
             "styles": [],
-            "template": "<sb-header [title]=\"color\" hasCopy>\n  <h4 *ngIf=\"color === 'primary'\">HEX: #3F51B5</h4>\n  <h4 *ngIf=\"color === 'accent'\">HEX: #D72828</h4>\n  <h4 *ngIf=\"color === 'warn'\">HEX: #5C5C5C</h4>\n</sb-header>\n\n<div\n  class=\"block\"\n  matRipple\n  matRippleColor=\"var(--mat-{{ color }}-contrast-{{ hue }})\"\n  cdkCopyToClipboard=\"var(--mat-{{ color }}-{{ hue }})\"\n  *ngFor=\"\n    let hue of [\n      '50',\n      '100',\n      '200',\n      '300',\n      '400',\n      '500',\n      '600',\n      '700',\n      '800',\n      '900',\n      'A100',\n      'A200',\n      'A400',\n      'A700'\n    ]\n  \"\n  style=\"background-color:var(--mat-{{ color }}-{{ hue }})\"\n>\n  <h1 style=\"color:var(--mat-{{ color }}-contrast-{{ hue }})\">\n    {{ hue }}\n  </h1>\n  <span style=\"color:var(--mat-{{ color }}-contrast-{{ hue }})\">\n    var(--mat-{{ color }}-{{ hue }})\n  </span>\n</div>\n",
+            "template": "<sb-header [title]=\"color\" clipboard>\n  <h4 *ngIf=\"color === 'primary'\">HEX: #3F51B5</h4>\n  <h4 *ngIf=\"color === 'accent'\">HEX: #D72828</h4>\n  <h4 *ngIf=\"color === 'warn'\">HEX: #5C5C5C</h4>\n</sb-header>\n\n<div\n  class=\"block\"\n  matRipple\n  cdkCopyToClipboard=\"var(--mat-{{ color }}-{{ hue }})\"\n  *ngFor=\"\n    let hue of [\n      '50',\n      '100',\n      '200',\n      '300',\n      '400',\n      '500',\n      '600',\n      '700',\n      '800',\n      '900',\n      'A100',\n      'A200',\n      'A400',\n      'A700'\n    ]\n  \"\n  style=\"background-color:var(--mat-{{ color }}-{{ hue }})\"\n>\n  <h1 style=\"color:var(--mat-{{ color }}-contrast-{{ hue }})\">\n    {{ hue }}\n  </h1>\n  <span style=\"color:var(--mat-{{ color }}-contrast-{{ hue }})\">\n    var(--mat-{{ color }}-{{ hue }})\n  </span>\n</div>\n",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
@@ -1880,7 +1884,7 @@
                     "defaultValue": "'primary'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 54,
+                    "line": 53,
                     "type": "\"primary\" | \"accent\" | \"warn\"",
                     "decorators": []
                 }
@@ -1895,7 +1899,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input } from '@angular/core';\nimport { ClipboardModule } from '@angular/cdk/clipboard';\nimport { MatRippleModule } from '@angular/material/core';\nimport SBHeader from '../assets/sb-header/sb-header.component';\n\n@Component({\n  selector: 'storybook-button',\n  standalone: true,\n  imports: [CommonModule, ClipboardModule, MatRippleModule, SBHeader],\n  styleUrls: ['./theme.component.scss'],\n  template: `\n    <sb-header [title]=\"color\" hasCopy>\n      <h4 *ngIf=\"color === 'primary'\">HEX: #3F51B5</h4>\n      <h4 *ngIf=\"color === 'accent'\">HEX: #D72828</h4>\n      <h4 *ngIf=\"color === 'warn'\">HEX: #5C5C5C</h4>\n    </sb-header>\n\n    <div\n      class=\"block\"\n      matRipple\n      matRippleColor=\"var(--mat-{{ color }}-contrast-{{ hue }})\"\n      cdkCopyToClipboard=\"var(--mat-{{ color }}-{{ hue }})\"\n      *ngFor=\"\n        let hue of [\n          '50',\n          '100',\n          '200',\n          '300',\n          '400',\n          '500',\n          '600',\n          '700',\n          '800',\n          '900',\n          'A100',\n          'A200',\n          'A400',\n          'A700'\n        ]\n      \"\n      style=\"background-color:var(--mat-{{ color }}-{{ hue }})\"\n    >\n      <h1 style=\"color:var(--mat-{{ color }}-contrast-{{ hue }})\">\n        {{ hue }}\n      </h1>\n      <span style=\"color:var(--mat-{{ color }}-contrast-{{ hue }})\">\n        var(--mat-{{ color }}-{{ hue }})\n      </span>\n    </div>\n  `,\n})\nexport default class Theme {\n  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';\n}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input } from '@angular/core';\nimport { ClipboardModule } from '@angular/cdk/clipboard';\nimport { MatRippleModule } from '@angular/material/core';\nimport SBHeader from '../assets/sb-header/sb-header.component';\n\n@Component({\n  selector: 'storybook-button',\n  standalone: true,\n  imports: [CommonModule, ClipboardModule, MatRippleModule, SBHeader],\n  styleUrls: ['./theme.component.scss'],\n  template: `\n    <sb-header [title]=\"color\" clipboard>\n      <h4 *ngIf=\"color === 'primary'\">HEX: #3F51B5</h4>\n      <h4 *ngIf=\"color === 'accent'\">HEX: #D72828</h4>\n      <h4 *ngIf=\"color === 'warn'\">HEX: #5C5C5C</h4>\n    </sb-header>\n\n    <div\n      class=\"block\"\n      matRipple\n      cdkCopyToClipboard=\"var(--mat-{{ color }}-{{ hue }})\"\n      *ngFor=\"\n        let hue of [\n          '50',\n          '100',\n          '200',\n          '300',\n          '400',\n          '500',\n          '600',\n          '700',\n          '800',\n          '900',\n          'A100',\n          'A200',\n          'A400',\n          'A700'\n        ]\n      \"\n      style=\"background-color:var(--mat-{{ color }}-{{ hue }})\"\n    >\n      <h1 style=\"color:var(--mat-{{ color }}-contrast-{{ hue }})\">\n        {{ hue }}\n      </h1>\n      <span style=\"color:var(--mat-{{ color }}-contrast-{{ hue }})\">\n        var(--mat-{{ color }}-{{ hue }})\n      </span>\n    </div>\n  `,\n})\nexport default class Theme {\n  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -2096,7 +2100,7 @@
         },
         {
             "name": "VirtualScroll",
-            "id": "component-VirtualScroll-dc0737949d27de9751810a64fc60fe8e5732f8dbb0b52165eca7e28779a42d4477bf9fdf4f34218f49d395c12c96407cd21fa273ce7b6c778e3b72f9f6dc411d",
+            "id": "component-VirtualScroll-fcb1e19291814992d850c57381fb8485b4158af08036ea158f16bd9dd21c25aa6004b160f67564aa25013d0bd74052c6e7ddfcf109dc68663e0cf7e41de2120c",
             "file": "src/stories/layout/virtual-scroll/virtual-scroll.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -2111,21 +2115,30 @@
             "template": "<cdk-virtual-scroll-viewport itemSize=\"50\" class=\"viewport\">\n  <div *cdkVirtualFor=\"let item of items\" class=\"item\">\n    {{ item }}\n  </div>\n</cdk-virtual-scroll-viewport>\n",
             "templateUrl": [],
             "viewProviders": [],
-            "inputsClass": [],
-            "outputsClass": [],
-            "propertiesClass": [
+            "inputsClass": [
                 {
                     "name": "items",
-                    "defaultValue": "Array.from({ length: 1000 }).map((_, i) => `Item #${i}`)",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 33
+                    "line": 34,
+                    "type": "string[]",
+                    "decorators": []
                 }
             ],
-            "methodsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 36,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
             "deprecated": false,
             "deprecationMessage": "",
             "hostBindings": [],
@@ -2133,10 +2146,13 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\nimport { ScrollingModule } from '@angular/cdk/scrolling';\n\n@Component({\n  selector: 'storybook-virtual-scroll',\n  standalone: true,\n  imports: [ScrollingModule],\n  styles: [\n    `\n      .viewport {\n        height: 400px;\n        width: 200px;\n        border: 2px solid var(--mat-divider);\n        border-radius: 4px;\n      }\n\n      .item {\n        height: 30px;\n        padding: 6px;\n        border: 1px solid var(--mat-divider);\n      }\n    `,\n  ],\n  template: `\n    <cdk-virtual-scroll-viewport itemSize=\"50\" class=\"viewport\">\n      <div *cdkVirtualFor=\"let item of items\" class=\"item\">\n        {{ item }}\n      </div>\n    </cdk-virtual-scroll-viewport>\n  `,\n})\nexport default class VirtualScroll {\n  items = Array.from({ length: 1000 }).map((_, i) => `Item #${i}`);\n}\n",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\nimport { ScrollingModule } from '@angular/cdk/scrolling';\nimport { CommonModule } from '@angular/common';\n\n@Component({\n  selector: 'storybook-virtual-scroll',\n  standalone: true,\n  imports: [ScrollingModule, CommonModule],\n  styles: [\n    `\n      .viewport {\n        height: 400px;\n        width: 200px;\n        border: 2px solid var(--mat-divider);\n        border-radius: 4px;\n      }\n\n      .item {\n        height: 30px;\n        padding: 6px;\n        border: 1px solid var(--mat-divider);\n      }\n    `,\n  ],\n  template: `\n    <cdk-virtual-scroll-viewport itemSize=\"50\" class=\"viewport\">\n      <div *cdkVirtualFor=\"let item of items\" class=\"item\">\n        {{ item }}\n      </div>\n    </cdk-virtual-scroll-viewport>\n  `,\n})\nexport default class VirtualScroll implements OnInit {\n  @Input() items!: string[];\n\n  ngOnInit() {\n    this.items = Array.from({ length: 1000 }).map((_, i) => `Item #${i}`);\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
-            "stylesData": "\n      .viewport {\n        height: 400px;\n        width: 200px;\n        border: 2px solid var(--mat-divider);\n        border-radius: 4px;\n      }\n\n      .item {\n        height: 30px;\n        padding: 6px;\n        border: 1px solid var(--mat-divider);\n      }\n    \n"
+            "stylesData": "\n      .viewport {\n        height: 400px;\n        width: 200px;\n        border: 2px solid var(--mat-divider);\n        border-radius: 4px;\n      }\n\n      .item {\n        height: 30px;\n        padding: 6px;\n        border: 1px solid var(--mat-divider);\n      }\n    \n",
+            "implements": [
+                "OnInit"
+            ]
         }
     ],
     "modules": [
@@ -2291,7 +2307,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/components/chips/chips.stories.ts",
+                "file": "src/stories/components/card/card.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -2311,7 +2327,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/components/card/card.stories.ts",
+                "file": "src/stories/components/chips/chips.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -2361,7 +2377,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/components/tabs/tabs.stories.ts",
+                "file": "src/stories/components/stepper/stepper.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -2381,27 +2397,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/components/stepper/stepper.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/components/tree/tree.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/assets/blank/blank.stories.ts",
+                "file": "src/stories/components/tabs/tabs.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -2416,6 +2412,16 @@
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "Template.bind({\n  position: 'after',\n})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/tree/tree.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
             },
             {
                 "name": "Default",
@@ -2441,7 +2447,27 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/layout/grid/grid.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/storybook/docs/docs.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/layout/responsive/responsive.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -2461,16 +2487,6 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/layout/grid/grid.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/layout/virtual-scroll/virtual-scroll.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -2481,7 +2497,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/layout/responsive/responsive.stories.ts",
+                "file": "src/stories/assets/blank/blank.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -2670,11 +2686,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/components/chips/chips.stories.ts",
+                "file": "src/stories/components/card/card.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<Chips>",
-                "defaultValue": "(args: Chips) => ({\n  props: args,\n})"
+                "type": "Story<Card>",
+                "defaultValue": "(args: Card) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -2690,11 +2706,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/components/card/card.stories.ts",
+                "file": "src/stories/components/chips/chips.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<Card>",
-                "defaultValue": "(args: Card) => ({\n  props: args,\n})"
+                "type": "Story<Chips>",
+                "defaultValue": "(args: Chips) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -2720,6 +2736,16 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/components/progress/progress.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<ProgressComponent>",
+                "defaultValue": "(args: ProgressComponent) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/components/slide-toggle/slide-toggle.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -2740,21 +2766,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/components/progress/progress.stories.ts",
+                "file": "src/stories/components/stepper/stepper.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<ProgressComponent>",
-                "defaultValue": "(args: ProgressComponent) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/components/tabs/tabs.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<Tabs>",
-                "defaultValue": "(args: Tabs) => ({\n  props: args,\n})"
+                "type": "Story<Stepper>",
+                "defaultValue": "(args: Stepper) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -2770,31 +2786,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/components/stepper/stepper.stories.ts",
+                "file": "src/stories/components/tabs/tabs.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<Stepper>",
-                "defaultValue": "(args: Stepper) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/components/tree/tree.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<Tree>",
-                "defaultValue": "(args: Tree) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/assets/blank/blank.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<Blank>",
-                "defaultValue": "(args: Blank) => ({\n  props: args,\n})"
+                "type": "Story<Tabs>",
+                "defaultValue": "(args: Tabs) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -2805,6 +2801,16 @@
                 "deprecationMessage": "",
                 "type": "Story<Tooltip>",
                 "defaultValue": "(args: Tooltip) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/tree/tree.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Tree>",
+                "defaultValue": "(args: Tree) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -2830,11 +2836,31 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/layout/grid/grid.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Grid>",
+                "defaultValue": "(args: Grid) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/storybook/docs/docs.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<Docs>",
                 "defaultValue": "(args: Docs) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/layout/responsive/responsive.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Responsive>",
+                "defaultValue": "(args: Responsive) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -2850,16 +2876,6 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/layout/grid/grid.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<Grid>",
-                "defaultValue": "(args: Grid) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/layout/virtual-scroll/virtual-scroll.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -2870,11 +2886,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/layout/responsive/responsive.stories.ts",
+                "file": "src/stories/assets/blank/blank.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<Responsive>",
-                "defaultValue": "(args: Responsive) => ({\n  props: args,\n})"
+                "type": "Story<Blank>",
+                "defaultValue": "(args: Blank) => ({\n  props: args,\n})"
             },
             {
                 "name": "Toggle",
@@ -3172,50 +3188,6 @@
                     "defaultValue": "'https://www.figma.com/file/B4I9c9XojvfCuHyqlegRWg/material?node-id='"
                 }
             ],
-            "src/stories/components/chips/chips.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/components/chips/chips.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/components/chips/chips.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<Chips>",
-                    "defaultValue": "(args: Chips) => ({\n  props: args,\n})"
-                }
-            ],
-            "src/stories/components/dialog/dialog.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/components/dialog/dialog.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/components/dialog/dialog.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<Dialog>",
-                    "defaultValue": "(args: Dialog) => ({\n  props: args,\n})"
-                }
-            ],
             "src/stories/components/card/card.stories.ts": [
                 {
                     "name": "Default",
@@ -3266,6 +3238,50 @@
                     "deprecationMessage": "",
                     "type": "Story<Card>",
                     "defaultValue": "(args: Card) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/stories/components/dialog/dialog.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/dialog/dialog.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/dialog/dialog.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Dialog>",
+                    "defaultValue": "(args: Dialog) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/stories/components/chips/chips.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/chips/chips.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/chips/chips.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Chips>",
+                    "defaultValue": "(args: Chips) => ({\n  props: args,\n})"
                 }
             ],
             "src/stories/components/dragDrop/dragDrop.stories.ts": [
@@ -3334,12 +3350,12 @@
                     "defaultValue": "(args: Snackbar) => ({\n  props: args,\n})"
                 }
             ],
-            "src/stories/components/tabs/tabs.stories.ts": [
+            "src/stories/components/stepper/stepper.stories.ts": [
                 {
                     "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/components/tabs/tabs.stories.ts",
+                    "file": "src/stories/components/stepper/stepper.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -3349,11 +3365,11 @@
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/components/tabs/tabs.stories.ts",
+                    "file": "src/stories/components/stepper/stepper.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Story<Tabs>",
-                    "defaultValue": "(args: Tabs) => ({\n  props: args,\n})"
+                    "type": "Story<Stepper>",
+                    "defaultValue": "(args: Stepper) => ({\n  props: args,\n})"
                 }
             ],
             "src/stories/components/table/table.stories.ts": [
@@ -3378,12 +3394,12 @@
                     "defaultValue": "(args: Table) => ({\n  props: args,\n})"
                 }
             ],
-            "src/stories/components/stepper/stepper.stories.ts": [
+            "src/stories/components/tabs/tabs.stories.ts": [
                 {
                     "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/components/stepper/stepper.stories.ts",
+                    "file": "src/stories/components/tabs/tabs.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -3393,55 +3409,11 @@
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/components/stepper/stepper.stories.ts",
+                    "file": "src/stories/components/tabs/tabs.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Story<Stepper>",
-                    "defaultValue": "(args: Stepper) => ({\n  props: args,\n})"
-                }
-            ],
-            "src/stories/components/tree/tree.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/components/tree/tree.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/components/tree/tree.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<Tree>",
-                    "defaultValue": "(args: Tree) => ({\n  props: args,\n})"
-                }
-            ],
-            "src/stories/assets/blank/blank.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/assets/blank/blank.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/assets/blank/blank.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<Blank>",
-                    "defaultValue": "(args: Blank) => ({\n  props: args,\n})"
+                    "type": "Story<Tabs>",
+                    "defaultValue": "(args: Tabs) => ({\n  props: args,\n})"
                 }
             ],
             "src/stories/components/tooltip/tooltip.stories.ts": [
@@ -3464,6 +3436,28 @@
                     "deprecationMessage": "",
                     "type": "Story<Tooltip>",
                     "defaultValue": "(args: Tooltip) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/stories/components/tree/tree.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/tree/tree.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/tree/tree.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Tree>",
+                    "defaultValue": "(args: Tree) => ({\n  props: args,\n})"
                 }
             ],
             "src/stories/helpers/elevation/elevation.stories.ts": [
@@ -3510,6 +3504,28 @@
                     "defaultValue": "(args: Helpers) => ({\n  props: args,\n})"
                 }
             ],
+            "src/stories/layout/grid/grid.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/layout/grid/grid.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/layout/grid/grid.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Grid>",
+                    "defaultValue": "(args: Grid) => ({\n  props: args,\n})"
+                }
+            ],
             "src/stories/storybook/docs/docs.stories.ts": [
                 {
                     "name": "Default",
@@ -3530,6 +3546,28 @@
                     "deprecationMessage": "",
                     "type": "Story<Docs>",
                     "defaultValue": "(args: Docs) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/stories/layout/responsive/responsive.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/layout/responsive/responsive.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/layout/responsive/responsive.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Responsive>",
+                    "defaultValue": "(args: Responsive) => ({\n  props: args,\n})"
                 }
             ],
             "src/stories/storybook/figma/figma.stories.ts": [
@@ -3574,28 +3612,6 @@
                     "defaultValue": "'https://www.figma.com/file/B4I9c9XojvfCuHyqlegRWg/material?node-id='"
                 }
             ],
-            "src/stories/layout/grid/grid.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/layout/grid/grid.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/layout/grid/grid.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<Grid>",
-                    "defaultValue": "(args: Grid) => ({\n  props: args,\n})"
-                }
-            ],
             "src/stories/layout/virtual-scroll/virtual-scroll.stories.ts": [
                 {
                     "name": "Default",
@@ -3618,12 +3634,12 @@
                     "defaultValue": "(args: VirtualScroll) => ({\n  props: args,\n})"
                 }
             ],
-            "src/stories/layout/responsive/responsive.stories.ts": [
+            "src/stories/assets/blank/blank.stories.ts": [
                 {
                     "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/layout/responsive/responsive.stories.ts",
+                    "file": "src/stories/assets/blank/blank.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -3633,11 +3649,11 @@
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/layout/responsive/responsive.stories.ts",
+                    "file": "src/stories/assets/blank/blank.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Story<Responsive>",
-                    "defaultValue": "(args: Responsive) => ({\n  props: args,\n})"
+                    "type": "Story<Blank>",
+                    "defaultValue": "(args: Blank) => ({\n  props: args,\n})"
                 }
             ],
             "src/stories/components/table/table.component.ts": [
@@ -4538,7 +4554,7 @@
                 "linktype": "component",
                 "name": "VirtualScroll",
                 "coveragePercent": 0,
-                "coverageCount": "0/2",
+                "coverageCount": "0/3",
                 "status": "low"
             },
             {
