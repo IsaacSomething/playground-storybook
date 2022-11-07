@@ -10,7 +10,6 @@ export default {
 
 const Template: Story<Table> = (args: Table) => ({
   props: args,
-  argTypes: {},
 });
 
 const disabledTypes = {
@@ -28,8 +27,18 @@ const defaultArgs: Partial<Table> | undefined = {
 };
 
 export const Default = Template.bind({});
-Default.args = { ...defaultArgs };
-Default.argTypes = { ...disabledTypes };
+Default.args = {
+  ...defaultArgs,
+  withHover: false,
+  striped: false,
+  header: false,
+};
+Default.argTypes = {
+  ...disabledTypes,
+  withHover: { control: 'boolean', title: 'With hover' },
+  striped: { control: 'boolean' },
+  header: { control: 'boolean' },
+};
 Default.parameters = {
   docs: {
     source: {
