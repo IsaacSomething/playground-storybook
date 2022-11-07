@@ -17,7 +17,7 @@ import { take } from 'rxjs';
   ],
   template: `
     <div class="padding">
-      <mat-form-field>
+      <mat-form-field [appearance]="appearance">
         <mat-label>Autosize textarea</mat-label>
         <textarea
           matInput
@@ -33,6 +33,7 @@ import { take } from 'rxjs';
 export default class Textarea {
   @Input() color: 'primary' | 'accent' | 'warn' = 'primary';
   @Input() disabled: boolean = false;
+  @Input() appearance!: 'legacy' | 'standard' | 'fill' | 'outline';
 
   constructor(private ngZone: NgZone) {}
 

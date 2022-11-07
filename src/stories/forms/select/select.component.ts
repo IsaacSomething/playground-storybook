@@ -15,7 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   template: `
     <div class="padding">
-      <mat-form-field>
+      <mat-form-field [appearance]="appearance">
         <mat-label>Select items</mat-label>
 
         <mat-select>
@@ -34,4 +34,5 @@ export default class Select {
   @Input() label!: string;
   @Input() color: 'primary' | 'accent' | 'warn' = 'primary';
   @Input() disabled: boolean = false;
+  @Input() appearance!: 'legacy' | 'standard' | 'fill' | 'outline';
 }

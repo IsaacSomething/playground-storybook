@@ -21,6 +21,7 @@ const Template: Story<Textarea> = (args: Textarea) => ({
 const defaultArgs: Partial<Textarea> | undefined = {
   color: 'primary',
   disabled: false,
+  appearance: 'fill',
 };
 
 export const Default = Template.bind({});

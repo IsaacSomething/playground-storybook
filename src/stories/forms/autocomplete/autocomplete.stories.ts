@@ -17,4 +17,12 @@ const Template: Story<Autocomplete> = (args: Autocomplete) => ({
   props: args,
 });
 
+const defaultArgs: Partial<Autocomplete> | undefined = {
+  label: '[Autocomplete label]',
+  color: 'primary',
+  disabled: false,
+  appearance: 'fill',
+};
+
 export const Default = Template.bind({});
+Default.args = { ...defaultArgs };

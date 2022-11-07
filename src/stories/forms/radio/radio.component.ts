@@ -11,6 +11,7 @@ import { MatRadioModule } from '@angular/material/radio';
       <mat-radio-group [color]="color">
         <mat-radio-button
           *ngFor="let item of [1, 1, 1]; let idx = index"
+          [value]="label + '-' + (idx + 1)"
           class="padding-right"
         >
           {{ label + '-' + (idx + 1) }}

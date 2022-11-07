@@ -22,6 +22,7 @@ const defaultArgs: Partial<Select> | undefined = {
   label: 'Select',
   color: 'primary',
   disabled: false,
+  appearance: 'fill',
 };
 
 export const Default = Template.bind({});
