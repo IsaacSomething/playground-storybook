@@ -1,4 +1,17 @@
 .mat-table {
   width: 100%;
   border-radius: var(--mat-radius);
+
+  mat-row,
+  mat-header-row,
+  mat-footer-row,
+  th.mat-header-cell,
+  td.mat-cell,
+  td.mat-footer-cell {
+    border-color: var(--mat-divider);
+  }
+
+  .mat-row:hover .mat-cell {
+    background: var(--mat-divider);
+  }
 }

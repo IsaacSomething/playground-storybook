@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
 import { MatGridListModule } from '@angular/material/grid-list';
+import SBHeader from 'src/stories/assets/sb-header/sb-header.component';
 
 @Component({
   selector: 'storybook-grid',
   standalone: true,
-  imports: [MatGridListModule],
+  imports: [MatGridListModule, SBHeader],
   template: `
+    <sb-header title="Grid" matLink="grid-list"></sb-header>
+
     <mat-grid-list cols="2" rowHeight="2:1">
       <mat-grid-tile class="bg-divider">
         <h1>[1]</h1>

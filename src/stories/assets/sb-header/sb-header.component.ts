@@ -15,33 +15,46 @@ import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
       }
       .container {
         display: block;
-        width: 100%;
+        width: calc(100% - 32px);
+        margin-left: 16px;
       }
       h2 {
         font-size: 50px !important;
         font-weight: bold !important;
         margin-bottom: 6px !important;
         text-transform: capitalize;
+        padding-bottom: 16px;
       }
       small {
         padding-top: 12px;
         display: block;
+      }
+      mat-divider {
+        margin-bottom: 16px;
+      }
+      a {
+        padding-bottom: 16px;
       }
     `,
   ],
   template: `
     <div class="container">
       <h2>{{ title }}</h2>
-      <ng-content></ng-content>
+      <a
+        href="https://material.angular.io/components/{{ matLink }}/api"
+        target="_blank"
+      >
+        Angular material documentation
+      </a>
+
       <small *ngIf="clipboard">CLICK TO COPY VALUE</small>
       <mat-divider></mat-divider>
-      <br />
-      <div></div>
     </div>
   `,
 })
 export default class SBHeader {
   @Input() title!: string;
+  @Input() matLink!: string;
   @Input() set clipboard(value: BooleanInput) {
     this._clipboard = coerceBooleanProperty(value);
   }
