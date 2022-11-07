@@ -5,7 +5,7 @@ import { MatTable, MatTableModule } from '@angular/material/table';
 import { PeriodicElement, TableModel } from './model';
 
 @Component({
-  selector: 'storybook-table',
+  selector: 'storybook-table-header-footer',
   standalone: true,
   imports: [MatTableModule, MatButtonModule, MatIconModule],
   template: `
@@ -19,28 +19,51 @@ import { PeriodicElement, TableModel } from './model';
         [class.header]="header"
         [class.text-transform]="textTransform"
       >
+        <ng-container matColumnDef="header">
+          <th mat-header-cell *matHeaderCellDef colspan="4">
+            <h1 style="margin:0;font-weight:bold">[Header]</h1>
+          </th>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="['header']"></tr>
+
         <ng-container matColumnDef="position">
           <th mat-header-cell *matHeaderCellDef>No.</th>
           <td mat-cell *matCellDef="let element">{{ element.position }}</td>
+          <td mat-footer-cell *matFooterCellDef></td>
         </ng-container>
 
         <ng-container matColumnDef="name">
           <th mat-header-cell *matHeaderCellDef>Name</th>
           <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+          <td mat-footer-cell *matFooterCellDef style="text-align:right;">
+            <span style="font-weight:bold">[Col footer]: &nbsp;</span>
+          </td>
         </ng-container>
 
         <ng-container matColumnDef="weight">
           <th mat-header-cell *matHeaderCellDef>Weight</th>
           <td mat-cell *matCellDef="let element">{{ element.weight }}</td>
+          <td mat-footer-cell *matFooterCellDef>
+            <span style="font-weight:bold">[Col footer]</span>
+          </td>
         </ng-container>
 
         <ng-container matColumnDef="symbol">
           <th mat-header-cell *matHeaderCellDef>Symbol</th>
           <td mat-cell *matCellDef="let element">{{ element.symbol }}</td>
+          <td mat-footer-cell *matFooterCellDef></td>
         </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+        <tr mat-footer-row *matFooterRowDef="displayedColumns"></tr>
+
+        <!-- Disclaimer column -->
+        <ng-container matColumnDef="disclaimer">
+          <td mat-footer-cell *matFooterCellDef colspan="4">[Footer row 2]</td>
+        </ng-container>
+        <tr mat-footer-row *matFooterRowDef="['disclaimer']"></tr>
 
         <!-- Row shown when there is no matching data. -->
         <tr class="mat-row" *matNoDataRow>
@@ -65,7 +88,7 @@ import { PeriodicElement, TableModel } from './model';
     </div>
   `,
 })
-export default class Table {
+export default class TableHeaderFooter {
   @ViewChild(MatTable) table!: MatTable<PeriodicElement>;
   @Input() displayedColumns!: string[];
   @Input() dataSource!: PeriodicElement[];

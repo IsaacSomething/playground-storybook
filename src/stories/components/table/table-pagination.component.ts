@@ -1,13 +1,25 @@
-import { Component, Input, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, Input, ViewChild } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { MatTable, MatTableModule } from '@angular/material/table';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import {
+  MatTable,
+  MatTableDataSource,
+  MatTableModule,
+} from '@angular/material/table';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PeriodicElement, TableModel } from './model';
 
 @Component({
-  selector: 'storybook-table',
+  selector: 'storybook-table-pagination',
   standalone: true,
-  imports: [MatTableModule, MatButtonModule, MatIconModule],
+  imports: [
+    MatTableModule,
+    MatButtonModule,
+    MatIconModule,
+    MatPaginatorModule,
+    BrowserAnimationsModule,
+  ],
   template: `
     <div class="padding-left-32 padding-right-32">
       <table
@@ -51,44 +63,31 @@ import { PeriodicElement, TableModel } from './model';
           </td>
         </tr>
       </table>
-      <br />
-      <button mat-raised-button class="margin-right" (click)="addRow()">
-        <mat-icon>add</mat-icon> Row
-      </button>
-      <button mat-raised-button class="margin-right" (click)="removeRow()">
-        <mat-icon>remove</mat-icon> Row
-      </button>
 
-      <button mat-raised-button (click)="addBigData()">
-        <mat-icon>add</mat-icon> Big data
-      </button>
+      <mat-paginator
+        [pageSizeOptions]="[5, 10, 20]"
+        showFirstLastButtons
+        class="mat-elevation-z1"
+      >
+      </mat-paginator>
     </div>
   `,
 })
-export default class Table {
+export default class TablePagination implements AfterViewInit {
   @ViewChild(MatTable) table!: MatTable<PeriodicElement>;
   @Input() displayedColumns!: string[];
-  @Input() dataSource!: PeriodicElement[];
+  @Input() dataSource!: PeriodicElement[] | any;
   @Input() withHover!: boolean;
   @Input() striped!: boolean;
   @Input() header!: boolean;
   @Input() textTransform!: boolean;
 
-  addRow() {
-    const randomElementIndex = Math.floor(
-      Math.random() * TableModel.bigData.length
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+
+  ngAfterViewInit() {
+    this.dataSource = new MatTableDataSource<PeriodicElement>(
+      TableModel.bigData
     );
-    this.dataSource.push(TableModel.bigData[randomElementIndex]);
-    this.table.renderRows();
-  }
-
-  removeRow() {
-    this.dataSource.pop();
-    this.table.renderRows();
-  }
-
-  addBigData() {
-    this.dataSource = TableModel.bigData;
-    this.table.renderRows();
+    this.dataSource.paginator = this.paginator;
   }
 }

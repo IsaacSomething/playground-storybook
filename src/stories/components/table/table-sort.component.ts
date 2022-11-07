@@ -5,7 +5,7 @@ import { MatTable, MatTableModule } from '@angular/material/table';
 import { PeriodicElement, TableModel } from './model';
 
 @Component({
-  selector: 'storybook-table',
+  selector: 'storybook-table-sort',
   standalone: true,
   imports: [MatTableModule, MatButtonModule, MatIconModule],
   template: `
@@ -51,6 +51,7 @@ import { PeriodicElement, TableModel } from './model';
           </td>
         </tr>
       </table>
+
       <br />
       <button mat-raised-button class="margin-right" (click)="addRow()">
         <mat-icon>add</mat-icon> Row
@@ -65,7 +66,7 @@ import { PeriodicElement, TableModel } from './model';
     </div>
   `,
 })
-export default class Table {
+export default class TableSort {
   @ViewChild(MatTable) table!: MatTable<PeriodicElement>;
   @Input() displayedColumns!: string[];
   @Input() dataSource!: PeriodicElement[];

@@ -19,7 +19,7 @@ $spaces: "margin", "padding";
     #{$space}: 0 var(--mat-spacing);
   }
   .no-#{$space} {
-    #{$space}: 0;
+    #{$space}: 0!important;
   }
 }
 

@@ -15,6 +15,7 @@
   &.with-hover {
     .mat-row:hover .mat-cell {
       background: var(--mat-divider);
+      cursor: pointer;
     }
   }
 
@@ -28,5 +29,26 @@
     thead {
       background: var(--mat-divider);
     }
+  }
+
+  &.text-transform {
+    thead th {
+      text-transform: uppercase;
+      font-size: 11px;
+    }
+  }
+}
+
+mat-accordion {
+  mat-row,
+  td.mat-cell {
+    border: none;
+  }
+  .mat-expansion-panel {
+    border-bottom: 1px solid var(--mat-divider);
+  }
+
+  .cdk-column-name {
+    font-weight: bold;
   }
 }
