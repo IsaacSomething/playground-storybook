@@ -8,7 +8,7 @@ import { MatRadioModule } from '@angular/material/radio';
   imports: [MatRadioModule, CommonModule],
   template: `
     <div class="padding">
-      <mat-radio-group [color]="color">
+      <mat-radio-group [color]="color" [disabled]="disabled">
         <mat-radio-button
           *ngFor="let item of [1, 1, 1]; let idx = index"
           [value]="label + '-' + (idx + 1)"

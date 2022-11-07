@@ -7,6 +7,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
   template: `
     <div class="padding">
       <mat-checkbox
+        [disabled]="disabled"
         [color]="color"
         [labelPosition]="labelPosition"
         [disabled]="disabled"

@@ -245,7 +245,7 @@
         },
         {
             "name": "Autocomplete",
-            "id": "component-Autocomplete-03d525662ba62e51744552b1f355768d42dcb8137dbcd60f2177728765e788053f47ca323283b28ae4b18c7b575d708f011027ff058c39604196687580ba9813",
+            "id": "component-Autocomplete-d79707c54202b3246e61e6166e61dba29fadc15f35c2de2de8ce5b99da87311db46ba8edc5302427716b87bc7e5bf1d3663b48cc0f0b48d03d2c221c5877e249",
             "file": "src/stories/forms/autocomplete/autocomplete.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -255,16 +255,24 @@
             "selector": "storybook-autocomplete",
             "styleUrls": [],
             "styles": [],
-            "template": "Copy and paste these files for a blank project <br />\nWill be better to add a schematic for this\n",
+            "template": "<form class=\"padding\">\n  <mat-form-field class=\"example-full-width\" [appearance]=\"appearance\">\n    <mat-label>{{ label }}</mat-label>\n    <input\n      type=\"text\"\n      placeholder=\"Pick one\"\n      aria-label=\"Number\"\n      matInput\n      [formControl]=\"myControl\"\n      [matAutocomplete]=\"auto\"\n    />\n    <mat-autocomplete #auto=\"matAutocomplete\">\n      <mat-option\n        *ngFor=\"let option of filteredOptions | async\"\n        [value]=\"option\"\n      >\n        {{ option }}\n      </mat-option>\n    </mat-autocomplete>\n  </mat-form-field>\n</form>\n",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
+                {
+                    "name": "appearance",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 51,
+                    "type": "\"legacy\" | \"standard\" | \"fill\" | \"outline\"",
+                    "decorators": []
+                },
                 {
                     "name": "color",
                     "defaultValue": "'primary'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 13,
+                    "line": 48,
                     "type": "\"primary\" | \"accent\" | \"warn\"",
                     "decorators": []
                 },
@@ -273,14 +281,94 @@
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 14,
+                    "line": 49,
                     "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 50,
+                    "type": "string",
                     "decorators": []
                 }
             ],
             "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "filteredOptions",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Observable<string[]>",
+                    "optional": false,
+                    "description": "",
+                    "line": 55
+                },
+                {
+                    "name": "myControl",
+                    "defaultValue": "new FormControl('')",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 53
+                },
+                {
+                    "name": "options",
+                    "defaultValue": "['One', 'Two', 'Three']",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 54
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "_filter",
+                    "args": [
+                        {
+                            "name": "value",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "string[]",
+                    "typeParameters": [],
+                    "line": 64,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        121
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "value",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 57,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
             "deprecated": false,
             "deprecationMessage": "",
             "hostBindings": [],
@@ -288,7 +376,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'storybook-autocomplete',\n  standalone: true,\n  imports: [],\n  template: `\n    Copy and paste these files for a blank project <br />\n    Will be better to add a schematic for this\n  `,\n})\nexport default class Autocomplete {\n  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';\n  @Input() disabled: boolean = false;\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { FormControl } from '@angular/forms';\nimport { MatAutocompleteModule } from '@angular/material/autocomplete';\nimport { MatFormFieldModule } from '@angular/material/form-field';\nimport { MatInputModule } from '@angular/material/input';\nimport { FormsModule, ReactiveFormsModule } from '@angular/forms';\nimport { map, Observable, startWith } from 'rxjs';\nimport { CommonModule } from '@angular/common';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\n\n@Component({\n  selector: 'storybook-autocomplete',\n  standalone: true,\n  imports: [\n    MatAutocompleteModule,\n    MatFormFieldModule,\n    FormsModule,\n    ReactiveFormsModule,\n    CommonModule,\n    BrowserAnimationsModule,\n    MatInputModule,\n  ],\n  template: `\n    <form class=\"padding\">\n      <mat-form-field class=\"example-full-width\" [appearance]=\"appearance\">\n        <mat-label>{{ label }}</mat-label>\n        <input\n          type=\"text\"\n          placeholder=\"Pick one\"\n          aria-label=\"Number\"\n          matInput\n          [formControl]=\"myControl\"\n          [matAutocomplete]=\"auto\"\n        />\n        <mat-autocomplete #auto=\"matAutocomplete\">\n          <mat-option\n            *ngFor=\"let option of filteredOptions | async\"\n            [value]=\"option\"\n          >\n            {{ option }}\n          </mat-option>\n        </mat-autocomplete>\n      </mat-form-field>\n    </form>\n  `,\n})\nexport default class Autocomplete {\n  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';\n  @Input() disabled: boolean = false;\n  @Input() label!: string;\n  @Input() appearance!: 'legacy' | 'standard' | 'fill' | 'outline';\n\n  myControl = new FormControl('');\n  options: string[] = ['One', 'Two', 'Three'];\n  filteredOptions!: Observable<string[]>;\n\n  ngOnInit() {\n    this.filteredOptions = this.myControl.valueChanges.pipe(\n      startWith(''),\n      map((value) => this._filter(value || ''))\n    );\n  }\n\n  private _filter(value: string): string[] {\n    const filterValue = value.toLowerCase();\n\n    return this.options.filter((option) =>\n      option.toLowerCase().includes(filterValue)\n    );\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": ""
@@ -1408,7 +1496,7 @@
         },
         {
             "name": "InputFormField",
-            "id": "component-InputFormField-df25f76af88d016c39f172bc15a664e531aff2f9923d9dff8194b97ef502b048a8df8cf035c36ca9d10e283199c53da6b10183163d812cec39923c6d12d5a427",
+            "id": "component-InputFormField-0bf5237669a0b80b4670123f9516388184f8dacd5ede8d0046720f5d4e9b1bfde2d5f107207d81a1b9263db7f14afea1bc653a3dca9db84416e6752191dab878",
             "file": "src/stories/forms/input/input.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1418,16 +1506,23 @@
             "selector": "storybook-input",
             "styleUrls": [],
             "styles": [],
-            "template": "Copy and paste these files for a blank project <br />\nWill be better to add a schematic for this\n",
+            "template": "<div class=\"padding\">\n  <mat-form-field [appearance]=\"appearance\" [color]=\"color\">\n    <mat-label>{{ label }}</mat-label>\n\n    <input matInput placeholder=\"Placeholder\" [value]=\"label\" />\n  </mat-form-field>\n</div>\n",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
                 {
-                    "name": "color",
-                    "defaultValue": "'primary'",
+                    "name": "appearance",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 13,
+                    "line": 23,
+                    "type": "\"legacy\" | \"standard\" | \"fill\" | \"outline\"",
+                    "decorators": []
+                },
+                {
+                    "name": "color",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 20,
                     "type": "\"primary\" | \"accent\" | \"warn\"",
                     "decorators": []
                 },
@@ -1436,8 +1531,16 @@
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 14,
+                    "line": 22,
                     "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 21,
+                    "type": "string",
                     "decorators": []
                 }
             ],
@@ -1451,7 +1554,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'storybook-input',\n  standalone: true,\n  imports: [],\n  template: `\n    Copy and paste these files for a blank project <br />\n    Will be better to add a schematic for this\n  `,\n})\nexport default class InputFormField {\n  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';\n  @Input() disabled: boolean = false;\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { MatFormFieldModule } from '@angular/material/form-field';\nimport { MatInputModule } from '@angular/material/input';\n\n@Component({\n  selector: 'storybook-input',\n  standalone: true,\n  imports: [MatInputModule, MatFormFieldModule],\n  template: `\n    <div class=\"padding\">\n      <mat-form-field [appearance]=\"appearance\" [color]=\"color\">\n        <mat-label>{{ label }}</mat-label>\n\n        <input matInput placeholder=\"Placeholder\" [value]=\"label\" />\n      </mat-form-field>\n    </div>\n  `,\n})\nexport default class InputFormField {\n  @Input() color!: 'primary' | 'accent' | 'warn';\n  @Input() label!: string;\n  @Input() disabled: boolean = false;\n  @Input() appearance!: 'legacy' | 'standard' | 'fill' | 'outline';\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": ""
@@ -1602,7 +1705,7 @@
         },
         {
             "name": "Radio",
-            "id": "component-Radio-b985000732d13dc733d86a07cfd539527d6af7a466c04faacf2ab4d9cda76d42229ec982b12e449a834dd091d208f0848abd6a1458e0a0fc4ca3fe2da7519c43",
+            "id": "component-Radio-5176dc8cc059dbab6998a18dd9f550bdca3119ac78b1e733078a3e828183529dd4454a829f11345f3993faf9c98658b65bc47b9a22ae9e86ee0d4c32fa98da66",
             "file": "src/stories/forms/radio/radio.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1612,7 +1715,7 @@
             "selector": "storybook-radio",
             "styleUrls": [],
             "styles": [],
-            "template": "<div class=\"padding\">\n  <mat-radio-group [color]=\"color\">\n    <mat-radio-button\n      *ngFor=\"let item of [1, 1, 1]; let idx = index\"\n      class=\"padding-right\"\n    >\n      {{ label + '-' + (idx + 1) }}\n    </mat-radio-button>\n  </mat-radio-group>\n</div>\n",
+            "template": "<div class=\"padding\">\n  <mat-radio-group [color]=\"color\">\n    <mat-radio-button\n      *ngFor=\"let item of [1, 1, 1]; let idx = index\"\n      [value]=\"label + '-' + (idx + 1)\"\n      class=\"padding-right\"\n    >\n      {{ label + '-' + (idx + 1) }}\n    </mat-radio-button>\n  </mat-radio-group>\n</div>\n",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
@@ -1621,7 +1724,7 @@
                     "defaultValue": "'primary'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 23,
+                    "line": 24,
                     "type": "\"primary\" | \"accent\" | \"warn\"",
                     "decorators": []
                 },
@@ -1630,7 +1733,7 @@
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 26,
+                    "line": 27,
                     "type": "boolean",
                     "decorators": []
                 },
@@ -1638,7 +1741,7 @@
                     "name": "label",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 24,
+                    "line": 25,
                     "type": "string",
                     "decorators": []
                 },
@@ -1646,7 +1749,7 @@
                     "name": "labelPosition",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 25,
+                    "line": 26,
                     "type": "\"after\" | \"before\"",
                     "decorators": []
                 }
@@ -1661,7 +1764,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input } from '@angular/core';\nimport { MatRadioModule } from '@angular/material/radio';\n\n@Component({\n  selector: 'storybook-radio',\n  standalone: true,\n  imports: [MatRadioModule, CommonModule],\n  template: `\n    <div class=\"padding\">\n      <mat-radio-group [color]=\"color\">\n        <mat-radio-button\n          *ngFor=\"let item of [1, 1, 1]; let idx = index\"\n          class=\"padding-right\"\n        >\n          {{ label + '-' + (idx + 1) }}\n        </mat-radio-button>\n      </mat-radio-group>\n    </div>\n  `,\n})\nexport default class Radio {\n  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';\n  @Input() label!: string;\n  @Input() labelPosition!: 'after' | 'before';\n  @Input() disabled: boolean = false;\n}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input } from '@angular/core';\nimport { MatRadioModule } from '@angular/material/radio';\n\n@Component({\n  selector: 'storybook-radio',\n  standalone: true,\n  imports: [MatRadioModule, CommonModule],\n  template: `\n    <div class=\"padding\">\n      <mat-radio-group [color]=\"color\">\n        <mat-radio-button\n          *ngFor=\"let item of [1, 1, 1]; let idx = index\"\n          [value]=\"label + '-' + (idx + 1)\"\n          class=\"padding-right\"\n        >\n          {{ label + '-' + (idx + 1) }}\n        </mat-radio-button>\n      </mat-radio-group>\n    </div>\n  `,\n})\nexport default class Radio {\n  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';\n  @Input() label!: string;\n  @Input() labelPosition!: 'after' | 'before';\n  @Input() disabled: boolean = false;\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": ""
@@ -1909,7 +2012,7 @@
         },
         {
             "name": "Select",
-            "id": "component-Select-eb2c034faef0dbf41f4d4bbdfdd4200287bcbd2d3347aecd0587bfcb2c71943b46b00fd62c9f34c9d0cff0b751872c0d4070a47068c903398f332ab7ce05a53c",
+            "id": "component-Select-ff9399d4e2e1e27af56ee1dbec85da2001b990874d20367202ca5a28332148429e75b4853714ba1d1d88da7a7bec29fd81cf1948879e10fb3da56c72b5e95c47",
             "file": "src/stories/forms/select/select.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1919,10 +2022,18 @@
             "selector": "storybook-select",
             "styleUrls": [],
             "styles": [],
-            "template": "<div class=\"padding\">\n  <mat-form-field>\n    <mat-label>Select items</mat-label>\n\n    <mat-select>\n      <mat-option\n        *ngFor=\"let item of [1, 2, 3]; let idx = index\"\n        [value]=\"item\"\n      >\n        {{ label + '-' + (idx + 1) }}\n      </mat-option>\n    </mat-select>\n  </mat-form-field>\n</div>\n",
+            "template": "<div class=\"padding\">\n  <mat-form-field [appearance]=\"appearance\">\n    <mat-label>Select items</mat-label>\n\n    <mat-select>\n      <mat-option\n        *ngFor=\"let item of [1, 2, 3]; let idx = index\"\n        [value]=\"item\"\n      >\n        {{ label + '-' + (idx + 1) }}\n      </mat-option>\n    </mat-select>\n  </mat-form-field>\n</div>\n",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
+                {
+                    "name": "appearance",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 37,
+                    "type": "\"legacy\" | \"standard\" | \"fill\" | \"outline\"",
+                    "decorators": []
+                },
                 {
                     "name": "color",
                     "defaultValue": "'primary'",
@@ -1960,7 +2071,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { MatFormFieldModule } from '@angular/material/form-field';\nimport { MatInputModule } from '@angular/material/input';\nimport { MatSelectModule } from '@angular/material/select';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\n\n@Component({\n  selector: 'storybook-select',\n  standalone: true,\n  imports: [\n    MatFormFieldModule,\n    MatInputModule,\n    MatSelectModule,\n    BrowserAnimationsModule,\n  ],\n  template: `\n    <div class=\"padding\">\n      <mat-form-field>\n        <mat-label>Select items</mat-label>\n\n        <mat-select>\n          <mat-option\n            *ngFor=\"let item of [1, 2, 3]; let idx = index\"\n            [value]=\"item\"\n          >\n            {{ label + '-' + (idx + 1) }}\n          </mat-option>\n        </mat-select>\n      </mat-form-field>\n    </div>\n  `,\n})\nexport default class Select {\n  @Input() label!: string;\n  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';\n  @Input() disabled: boolean = false;\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { MatFormFieldModule } from '@angular/material/form-field';\nimport { MatInputModule } from '@angular/material/input';\nimport { MatSelectModule } from '@angular/material/select';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\n\n@Component({\n  selector: 'storybook-select',\n  standalone: true,\n  imports: [\n    MatFormFieldModule,\n    MatInputModule,\n    MatSelectModule,\n    BrowserAnimationsModule,\n  ],\n  template: `\n    <div class=\"padding\">\n      <mat-form-field [appearance]=\"appearance\">\n        <mat-label>Select items</mat-label>\n\n        <mat-select>\n          <mat-option\n            *ngFor=\"let item of [1, 2, 3]; let idx = index\"\n            [value]=\"item\"\n          >\n            {{ label + '-' + (idx + 1) }}\n          </mat-option>\n        </mat-select>\n      </mat-form-field>\n    </div>\n  `,\n})\nexport default class Select {\n  @Input() label!: string;\n  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';\n  @Input() disabled: boolean = false;\n  @Input() appearance!: 'legacy' | 'standard' | 'fill' | 'outline';\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": ""
@@ -2052,7 +2163,7 @@
         },
         {
             "name": "Slider",
-            "id": "component-Slider-e95c0b0191aae1112576e0291814cadc3b86dd367fd726ae1d73f91208162acb8cd45545c3a21a8c06ecbdc9a91df45c15aeb9a3a667c9cdc35123893c45b1cb",
+            "id": "component-Slider-fa9d5ec4788a44aa095343a1eaa59693c7f4d1df64d9927da17a37bcfd4f3131b209b5e9529d648057cf9ff8a1461f8e16845e5858593e29241765508ce78166",
             "file": "src/stories/forms/slider/slider.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -2061,8 +2172,10 @@
             "providers": [],
             "selector": "storybook-slider",
             "styleUrls": [],
-            "styles": [],
-            "template": "Copy and paste these files for a blank project <br />\nWill be better to add a schematic for this\n",
+            "styles": [
+                "\n      mat-slider {\n        width: 100%;\n      }\n      h1 {\n        font-weight: bold !important;\n      }\n    "
+            ],
+            "template": "<div class=\"padding\">\n  <mat-slider #slider [color]=\"color\" [disabled]=\"disabled\"></mat-slider>\n\n  <h1>[{{ slider.value }}]</h1>\n</div>\n",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
@@ -2071,7 +2184,7 @@
                     "defaultValue": "'primary'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 13,
+                    "line": 27,
                     "type": "\"primary\" | \"accent\" | \"warn\"",
                     "decorators": []
                 },
@@ -2080,7 +2193,7 @@
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 14,
+                    "line": 28,
                     "type": "boolean",
                     "decorators": []
                 }
@@ -2095,10 +2208,10 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'storybook-slider',\n  standalone: true,\n  imports: [],\n  template: `\n    Copy and paste these files for a blank project <br />\n    Will be better to add a schematic for this\n  `,\n})\nexport default class Slider {\n  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';\n  @Input() disabled: boolean = false;\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { MatSliderModule } from '@angular/material/slider';\n\n@Component({\n  selector: 'storybook-slider',\n  standalone: true,\n  imports: [MatSliderModule],\n  styles: [\n    `\n      mat-slider {\n        width: 100%;\n      }\n      h1 {\n        font-weight: bold !important;\n      }\n    `,\n  ],\n  template: `\n    <div class=\"padding\">\n      <mat-slider #slider [color]=\"color\" [disabled]=\"disabled\"></mat-slider>\n\n      <h1>[{{ slider.value }}]</h1>\n    </div>\n  `,\n})\nexport default class Slider {\n  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';\n  @Input() disabled: boolean = false;\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
-            "stylesData": ""
+            "stylesData": "\n      mat-slider {\n        width: 100%;\n      }\n      h1 {\n        font-weight: bold !important;\n      }\n    \n"
         },
         {
             "name": "SlideToggle",
@@ -2370,7 +2483,7 @@
         },
         {
             "name": "Textarea",
-            "id": "component-Textarea-124f287d95ba53fd0628ad0b5294a6c4fc56383ecfde83693faf20094dd3e15d71e47e36e150e9d81d9608db27b46ded636915ed266ee2748227671f62779f8c",
+            "id": "component-Textarea-a6db7702923a90ad0b57489e3b687db14f0cafe5aadf04d3377d8f3ac250f7a41c43fe862d53f16e0f4617317867a2ea80257f4147ae6a25742c938aab6d4c52",
             "file": "src/stories/forms/textarea/textarea.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -2380,10 +2493,18 @@
             "selector": "storybook-textarea",
             "styleUrls": [],
             "styles": [],
-            "template": "<div class=\"padding\">\n  <mat-form-field>\n    <mat-label>Autosize textarea</mat-label>\n    <textarea\n      matInput\n      cdkTextareaAutosize\n      #autosize=\"cdkTextareaAutosize\"\n      cdkAutosizeMinRows=\"1\"\n      cdkAutosizeMaxRows=\"5\"\n    ></textarea>\n  </mat-form-field>\n</div>\n",
+            "template": "<div class=\"padding\">\n  <mat-form-field [appearance]=\"appearance\">\n    <mat-label>Autosize textarea</mat-label>\n    <textarea\n      matInput\n      cdkTextareaAutosize\n      #autosize=\"cdkTextareaAutosize\"\n      cdkAutosizeMinRows=\"1\"\n      cdkAutosizeMaxRows=\"5\"\n    ></textarea>\n  </mat-form-field>\n</div>\n",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
+                {
+                    "name": "appearance",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 36,
+                    "type": "\"legacy\" | \"standard\" | \"fill\" | \"outline\"",
+                    "decorators": []
+                },
                 {
                     "name": "color",
                     "defaultValue": "'primary'",
@@ -2412,7 +2533,7 @@
                     "type": "CdkTextareaAutosize",
                     "optional": false,
                     "description": "",
-                    "line": 39,
+                    "line": 40,
                     "decorators": [
                         {
                             "name": "ViewChild",
@@ -2428,7 +2549,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 41,
+                    "line": 42,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -2440,7 +2561,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CdkTextareaAutosize } from '@angular/cdk/text-field';\nimport { Component, Input, NgZone, ViewChild } from '@angular/core';\nimport { MatFormFieldModule } from '@angular/material/form-field';\nimport { MatInputModule } from '@angular/material/input';\nimport { MatSelectModule } from '@angular/material/select';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\nimport { take } from 'rxjs';\n\n@Component({\n  selector: 'storybook-textarea',\n  standalone: true,\n  imports: [\n    MatFormFieldModule,\n    MatInputModule,\n    MatSelectModule,\n    BrowserAnimationsModule,\n  ],\n  template: `\n    <div class=\"padding\">\n      <mat-form-field>\n        <mat-label>Autosize textarea</mat-label>\n        <textarea\n          matInput\n          cdkTextareaAutosize\n          #autosize=\"cdkTextareaAutosize\"\n          cdkAutosizeMinRows=\"1\"\n          cdkAutosizeMaxRows=\"5\"\n        ></textarea>\n      </mat-form-field>\n    </div>\n  `,\n})\nexport default class Textarea {\n  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';\n  @Input() disabled: boolean = false;\n\n  constructor(private ngZone: NgZone) {}\n\n  @ViewChild('autosize') autosize!: CdkTextareaAutosize;\n\n  triggerResize() {\n    // Wait for changes to be applied, then trigger textarea resize.\n    this.ngZone.onStable\n      .pipe(take(1))\n      .subscribe(() => this.autosize.resizeToFitContent(true));\n  }\n}\n",
+            "sourceCode": "import { CdkTextareaAutosize } from '@angular/cdk/text-field';\nimport { Component, Input, NgZone, ViewChild } from '@angular/core';\nimport { MatFormFieldModule } from '@angular/material/form-field';\nimport { MatInputModule } from '@angular/material/input';\nimport { MatSelectModule } from '@angular/material/select';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\nimport { take } from 'rxjs';\n\n@Component({\n  selector: 'storybook-textarea',\n  standalone: true,\n  imports: [\n    MatFormFieldModule,\n    MatInputModule,\n    MatSelectModule,\n    BrowserAnimationsModule,\n  ],\n  template: `\n    <div class=\"padding\">\n      <mat-form-field [appearance]=\"appearance\">\n        <mat-label>Autosize textarea</mat-label>\n        <textarea\n          matInput\n          cdkTextareaAutosize\n          #autosize=\"cdkTextareaAutosize\"\n          cdkAutosizeMinRows=\"1\"\n          cdkAutosizeMaxRows=\"5\"\n        ></textarea>\n      </mat-form-field>\n    </div>\n  `,\n})\nexport default class Textarea {\n  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';\n  @Input() disabled: boolean = false;\n  @Input() appearance!: 'legacy' | 'standard' | 'fill' | 'outline';\n\n  constructor(private ngZone: NgZone) {}\n\n  @ViewChild('autosize') autosize!: CdkTextareaAutosize;\n\n  triggerResize() {\n    // Wait for changes to be applied, then trigger textarea resize.\n    this.ngZone.onStable\n      .pipe(take(1))\n      .subscribe(() => this.autosize.resizeToFitContent(true));\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
@@ -2457,7 +2578,7 @@
                         "deprecationMessage": ""
                     }
                 ],
-                "line": 35,
+                "line": 36,
                 "jsdoctags": [
                     {
                         "name": "ngZone",
@@ -2998,6 +3119,16 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/components/card/card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/components/chips/chips.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -3028,7 +3159,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/components/card/card.stories.ts",
+                "file": "src/stories/components/menu/menu.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -3039,16 +3170,6 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/components/expansion/expansion.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/components/menu/menu.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -3088,7 +3209,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/components/table/table.stories.ts",
+                "file": "src/stories/components/tabs/tabs.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -3098,7 +3219,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/components/tabs/tabs.stories.ts",
+                "file": "src/stories/components/table/table.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -3158,7 +3279,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/forms/input/input.stories.ts",
+                "file": "src/stories/forms/date-picker/date-picker.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -3168,7 +3289,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/forms/date-picker/date-picker.stories.ts",
+                "file": "src/stories/forms/radio/radio.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -3188,7 +3309,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/forms/radio/radio.stories.ts",
+                "file": "src/stories/forms/input/input.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -3218,27 +3339,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/layout/responsive/responsive.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/layout/grid/grid.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/layout/virtual-scroll/virtual-scroll.stories.ts",
+                "file": "src/stories/helpers/ripples/ripples.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -3268,7 +3369,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/storybook/figma/figma.stories.ts",
+                "file": "src/stories/layout/grid/grid.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -3278,7 +3379,17 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/helpers/ripples/ripples.stories.ts",
+                "file": "src/stories/layout/responsive/responsive.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/layout/virtual-scroll/virtual-scroll.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -3289,6 +3400,16 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/storybook/docs/docs.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/storybook/figma/figma.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -3338,21 +3459,21 @@
                 "name": "defaultArgs",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/forms/checkbox/checkbox.stories.ts",
+                "file": "src/stories/forms/autocomplete/autocomplete.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Partial | undefined",
-                "defaultValue": "{\n  label: '[Checkbox label]',\n  color: 'primary',\n  labelPosition: 'after',\n  disabled: false,\n  indeterminate: false,\n}"
+                "defaultValue": "{\n  label: '[Autocomplete label]',\n  color: 'primary',\n  disabled: false,\n  appearance: 'fill',\n}"
             },
             {
                 "name": "defaultArgs",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/forms/input/input.stories.ts",
+                "file": "src/stories/forms/checkbox/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Partial | undefined",
-                "defaultValue": "{\n  color: 'primary',\n  disabled: false,\n}"
+                "defaultValue": "{\n  label: '[Checkbox label]',\n  color: 'primary',\n  labelPosition: 'after',\n  disabled: false,\n  indeterminate: false,\n}"
             },
             {
                 "name": "defaultArgs",
@@ -3368,21 +3489,31 @@
                 "name": "defaultArgs",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/forms/select/select.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Partial | undefined",
-                "defaultValue": "{\n  label: 'Select',\n  color: 'primary',\n  disabled: false,\n}"
-            },
-            {
-                "name": "defaultArgs",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/forms/radio/radio.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Partial | undefined",
                 "defaultValue": "{\n  label: '[Radio label]',\n  color: 'primary',\n  labelPosition: 'after',\n  disabled: false,\n}"
+            },
+            {
+                "name": "defaultArgs",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/forms/select/select.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Partial | undefined",
+                "defaultValue": "{\n  label: 'Select',\n  color: 'primary',\n  disabled: false,\n  appearance: 'fill',\n}"
+            },
+            {
+                "name": "defaultArgs",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/forms/input/input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Partial | undefined",
+                "defaultValue": "{\n  label: '[label]',\n  color: 'primary',\n  appearance: 'fill',\n  disabled: false,\n}"
             },
             {
                 "name": "defaultArgs",
@@ -3402,7 +3533,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Partial | undefined",
-                "defaultValue": "{\n  color: 'primary',\n  disabled: false,\n}"
+                "defaultValue": "{\n  color: 'primary',\n  disabled: false,\n  appearance: 'fill',\n}"
             },
             {
                 "name": "designParams",
@@ -3458,21 +3589,21 @@
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/environments/environment.prod.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "object",
-                "defaultValue": "{\n  production: true\n}"
-            },
-            {
-                "name": "environment",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/environments/environment.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
                 "defaultValue": "{\n  production: false\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.prod.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  production: true\n}"
             },
             {
                 "name": "Expansion",
@@ -3597,6 +3728,16 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/components/card/card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Card>",
+                "defaultValue": "(args: Card) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/components/chips/chips.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -3627,11 +3768,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/components/card/card.stories.ts",
+                "file": "src/stories/components/menu/menu.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<Card>",
-                "defaultValue": "(args: Card) => ({\n  props: args,\n})"
+                "type": "Story<Menu>",
+                "defaultValue": "(args: Menu) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -3642,16 +3783,6 @@
                 "deprecationMessage": "",
                 "type": "Story<Expansion>",
                 "defaultValue": "(args: Expansion) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/components/menu/menu.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<Menu>",
-                "defaultValue": "(args: Menu) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -3697,21 +3828,21 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/components/table/table.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<Table>",
-                "defaultValue": "(args: Table) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/components/tabs/tabs.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<Tabs>",
                 "defaultValue": "(args: Tabs) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/table/table.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Table>",
+                "defaultValue": "(args: Table) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -3767,21 +3898,21 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/forms/input/input.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<InputFormField>",
-                "defaultValue": "(args: InputFormField) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n  },\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/forms/date-picker/date-picker.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<DatePicker>",
                 "defaultValue": "(args: DatePicker) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n  },\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/forms/radio/radio.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Radio>",
+                "defaultValue": "(args: Radio) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n    labelPosition: {\n      options: ['before', 'after'],\n      control: { type: 'select' },\n      name: 'Label position',\n    },\n  },\n})"
             },
             {
                 "name": "Template",
@@ -3797,11 +3928,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/forms/radio/radio.stories.ts",
+                "file": "src/stories/forms/input/input.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<Radio>",
-                "defaultValue": "(args: Radio) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n    labelPosition: {\n      options: ['before', 'after'],\n      control: { type: 'select' },\n      name: 'Label position',\n    },\n  },\n})"
+                "type": "Story<InputFormField>",
+                "defaultValue": "(args: InputFormField) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n  },\n})"
             },
             {
                 "name": "Template",
@@ -3821,37 +3952,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<Textarea>",
-                "defaultValue": "(args: Textarea) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n  },\n})"
+                "defaultValue": "(args: Textarea) => ({\n  props: args,\n  argTypes: {\n    color: {\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n  },\n})"
             },
             {
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/layout/responsive/responsive.stories.ts",
+                "file": "src/stories/helpers/ripples/ripples.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<Responsive>",
-                "defaultValue": "(args: Responsive) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/layout/grid/grid.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<Grid>",
-                "defaultValue": "(args: Grid) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/layout/virtual-scroll/virtual-scroll.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<VirtualScroll>",
-                "defaultValue": "(args: VirtualScroll) => ({\n  props: args,\n})"
+                "type": "Story<Ripples>",
+                "defaultValue": "(args: Ripples) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -3877,21 +3988,31 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/storybook/figma/figma.stories.ts",
+                "file": "src/stories/layout/grid/grid.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<Figma>",
-                "defaultValue": "(args: Figma) => ({\n  props: args,\n})"
+                "type": "Story<Grid>",
+                "defaultValue": "(args: Grid) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/helpers/ripples/ripples.stories.ts",
+                "file": "src/stories/layout/responsive/responsive.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<Ripples>",
-                "defaultValue": "(args: Ripples) => ({\n  props: args,\n})"
+                "type": "Story<Responsive>",
+                "defaultValue": "(args: Responsive) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/layout/virtual-scroll/virtual-scroll.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<VirtualScroll>",
+                "defaultValue": "(args: VirtualScroll) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -3902,6 +4023,16 @@
                 "deprecationMessage": "",
                 "type": "Story<Docs>",
                 "defaultValue": "(args: Docs) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/storybook/figma/figma.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Figma>",
+                "defaultValue": "(args: Figma) => ({\n  props: args,\n})"
             },
             {
                 "name": "Toggle",
@@ -4241,6 +4372,58 @@
                     "defaultValue": "'https://www.figma.com/file/B4I9c9XojvfCuHyqlegRWg/material?node-id='"
                 }
             ],
+            "src/stories/components/card/card.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/card/card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Drawer",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/card/card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<CardDrawer>",
+                    "defaultValue": "(args: CardDrawer) => ({\n  component: CardDrawer,\n  props: args,\n  argTypes: {\n    color: 'default',\n    drawerSize: {\n      control: { type: 'range', min: 0, max: 100, step: 5 },\n    },\n  },\n})"
+                },
+                {
+                    "name": "Expansion",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/card/card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<CardExpansion>",
+                    "defaultValue": "(args: CardExpansion) => ({\n  component: CardExpansion,\n  props: args,\n  color: 'default',\n})"
+                },
+                {
+                    "name": "Image",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/card/card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/card/card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Card>",
+                    "defaultValue": "(args: Card) => ({\n  props: args,\n})"
+                }
+            ],
             "src/stories/components/chips/chips.stories.ts": [
                 {
                     "name": "Default",
@@ -4307,42 +4490,12 @@
                     "defaultValue": "(args: DragDrop) => ({\n  props: args,\n})"
                 }
             ],
-            "src/stories/components/card/card.stories.ts": [
+            "src/stories/components/menu/menu.stories.ts": [
                 {
                     "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/components/card/card.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Drawer",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/components/card/card.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<CardDrawer>",
-                    "defaultValue": "(args: CardDrawer) => ({\n  component: CardDrawer,\n  props: args,\n  argTypes: {\n    color: 'default',\n    drawerSize: {\n      control: { type: 'range', min: 0, max: 100, step: 5 },\n    },\n  },\n})"
-                },
-                {
-                    "name": "Expansion",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/components/card/card.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<CardExpansion>",
-                    "defaultValue": "(args: CardExpansion) => ({\n  component: CardExpansion,\n  props: args,\n  color: 'default',\n})"
-                },
-                {
-                    "name": "Image",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/components/card/card.stories.ts",
+                    "file": "src/stories/components/menu/menu.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -4352,11 +4505,11 @@
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/components/card/card.stories.ts",
+                    "file": "src/stories/components/menu/menu.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Story<Card>",
-                    "defaultValue": "(args: Card) => ({\n  props: args,\n})"
+                    "type": "Story<Menu>",
+                    "defaultValue": "(args: Menu) => ({\n  props: args,\n})"
                 }
             ],
             "src/stories/components/expansion/expansion.stories.ts": [
@@ -4379,28 +4532,6 @@
                     "deprecationMessage": "",
                     "type": "Story<Expansion>",
                     "defaultValue": "(args: Expansion) => ({\n  props: args,\n})"
-                }
-            ],
-            "src/stories/components/menu/menu.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/components/menu/menu.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/components/menu/menu.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<Menu>",
-                    "defaultValue": "(args: Menu) => ({\n  props: args,\n})"
                 }
             ],
             "src/stories/components/snackbar/snackbar.stories.ts": [
@@ -4447,28 +4578,6 @@
                     "defaultValue": "(args: Stepper) => ({\n  props: args,\n})"
                 }
             ],
-            "src/stories/components/table/table.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/components/table/table.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/components/table/table.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<Table>",
-                    "defaultValue": "(args: Table) => ({\n  props: args,\n})"
-                }
-            ],
             "src/stories/components/tabs/tabs.stories.ts": [
                 {
                     "name": "Default",
@@ -4489,6 +4598,28 @@
                     "deprecationMessage": "",
                     "type": "Story<Tabs>",
                     "defaultValue": "(args: Tabs) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/stories/components/table/table.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/table/table.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/table/table.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Table>",
+                    "defaultValue": "(args: Table) => ({\n  props: args,\n})"
                 }
             ],
             "src/stories/components/toolbar/toolbar.stories.ts": [
@@ -4589,6 +4720,16 @@
                     "defaultValue": "Template.bind({})"
                 },
                 {
+                    "name": "defaultArgs",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/forms/autocomplete/autocomplete.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Partial | undefined",
+                    "defaultValue": "{\n  label: '[Autocomplete label]',\n  color: 'primary',\n  disabled: false,\n  appearance: 'fill',\n}"
+                },
+                {
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
@@ -4631,38 +4772,6 @@
                     "defaultValue": "(args: Checkbox) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: {\n      control: { type: 'boolean' },\n    },\n    indeterminate: {\n      control: { type: 'boolean' },\n    },\n    labelPosition: {\n      options: ['before', 'after'],\n      control: { type: 'select' },\n      name: 'Label position',\n    },\n  },\n})"
                 }
             ],
-            "src/stories/forms/input/input.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/forms/input/input.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "defaultArgs",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/forms/input/input.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Partial | undefined",
-                    "defaultValue": "{\n  color: 'primary',\n  disabled: false,\n}"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/forms/input/input.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<InputFormField>",
-                    "defaultValue": "(args: InputFormField) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n  },\n})"
-                }
-            ],
             "src/stories/forms/date-picker/date-picker.stories.ts": [
                 {
                     "name": "Default",
@@ -4695,38 +4804,6 @@
                     "defaultValue": "(args: DatePicker) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n  },\n})"
                 }
             ],
-            "src/stories/forms/select/select.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/forms/select/select.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "defaultArgs",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/forms/select/select.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Partial | undefined",
-                    "defaultValue": "{\n  label: 'Select',\n  color: 'primary',\n  disabled: false,\n}"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/forms/select/select.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<Select>",
-                    "defaultValue": "(args: Select) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n  },\n})"
-                }
-            ],
             "src/stories/forms/radio/radio.stories.ts": [
                 {
                     "name": "Default",
@@ -4757,6 +4834,70 @@
                     "deprecationMessage": "",
                     "type": "Story<Radio>",
                     "defaultValue": "(args: Radio) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n    labelPosition: {\n      options: ['before', 'after'],\n      control: { type: 'select' },\n      name: 'Label position',\n    },\n  },\n})"
+                }
+            ],
+            "src/stories/forms/select/select.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/forms/select/select.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "defaultArgs",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/forms/select/select.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Partial | undefined",
+                    "defaultValue": "{\n  label: 'Select',\n  color: 'primary',\n  disabled: false,\n  appearance: 'fill',\n}"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/forms/select/select.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Select>",
+                    "defaultValue": "(args: Select) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n  },\n})"
+                }
+            ],
+            "src/stories/forms/input/input.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/forms/input/input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "defaultArgs",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/forms/input/input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Partial | undefined",
+                    "defaultValue": "{\n  label: '[label]',\n  color: 'primary',\n  appearance: 'fill',\n  disabled: false,\n}"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/forms/input/input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<InputFormField>",
+                    "defaultValue": "(args: InputFormField) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n  },\n})"
                 }
             ],
             "src/stories/forms/slider/slider.stories.ts": [
@@ -4810,7 +4951,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Partial | undefined",
-                    "defaultValue": "{\n  color: 'primary',\n  disabled: false,\n}"
+                    "defaultValue": "{\n  color: 'primary',\n  disabled: false,\n  appearance: 'fill',\n}"
                 },
                 {
                     "name": "Template",
@@ -4820,15 +4961,15 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<Textarea>",
-                    "defaultValue": "(args: Textarea) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n  },\n})"
+                    "defaultValue": "(args: Textarea) => ({\n  props: args,\n  argTypes: {\n    color: {\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n  },\n})"
                 }
             ],
-            "src/stories/layout/responsive/responsive.stories.ts": [
+            "src/stories/helpers/ripples/ripples.stories.ts": [
                 {
                     "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/layout/responsive/responsive.stories.ts",
+                    "file": "src/stories/helpers/ripples/ripples.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -4838,55 +4979,11 @@
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/layout/responsive/responsive.stories.ts",
+                    "file": "src/stories/helpers/ripples/ripples.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Story<Responsive>",
-                    "defaultValue": "(args: Responsive) => ({\n  props: args,\n})"
-                }
-            ],
-            "src/stories/layout/grid/grid.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/layout/grid/grid.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/layout/grid/grid.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<Grid>",
-                    "defaultValue": "(args: Grid) => ({\n  props: args,\n})"
-                }
-            ],
-            "src/stories/layout/virtual-scroll/virtual-scroll.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/layout/virtual-scroll/virtual-scroll.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/layout/virtual-scroll/virtual-scroll.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<VirtualScroll>",
-                    "defaultValue": "(args: VirtualScroll) => ({\n  props: args,\n})"
+                    "type": "Story<Ripples>",
+                    "defaultValue": "(args: Ripples) => ({\n  props: args,\n})"
                 }
             ],
             "src/stories/helpers/elevation/elevation.stories.ts": [
@@ -4933,6 +5030,94 @@
                     "defaultValue": "(args: Helpers) => ({\n  props: args,\n})"
                 }
             ],
+            "src/stories/layout/grid/grid.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/layout/grid/grid.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/layout/grid/grid.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Grid>",
+                    "defaultValue": "(args: Grid) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/stories/layout/responsive/responsive.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/layout/responsive/responsive.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/layout/responsive/responsive.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Responsive>",
+                    "defaultValue": "(args: Responsive) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/stories/layout/virtual-scroll/virtual-scroll.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/layout/virtual-scroll/virtual-scroll.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/layout/virtual-scroll/virtual-scroll.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<VirtualScroll>",
+                    "defaultValue": "(args: VirtualScroll) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/stories/storybook/docs/docs.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/storybook/docs/docs.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/storybook/docs/docs.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Docs>",
+                    "defaultValue": "(args: Docs) => ({\n  props: args,\n})"
+                }
+            ],
             "src/stories/storybook/figma/figma.stories.ts": [
                 {
                     "name": "Default",
@@ -4975,50 +5160,6 @@
                     "defaultValue": "'https://www.figma.com/file/B4I9c9XojvfCuHyqlegRWg/material?node-id='"
                 }
             ],
-            "src/stories/helpers/ripples/ripples.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/helpers/ripples/ripples.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/helpers/ripples/ripples.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<Ripples>",
-                    "defaultValue": "(args: Ripples) => ({\n  props: args,\n})"
-                }
-            ],
-            "src/stories/storybook/docs/docs.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/storybook/docs/docs.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/storybook/docs/docs.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<Docs>",
-                    "defaultValue": "(args: Docs) => ({\n  props: args,\n})"
-                }
-            ],
             "src/stories/components/table/table.component.ts": [
                 {
                     "name": "ELEMENT_DATA",
@@ -5031,18 +5172,6 @@
                     "defaultValue": "[\n  { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },\n  { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },\n  { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },\n  { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },\n  { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },\n  { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },\n  { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },\n  { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },\n  { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },\n  { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },\n]"
                 }
             ],
-            "src/environments/environment.prod.ts": [
-                {
-                    "name": "environment",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/environments/environment.prod.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\n  production: true\n}"
-                }
-            ],
             "src/environments/environment.ts": [
                 {
                     "name": "environment",
@@ -5053,6 +5182,18 @@
                     "deprecationMessage": "",
                     "type": "object",
                     "defaultValue": "{\n  production: false\n}"
+                }
+            ],
+            "src/environments/environment.prod.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.prod.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  production: true\n}"
                 }
             ],
             "src/stories/components/tree/tree.component.ts": [
@@ -5899,7 +6040,7 @@
                 "linktype": "component",
                 "name": "Autocomplete",
                 "coveragePercent": 0,
-                "coverageCount": "0/3",
+                "coverageCount": "0/10",
                 "status": "low"
             },
             {
@@ -5908,6 +6049,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/forms/autocomplete/autocomplete.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "defaultArgs",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -6006,7 +6157,7 @@
                 "linktype": "component",
                 "name": "InputFormField",
                 "coveragePercent": 0,
-                "coverageCount": "0/3",
+                "coverageCount": "0/5",
                 "status": "low"
             },
             {
@@ -6084,7 +6235,7 @@
                 "linktype": "component",
                 "name": "Select",
                 "coveragePercent": 0,
-                "coverageCount": "0/4",
+                "coverageCount": "0/5",
                 "status": "low"
             },
             {
@@ -6162,7 +6313,7 @@
                 "linktype": "component",
                 "name": "Textarea",
                 "coveragePercent": 0,
-                "coverageCount": "0/6",
+                "coverageCount": "0/7",
                 "status": "low"
             },
             {

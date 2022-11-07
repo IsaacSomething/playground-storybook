@@ -19,7 +19,7 @@ import { MatSliderModule } from '@angular/material/slider';
     <div class="padding">
       <mat-slider #slider [color]="color" [disabled]="disabled"></mat-slider>
 
-      <h1>{{ slider.value }}</h1>
+      <h1>[{{ slider.value }}]</h1>
     </div>
   `,
 })

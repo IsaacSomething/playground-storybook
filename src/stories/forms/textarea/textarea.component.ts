@@ -17,9 +17,10 @@ import { take } from 'rxjs';
   ],
   template: `
     <div class="padding">
-      <mat-form-field [appearance]="appearance">
+      <mat-form-field [appearance]="appearance" [color]="color">
         <mat-label>Autosize textarea</mat-label>
         <textarea
+          [disabled]="disabled"
           matInput
           cdkTextareaAutosize
           #autosize="cdkTextareaAutosize"

@@ -17,10 +17,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   template: `
     <div class="padding">
-      <mat-form-field appearance="fill">
+      <mat-form-field [appearance]="appearance" [color]="color">
         <mat-label>Enter a date range</mat-label>
 
-        <mat-date-range-input [rangePicker]="picker">
+        <mat-date-range-input [rangePicker]="picker" [disabled]="disabled">
           <input matStartDate placeholder="Start date" />
           <input matEndDate placeholder="End date" />
         </mat-date-range-input>
@@ -34,4 +34,5 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 export default class DatePicker {
   @Input() color: 'primary' | 'accent' | 'warn' = 'primary';
   @Input() disabled: boolean = false;
+  @Input() appearance!: 'legacy' | 'standard' | 'fill' | 'outline';
 }

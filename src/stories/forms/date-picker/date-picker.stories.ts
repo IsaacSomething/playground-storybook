@@ -21,6 +21,7 @@ const Template: Story<DatePicker> = (args: DatePicker) => ({
 const defaultArgs: Partial<DatePicker> | undefined = {
   color: 'primary',
   disabled: false,
+  appearance: 'fill',
 };
 
 export const Default = Template.bind({});

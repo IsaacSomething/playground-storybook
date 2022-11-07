@@ -15,10 +15,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   template: `
     <div class="padding">
-      <mat-form-field [appearance]="appearance">
+      <mat-form-field [appearance]="appearance" [color]="color">
         <mat-label>Select items</mat-label>
 
-        <mat-select>
+        <mat-select [disabled]="disabled">
           <mat-option
             *ngFor="let item of [1, 2, 3]; let idx = index"
             [value]="item"

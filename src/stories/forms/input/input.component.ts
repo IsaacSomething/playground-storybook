@@ -11,7 +11,12 @@ import { MatInputModule } from '@angular/material/input';
       <mat-form-field [appearance]="appearance" [color]="color">
         <mat-label>{{ label }}</mat-label>
 
-        <input matInput placeholder="Placeholder" [value]="label" />
+        <input
+          [disabled]="disabled"
+          matInput
+          placeholder="Placeholder"
+          [value]="label"
+        />
       </mat-form-field>
     </div>
   `,

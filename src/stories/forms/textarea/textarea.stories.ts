@@ -11,7 +11,6 @@ const Template: Story<Textarea> = (args: Textarea) => ({
   props: args,
   argTypes: {
     color: {
-      options: ['primary', 'accent', 'warn'],
       control: { type: 'radio' },
     },
     disabled: { control: { type: 'boolean' } },

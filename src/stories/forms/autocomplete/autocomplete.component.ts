@@ -25,6 +25,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       <mat-form-field class="example-full-width" [appearance]="appearance">
         <mat-label>{{ label }}</mat-label>
         <input
+          [disabled]="disabled"
           type="text"
           placeholder="Pick one"
           aria-label="Number"
