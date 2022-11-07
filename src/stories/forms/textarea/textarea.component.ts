@@ -1,15 +1,47 @@
-import { Component, Input } from '@angular/core';
+import { CdkTextareaAutosize } from '@angular/cdk/text-field';
+import { Component, Input, NgZone, ViewChild } from '@angular/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { take } from 'rxjs';
 
 @Component({
   selector: 'storybook-textarea',
   standalone: true,
-  imports: [],
+  imports: [
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    BrowserAnimationsModule,
+  ],
   template: `
-    Copy and paste these files for a blank project <br />
-    Will be better to add a schematic for this
+    <div class="padding">
+      <mat-form-field>
+        <mat-label>Autosize textarea</mat-label>
+        <textarea
+          matInput
+          cdkTextareaAutosize
+          #autosize="cdkTextareaAutosize"
+          cdkAutosizeMinRows="1"
+          cdkAutosizeMaxRows="5"
+        ></textarea>
+      </mat-form-field>
+    </div>
   `,
 })
 export default class Textarea {
   @Input() color: 'primary' | 'accent' | 'warn' = 'primary';
   @Input() disabled: boolean = false;
+
+  constructor(private ngZone: NgZone) {}
+
+  @ViewChild('autosize') autosize!: CdkTextareaAutosize;
+
+  triggerResize() {
+    // Wait for changes to be applied, then trigger textarea resize.
+    this.ngZone.onStable
+      .pipe(take(1))
+      .subscribe(() => this.autosize.resizeToFitContent(true));
+  }
 }

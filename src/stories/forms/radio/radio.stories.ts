@@ -24,7 +24,7 @@ const Template: Story<Radio> = (args: Radio) => ({
 });
 
 const defaultArgs: Partial<Radio> | undefined = {
-  label: '[Checkbox label]',
+  label: '[Radio label]',
   color: 'primary',
   labelPosition: 'after',
   disabled: false,

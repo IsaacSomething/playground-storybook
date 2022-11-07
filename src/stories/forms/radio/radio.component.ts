@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { MatRadioModule } from '@angular/material/radio';
+
 @Component({
   selector: 'storybook-radio',
   standalone: true,
@@ -8,7 +9,10 @@ import { MatRadioModule } from '@angular/material/radio';
   template: `
     <div class="padding">
       <mat-radio-group [color]="color">
-        <mat-radio-button *ngFor="let item of [1, 1, 1]; let idx = index" class="padding-right">
+        <mat-radio-button
+          *ngFor="let item of [1, 1, 1]; let idx = index"
+          class="padding-right"
+        >
           {{ label + '-' + (idx + 1) }}
         </mat-radio-button>
       </mat-radio-group>
