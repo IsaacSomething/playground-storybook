@@ -7,17 +7,36 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   selector: 'storybook-menu',
   standalone: true,
   imports: [MatMenuModule, MatButtonModule, BrowserAnimationsModule],
+  styles: [
+    `
+      .container {
+        padding: 200px 100px;
+      }
+    `,
+  ],
   template: `
-    <div class="padding">
-      <button mat-flat-button [matMenuTriggerFor]="menu">[Menu]</button>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item>Item 1</button>
-        <button mat-menu-item>Item 2</button>
+    <div class="container">
+      <button mat-raised-button [matMenuTriggerFor]="menu">
+        [Menu trigger]
+      </button>
+
+      <mat-menu
+        #menu="matMenu"
+        [hasBackdrop]="hasBackdrop"
+        [overlapTrigger]="overlapTrigger"
+        [xPosition]="xPosition"
+        [yPosition]="yPosition"
+      >
+        <button mat-menu-item>[Item 1]</button>
+        <button mat-menu-item>[Item 2]</button>
+        <button mat-menu-item>[Item 2]</button>
       </mat-menu>
     </div>
   `,
 })
 export default class Menu {
-  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';
-  @Input() disabled: boolean = false;
+  @Input() xPosition!: 'before' | 'after';
+  @Input() yPosition!: 'above' | 'below';
+  @Input() hasBackdrop!: boolean;
+  @Input() overlapTrigger!: boolean;
 }

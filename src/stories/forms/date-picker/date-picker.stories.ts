@@ -1,4 +1,6 @@
 import { Story, Meta } from '@storybook/angular';
+import DatePickerMobile from './date-picker-mobile.component';
+import DatePickerRange from './date-picker-range.component';
 import DatePicker from './date-picker.component';
 
 export default {
@@ -14,6 +16,10 @@ const Template: Story<DatePicker> = (args: DatePicker) => ({
       options: ['primary', 'accent', 'warn'],
       control: { type: 'radio' },
     },
+    startView: {
+      options: ['month', 'year', 'multi-year'],
+      control: { type: 'select' },
+    },
     disabled: { control: { type: 'boolean' } },
   },
 });
@@ -22,7 +28,22 @@ const defaultArgs: Partial<DatePicker> | undefined = {
   color: 'primary',
   disabled: false,
   appearance: 'standard',
+  startView: 'month',
 };
 
 export const Default = Template.bind({});
 Default.args = { ...defaultArgs };
+
+/* Date picker mobile UI */
+export const Mobile: Story<DatePickerMobile> = (args: DatePickerMobile) => ({
+  component: DatePickerMobile,
+  props: args,
+});
+Mobile.args = { ...defaultArgs };
+
+/* Date picker range */
+export const Range: Story<DatePickerRange> = (args: DatePickerRange) => ({
+  component: DatePickerRange,
+  props: args,
+});
+Range.args = { ...defaultArgs };

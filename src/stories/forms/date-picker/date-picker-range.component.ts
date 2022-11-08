@@ -6,7 +6,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @Component({
-  selector: 'storybook-date-picker',
+  selector: 'storybook-date-picker-range',
   standalone: true,
   imports: [
     MatFormFieldModule,
@@ -18,17 +18,24 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   template: `
     <div class="padding">
       <mat-form-field [appearance]="appearance" [color]="color">
-        <mat-label>Choose a date</mat-label>
-        <input matInput [matDatepicker]="picker" />
+        <mat-label>Enter a date range</mat-label>
+
+        <mat-date-range-input [rangePicker]="picker" [disabled]="disabled">
+          <input matStartDate placeholder="Start date" />
+          <input matEndDate placeholder="End date" />
+        </mat-date-range-input>
 
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker [startView]="startView"></mat-datepicker>
+        <mat-date-range-picker
+          #picker
+          [startView]="startView"
+        ></mat-date-range-picker>
       </mat-form-field>
     </div>
   `,
 })
-export default class DatePicker {
-  @Input() color!: 'primary' | 'accent' | 'warn';
+export default class DatePickerRange {
+  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';
   @Input() disabled: boolean = false;
   @Input() appearance!: 'legacy' | 'standard' | 'fill' | 'outline';
   @Input() startView!: 'month' | 'year' | 'multi-year';
