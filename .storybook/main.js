@@ -4,7 +4,11 @@ module.exports = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
-    "storybook-addon-designs"
+    "storybook-addon-designs",
+    {
+      name: "@storybook/addon-docs",
+      options: { transcludeMarkdown: true },
+    },
   ],
   framework: "@storybook/angular",
   core: {
