@@ -8,7 +8,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   standalone: true,
   imports: [MatButtonModule, MatSnackBarModule, BrowserAnimationsModule],
   template: `
-    <button mat-flat-button (click)="open()">[Open snackbar]</button>
+    <div class="padding">
+      <button mat-raised-button (click)="open()">[Open snackbar]</button>
+    </div>
   `,
 })
 export default class Snackbar {

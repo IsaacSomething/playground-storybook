@@ -9,7 +9,6 @@ export default {
       options: ['primary', 'accent', 'warn'],
       control: { type: 'radio' },
     },
-    disabled: { control: { type: 'boolean' } },
   },
 } as Meta;
 
@@ -20,8 +19,7 @@ const Template: Story<Autocomplete> = (args: Autocomplete) => ({
 const defaultArgs: Partial<Autocomplete> | undefined = {
   label: '[Autocomplete label]',
   color: 'primary',
-  disabled: false,
-  appearance: 'fill',
+  appearance: 'standard',
 };
 
 export const Default = Template.bind({});

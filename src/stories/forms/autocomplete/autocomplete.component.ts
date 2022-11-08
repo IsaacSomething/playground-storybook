@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -22,15 +22,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   template: `
     <form class="padding">
-      <mat-form-field class="example-full-width" [appearance]="appearance">
+      <mat-form-field [appearance]="appearance" [color]="color">
         <mat-label>{{ label }}</mat-label>
         <input
-          [disabled]="disabled"
           type="text"
-          placeholder="Pick one"
-          aria-label="Number"
+          placeholder="Start typing"
           matInput
-          [formControl]="myControl"
+          [formControl]="control"
           [matAutocomplete]="auto"
         />
         <mat-autocomplete #auto="matAutocomplete">
@@ -45,28 +43,27 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     </form>
   `,
 })
-export default class Autocomplete {
+export default class Autocomplete implements OnInit {
   @Input() color: 'primary' | 'accent' | 'warn' = 'primary';
-  @Input() disabled: boolean = false;
   @Input() label!: string;
   @Input() appearance!: 'legacy' | 'standard' | 'fill' | 'outline';
 
-  myControl = new FormControl('');
-  options: string[] = ['One', 'Two', 'Three'];
+  control = new FormControl('');
+  items: string[] = ['Item 1', 'Position 2', 'Level 3'];
   filteredOptions!: Observable<string[]>;
 
   ngOnInit() {
-    this.filteredOptions = this.myControl.valueChanges.pipe(
+    this.filteredOptions = this.control.valueChanges.pipe(
       startWith(''),
-      map((value) => this._filter(value || ''))
+      map((value) => this.filter(value || ''))
     );
   }
 
-  private _filter(value: string): string[] {
+  private filter(value: string): string[] {
     const filterValue = value.toLowerCase();
 
-    return this.options.filter((option) =>
-      option.toLowerCase().includes(filterValue)
+    return this.items.filter((item) =>
+      item.toLowerCase().includes(filterValue)
     );
   }
 }

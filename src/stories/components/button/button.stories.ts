@@ -47,6 +47,7 @@ export const Default = Template.bind({});
 Default.args = { ...defaultArgs };
 Default.parameters = {
   design: { ...designParams, url: `${urlPrefix}0%3A1` },
+  id: 'test',
 };
 Default.argTypes = { ...disableTypes };
 

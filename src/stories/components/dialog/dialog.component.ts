@@ -1,50 +1,30 @@
-import { Component, Inject, Input } from '@angular/core';
-import {
-  MatDialog,
-  MatDialogModule,
-  MatDialogRef,
-  MAT_DIALOG_DATA,
-} from '@angular/material/dialog';
+import { Component, Input } from '@angular/core';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DialogTemplate } from './dialog-template.component';
 
 @Component({
   selector: 'storybook-chips',
   standalone: true,
   imports: [MatDialogModule, MatButtonModule, BrowserAnimationsModule],
-  template: `<button mat-flat-button (click)="open()">[Open dialog]</button>`,
+  template: `
+    <div class="padding">
+      <button mat-raised-button (click)="open()">[Open dialog]</button>
+    </div>
+  `,
 })
 export default class Chips {
-  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';
+  @Input() color!: 'primary' | 'accent' | 'warn';
+  @Input() hasBackdrop!: boolean;
+  @Input() disableClose!: boolean;
 
   constructor(public dialog: MatDialog) {}
 
   open() {
-    const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
-      width: '350px',
-      height: '350px',
+    this.dialog.open(DialogTemplate, {
+      hasBackdrop: this.hasBackdrop,
+      disableClose: this.disableClose,
     });
-
-    dialogRef.afterClosed().subscribe((result) => {});
-  }
-}
-
-export interface DialogData {
-  animal: string;
-  name: string;
-}
-
-@Component({
-  selector: 'dialog-storybook-example',
-  template: ` <h1>[Dialog component]</h1> `,
-})
-export class DialogOverviewExampleDialog {
-  constructor(
-    public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData
-  ) {}
-
-  onNoClick(): void {
-    this.dialogRef.close();
   }
 }

@@ -26,8 +26,7 @@ import { CommonModule } from '@angular/common';
   ],
   template: `
     <div class="padding">
-      <cdk-virtual-scroll-viewport itemSize="50" class="viewport">
-        <div class="bg-divider padding">[Content before]</div>
+      <cdk-virtual-scroll-viewport itemSize="10" class="viewport">
         <div
           *cdkVirtualFor="let item of items; templateCacheSize: 0"
           class="item"

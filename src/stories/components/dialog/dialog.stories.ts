@@ -13,7 +13,14 @@ export default {
   parameters: { options: { showPanel: true } },
 } as Meta;
 
+const defaultArgs: Partial<Dialog> | undefined = {
+  color: 'primary',
+  hasBackdrop: true,
+  disableClose: true,
+};
+
 const Template: Story<Dialog> = (args: Dialog) => ({
   props: args,
 });
 export const Default = Template.bind({});
+Default.args = { ...defaultArgs };

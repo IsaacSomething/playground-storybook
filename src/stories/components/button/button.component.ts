@@ -57,7 +57,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     </div>
   `,
 })
-export default class ButtonComponent {
+export default class Button {
   @Input() label!: string;
   @Input() type!: 'flat' | 'stroked' | 'raised' | 'default';
   @Input() color!: 'primary' | 'accent' | 'warn' | 'default';

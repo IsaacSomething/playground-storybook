@@ -13,7 +13,6 @@ export default {
       options: ['above', 'below'],
       control: { type: 'radio' },
     },
-    disabled: { control: { type: 'boolean' } },
   },
   parameters: { options: { showPanel: true } },
 } as Meta;
