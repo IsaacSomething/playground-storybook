@@ -9,12 +9,10 @@ import { NgFor } from '@angular/common';
 import { Component, Input, ViewChild } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatRippleModule } from '@angular/material/core';
-import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTable, MatTableModule } from '@angular/material/table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PeriodicElement, TableModel } from './model';
-import { CdkTableModule } from '@angular/cdk/table';
 
 @Component({
   selector: 'storybook-table-expand-row',
@@ -92,9 +90,7 @@ import { CdkTableModule } from '@angular/cdk/table';
         </ng-container>
 
         <ng-container matColumnDef="expand">
-          <th mat-header-cell *matHeaderCellDef aria-label="row actions">
-            &nbsp;
-          </th>
+          <th mat-header-cell *matHeaderCellDef>&nbsp;</th>
           <td mat-cell *matCellDef="let element">
             <button
               mat-icon-button
@@ -147,7 +143,6 @@ import { CdkTableModule } from '@angular/cdk/table';
         <tr mat-header-row *matHeaderRowDef="columnsExpand"></tr>
         <tr
           mat-row
-          matRipple
           *matRowDef="let element; columns: columnsExpand"
           class="example-element-row"
           [class.example-expanded-row]="expandedElement === element"

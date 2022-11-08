@@ -52,7 +52,7 @@ import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
     </div>
   `,
 })
-export default class SBHeader {
+export class SBHeader {
   @Input() title!: string;
   @Input() matLink!: string;
   @Input() set clipboard(value: BooleanInput) {

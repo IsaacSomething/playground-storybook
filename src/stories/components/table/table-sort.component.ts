@@ -1,17 +1,30 @@
-import { Component, Input, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, Input, ViewChild } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { MatTable, MatTableModule } from '@angular/material/table';
+import { MatSort, MatSortModule } from '@angular/material/sort';
+import {
+  MatTable,
+  MatTableDataSource,
+  MatTableModule,
+} from '@angular/material/table';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PeriodicElement, TableModel } from './model';
 
 @Component({
   selector: 'storybook-table-sort',
   standalone: true,
-  imports: [MatTableModule, MatButtonModule, MatIconModule],
+  imports: [
+    MatTableModule,
+    MatButtonModule,
+    MatIconModule,
+    MatSortModule,
+    BrowserAnimationsModule,
+  ],
   template: `
     <div class="padding-left-32 padding-right-32">
       <table
         mat-table
+        matSort
         [dataSource]="dataSource"
         class="mat-elevation-z1"
         [class.with-hover]="withHover"
@@ -25,17 +38,38 @@ import { PeriodicElement, TableModel } from './model';
         </ng-container>
 
         <ng-container matColumnDef="name">
-          <th mat-header-cell *matHeaderCellDef>Name</th>
+          <th
+            mat-header-cell
+            *matHeaderCellDef
+            mat-sort-header
+            sortActionDescription="Sort by name"
+          >
+            Name
+          </th>
           <td mat-cell *matCellDef="let element">{{ element.name }}</td>
         </ng-container>
 
         <ng-container matColumnDef="weight">
-          <th mat-header-cell *matHeaderCellDef>Weight</th>
+          <th
+            mat-header-cell
+            *matHeaderCellDef
+            mat-sort-header
+            sortActionDescription="Sort by weight"
+          >
+            Weight
+          </th>
           <td mat-cell *matCellDef="let element">{{ element.weight }}</td>
         </ng-container>
 
         <ng-container matColumnDef="symbol">
-          <th mat-header-cell *matHeaderCellDef>Symbol</th>
+          <th
+            mat-header-cell
+            *matHeaderCellDef
+            mat-sort-header
+            sortActionDescription="Sort by symbol"
+          >
+            Symbol
+          </th>
           <td mat-cell *matCellDef="let element">{{ element.symbol }}</td>
         </ng-container>
 
@@ -53,7 +87,7 @@ import { PeriodicElement, TableModel } from './model';
       </table>
 
       <br />
-      <button mat-raised-button class="margin-right" (click)="addRow()">
+      <!--  <button mat-raised-button class="margin-right" (click)="addRow()">
         <mat-icon>add</mat-icon> Row
       </button>
       <button mat-raised-button class="margin-right" (click)="removeRow()">
@@ -62,20 +96,28 @@ import { PeriodicElement, TableModel } from './model';
 
       <button mat-raised-button (click)="addBigData()">
         <mat-icon>add</mat-icon> Big data
-      </button>
+      </button> -->
     </div>
   `,
 })
-export default class TableSort {
+export default class TableSort implements AfterViewInit {
   @ViewChild(MatTable) table!: MatTable<PeriodicElement>;
   @Input() displayedColumns!: string[];
-  @Input() dataSource!: PeriodicElement[];
+  @Input() dataSource = new MatTableDataSource(TableModel.data);
   @Input() withHover!: boolean;
   @Input() striped!: boolean;
   @Input() header!: boolean;
   @Input() textTransform!: boolean;
 
-  addRow() {
+  @ViewChild(MatSort) sort!: MatSort;
+
+  constructor() {}
+
+  ngAfterViewInit() {
+    this.dataSource.sort = this.sort;
+  }
+
+  /*  addRow() {
     const randomElementIndex = Math.floor(
       Math.random() * TableModel.bigData.length
     );
@@ -91,5 +133,5 @@ export default class TableSort {
   addBigData() {
     this.dataSource = TableModel.bigData;
     this.table.renderRows();
-  }
+  } */
 }

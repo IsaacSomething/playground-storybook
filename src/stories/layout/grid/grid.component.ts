@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatGridListModule } from '@angular/material/grid-list';
-import SBHeader from 'src/stories/assets/sb-header/sb-header.component';
+import { SBHeader } from '../../assets/sb-header';
 
 @Component({
   selector: 'storybook-grid',

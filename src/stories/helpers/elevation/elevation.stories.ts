@@ -12,10 +12,13 @@ export default {
   parameters: { options: { showPanel: true } },
 } as Meta;
 
+const defaultArgs: Partial<Elevation> | undefined = {
+  elevation: 1,
+};
+
 const Template: Story<Elevation> = (args: Elevation) => ({
   props: args,
 });
 
-export const Default = Template.bind({
-  elevation: 1,
-});
+export const Default = Template.bind({});
+Default.args = { ...defaultArgs };

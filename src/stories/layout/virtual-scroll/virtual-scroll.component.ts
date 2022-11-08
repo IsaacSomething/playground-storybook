@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
     `
       .viewport {
         height: 400px;
-        width: 200px;
+        width: 100%;
         border: 1px solid var(--mat-divider);
         border-radius: 4px;
       }
@@ -19,15 +19,22 @@ import { CommonModule } from '@angular/common';
         height: 30px;
         padding: 6px;
         border: 1px solid var(--mat-divider);
+        display: flex;
+        align-items: center;
       }
     `,
   ],
   template: `
     <div class="padding">
       <cdk-virtual-scroll-viewport itemSize="50" class="viewport">
-        <div *cdkVirtualFor="let item of items" class="item">
-          {{ item }}
+        <div class="bg-divider padding">[Content before]</div>
+        <div
+          *cdkVirtualFor="let item of items; templateCacheSize: 0"
+          class="item"
+        >
+          [{{ item }}]
         </div>
+        <div class="bg-divider padding">[Content After]</div>
       </cdk-virtual-scroll-viewport>
     </div>
   `,

@@ -120,7 +120,6 @@ import { PeriodicElement, TableModel } from './model';
           <tr mat-header-row *matHeaderRowDef="columnsExpand"></tr>
           <tr
             mat-row
-            matRipple
             *matRowDef="let element; columns: columnsExpand"
             class="example-element-row"
             [class.example-expanded-row]="expandedElement === element"

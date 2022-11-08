@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { MatRippleModule } from '@angular/material/core';
+import { SBHeader } from '../../assets/sb-header';
 
 @Component({
   selector: 'storybook-ripples',
   standalone: true,
-  imports: [MatRippleModule],
+  imports: [MatRippleModule, SBHeader],
   styles: [
     `
       .box {
@@ -17,18 +18,22 @@ import { MatRippleModule } from '@angular/material/core';
     `,
   ],
   template: `
-    <div
-      class="box mat-elevation-z1 margin"
-      matRipple
-      [matRippleCentered]="centered"
-      [matRippleUnbounded]="unbound"
-      [matRippleRadius]="radius"
-      [matRippleDisabled]="disabled"
-      [matRippleColor]="
-        color === 'default' ? 'default' : 'var(--mat-' + color + ')'
-      "
-    >
-      <ng-content></ng-content>
+    <sb-header title="Ripples" matLink="ripple"></sb-header>
+
+    <div class="padding">
+      <div
+        class="box mat-elevation-z1"
+        matRipple
+        [matRippleCentered]="centered"
+        [matRippleUnbounded]="unbound"
+        [matRippleRadius]="radius"
+        [matRippleDisabled]="disabled"
+        [matRippleColor]="
+          color === 'default' ? 'default' : 'var(--mat-' + color + ')'
+        "
+      >
+        <ng-content></ng-content>
+      </div>
     </div>
   `,
 })

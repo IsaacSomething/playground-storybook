@@ -1,24 +1,61 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Component, OnDestroy } from '@angular/core';
-import { Subject, takeUntil } from 'rxjs';
+import { AsyncPipe, JsonPipe, NgIf } from '@angular/common';
+import { Component, Input } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { map } from 'rxjs';
 
 @Component({
   selector: 'storybook-responsive',
   standalone: true,
-  imports: [],
+  imports: [AsyncPipe, JsonPipe, MatButtonModule, NgIf],
   template: `
-    <p>Resize the panel to see the current screen size change.</p>
-    <p>
-      The current screen size is <strong>[{{ currentScreenSize }}]</strong>
-    </p>
+    <div class="padding">
+      <p>Resize the panel to see the current screen size change.</p>
+
+      <button mat-stroked-button *ngIf="xSmall$ | async">
+        Show at [xSmall]
+      </button>
+      <button mat-stroked-button *ngIf="small$ | async">Show at [small]</button>
+      <button mat-stroked-button *ngIf="medium$ | async">
+        Show at [medium]
+      </button>
+      <button mat-stroked-button *ngIf="large$ | async">Show at [large]</button>
+      <button mat-stroked-button *ngIf="xLarge$ | async">
+        Show at [xLarge]
+      </button>
+
+      <br />
+      <br />
+      <code>{{ size$ | async | json }} </code>
+    </div>
   `,
 })
-export default class Responsive implements OnDestroy {
-  destroyed = new Subject<void>();
-  currentScreenSize!: string;
+export default class Responsive {
+  @Input() currentScreenSize!: string;
+  @Input() xSmall$ = this.breakpointObserver
+    .observe([Breakpoints.XSmall])
+    .pipe(map((_) => _.matches));
+  @Input() small$ = this.breakpointObserver
+    .observe([Breakpoints.Small])
+    .pipe(map((_) => _.matches));
+  @Input() medium$ = this.breakpointObserver
+    .observe([Breakpoints.Medium])
+    .pipe(map((_) => _.matches));
+  @Input() large$ = this.breakpointObserver
+    .observe([Breakpoints.Large])
+    .pipe(map((_) => _.matches));
+  @Input() xLarge$ = this.breakpointObserver
+    .observe([Breakpoints.XLarge])
+    .pipe(map((_) => _.matches));
+  @Input() size$ = this.breakpointObserver.observe([
+    Breakpoints.XSmall,
+    Breakpoints.Small,
+    Breakpoints.Medium,
+    Breakpoints.Large,
+    Breakpoints.XLarge,
+  ]);
 
-  // Create a map to display breakpoint names for demonstration purposes.
-  displayNameMap = new Map([
+  @Input() displayNameMap = new Map([
     [Breakpoints.XSmall, 'XSmall'],
     [Breakpoints.Small, 'Small'],
     [Breakpoints.Medium, 'Medium'],
@@ -26,28 +63,5 @@ export default class Responsive implements OnDestroy {
     [Breakpoints.XLarge, 'XLarge'],
   ]);
 
-  constructor(breakpointObserver: BreakpointObserver) {
-    breakpointObserver
-      .observe([
-        Breakpoints.XSmall,
-        Breakpoints.Small,
-        Breakpoints.Medium,
-        Breakpoints.Large,
-        Breakpoints.XLarge,
-      ])
-      .pipe(takeUntil(this.destroyed))
-      .subscribe((result) => {
-        for (const query of Object.keys(result.breakpoints)) {
-          if (result.breakpoints[query]) {
-            this.currentScreenSize =
-              this.displayNameMap.get(query) ?? 'Unknown';
-          }
-        }
-      });
-  }
-
-  ngOnDestroy() {
-    this.destroyed.next();
-    this.destroyed.complete();
-  }
+  constructor(private breakpointObserver: BreakpointObserver) {}
 }

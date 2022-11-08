@@ -135,7 +135,13 @@ export const Sort: Story<TableSort> = (args: TableSort) => ({
   component: TableSort,
   props: args,
 });
-Sort.args = { ...defaultArgs };
+Sort.args = {
+  displayedColumns: TableModel.displayedColumns,
+  withHover: false,
+  striped: false,
+  header: false,
+  textTransform: false,
+};
 Sort.argTypes = {
   ...disabledTypes,
   withHover: { control: 'boolean', title: 'With hover' },
