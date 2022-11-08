@@ -9,7 +9,7 @@ import { PeriodicElement, TableModel } from './model';
   standalone: true,
   imports: [MatTableModule, MatButtonModule, MatIconModule],
   template: `
-    <div class="padding-left-32 padding-right-32">
+    <div class="padding">
       <table
         mat-table
         [dataSource]="dataSource"

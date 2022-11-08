@@ -21,7 +21,7 @@ import { PeriodicElement, TableModel } from './model';
     BrowserAnimationsModule,
   ],
   template: `
-    <div class="padding-left-32 padding-right-32">
+    <div class="padding">
       <table
         mat-table
         [dataSource]="dataSource"

@@ -21,7 +21,7 @@ const Template: Story<InputFormField> = (args: InputFormField) => ({
 const defaultArgs: Partial<InputFormField> | undefined = {
   label: '[label]',
   color: 'primary',
-  appearance: 'fill',
+  appearance: 'standard',
   disabled: false,
 };
 

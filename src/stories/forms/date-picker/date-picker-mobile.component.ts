@@ -26,13 +26,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         </mat-date-range-input>
 
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-date-range-picker [color]="color" #picker></mat-date-range-picker>
+        <mat-date-range-picker #picker></mat-date-range-picker>
       </mat-form-field>
     </div>
   `,
 })
 export default class DatePicker {
-  @Input() color!: 'primary' | 'accent' | 'warn';
+  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';
   @Input() disabled: boolean = false;
   @Input() appearance!: 'legacy' | 'standard' | 'fill' | 'outline';
 }
