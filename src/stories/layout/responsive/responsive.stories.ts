@@ -15,7 +15,6 @@ const disableTypes = {
   xLarge$: { table: { disable: true } },
   size$: { table: { disable: true } },
   currentScreenSize: { table: { disable: true } },
-  currentScreenSize: { table: { disable: true } },
 };
 
 const Template: Story<Responsive> = (args: Responsive) => ({
