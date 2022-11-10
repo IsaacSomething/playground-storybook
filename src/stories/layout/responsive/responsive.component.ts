@@ -1,16 +1,22 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { AsyncPipe, JsonPipe, NgIf } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 import { map } from 'rxjs';
 
 @Component({
   selector: 'storybook-responsive',
   standalone: true,
-  imports: [AsyncPipe, JsonPipe, MatButtonModule, NgIf],
+  imports: [AsyncPipe, JsonPipe, MatButtonModule, NgIf, MatIconModule],
   template: `
     <div class="padding">
-      <p>Resize the panel to see the current screen size change.</p>
+      <p>
+        Resize the panel to see the current screen size change. For better
+        testing open in a new tab by clicking this icon
+        <mat-icon class="small">open_in_new</mat-icon> in the top right hard
+        corner of this panel
+      </p>
 
       <button mat-stroked-button *ngIf="xSmall$ | async">
         Show at [xSmall]
@@ -30,38 +36,39 @@ import { map } from 'rxjs';
     </div>
   `,
 })
-export default class Responsive {
+export default class Responsive implements OnInit {
   @Input() currentScreenSize!: string;
-  @Input() xSmall$ = this.breakpointObserver
-    .observe([Breakpoints.XSmall])
-    .pipe(map((_) => _.matches));
-  @Input() small$ = this.breakpointObserver
-    .observe([Breakpoints.Small])
-    .pipe(map((_) => _.matches));
-  @Input() medium$ = this.breakpointObserver
-    .observe([Breakpoints.Medium])
-    .pipe(map((_) => _.matches));
-  @Input() large$ = this.breakpointObserver
-    .observe([Breakpoints.Large])
-    .pipe(map((_) => _.matches));
-  @Input() xLarge$ = this.breakpointObserver
-    .observe([Breakpoints.XLarge])
-    .pipe(map((_) => _.matches));
-  @Input() size$ = this.breakpointObserver.observe([
-    Breakpoints.XSmall,
-    Breakpoints.Small,
-    Breakpoints.Medium,
-    Breakpoints.Large,
-    Breakpoints.XLarge,
-  ]);
-
-  @Input() displayNameMap = new Map([
-    [Breakpoints.XSmall, 'XSmall'],
-    [Breakpoints.Small, 'Small'],
-    [Breakpoints.Medium, 'Medium'],
-    [Breakpoints.Large, 'Large'],
-    [Breakpoints.XLarge, 'XLarge'],
-  ]);
+  @Input() xSmall$: any;
+  @Input() small$: any;
+  @Input() medium$: any;
+  @Input() large$: any;
+  @Input() xLarge$: any;
+  @Input() size$: any;
 
   constructor(private breakpointObserver: BreakpointObserver) {}
+
+  ngOnInit(): void {
+    this.xSmall$ = this.breakpointObserver
+      .observe([Breakpoints.XSmall])
+      .pipe(map((_) => _.matches));
+    this.small$ = this.breakpointObserver
+      .observe([Breakpoints.Small])
+      .pipe(map((_) => _.matches));
+    this.medium$ = this.breakpointObserver
+      .observe([Breakpoints.Medium])
+      .pipe(map((_) => _.matches));
+    this.large$ = this.breakpointObserver
+      .observe([Breakpoints.Large])
+      .pipe(map((_) => _.matches));
+    this.xLarge$ = this.breakpointObserver
+      .observe([Breakpoints.XLarge])
+      .pipe(map((_) => _.matches));
+    this.size$ = this.breakpointObserver.observe([
+      Breakpoints.XSmall,
+      Breakpoints.Small,
+      Breakpoints.Medium,
+      Breakpoints.Large,
+      Breakpoints.XLarge,
+    ]);
+  }
 }
