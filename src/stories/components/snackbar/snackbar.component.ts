@@ -14,8 +14,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   `,
 })
 export default class Snackbar {
-  @Input() color: 'primary' | 'accent' | 'warn' | 'default' = 'primary';
-  @Input() duration = 8000;
+  @Input() color!: 'primary' | 'accent' | 'warn' | 'default';
+  @Input() duration!: number;
+  @Input() verticalPosition!: 'top' | 'bottom';
+  @Input() horizontalPosition!: 'start' | 'center' | 'end' | 'left' | 'right';
 
   constructor(private snackBar: MatSnackBar) {}
 
@@ -25,6 +27,8 @@ export default class Snackbar {
     this.snackBar.open(message, 'Okay', {
       duration: this.duration,
       panelClass: `mat-${this.color}`,
+      verticalPosition: this.verticalPosition,
+      horizontalPosition: this.horizontalPosition,
     });
   }
 }

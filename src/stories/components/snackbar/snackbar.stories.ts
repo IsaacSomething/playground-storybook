@@ -9,6 +9,14 @@ export default {
       options: ['primary', 'accent', 'warn', 'default'],
       control: { type: 'radio' },
     },
+    verticalPosition: {
+      options: ['top', 'bottom'],
+      control: { type: 'select' },
+    },
+    horizontalPosition: {
+      options: ['start', 'center' , 'end' , 'left' , 'right';],
+      control: { type: 'select' },
+    },
     duration: {
       control: { type: 'range', min: 0, max: 10000, step: 1000 },
     },
@@ -16,8 +24,17 @@ export default {
   parameters: { options: { showPanel: true } },
 } as Meta;
 
+const defaultArgs: Partial<Snackbar> | undefined = {
+  color: 'primary',
+  duration: 5000,
+  verticalPosition: 'bottom',
+  horizontalPosition: 'left',
+  horizontalPosition:'center'
+};
+
 const Template: Story<Snackbar> = (args: Snackbar) => ({
   props: args,
 });
 
 export const Default = Template.bind({});
+Default.args = { ...defaultArgs };
