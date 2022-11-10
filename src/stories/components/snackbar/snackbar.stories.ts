@@ -14,7 +14,7 @@ export default {
       control: { type: 'select' },
     },
     horizontalPosition: {
-      options: ['start', 'center' , 'end' , 'left' , 'right';],
+      options: ['start', 'center', 'end', 'left', 'right'],
       control: { type: 'select' },
     },
     duration: {
@@ -28,8 +28,7 @@ const defaultArgs: Partial<Snackbar> | undefined = {
   color: 'primary',
   duration: 5000,
   verticalPosition: 'bottom',
-  horizontalPosition: 'left',
-  horizontalPosition:'center'
+  horizontalPosition: 'center',
 };
 
 const Template: Story<Snackbar> = (args: Snackbar) => ({
