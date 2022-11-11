@@ -1,9 +1,13 @@
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import {
+  BreakpointObserver,
+  Breakpoints,
+  BreakpointState,
+} from '@angular/cdk/layout';
 import { AsyncPipe, JsonPipe, NgIf } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { map } from 'rxjs';
+import { map, Observable } from 'rxjs';
 
 @Component({
   selector: 'storybook-responsive',
@@ -38,12 +42,12 @@ import { map } from 'rxjs';
 })
 export default class Responsive implements OnInit {
   @Input() currentScreenSize!: string;
-  @Input() xSmall$: any;
-  @Input() small$: any;
-  @Input() medium$: any;
-  @Input() large$: any;
-  @Input() xLarge$: any;
-  @Input() size$: any;
+  @Input() xSmall$!: Observable<boolean>;
+  @Input() small$!: Observable<boolean>;
+  @Input() medium$!: Observable<boolean>;
+  @Input() large$!: Observable<boolean>;
+  @Input() xLarge$!: Observable<boolean>;
+  @Input() size$!: Observable<BreakpointState>;
 
   constructor(private breakpointObserver: BreakpointObserver) {}
 
@@ -51,18 +55,23 @@ export default class Responsive implements OnInit {
     this.xSmall$ = this.breakpointObserver
       .observe([Breakpoints.XSmall])
       .pipe(map((_) => _.matches));
+
     this.small$ = this.breakpointObserver
       .observe([Breakpoints.Small])
       .pipe(map((_) => _.matches));
+
     this.medium$ = this.breakpointObserver
       .observe([Breakpoints.Medium])
       .pipe(map((_) => _.matches));
+
     this.large$ = this.breakpointObserver
       .observe([Breakpoints.Large])
       .pipe(map((_) => _.matches));
+
     this.xLarge$ = this.breakpointObserver
       .observe([Breakpoints.XLarge])
       .pipe(map((_) => _.matches));
+
     this.size$ = this.breakpointObserver.observe([
       Breakpoints.XSmall,
       Breakpoints.Small,

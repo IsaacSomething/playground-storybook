@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/angular';
 import SlideToggle from './slide-toggle.component';
 
 export default {
-  title: 'Components/Slide Toggle',
+  title: 'Forms/Slide Toggle',
   component: SlideToggle,
   argTypes: {
     color: {

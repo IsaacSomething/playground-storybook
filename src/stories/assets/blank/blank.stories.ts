@@ -13,6 +13,10 @@ export default {
   },
 } as Meta;
 
+const disabledTypes = {
+  dataSource: { table: { disable: true } },
+};
+
 const Template: Story<Blank> = (args: Blank) => ({
   props: args,
 });

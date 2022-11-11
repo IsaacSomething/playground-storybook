@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
 
 @Component({
   selector: 'storybook-slide-toggle',
@@ -19,6 +18,6 @@ import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
 })
 export default class SlideToggle {
   @Input() color!: 'primary' | 'accent' | 'warn';
-  @Input() disabled: boolean = false;
-  @Input() contained: boolean = false;
+  @Input() disabled!: boolean;
+  @Input() contained!: boolean;
 }
