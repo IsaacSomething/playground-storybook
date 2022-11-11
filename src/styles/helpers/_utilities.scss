@@ -1,6 +1,14 @@
 $props: "padding", "padding-left", "padding-right", "margin", "margin-left",
   "margin-right";
 
+$spaces: "margin", "padding";
+
+$spacing: "padding", "padding-right", "padding-left", "padding-bottom",
+  "padding-top", "margin", "margin-top", "margin-bottom", "margin-left",
+  "margin-right";
+
+$backgrounds: "bg", "card", "bar", "divider", "primary", "accent", "warn";
+
 @for $i from 1 through 60 {
   @each $prop in $props {
     .#{$prop}-#{$i} {
@@ -8,8 +16,6 @@ $props: "padding", "padding-left", "padding-right", "margin", "margin-left",
     }
   }
 }
-
-$spaces: "margin", "padding";
 
 @each $space in $spaces {
   .#{$space}-horizontal {
@@ -19,21 +25,15 @@ $spaces: "margin", "padding";
     #{$space}: 0 var(--mat-spacing);
   }
   .no-#{$space} {
-    #{$space}: 0!important;
+    #{$space}: 0 !important;
   }
 }
-
-$spacing: "padding", "padding-right", "padding-left", "padding-bottom",
-  "padding-top", "margin", "margin-top", "margin-bottom", "margin-left",
-  "margin-right";
 
 @each $space in $spacing {
   .#{$space} {
     #{$space}: var(--mat-spacing);
   }
 }
-
-$backgrounds: "bg", "card", "bar", "divider", "primary", "accent", "warn";
 
 @each $bg in $backgrounds {
   .bg-#{$bg} {

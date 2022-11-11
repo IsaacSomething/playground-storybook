@@ -3,6 +3,10 @@
 @mixin spinnerSize($size) {
   height: $size !important;
   width: $size !important;
+  svg {
+    height: $size !important;
+    width: $size !important;
+  }
 }
 
 @mixin buttonSize($height, $lineHeight, $font-size) {
@@ -38,7 +42,7 @@
     &.mat-#{$color}.mat-raised-button,
     &.mat-#{$color}.mat-flat-button {
       .mat-spinner circle {
-        stroke: var(--mat-#{$color}-50);
+        stroke: var(--mat-#{$color}-contrast-500);
       }
     }
   }
@@ -53,9 +57,6 @@
     @include buttonSize(50px, 48px, 16px);
     .mat-progress-spinner {
       @include spinnerSize(22px);
-      svg {
-        @include spinnerSize(22px);
-      }
     }
     &.mat-icon-button {
       width: 24px;
@@ -78,9 +79,6 @@
     @include buttonSize(24px, 21px, 12px);
     .mat-progress-spinner {
       @include spinnerSize(12px);
-      svg {
-        @include spinnerSize(12px);
-      }
     }
     &.mat-icon-button {
       width: 24px;

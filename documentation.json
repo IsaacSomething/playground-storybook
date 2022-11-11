@@ -853,57 +853,7 @@
         },
         {
             "name": "Chips",
-            "id": "component-Chips-03763dc19d9e0a7351ef85fbb8ae75f9d2818c5505fbadbcf48db516b696dfa24eab80cc8da140c9981a3d4c446085cd65f9fe6c25b03b43c56a5f263273d33e",
-            "file": "src/stories/components/chips/chips.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "storybook-chips",
-            "styleUrls": [],
-            "styles": [],
-            "template": "<div class=\"padding\">\n  <mat-chip-list>\n    <mat-chip>[Chip default]</mat-chip>\n    <mat-chip selected>[Chip default selected]</mat-chip>\n    <mat-chip [color]=\"color\">[Chip with color no selected]</mat-chip>\n    <mat-chip [color]=\"color\" selected>[Chip with color selected]</mat-chip>\n  </mat-chip-list>\n</div>\n",
-            "templateUrl": [],
-            "viewProviders": [],
-            "inputsClass": [
-                {
-                    "name": "color",
-                    "defaultValue": "'primary'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 20,
-                    "type": "\"primary\" | \"accent\" | \"warn\"",
-                    "decorators": []
-                },
-                {
-                    "name": "disabled",
-                    "defaultValue": "false",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 21,
-                    "type": "boolean",
-                    "decorators": []
-                }
-            ],
-            "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { MatChipsModule } from '@angular/material/chips';\n\n@Component({\n  selector: 'storybook-chips',\n  standalone: true,\n  imports: [MatChipsModule],\n  template: `\n    <div class=\"padding\">\n      <mat-chip-list>\n        <mat-chip>[Chip default]</mat-chip>\n        <mat-chip selected>[Chip default selected]</mat-chip>\n        <mat-chip [color]=\"color\">[Chip with color no selected]</mat-chip>\n        <mat-chip [color]=\"color\" selected>[Chip with color selected]</mat-chip>\n      </mat-chip-list>\n    </div>\n  `,\n})\nexport default class Chips {\n  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';\n  @Input() disabled: boolean = false;\n}\n",
-            "assetsDirs": [],
-            "styleUrlsData": "",
-            "stylesData": ""
-        },
-        {
-            "name": "Chips",
-            "id": "component-Chips-80dcce12f6708bc7a98f6c6d63e0b907bb2318534c77330b84b93e695719a71da0b3ea418c6566687b443fd382dc9d027798f5155e5fa73d87b9cdc943174c7d-1",
+            "id": "component-Chips-80dcce12f6708bc7a98f6c6d63e0b907bb2318534c77330b84b93e695719a71da0b3ea418c6566687b443fd382dc9d027798f5155e5fa73d87b9cdc943174c7d",
             "file": "src/stories/components/dialog/dialog.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1005,7 +955,57 @@
                         }
                     }
                 ]
-            },
+            }
+        },
+        {
+            "name": "Chips",
+            "id": "component-Chips-03763dc19d9e0a7351ef85fbb8ae75f9d2818c5505fbadbcf48db516b696dfa24eab80cc8da140c9981a3d4c446085cd65f9fe6c25b03b43c56a5f263273d33e-1",
+            "file": "src/stories/components/chips/chips.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-chips",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<div class=\"padding\">\n  <mat-chip-list>\n    <mat-chip>[Chip default]</mat-chip>\n    <mat-chip selected>[Chip default selected]</mat-chip>\n    <mat-chip [color]=\"color\">[Chip with color no selected]</mat-chip>\n    <mat-chip [color]=\"color\" selected>[Chip with color selected]</mat-chip>\n  </mat-chip-list>\n</div>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "color",
+                    "defaultValue": "'primary'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 20,
+                    "type": "\"primary\" | \"accent\" | \"warn\"",
+                    "decorators": []
+                },
+                {
+                    "name": "disabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 21,
+                    "type": "boolean",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { MatChipsModule } from '@angular/material/chips';\n\n@Component({\n  selector: 'storybook-chips',\n  standalone: true,\n  imports: [MatChipsModule],\n  template: `\n    <div class=\"padding\">\n      <mat-chip-list>\n        <mat-chip>[Chip default]</mat-chip>\n        <mat-chip selected>[Chip default selected]</mat-chip>\n        <mat-chip [color]=\"color\">[Chip with color no selected]</mat-chip>\n        <mat-chip [color]=\"color\" selected>[Chip with color selected]</mat-chip>\n      </mat-chip-list>\n    </div>\n  `,\n})\nexport default class Chips {\n  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';\n  @Input() disabled: boolean = false;\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
             "isDuplicate": true,
             "duplicateId": 1,
             "duplicateName": "Chips-1"
@@ -2551,8 +2551,8 @@
         },
         {
             "name": "SlideToggle",
-            "id": "component-SlideToggle-8705dfe039fbd2580ddc343e1711dbcb0263ea444c20ed36bc4355a88e6b92bcf4ceb7c7399ad3924b41a30aebcd9d25e075b6b6c0976049bee692574f5c12f3",
-            "file": "src/stories/components/slide-toggle/slide-toggle.component.ts",
+            "id": "component-SlideToggle-cfa14d90ba19381ec93da21aaa7476f7e9433e3545c81ebdf5a83da03f696e86d904f965f9d351d916b680877f0182e0846cf611feaebd070f42ec49aef84d83",
+            "file": "src/stories/forms/slide-toggle/slide-toggle.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
@@ -2569,25 +2569,23 @@
                     "name": "color",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 21,
+                    "line": 20,
                     "type": "\"primary\" | \"accent\" | \"warn\"",
                     "decorators": []
                 },
                 {
                     "name": "contained",
-                    "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 23,
+                    "line": 22,
                     "type": "boolean",
                     "decorators": []
                 },
                 {
                     "name": "disabled",
-                    "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 22,
+                    "line": 21,
                     "type": "boolean",
                     "decorators": []
                 }
@@ -2602,7 +2600,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { MatSlideToggleModule } from '@angular/material/slide-toggle';\nimport { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';\n\n@Component({\n  selector: 'storybook-slide-toggle',\n  standalone: true,\n  imports: [MatSlideToggleModule],\n  template: `\n    <div class=\"padding\">\n      <mat-slide-toggle\n        [color]=\"color\"\n        [disabled]=\"disabled\"\n        [class.contained]=\"contained\"\n      >\n      </mat-slide-toggle>\n    </div>\n  `,\n})\nexport default class SlideToggle {\n  @Input() color!: 'primary' | 'accent' | 'warn';\n  @Input() disabled: boolean = false;\n  @Input() contained: boolean = false;\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { MatSlideToggleModule } from '@angular/material/slide-toggle';\n\n@Component({\n  selector: 'storybook-slide-toggle',\n  standalone: true,\n  imports: [MatSlideToggleModule],\n  template: `\n    <div class=\"padding\">\n      <mat-slide-toggle\n        [color]=\"color\"\n        [disabled]=\"disabled\"\n        [class.contained]=\"contained\"\n      >\n      </mat-slide-toggle>\n    </div>\n  `,\n})\nexport default class SlideToggle {\n  @Input() color!: 'primary' | 'accent' | 'warn';\n  @Input() disabled!: boolean;\n  @Input() contained!: boolean;\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": ""
@@ -4202,7 +4200,7 @@
                 "name": "Contained",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/components/slide-toggle/slide-toggle.stories.ts",
+                "file": "src/stories/forms/slide-toggle/slide-toggle.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -4242,6 +4240,96 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/assets/blank/blank.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/helpers/elevation/elevation.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/helpers/ripples/ripples.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/helpers/margin-padding/helpers.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({\n  padding: 0,\n  margin: 0,\n})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/storybook/docs/docs.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/layout/grid/grid.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/storybook/figma/figma.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/layout/responsive/responsive.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/layout/virtual-scroll/virtual-scroll.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/components/badge/badge.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -4263,16 +4351,6 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/components/card/card.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/components/chips/chips.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -4312,27 +4390,17 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/components/chips/chips.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/components/menu/menu.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/components/slide-toggle/slide-toggle.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/components/snackbar/snackbar.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -4352,17 +4420,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/components/toolbar/toolbar.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/components/table/table.stories.ts",
+                "file": "src/stories/components/snackbar/snackbar.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -4382,6 +4440,16 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/components/table/table.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/components/tabs/tabs.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -4392,87 +4460,17 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/components/toolbar/toolbar.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/components/tree/tree.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/assets/blank/blank.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/helpers/elevation/elevation.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/helpers/margin-padding/helpers.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({\n  padding: 0,\n  margin: 0,\n})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/helpers/ripples/ripples.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/layout/grid/grid.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/layout/responsive/responsive.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/layout/virtual-scroll/virtual-scroll.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/forms/checkbox/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -4502,6 +4500,26 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/forms/checkbox/checkbox.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/forms/select/select.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/forms/date-picker/date-picker.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -4522,17 +4540,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/forms/select/select.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/forms/slider/slider.stories.ts",
+                "file": "src/stories/forms/slide-toggle/slide-toggle.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -4552,21 +4560,31 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/storybook/docs/docs.stories.ts",
+                "file": "src/stories/forms/slider/slider.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
             {
-                "name": "Default",
+                "name": "defaultArgs",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/storybook/figma/figma.stories.ts",
+                "file": "src/stories/helpers/elevation/elevation.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
+                "type": "Partial | undefined",
+                "defaultValue": "{\n  elevation: 1,\n}"
+            },
+            {
+                "name": "defaultArgs",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/helpers/ripples/ripples.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Partial | undefined",
+                "defaultValue": "{\n  color: 'default',\n  unbound: false,\n  centered: false,\n  disabled: false,\n  radius: 0,\n}"
             },
             {
                 "name": "defaultArgs",
@@ -4612,41 +4630,11 @@
                 "name": "defaultArgs",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/components/slide-toggle/slide-toggle.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Partial | undefined",
-                "defaultValue": "{\n  color: 'primary',\n  disabled: false,\n  contained: false,\n}"
-            },
-            {
-                "name": "defaultArgs",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/components/snackbar/snackbar.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Partial | undefined",
                 "defaultValue": "{\n  color: 'primary',\n  duration: 5000,\n  verticalPosition: 'bottom',\n  horizontalPosition: 'center',\n}"
-            },
-            {
-                "name": "defaultArgs",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/components/toolbar/toolbar.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Partial | undefined",
-                "defaultValue": "{\n  leftLabel: '[Left]',\n  rightLabel: '[Right]',\n  color: 'default',\n}"
-            },
-            {
-                "name": "defaultArgs",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/components/table/table.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Partial | undefined",
-                "defaultValue": "{\n  displayedColumns: TableModel.displayedColumns,\n  dataSource: TableModel.data,\n  withHover: false,\n  striped: false,\n  header: false,\n  textTransform: false,\n}"
             },
             {
                 "name": "defaultArgs",
@@ -4662,41 +4650,31 @@
                 "name": "defaultArgs",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/components/table/table.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Partial | undefined",
+                "defaultValue": "{\n  displayedColumns: TableModel.displayedColumns,\n  dataSource: TableModel.data,\n  withHover: false,\n  striped: false,\n  header: false,\n  textTransform: false,\n}"
+            },
+            {
+                "name": "defaultArgs",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/toolbar/toolbar.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Partial | undefined",
+                "defaultValue": "{\n  leftLabel: '[Left]',\n  rightLabel: '[Right]',\n  color: 'default',\n}"
+            },
+            {
+                "name": "defaultArgs",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/components/tree/tree.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Partial | undefined",
                 "defaultValue": "{\n  dataSource: new ArrayDataSource(TreeModel.TREE_DATA),\n  treeControl: new FlatTreeControl<ExampleFlatNode>(\n    (node) => node.level,\n    (node) => node.expandable\n  ),\n}"
-            },
-            {
-                "name": "defaultArgs",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/helpers/elevation/elevation.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Partial | undefined",
-                "defaultValue": "{\n  elevation: 1,\n}"
-            },
-            {
-                "name": "defaultArgs",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/helpers/ripples/ripples.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Partial | undefined",
-                "defaultValue": "{\n  color: 'default',\n  unbound: false,\n  centered: false,\n  disabled: false,\n  radius: 0,\n}"
-            },
-            {
-                "name": "defaultArgs",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/forms/checkbox/checkbox.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Partial | undefined",
-                "defaultValue": "{\n  label: '[Checkbox label]',\n  color: 'primary',\n  labelPosition: 'after',\n  disabled: false,\n  indeterminate: false,\n}"
             },
             {
                 "name": "defaultArgs",
@@ -4722,6 +4700,26 @@
                 "name": "defaultArgs",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/forms/checkbox/checkbox.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Partial | undefined",
+                "defaultValue": "{\n  label: '[Checkbox label]',\n  color: 'primary',\n  labelPosition: 'after',\n  disabled: false,\n  indeterminate: false,\n}"
+            },
+            {
+                "name": "defaultArgs",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/forms/select/select.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Partial | undefined",
+                "defaultValue": "{\n  label: 'Select',\n  color: 'primary',\n  disabled: false,\n  appearance: 'standard',\n}"
+            },
+            {
+                "name": "defaultArgs",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/forms/date-picker/date-picker.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -4742,21 +4740,11 @@
                 "name": "defaultArgs",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/forms/select/select.stories.ts",
+                "file": "src/stories/forms/slide-toggle/slide-toggle.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Partial | undefined",
-                "defaultValue": "{\n  label: 'Select',\n  color: 'primary',\n  disabled: false,\n  appearance: 'standard',\n}"
-            },
-            {
-                "name": "defaultArgs",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/forms/slider/slider.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Partial | undefined",
-                "defaultValue": "{\n  color: 'primary',\n  disabled: false,\n}"
+                "defaultValue": "{\n  color: 'primary',\n  disabled: false,\n  contained: false,\n}"
             },
             {
                 "name": "defaultArgs",
@@ -4767,6 +4755,16 @@
                 "deprecationMessage": "",
                 "type": "Partial | undefined",
                 "defaultValue": "{\n  color: 'primary',\n  disabled: false,\n  appearance: 'standard',\n}"
+            },
+            {
+                "name": "defaultArgs",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/forms/slider/slider.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Partial | undefined",
+                "defaultValue": "{\n  color: 'primary',\n  disabled: false,\n}"
             },
             {
                 "name": "defaultCode",
@@ -4782,7 +4780,7 @@
                 "name": "designParams",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/components/button/button.stories.ts",
+                "file": "src/stories/storybook/figma/figma.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
@@ -4792,21 +4790,11 @@
                 "name": "designParams",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/storybook/figma/figma.stories.ts",
+                "file": "src/stories/components/button/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
                 "defaultValue": "{\n  type: 'figma',\n  url: `${urlPrefix}?node-id=0%3A1`,\n}"
-            },
-            {
-                "name": "disabledTypes",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/components/table/table.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "object",
-                "defaultValue": "{\n  dataSource: { table: { disable: true } },\n  displayedColumns: { table: { disable: true } },\n  addBigData: { table: { disable: true } },\n  addRow: { table: { disable: true } },\n  removeRow: { table: { disable: true } },\n}"
             },
             {
                 "name": "disabledTypes",
@@ -4819,14 +4807,14 @@
                 "defaultValue": "{\n  dataSource: { table: { disable: true } },\n}"
             },
             {
-                "name": "disableTypes",
+                "name": "disabledTypes",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/components/button/button.stories.ts",
+                "file": "src/stories/components/table/table.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
-                "defaultValue": "{\n  size: { control: { disable: true } },\n  type: { control: { disable: true } },\n}"
+                "defaultValue": "{\n  dataSource: { table: { disable: true } },\n  displayedColumns: { table: { disable: true } },\n  addBigData: { table: { disable: true } },\n  addRow: { table: { disable: true } },\n  removeRow: { table: { disable: true } },\n}"
             },
             {
                 "name": "disableTypes",
@@ -4837,6 +4825,16 @@
                 "deprecationMessage": "",
                 "type": "object",
                 "defaultValue": "{\n  xSmall$: { table: { disable: true } },\n  small$: { table: { disable: true } },\n  medium$: { table: { disable: true } },\n  large$: { table: { disable: true } },\n  xLarge$: { table: { disable: true } },\n  size$: { table: { disable: true } },\n  currentScreenSize: { table: { disable: true } },\n}"
+            },
+            {
+                "name": "disableTypes",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/button/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  size: { control: { disable: true } },\n  type: { control: { disable: true } },\n}"
             },
             {
                 "name": "displayedColumns",
@@ -5051,6 +5049,96 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/assets/blank/blank.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Blank>",
+                "defaultValue": "(args: Blank) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/helpers/elevation/elevation.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Elevation>",
+                "defaultValue": "(args: Elevation) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/helpers/ripples/ripples.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Ripples>",
+                "defaultValue": "(args: Ripples) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/helpers/margin-padding/helpers.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Helpers>",
+                "defaultValue": "(args: Helpers) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/storybook/docs/docs.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Docs>",
+                "defaultValue": "(args: Docs) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/layout/grid/grid.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Grid>",
+                "defaultValue": "(args: Grid) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/storybook/figma/figma.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Figma>",
+                "defaultValue": "(args: Figma) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/layout/responsive/responsive.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Responsive>",
+                "defaultValue": "(args: Responsive) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/layout/virtual-scroll/virtual-scroll.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<VirtualScroll>",
+                "defaultValue": "(args: VirtualScroll) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/components/badge/badge.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -5076,16 +5164,6 @@
                 "deprecationMessage": "",
                 "type": "Story<Card>",
                 "defaultValue": "(args: Card) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/components/chips/chips.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<Chips>",
-                "defaultValue": "(args: Chips) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -5121,16 +5199,6 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/components/menu/menu.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<Menu>",
-                "defaultValue": "(args: Menu) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/components/progress/progress.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -5141,21 +5209,21 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/components/slide-toggle/slide-toggle.stories.ts",
+                "file": "src/stories/components/chips/chips.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<SlideToggle>",
-                "defaultValue": "(args: SlideToggle) => ({\n  props: args,\n})"
+                "type": "Story<Chips>",
+                "defaultValue": "(args: Chips) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/components/snackbar/snackbar.stories.ts",
+                "file": "src/stories/components/menu/menu.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<Snackbar>",
-                "defaultValue": "(args: Snackbar) => ({\n  props: args,\n})"
+                "type": "Story<Menu>",
+                "defaultValue": "(args: Menu) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -5171,21 +5239,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/components/toolbar/toolbar.stories.ts",
+                "file": "src/stories/components/snackbar/snackbar.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<Toolbar>",
-                "defaultValue": "(args: Toolbar) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/components/table/table.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<Table>",
-                "defaultValue": "(args: Table) => ({\n  props: args,\n})"
+                "type": "Story<Snackbar>",
+                "defaultValue": "(args: Snackbar) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -5201,6 +5259,16 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/components/table/table.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Table>",
+                "defaultValue": "(args: Table) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/components/tabs/tabs.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -5211,91 +5279,21 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/components/toolbar/toolbar.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Toolbar>",
+                "defaultValue": "(args: Toolbar) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/components/tree/tree.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<Tree>",
                 "defaultValue": "(args: Tree) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/assets/blank/blank.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<Blank>",
-                "defaultValue": "(args: Blank) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/helpers/elevation/elevation.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<Elevation>",
-                "defaultValue": "(args: Elevation) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/helpers/margin-padding/helpers.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<Helpers>",
-                "defaultValue": "(args: Helpers) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/helpers/ripples/ripples.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<Ripples>",
-                "defaultValue": "(args: Ripples) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/layout/grid/grid.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<Grid>",
-                "defaultValue": "(args: Grid) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/layout/responsive/responsive.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<Responsive>",
-                "defaultValue": "(args: Responsive) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/layout/virtual-scroll/virtual-scroll.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<VirtualScroll>",
-                "defaultValue": "(args: VirtualScroll) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/forms/checkbox/checkbox.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<Checkbox>",
-                "defaultValue": "(args: Checkbox) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: {\n      control: { type: 'boolean' },\n    },\n    indeterminate: {\n      control: { type: 'boolean' },\n    },\n    labelPosition: {\n      options: ['before', 'after'],\n      control: { type: 'select' },\n      name: 'Label position',\n    },\n  },\n})"
             },
             {
                 "name": "Template",
@@ -5321,6 +5319,26 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/forms/checkbox/checkbox.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Checkbox>",
+                "defaultValue": "(args: Checkbox) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: {\n      control: { type: 'boolean' },\n    },\n    indeterminate: {\n      control: { type: 'boolean' },\n    },\n    labelPosition: {\n      options: ['before', 'after'],\n      control: { type: 'select' },\n      name: 'Label position',\n    },\n  },\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/forms/select/select.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Select>",
+                "defaultValue": "(args: Select) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n  },\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/forms/date-picker/date-picker.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -5341,21 +5359,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/forms/select/select.stories.ts",
+                "file": "src/stories/forms/slide-toggle/slide-toggle.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<Select>",
-                "defaultValue": "(args: Select) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n  },\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/forms/slider/slider.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<Slider>",
-                "defaultValue": "(args: Slider) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n  },\n})"
+                "type": "Story<SlideToggle>",
+                "defaultValue": "(args: SlideToggle) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -5371,21 +5379,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/storybook/docs/docs.stories.ts",
+                "file": "src/stories/forms/slider/slider.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<Docs>",
-                "defaultValue": "(args: Docs) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/storybook/figma/figma.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<Figma>",
-                "defaultValue": "(args: Figma) => ({\n  props: args,\n})"
+                "type": "Story<Slider>",
+                "defaultValue": "(args: Slider) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n  },\n})"
             },
             {
                 "name": "Toggle",
@@ -5411,7 +5409,7 @@
                 "name": "urlPrefix",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/components/button/button.stories.ts",
+                "file": "src/stories/storybook/figma/figma.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "string",
@@ -5421,7 +5419,7 @@
                 "name": "urlPrefix",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/storybook/figma/figma.stories.ts",
+                "file": "src/stories/components/button/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "string",
@@ -5558,12 +5556,12 @@
                     "defaultValue": "[\n    'position',\n    'name',\n    'weight',\n    'symbol',\n  ]"
                 }
             ],
-            "src/stories/components/slide-toggle/slide-toggle.stories.ts": [
+            "src/stories/forms/slide-toggle/slide-toggle.stories.ts": [
                 {
                     "name": "Contained",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/components/slide-toggle/slide-toggle.stories.ts",
+                    "file": "src/stories/forms/slide-toggle/slide-toggle.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -5573,7 +5571,7 @@
                     "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/components/slide-toggle/slide-toggle.stories.ts",
+                    "file": "src/stories/forms/slide-toggle/slide-toggle.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -5583,7 +5581,7 @@
                     "name": "defaultArgs",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/components/slide-toggle/slide-toggle.stories.ts",
+                    "file": "src/stories/forms/slide-toggle/slide-toggle.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Partial | undefined",
@@ -5593,7 +5591,7 @@
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/components/slide-toggle/slide-toggle.stories.ts",
+                    "file": "src/stories/forms/slide-toggle/slide-toggle.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<SlideToggle>",
@@ -5641,6 +5639,264 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "literal type"
+                }
+            ],
+            "src/stories/assets/blank/blank.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/assets/blank/blank.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "disabledTypes",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/assets/blank/blank.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  dataSource: { table: { disable: true } },\n}"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/assets/blank/blank.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Blank>",
+                    "defaultValue": "(args: Blank) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/stories/helpers/elevation/elevation.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/helpers/elevation/elevation.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "defaultArgs",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/helpers/elevation/elevation.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Partial | undefined",
+                    "defaultValue": "{\n  elevation: 1,\n}"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/helpers/elevation/elevation.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Elevation>",
+                    "defaultValue": "(args: Elevation) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/stories/helpers/ripples/ripples.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/helpers/ripples/ripples.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "defaultArgs",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/helpers/ripples/ripples.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Partial | undefined",
+                    "defaultValue": "{\n  color: 'default',\n  unbound: false,\n  centered: false,\n  disabled: false,\n  radius: 0,\n}"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/helpers/ripples/ripples.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Ripples>",
+                    "defaultValue": "(args: Ripples) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/stories/helpers/margin-padding/helpers.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/helpers/margin-padding/helpers.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({\n  padding: 0,\n  margin: 0,\n})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/helpers/margin-padding/helpers.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Helpers>",
+                    "defaultValue": "(args: Helpers) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/stories/storybook/docs/docs.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/storybook/docs/docs.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/storybook/docs/docs.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Docs>",
+                    "defaultValue": "(args: Docs) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/stories/layout/grid/grid.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/layout/grid/grid.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/layout/grid/grid.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Grid>",
+                    "defaultValue": "(args: Grid) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/stories/storybook/figma/figma.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/storybook/figma/figma.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "designParams",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/storybook/figma/figma.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  type: 'figma',\n  url: `${urlPrefix}?node-id=0%3A1`,\n}"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/storybook/figma/figma.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Figma>",
+                    "defaultValue": "(args: Figma) => ({\n  props: args,\n})"
+                },
+                {
+                    "name": "urlPrefix",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/storybook/figma/figma.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "'https://www.figma.com/file/B4I9c9XojvfCuHyqlegRWg/material?node-id='"
+                }
+            ],
+            "src/stories/layout/responsive/responsive.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/layout/responsive/responsive.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "disableTypes",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/layout/responsive/responsive.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  xSmall$: { table: { disable: true } },\n  small$: { table: { disable: true } },\n  medium$: { table: { disable: true } },\n  large$: { table: { disable: true } },\n  xLarge$: { table: { disable: true } },\n  size$: { table: { disable: true } },\n  currentScreenSize: { table: { disable: true } },\n}"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/layout/responsive/responsive.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Responsive>",
+                    "defaultValue": "(args: Responsive) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/stories/layout/virtual-scroll/virtual-scroll.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/layout/virtual-scroll/virtual-scroll.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/layout/virtual-scroll/virtual-scroll.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<VirtualScroll>",
+                    "defaultValue": "(args: VirtualScroll) => ({\n  props: args,\n})"
                 }
             ],
             "src/stories/components/badge/badge.stories.ts": [
@@ -5829,28 +6085,6 @@
                     "defaultValue": "(args: Card) => ({\n  props: args,\n})"
                 }
             ],
-            "src/stories/components/chips/chips.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/components/chips/chips.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/components/chips/chips.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<Chips>",
-                    "defaultValue": "(args: Chips) => ({\n  props: args,\n})"
-                }
-            ],
             "src/stories/components/dialog/dialog.stories.ts": [
                 {
                     "name": "Default",
@@ -5927,6 +6161,28 @@
                     "defaultValue": "(args: Expansion) => ({\n  props: args,\n})"
                 }
             ],
+            "src/stories/components/chips/chips.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/chips/chips.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/chips/chips.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Chips>",
+                    "defaultValue": "(args: Chips) => ({\n  props: args,\n})"
+                }
+            ],
             "src/stories/components/menu/menu.stories.ts": [
                 {
                     "name": "Default",
@@ -5957,6 +6213,28 @@
                     "deprecationMessage": "",
                     "type": "Story<Menu>",
                     "defaultValue": "(args: Menu) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/stories/components/stepper/stepper.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/stepper/stepper.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/stepper/stepper.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Stepper>",
+                    "defaultValue": "(args: Stepper) => ({\n  props: args,\n})"
                 }
             ],
             "src/stories/components/snackbar/snackbar.stories.ts": [
@@ -5991,34 +6269,12 @@
                     "defaultValue": "(args: Snackbar) => ({\n  props: args,\n})"
                 }
             ],
-            "src/stories/components/stepper/stepper.stories.ts": [
+            "src/stories/components/tooltip/tooltip.stories.ts": [
                 {
                     "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/components/stepper/stepper.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/components/stepper/stepper.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<Stepper>",
-                    "defaultValue": "(args: Stepper) => ({\n  props: args,\n})"
-                }
-            ],
-            "src/stories/components/toolbar/toolbar.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/components/toolbar/toolbar.stories.ts",
+                    "file": "src/stories/components/tooltip/tooltip.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -6028,21 +6284,21 @@
                     "name": "defaultArgs",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/components/toolbar/toolbar.stories.ts",
+                    "file": "src/stories/components/tooltip/tooltip.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Partial | undefined",
-                    "defaultValue": "{\n  leftLabel: '[Left]',\n  rightLabel: '[Right]',\n  color: 'default',\n}"
+                    "defaultValue": "{\n  tooltipLabel: '[Tooltip label]',\n  color: 'default',\n  position: 'below',\n  disabled: false,\n  showDelay: 0,\n  hideDelay: 0,\n}"
                 },
                 {
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/components/toolbar/toolbar.stories.ts",
+                    "file": "src/stories/components/tooltip/tooltip.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Story<Toolbar>",
-                    "defaultValue": "(args: Toolbar) => ({\n  props: args,\n})"
+                    "type": "Story<Tooltip>",
+                    "defaultValue": "(args: Tooltip) => ({\n  props: args,\n  argTypes: {\n    position: {\n      options: ['after', 'before', 'above', 'below', 'left', 'right'],\n      control: { type: 'select' },\n    },\n    color: {\n      options: ['default', 'primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: {\n      control: { type: 'boolean' },\n    },\n    tooltipLabel: {\n      control: { type: 'text', label: 'Label' },\n      name: 'Tooltip label',\n    },\n    showDelay: {\n      control: { type: 'range', min: 0, max: 10000, step: 1000 },\n      name: 'Show delay',\n    },\n    hideDelay: {\n      control: { type: 'range', min: 0, max: 10000, step: 1000 },\n      name: 'Hide delay',\n    },\n  },\n})"
                 }
             ],
             "src/stories/components/table/table.stories.ts": [
@@ -6137,38 +6393,6 @@
                     "defaultValue": "(args: Table) => ({\n  props: args,\n})"
                 }
             ],
-            "src/stories/components/tooltip/tooltip.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/components/tooltip/tooltip.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "defaultArgs",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/components/tooltip/tooltip.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Partial | undefined",
-                    "defaultValue": "{\n  tooltipLabel: '[Tooltip label]',\n  color: 'default',\n  position: 'below',\n  disabled: false,\n  showDelay: 0,\n  hideDelay: 0,\n}"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/components/tooltip/tooltip.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<Tooltip>",
-                    "defaultValue": "(args: Tooltip) => ({\n  props: args,\n  argTypes: {\n    position: {\n      options: ['after', 'before', 'above', 'below', 'left', 'right'],\n      control: { type: 'select' },\n    },\n    color: {\n      options: ['default', 'primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: {\n      control: { type: 'boolean' },\n    },\n    tooltipLabel: {\n      control: { type: 'text', label: 'Label' },\n      name: 'Tooltip label',\n    },\n    showDelay: {\n      control: { type: 'range', min: 0, max: 10000, step: 1000 },\n      name: 'Show delay',\n    },\n    hideDelay: {\n      control: { type: 'range', min: 0, max: 10000, step: 1000 },\n      name: 'Hide delay',\n    },\n  },\n})"
-                }
-            ],
             "src/stories/components/tabs/tabs.stories.ts": [
                 {
                     "name": "Default",
@@ -6189,6 +6413,38 @@
                     "deprecationMessage": "",
                     "type": "Story<Tabs>",
                     "defaultValue": "(args: Tabs) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/stories/components/toolbar/toolbar.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/toolbar/toolbar.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "defaultArgs",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/toolbar/toolbar.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Partial | undefined",
+                    "defaultValue": "{\n  leftLabel: '[Left]',\n  rightLabel: '[Right]',\n  color: 'default',\n}"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/toolbar/toolbar.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Toolbar>",
+                    "defaultValue": "(args: Toolbar) => ({\n  props: args,\n})"
                 }
             ],
             "src/stories/components/tree/tree.stories.ts": [
@@ -6221,232 +6477,6 @@
                     "deprecationMessage": "",
                     "type": "Story<Tree>",
                     "defaultValue": "(args: Tree) => ({\n  props: args,\n})"
-                }
-            ],
-            "src/stories/assets/blank/blank.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/assets/blank/blank.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "disabledTypes",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/assets/blank/blank.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\n  dataSource: { table: { disable: true } },\n}"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/assets/blank/blank.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<Blank>",
-                    "defaultValue": "(args: Blank) => ({\n  props: args,\n})"
-                }
-            ],
-            "src/stories/helpers/elevation/elevation.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/helpers/elevation/elevation.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "defaultArgs",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/helpers/elevation/elevation.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Partial | undefined",
-                    "defaultValue": "{\n  elevation: 1,\n}"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/helpers/elevation/elevation.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<Elevation>",
-                    "defaultValue": "(args: Elevation) => ({\n  props: args,\n})"
-                }
-            ],
-            "src/stories/helpers/margin-padding/helpers.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/helpers/margin-padding/helpers.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({\n  padding: 0,\n  margin: 0,\n})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/helpers/margin-padding/helpers.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<Helpers>",
-                    "defaultValue": "(args: Helpers) => ({\n  props: args,\n})"
-                }
-            ],
-            "src/stories/helpers/ripples/ripples.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/helpers/ripples/ripples.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "defaultArgs",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/helpers/ripples/ripples.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Partial | undefined",
-                    "defaultValue": "{\n  color: 'default',\n  unbound: false,\n  centered: false,\n  disabled: false,\n  radius: 0,\n}"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/helpers/ripples/ripples.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<Ripples>",
-                    "defaultValue": "(args: Ripples) => ({\n  props: args,\n})"
-                }
-            ],
-            "src/stories/layout/grid/grid.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/layout/grid/grid.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/layout/grid/grid.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<Grid>",
-                    "defaultValue": "(args: Grid) => ({\n  props: args,\n})"
-                }
-            ],
-            "src/stories/layout/responsive/responsive.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/layout/responsive/responsive.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "disableTypes",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/layout/responsive/responsive.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\n  xSmall$: { table: { disable: true } },\n  small$: { table: { disable: true } },\n  medium$: { table: { disable: true } },\n  large$: { table: { disable: true } },\n  xLarge$: { table: { disable: true } },\n  size$: { table: { disable: true } },\n  currentScreenSize: { table: { disable: true } },\n}"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/layout/responsive/responsive.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<Responsive>",
-                    "defaultValue": "(args: Responsive) => ({\n  props: args,\n})"
-                }
-            ],
-            "src/stories/layout/virtual-scroll/virtual-scroll.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/layout/virtual-scroll/virtual-scroll.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/layout/virtual-scroll/virtual-scroll.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<VirtualScroll>",
-                    "defaultValue": "(args: VirtualScroll) => ({\n  props: args,\n})"
-                }
-            ],
-            "src/stories/forms/checkbox/checkbox.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/forms/checkbox/checkbox.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "defaultArgs",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/forms/checkbox/checkbox.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Partial | undefined",
-                    "defaultValue": "{\n  label: '[Checkbox label]',\n  color: 'primary',\n  labelPosition: 'after',\n  disabled: false,\n  indeterminate: false,\n}"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/forms/checkbox/checkbox.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<Checkbox>",
-                    "defaultValue": "(args: Checkbox) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: {\n      control: { type: 'boolean' },\n    },\n    indeterminate: {\n      control: { type: 'boolean' },\n    },\n    labelPosition: {\n      options: ['before', 'after'],\n      control: { type: 'select' },\n      name: 'Label position',\n    },\n  },\n})"
                 }
             ],
             "src/stories/forms/autocomplete/autocomplete.stories.ts": [
@@ -6511,6 +6541,70 @@
                     "deprecationMessage": "",
                     "type": "Story<InputFormField>",
                     "defaultValue": "(args: InputFormField) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n  },\n})"
+                }
+            ],
+            "src/stories/forms/checkbox/checkbox.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/forms/checkbox/checkbox.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "defaultArgs",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/forms/checkbox/checkbox.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Partial | undefined",
+                    "defaultValue": "{\n  label: '[Checkbox label]',\n  color: 'primary',\n  labelPosition: 'after',\n  disabled: false,\n  indeterminate: false,\n}"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/forms/checkbox/checkbox.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Checkbox>",
+                    "defaultValue": "(args: Checkbox) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: {\n      control: { type: 'boolean' },\n    },\n    indeterminate: {\n      control: { type: 'boolean' },\n    },\n    labelPosition: {\n      options: ['before', 'after'],\n      control: { type: 'select' },\n      name: 'Label position',\n    },\n  },\n})"
+                }
+            ],
+            "src/stories/forms/select/select.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/forms/select/select.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "defaultArgs",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/forms/select/select.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Partial | undefined",
+                    "defaultValue": "{\n  label: 'Select',\n  color: 'primary',\n  disabled: false,\n  appearance: 'standard',\n}"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/forms/select/select.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Select>",
+                    "defaultValue": "(args: Select) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n  },\n})"
                 }
             ],
             "src/stories/forms/date-picker/date-picker.stories.ts": [
@@ -6597,70 +6691,6 @@
                     "defaultValue": "(args: Radio) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n    labelPosition: {\n      options: ['before', 'after'],\n      control: { type: 'select' },\n      name: 'Label position',\n    },\n  },\n})"
                 }
             ],
-            "src/stories/forms/select/select.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/forms/select/select.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "defaultArgs",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/forms/select/select.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Partial | undefined",
-                    "defaultValue": "{\n  label: 'Select',\n  color: 'primary',\n  disabled: false,\n  appearance: 'standard',\n}"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/forms/select/select.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<Select>",
-                    "defaultValue": "(args: Select) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n  },\n})"
-                }
-            ],
-            "src/stories/forms/slider/slider.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/forms/slider/slider.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "defaultArgs",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/forms/slider/slider.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Partial | undefined",
-                    "defaultValue": "{\n  color: 'primary',\n  disabled: false,\n}"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/forms/slider/slider.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<Slider>",
-                    "defaultValue": "(args: Slider) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n  },\n})"
-                }
-            ],
             "src/stories/forms/textarea/textarea.stories.ts": [
                 {
                     "name": "Default",
@@ -6693,68 +6723,36 @@
                     "defaultValue": "(args: Textarea) => ({\n  props: args,\n  argTypes: {\n    color: {\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n  },\n})"
                 }
             ],
-            "src/stories/storybook/docs/docs.stories.ts": [
+            "src/stories/forms/slider/slider.stories.ts": [
                 {
                     "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/storybook/docs/docs.stories.ts",
+                    "file": "src/stories/forms/slider/slider.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
                     "defaultValue": "Template.bind({})"
                 },
                 {
-                    "name": "Template",
+                    "name": "defaultArgs",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/storybook/docs/docs.stories.ts",
+                    "file": "src/stories/forms/slider/slider.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Story<Docs>",
-                    "defaultValue": "(args: Docs) => ({\n  props: args,\n})"
-                }
-            ],
-            "src/stories/storybook/figma/figma.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/storybook/figma/figma.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "designParams",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/storybook/figma/figma.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\n  type: 'figma',\n  url: `${urlPrefix}?node-id=0%3A1`,\n}"
+                    "type": "Partial | undefined",
+                    "defaultValue": "{\n  color: 'primary',\n  disabled: false,\n}"
                 },
                 {
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/storybook/figma/figma.stories.ts",
+                    "file": "src/stories/forms/slider/slider.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Story<Figma>",
-                    "defaultValue": "(args: Figma) => ({\n  props: args,\n})"
-                },
-                {
-                    "name": "urlPrefix",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/storybook/figma/figma.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "defaultValue": "'https://www.figma.com/file/B4I9c9XojvfCuHyqlegRWg/material?node-id='"
+                    "type": "Story<Slider>",
+                    "defaultValue": "(args: Slider) => ({\n  props: args,\n  argTypes: {\n    color: {\n      options: ['primary', 'accent', 'warn'],\n      control: { type: 'radio' },\n    },\n    disabled: { control: { type: 'boolean' } },\n  },\n})"
                 }
             ],
             "src/environments/environment.prod.ts": [
@@ -7374,55 +7372,6 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "SidenavContainer",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/components/slide-toggle/slide-toggle.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "SlideToggle",
-                "coveragePercent": 0,
-                "coverageCount": "0/4",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/components/slide-toggle/slide-toggle.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Contained",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/components/slide-toggle/slide-toggle.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Default",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/components/slide-toggle/slide-toggle.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "defaultArgs",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/components/slide-toggle/slide-toggle.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Template",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -8117,6 +8066,55 @@
             },
             {
                 "filePath": "src/stories/forms/select/select.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/forms/slide-toggle/slide-toggle.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "SlideToggle",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/forms/slide-toggle/slide-toggle.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Contained",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/forms/slide-toggle/slide-toggle.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/forms/slide-toggle/slide-toggle.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "defaultArgs",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/forms/slide-toggle/slide-toggle.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
