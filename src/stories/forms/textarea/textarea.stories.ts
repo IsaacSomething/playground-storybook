@@ -10,18 +10,22 @@ export default {
 const Template: Story<Textarea> = (args: Textarea) => ({
   props: args,
   argTypes: {
-    color: {
-      control: { type: 'radio' },
-    },
+    color: { control: { type: 'radio' } },
     disabled: { control: { type: 'boolean' } },
   },
 });
 
+const disabledTypes = {
+  triggerResize: { table: { disable: true } },
+  autosize: { table: { disable: true } },
+};
+
 const defaultArgs: Partial<Textarea> | undefined = {
   color: 'primary',
-  disabled: false,
   appearance: 'standard',
+  disabled: false,
 };
 
 export const Default = Template.bind({});
 Default.args = { ...defaultArgs };
+Default.argTypes = { ...disabledTypes };

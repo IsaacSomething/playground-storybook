@@ -10,7 +10,6 @@ export default {
       control: { type: 'radio' },
     },
     disabled: { control: { type: 'boolean' } },
-    isContained: { control: { type: 'boolean' } },
   },
   parameters: { options: { showPanel: true } },
 } as Meta;

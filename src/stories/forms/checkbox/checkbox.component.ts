@@ -1,19 +1,23 @@
+import { NgFor } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+
 @Component({
   selector: 'storybook-Checkbox',
   standalone: true,
-  imports: [MatCheckboxModule],
+  imports: [MatCheckboxModule, NgFor],
   template: `
     <div class="padding">
       <mat-checkbox
+        *ngFor="let item of [1, 2, 3]"
         [disabled]="disabled"
         [color]="color"
         [labelPosition]="labelPosition"
         [disabled]="disabled"
         [indeterminate]="indeterminate"
+        class="margin-right"
       >
-        {{ label }}
+        {{ label + '-' + item }}
       </mat-checkbox>
     </div>
   `,

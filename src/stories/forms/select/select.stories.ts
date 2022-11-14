@@ -20,8 +20,8 @@ const Template: Story<Select> = (args: Select) => ({
 
 const defaultArgs: Partial<Select> | undefined = {
   label: 'Select',
-  color: 'primary',
   disabled: false,
+  color: 'primary',
   appearance: 'standard',
 };
 

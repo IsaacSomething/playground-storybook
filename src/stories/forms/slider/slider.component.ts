@@ -1,3 +1,4 @@
+import { NumberInput } from '@angular/cdk/coercion';
 import { Component, Input } from '@angular/core';
 import { MatSliderModule } from '@angular/material/slider';
 
@@ -17,13 +18,25 @@ import { MatSliderModule } from '@angular/material/slider';
   ],
   template: `
     <div class="padding">
-      <mat-slider #slider [color]="color" [disabled]="disabled"></mat-slider>
+      <mat-slider
+        #slider
+        [color]="color"
+        [disabled]="disabled"
+        [vertical]="vertical"
+        [thumbLabel]="thumbLabel"
+        [tickInterval]="tickInterval"
+        [step]="step"
+      ></mat-slider>
 
       <h1>[{{ slider.value }}]</h1>
     </div>
   `,
 })
 export default class Slider {
-  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';
-  @Input() disabled: boolean = false;
+  @Input() color!: 'primary' | 'accent' | 'warn';
+  @Input() disabled!: boolean;
+  @Input() vertical!: boolean;
+  @Input() thumbLabel!: boolean;
+  @Input() tickInterval!: number;
+  @Input() step!: number;
 }

@@ -19,6 +19,7 @@ import { take } from 'rxjs';
     <div class="padding">
       <mat-form-field [appearance]="appearance" [color]="color">
         <mat-label>Autosize textarea</mat-label>
+
         <textarea
           [disabled]="disabled"
           matInput
@@ -32,13 +33,12 @@ import { take } from 'rxjs';
   `,
 })
 export default class Textarea {
+  @ViewChild('autosize') autosize!: CdkTextareaAutosize;
   @Input() color: 'primary' | 'accent' | 'warn' = 'primary';
   @Input() disabled: boolean = false;
   @Input() appearance!: 'legacy' | 'standard' | 'fill' | 'outline';
 
   constructor(private ngZone: NgZone) {}
-
-  @ViewChild('autosize') autosize!: CdkTextareaAutosize;
 
   triggerResize() {
     // Wait for changes to be applied, then trigger textarea resize.

@@ -35,8 +35,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   `,
 })
 export default class DatePickerRange {
-  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';
-  @Input() disabled: boolean = false;
+  @Input() color!: 'primary' | 'accent' | 'warn';
+  @Input() disabled!: boolean;
   @Input() appearance!: 'legacy' | 'standard' | 'fill' | 'outline';
   @Input() startView!: 'month' | 'year' | 'multi-year';
 }

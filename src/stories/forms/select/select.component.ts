@@ -16,14 +16,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   template: `
     <div class="padding">
       <mat-form-field [appearance]="appearance" [color]="color">
-        <mat-label>Select items</mat-label>
+        <mat-label>{{ label }}</mat-label>
 
         <mat-select [disabled]="disabled">
           <mat-option
             *ngFor="let item of [1, 2, 3]; let idx = index"
             [value]="item"
           >
-            {{ label + '-' + (idx + 1) }}
+            {{ 'item-' + (idx + 1) }}
           </mat-option>
         </mat-select>
       </mat-form-field>
@@ -32,7 +32,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 })
 export default class Select {
   @Input() label!: string;
-  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';
   @Input() disabled: boolean = false;
+  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';
   @Input() appearance!: 'legacy' | 'standard' | 'fill' | 'outline';
 }

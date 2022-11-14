@@ -11,12 +11,7 @@ import { MatInputModule } from '@angular/material/input';
       <mat-form-field [appearance]="appearance" [color]="color">
         <mat-label>{{ label }}</mat-label>
 
-        <input
-          [disabled]="disabled"
-          matInput
-          placeholder="Placeholder"
-          [value]="label"
-        />
+        <input [disabled]="disabled" matInput [placeholder]="placeholder" />
       </mat-form-field>
     </div>
   `,
@@ -24,6 +19,7 @@ import { MatInputModule } from '@angular/material/input';
 export default class InputFormField {
   @Input() color!: 'primary' | 'accent' | 'warn';
   @Input() label!: string;
+  @Input() placeholder!: string;
   @Input() disabled: boolean = false;
   @Input() appearance!: 'legacy' | 'standard' | 'fill' | 'outline';
 }

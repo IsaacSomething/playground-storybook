@@ -44,13 +44,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   `,
 })
 export default class Autocomplete implements OnInit {
-  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';
+  @Input() color!: 'primary' | 'accent' | 'warn';
   @Input() label!: string;
   @Input() appearance!: 'legacy' | 'standard' | 'fill' | 'outline';
 
-  control = new FormControl('');
-  items: string[] = ['Item 1', 'Position 2', 'Level 3'];
-  filteredOptions!: Observable<string[]>;
+  @Input() control!: FormControl;
+  @Input() items!: string[];
+  @Input() filteredOptions!: Observable<string[]>;
 
   ngOnInit() {
     this.filteredOptions = this.control.valueChanges.pipe(
