@@ -31,9 +31,14 @@ const defaultArgs: Partial<Snackbar> | undefined = {
   horizontalPosition: 'center',
 };
 
+const disableTypes = {
+  open: { table: { disable: true } },
+};
+
 const Template: Story<Snackbar> = (args: Snackbar) => ({
   props: args,
 });
 
 export const Default = Template.bind({});
 Default.args = { ...defaultArgs };
+Default.argTypes = { ...disableTypes };

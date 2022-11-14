@@ -13,6 +13,7 @@ const disabledTypes = {
   addBigData: { table: { disable: true } },
   addRow: { table: { disable: true } },
   removeRow: { table: { disable: true } },
+  table: { table: { disable: true } },
 };
 
 const defaultArgs: Partial<Table> | undefined = {

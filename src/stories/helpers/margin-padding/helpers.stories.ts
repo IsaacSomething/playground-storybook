@@ -15,7 +15,7 @@ export default {
       control: { type: 'range', min: 0, max: 60, step: 5 },
     },
     margin: {
-      control: { type: 'range', min: 0, max: 60, step: 5},
+      control: { type: 'range', min: 0, max: 60, step: 5 },
     },
     marginLeft: {
       control: { type: 'range', min: 0, max: 60, step: 5 },
@@ -27,11 +27,21 @@ export default {
   },
 } as Meta;
 
+const defaultArgs = {
+  padding: 0,
+  margin: 0,
+};
+
+const disableTypes = {
+  ngOnChanges: { table: { disable: true } },
+  code: { table: { disable: true } },
+  parameters: { table: { disable: true } },
+};
+
 const Template: Story<Helpers> = (args: Helpers) => ({
   props: args,
 });
 
-export const Default = Template.bind({
-  padding: 0,
-  margin: 0,
-});
+export const Default = Template.bind({});
+Default.args = { ...defaultArgs };
+Default.argTypes = { ...disableTypes };

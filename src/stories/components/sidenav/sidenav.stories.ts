@@ -21,7 +21,15 @@ export default {
   parameters: { options: { showPanel: true } },
 } as Meta;
 
+const disableTypes = {
+  closedStart: { table: { disable: true } },
+  onPositionChanged: { table: { disable: true } },
+  openedChange: { table: { disable: true } },
+  openedStart: { table: { disable: true } },
+};
+
 const SidenavContainer: Story<Sidenav> = (args: Sidenav) => ({
   props: args,
 });
-export const Container = SidenavContainer.bind({});
+export const Default = SidenavContainer.bind({});
+Default.argTypes = { ...disableTypes };

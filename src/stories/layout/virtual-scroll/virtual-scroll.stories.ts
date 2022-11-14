@@ -7,9 +7,14 @@ export default {
   parameters: { options: { showPanel: true } },
 } as Meta;
 
+const disableTypes = {
+  items: { table: { disable: true } },
+  ngOnInit: { table: { disable: true } },
+};
+
 const Template: Story<VirtualScroll> = (args: VirtualScroll) => ({
   props: args,
 });
 
 export const Default = Template.bind({});
-Default.argTypes = { items: { control: { disable: true } } };
+Default.argTypes = { ...disableTypes };

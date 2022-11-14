@@ -45,11 +45,11 @@ const defaultArgs: Partial<Button> | undefined = {
 /* Default */
 export const Default = Template.bind({});
 Default.args = { ...defaultArgs };
+Default.argTypes = { ...disableTypes };
 Default.parameters = {
   design: { ...designParams, url: `${urlPrefix}0%3A1` },
   id: 'test',
 };
-Default.argTypes = { ...disableTypes };
 
 /* Flat */
 export const Flat = Template.bind({});

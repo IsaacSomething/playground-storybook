@@ -61,7 +61,8 @@ export default class Button {
   @Input() label!: string;
   @Input() type!: 'flat' | 'stroked' | 'raised' | 'default';
   @Input() color!: 'primary' | 'accent' | 'warn' | 'default';
-  @Input() disabled: boolean = false;
-  @Input() loading: boolean = false;
-  @Input() round: boolean = false;
+  @Input() disabled!: boolean;
+  @Input() loading!: boolean;
+  @Input() round!: boolean;
+  @Input() size!: any;
 }

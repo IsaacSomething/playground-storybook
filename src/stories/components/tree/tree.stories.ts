@@ -18,9 +18,18 @@ const defaultArgs: Partial<Tree> | undefined = {
   ),
 };
 
+const disableTypes = {
+  dataSource: { table: { disable: true } },
+  treeControl: { table: { disable: true } },
+  hasChild: { table: { disable: true } },
+  getParentNode: { table: { disable: true } },
+  shouldRender: { table: { disable: true } },
+};
+
 const Template: Story<Tree> = (args: Tree) => ({
   props: args,
 });
 
 export const Default = Template.bind({});
 Default.args = { ...defaultArgs };
+Default.argTypes = { ...disableTypes };
