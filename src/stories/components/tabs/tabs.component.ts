@@ -14,7 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     `,
   ],
   template: `
-    <mat-tab-group [color]="color">
+    <mat-tab-group [color]="color" [attr.mat-align-tabs]="align">
       <mat-tab label="[First]">
         <div class="padding">
           <h1>[01]</h1>
@@ -49,6 +49,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   `,
 })
 export default class Tabs {
-  @Input() color: 'primary' | 'accent' | 'warn' | 'none' = 'primary';
-  @Input() disabled: boolean = false;
+  @Input() color!: 'primary' | 'accent' | 'warn' | 'default';
+  @Input() align!: 'start' | 'center' | 'end';
+  @Input() disabled!: boolean;
 }

@@ -5,10 +5,6 @@ export default {
   title: 'Forms/Slider',
   component: Slider,
   parameters: { options: { showPanel: true } },
-} as Meta;
-
-const Template: Story<Slider> = (args: Slider) => ({
-  props: args,
   argTypes: {
     color: {
       options: ['primary', 'accent', 'warn'],
@@ -21,16 +17,22 @@ const Template: Story<Slider> = (args: Slider) => ({
       control: { type: 'range', min: 1, max: 50, step: 1 },
     },
     disabled: { control: { type: 'boolean' } },
+    invert: { control: { type: 'boolean' } },
   },
+} as Meta;
+
+const Template: Story<Slider> = (args: Slider) => ({
+  props: args,
 });
 
 const defaultArgs: Partial<Slider> | undefined = {
   color: 'primary',
+  tickInterval: 0,
+  step: 1,
   disabled: false,
   vertical: false,
   thumbLabel: false,
-  tickInterval: 0,
-  step: 1,
+  invert: false,
 };
 
 export const Default = Template.bind({});

@@ -5,10 +5,6 @@ export default {
   title: 'Components/Tooltip',
   component: Tooltip,
   parameters: { options: { showPanel: true } },
-} as Meta;
-
-const Template: Story<Tooltip> = (args: Tooltip) => ({
-  props: args,
   argTypes: {
     position: {
       options: ['after', 'before', 'above', 'below', 'left', 'right'],
@@ -34,6 +30,10 @@ const Template: Story<Tooltip> = (args: Tooltip) => ({
       name: 'Hide delay',
     },
   },
+} as Meta;
+
+const Template: Story<Tooltip> = (args: Tooltip) => ({
+  props: args,
 });
 
 const defaultArgs: Partial<Tooltip> | undefined = {

@@ -26,6 +26,7 @@ import { MatSliderModule } from '@angular/material/slider';
         [thumbLabel]="thumbLabel"
         [tickInterval]="tickInterval"
         [step]="step"
+        [invert]="invert"
       ></mat-slider>
 
       <h1>[{{ slider.value }}]</h1>
@@ -36,6 +37,7 @@ export default class Slider {
   @Input() color!: 'primary' | 'accent' | 'warn';
   @Input() disabled!: boolean;
   @Input() vertical!: boolean;
+  @Input() invert!: boolean;
   @Input() thumbLabel!: boolean;
   @Input() tickInterval!: number;
   @Input() step!: number;

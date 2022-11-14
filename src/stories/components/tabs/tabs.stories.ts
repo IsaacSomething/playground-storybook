@@ -6,19 +6,30 @@ export default {
   component: Tabs,
   argTypes: {
     color: {
-      options: ['primary', 'accent', 'warn', 'none'],
+      options: ['primary', 'accent', 'warn', 'default'],
       control: { type: 'radio' },
     },
     disabled: { control: { type: 'boolean' } },
+    align: {
+      options: ['start', 'center', 'end'],
+      control: { type: 'select' },
+    },
   },
   parameters: { options: { showPanel: true } },
 } as Meta;
+
+const defaultArgs: Partial<Tabs> | undefined = {
+  color: 'default',
+  disabled: false,
+  align: 'start',
+};
 
 const Template: Story<Tabs> = (args: Tabs) => ({
   props: args,
 });
 
 export const Default = Template.bind({});
+Default.args = { ...defaultArgs };
 Default.parameters = {
   docs: {
     source: {

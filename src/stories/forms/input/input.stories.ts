@@ -15,6 +15,9 @@ const Template: Story<InputFormField> = (args: InputFormField) => ({
       control: { type: 'radio' },
     },
     disabled: { control: { type: 'boolean' } },
+    showError: { control: { type: 'boolean' } },
+    showHint: { control: { type: 'boolean' } },
+    complexLabel: { control: { type: 'boolean' } },
   },
 });
 
@@ -24,6 +27,9 @@ const defaultArgs: Partial<InputFormField> | undefined = {
   color: 'primary',
   appearance: 'standard',
   disabled: false,
+  showError: false,
+  showHint: false,
+  complexLabel: false,
 };
 
 export const Default = Template.bind({});
