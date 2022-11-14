@@ -19,7 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     <div class="padding">
       <mat-form-field [appearance]="appearance" [color]="color">
         <mat-label>Choose a date</mat-label>
-        <input matInput [matDatepicker]="picker" />
+        <input matInput [matDatepicker]="picker" [disabled]="disabled" />
 
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker [startView]="startView"></mat-datepicker>

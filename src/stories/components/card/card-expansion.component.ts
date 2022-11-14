@@ -16,8 +16,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   template: `
     <div class="padding">
       <mat-card [attr.color]="color" class="expansion">
-        <mat-card-header class="no-margin">
-          <mat-expansion-panel matRipple matRippleColor="black">
+        <mat-card-header>
+          <mat-expansion-panel matRipple>
             <mat-expansion-panel-header>
               <mat-card-title>Title</mat-card-title>
               <mat-card-subtitle>Subtitle</mat-card-subtitle>
