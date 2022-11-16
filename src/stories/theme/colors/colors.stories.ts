@@ -1,5 +1,5 @@
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import Theme from './theme.component';
+import Theme from './colors.component';
 
 export default {
   title: 'Theme/Colors',

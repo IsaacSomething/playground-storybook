@@ -14,14 +14,18 @@ const Template: Story<Select> = (args: Select) => ({
       options: ['primary', 'accent', 'warn'],
       control: { type: 'radio' },
     },
+    appearance: {
+      options: ['standard', 'legacy', 'fill', 'outline', 'none'],
+      control: { type: 'select' },
+    },
     disabled: { control: { type: 'boolean' } },
   },
 });
 
 const defaultArgs: Partial<Select> | undefined = {
-  label: 'Select',
-  disabled: false,
+  label: '[Select]',
   color: 'primary',
+  disabled: false,
   appearance: 'standard',
 };
 

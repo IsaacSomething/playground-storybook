@@ -2,13 +2,13 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { ClipboardModule } from '@angular/cdk/clipboard';
 import { MatRippleModule } from '@angular/material/core';
-import { SBHeader } from '../assets/sb-header';
+import { SBHeader } from '../../assets/sb-header';
 
 @Component({
-  selector: 'storybook-button',
+  selector: 'storybook-colors',
   standalone: true,
   imports: [CommonModule, ClipboardModule, MatRippleModule, SBHeader],
-  styleUrls: ['./theme.component.scss'],
+  styleUrls: ['./colors.component.scss'],
   template: `
     <div class="padding">
       <sb-header [title]="color" clipboard>
@@ -51,6 +51,6 @@ import { SBHeader } from '../assets/sb-header';
     </div>
   `,
 })
-export default class Theme {
+export default class Colors {
   @Input() color: 'primary' | 'accent' | 'warn' = 'primary';
 }

@@ -32,7 +32,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 })
 export default class Select {
   @Input() label!: string;
-  @Input() disabled: boolean = false;
-  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';
-  @Input() appearance!: 'legacy' | 'standard' | 'fill' | 'outline';
+  @Input() disabled!: boolean;
+  @Input() color!: 'primary' | 'accent' | 'warn';
+  @Input() appearance!: 'standard' | 'legacy' | 'fill' | 'outline';
 }

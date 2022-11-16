@@ -9,6 +9,8 @@ $spacing: "padding", "padding-right", "padding-left", "padding-bottom",
 
 $backgrounds: "bg", "card", "bar", "divider", "primary", "accent", "warn";
 
+$text: "default", "primary", "accent", "warn", "divider";
+
 @for $i from 1 through 60 {
   @each $prop in $props {
     .#{$prop}-#{$i} {
@@ -38,6 +40,12 @@ $backgrounds: "bg", "card", "bar", "divider", "primary", "accent", "warn";
 @each $bg in $backgrounds {
   .bg-#{$bg} {
     background-color: var(--mat-#{$bg});
+  }
+}
+
+@each $color in $text {
+  .text-#{$color} {
+    color: var(--mat-#{$color});
   }
 }
 
