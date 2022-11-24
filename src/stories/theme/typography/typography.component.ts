@@ -28,5 +28,4 @@ import { Component, Input } from '@angular/core';
 })
 export default class Typography {
   @Input() color!: 'default' | 'primary' | 'accent' | 'warn';
-  @Input() disabled!: boolean;
 }

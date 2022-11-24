@@ -10,7 +10,6 @@ export default {
       options: ['primary', 'accent', 'warn', 'default'],
       control: { type: 'radio' },
     },
-    disabled: { control: { type: 'boolean' } },
   },
 } as Meta;
 

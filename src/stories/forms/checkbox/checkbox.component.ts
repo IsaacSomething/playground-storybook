@@ -7,7 +7,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
   standalone: true,
   imports: [MatCheckboxModule, NgFor],
   template: `
-    <div class="padding">
+    <div class="padding flex-column">
       <mat-checkbox
         *ngFor="let item of [1, 2, 3]"
         [disabled]="disabled"

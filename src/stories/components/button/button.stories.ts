@@ -51,7 +51,6 @@ Default.parameters = {
   id: 'test',
 };
 
-/* Flat */
 export const Flat = Template.bind({});
 Flat.args = { ...defaultArgs, type: 'flat' };
 Flat.parameters = {
